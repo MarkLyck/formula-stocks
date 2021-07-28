@@ -60,6 +60,9 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
   const [stripeError, setStripeError] = useState(null)
   const [form] = Form.useForm()
 
+  console.log('🔈 ~ stripeError', stripeError)
+  console.log('🔈 ~ accountInfo', accountInfo)
+
   return (
     <StyledForm
       form={form}

@@ -34,8 +34,8 @@ const FreeTrialText = styled(Text)`
 `
 
 type SchedulePickerProps = {
-  plan: string
-  schedule: string
+  plan: 'entry' | 'premium'
+  schedule: 'monthly' | 'yearly'
   setSchedule: (value: string) => void
   onSubmit: () => void
 }

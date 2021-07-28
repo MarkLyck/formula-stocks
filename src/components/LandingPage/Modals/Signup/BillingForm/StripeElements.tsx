@@ -1,6 +1,5 @@
 import { CardNumberElement, CardExpiryElement, CardCvcElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import styled from '@emotion/styled'
-import { Space } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import theme from 'src/lib/theme'
 

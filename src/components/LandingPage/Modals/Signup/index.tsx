@@ -25,7 +25,7 @@ const ModalContent = styled.div`
 
 const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
   const [page, setPage] = useState(1)
-  const [plan, setPlan] = useState('')
+  const [plan, setPlan] = useState<'entry' | 'premium'>('entry')
   const [schedule, setSchedule]: any = useState('yearly')
   const [accountInfo, setAccountInfo] = useState(null)
 
@@ -41,7 +41,7 @@ const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
     nextPage()
   }
 
-  const handleSelectPlan = (plan: string) => {
+  const handleSelectPlan = (plan: 'entry' | 'premium') => {
     setPlan(plan)
     nextPage()
   }
