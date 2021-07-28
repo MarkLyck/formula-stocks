@@ -38,13 +38,6 @@ const StyledForm = styled(Form)`
       color: ${(props: any) => props.theme.palette.primary[600]};
     }
   }
-
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px 2px;
-  }
 `
 
 const validateMessages = {

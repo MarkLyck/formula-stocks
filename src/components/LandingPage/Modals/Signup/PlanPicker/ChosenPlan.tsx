@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Typography, Button } from 'antd'
+import { Typography } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const { Title, Text } = Typography
@@ -9,7 +9,7 @@ const ChosenPlanContainer = styled.div`
   width: 100%;
   background: ${(p) => p.theme.palette.neutral[200]};
   padding: 12px;
-  border: 2px solid ${(p) => p.theme.palette.border};
+  border: 1px solid ${(p) => p.theme.palette.neutral[300]};
   margin-bottom: 24px;
 `
 
@@ -56,7 +56,7 @@ const ChosenPlan = ({ plan, schedule }: ChosenPlanProps) => {
           <Title level={5} style={{ marginBottom: 0, lineHeight: 1.2 }}>
             {planTitle}
           </Title>
-          <ScheduleText>{schedule}</ScheduleText>
+          <ScheduleText>{schedule} subscription</ScheduleText>
         </div>
       </Beside>
       {/* @ts-ignore */}

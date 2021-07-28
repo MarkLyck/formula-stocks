@@ -1,8 +1,8 @@
-import { Radio, Typography, Badge } from 'antd'
+import { Radio, Typography, Badge, Button } from 'antd'
 import ChosenPlan from '../PlanPicker/ChosenPlan'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { ActionButton } from 'src/ui-components'
+import { currencyRoundedFormatter } from 'src/common/utils/formatters'
 
 const { Title, Text } = Typography
 
@@ -21,11 +21,10 @@ const FreeTrialText = styled(Text)`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 16px 0 8px;
+  margin: 12px 0 8px;
   padding: 8px;
   border-radius: 8px;
   font-weight: bold;
-  background: ${(p) => p.theme.palette.neutral[200]};
 
   svg {
     font-size: 18px;
@@ -67,7 +66,7 @@ const SchedulePicker = ({ plan, schedule, setSchedule, onSubmit }: SchedulePicke
               <Title level={4} style={{ marginBottom: 0 }}>
                 Yearly
               </Title>
-              <Text>Pay for a full year - ${yearlyPrice * 12} / year</Text>
+              <Text>Pay for a full year - {currencyRoundedFormatter.format(yearlyPrice * 12)} / year</Text>
             </div>
             <div style={{ marginLeft: 'auto' }}>
               <Title level={4} style={{ margin: '12px 0 0 auto' }}>
@@ -96,10 +95,9 @@ const SchedulePicker = ({ plan, schedule, setSchedule, onSubmit }: SchedulePicke
         <FontAwesomeIcon icon={['fad', 'gift']} />
         All plans include a 7-day free trial
       </FreeTrialText>
-      {/* @ts-ignore */}
-      <ActionButton style={{ width: '100%', marginTop: 16 }} onClick={onSubmit}>
+      <Button onClick={onSubmit} type="primary" block size="large">
         Next
-      </ActionButton>
+      </Button>
     </div>
   )
 }

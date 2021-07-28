@@ -1,8 +1,6 @@
 import styled from '@emotion/styled'
-import { Typography } from 'antd'
-import { ActionButton } from 'src/ui-components'
+import { Typography, Button } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 const { Title } = Typography
 
 const PlanContainer = styled.div`
@@ -47,13 +45,28 @@ const StyledList = styled.div`
       content: '';
       height: 8px;
       width: 8px;
-      background: ${(p) => p.theme.palette[p.color][500]};
+      background: ${(p: any) => p.theme.palette[p.color][500]};
       position: absolute;
       top: 50%;
       left: 0;
       transform: translateY(-50%);
       border-radius: 8px;
     }
+  }
+`
+
+const GreenButton = styled(Button)`
+  background-color: ${(p) => p.theme.palette.success[600]};
+  border-color: ${(p) => p.theme.palette.success[700]};
+
+  &:hover {
+    background-color: ${(p) => p.theme.palette.success[500]};
+    border-color: ${(p) => p.theme.palette.success[500]};
+  }
+
+  &:focus {
+    background-color: ${(p) => p.theme.palette.success[500]};
+    border-color: ${(p) => p.theme.palette.success[500]};
   }
 `
 
@@ -78,9 +91,9 @@ const PlanPicker = ({ setPlan }: any) => (
           <li>For portfolios under $100k</li>
         </StyledList>
         {/* @ts-ignore */}
-        <ActionButton style={{ width: '100%', marginTop: 16 }} onClick={() => setPlan('entry')}>
+        <Button onClick={() => setPlan('entry')} type="primary" size="large" block style={{ marginTop: 16 }}>
           Choose plan
-        </ActionButton>
+        </Button>
       </PlanContainer>
       <PlanContainer>
         <Beside>
@@ -98,10 +111,9 @@ const PlanPicker = ({ setPlan }: any) => (
           <li>7-day free trial</li>
           <li>For portfolios from $100k to $1M</li>
         </StyledList>
-        {/* @ts-ignore */}
-        <ActionButton status="success" style={{ width: '100%', marginTop: 16 }} onClick={() => setPlan('premium')}>
+        <GreenButton onClick={() => setPlan('premium')} type="primary" size="large" block style={{ marginTop: 16 }}>
           Choose plan
-        </ActionButton>
+        </GreenButton>
       </PlanContainer>
     </Beside>
   </div>

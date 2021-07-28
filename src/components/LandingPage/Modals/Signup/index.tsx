@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Modal, Typography } from 'antd'
 import dynamic from 'next/dynamic'
+import styled from '@emotion/styled'
 
 import PlanPicker from './PlanPicker'
 import SchedulePicker from './SchedulePicker'
@@ -12,6 +13,15 @@ interface SignupModalProps {
   onClose: () => void
   isVisible?: boolean
 }
+
+const ModalContent = styled.div`
+  .ant-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 2px;
+  }
+`
 
 const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
   const [page, setPage] = useState(1)
@@ -41,10 +51,12 @@ const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
       <Typography.Title level={3} style={{ marginBottom: 24 }}>
         {title}
       </Typography.Title>
-      {page === 1 && <PlanPicker setPlan={handleSelectPlan} />}
-      {page === 2 && <SchedulePicker plan={plan} schedule={schedule} setSchedule={setSchedule} onSubmit={nextPage} />}
-      {page === 3 && <AccountForm onSubmit={handleAccountInfoSubmit} />}
-      {page === 4 && <BillingForm accountInfo={accountInfo} schedule={schedule} plan={plan} onSubmit={console.log} />}
+      <ModalContent>
+        {page === 1 && <PlanPicker setPlan={handleSelectPlan} />}
+        {page === 2 && <SchedulePicker plan={plan} schedule={schedule} setSchedule={setSchedule} onSubmit={nextPage} />}
+        {page === 3 && <AccountForm onSubmit={handleAccountInfoSubmit} />}
+        {page === 4 && <BillingForm accountInfo={accountInfo} schedule={schedule} plan={plan} onSubmit={console.log} />}
+      </ModalContent>
     </Modal>
   )
 }

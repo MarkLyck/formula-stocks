@@ -1,5 +1,6 @@
-import { Typography, Row, Col, Divider } from 'antd'
+import { Typography, Row, Col } from 'antd'
 import styled from '@emotion/styled'
+import { currencyRoundedFormatter } from 'src/common/utils/formatters'
 
 const { Text } = Typography
 
@@ -34,16 +35,9 @@ const Invoice = ({ plan, schedule }: InvoiceProps) => {
       <Row gutter={16}>
         <Col span={24}>
           <Beside>
-            <Text>Due now:</Text>
-            <Bold>$0</Bold>
-          </Beside>
-        </Col>
-        <Divider style={{ margin: '8px 0' }} />
-        <Col span={24}>
-          <Beside>
             <Text>Price after 7 days:</Text>
             <Bold>
-              ${price} / {termText}
+              {currencyRoundedFormatter.format(price)} / {termText}
             </Bold>
           </Beside>
         </Col>
