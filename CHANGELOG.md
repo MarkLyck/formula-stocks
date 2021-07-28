@@ -1,5 +1,74 @@
 # Changelog
 
+<a name="1.0.282"></a>
+## 1.0.282 (2021-07-28)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.282 [[b87357f](https://github.com/MarkLyck/formula-stocks/commit/b87357fbb22abd3a8986e08599e0737a3864f580)]
+
+
+<a name="1.0.281"></a>
+## 1.0.281 (2021-07-28)
+
+### Changed
+
+- ⬆️ Update dependency @types/react to v17.0.15 [[7a57ba7](https://github.com/MarkLyck/formula-stocks/commit/7a57ba759bf9595943f1126b9b8adb47b44d58e7)]
+
+### Miscellaneous
+
+-  Merge pull request [#367](https://github.com/MarkLyck/formula-stocks/issues/367) from MarkLyck/renovate/react-17.x [[f52827f](https://github.com/MarkLyck/formula-stocks/commit/f52827fd351e610a5610d8736a78c9c5a9f1f19a)]
+- 📝 version bump to v1.0.281 [[06baeb9](https://github.com/MarkLyck/formula-stocks/commit/06baeb9520f746f4e7456ee16caf1f853aac8e76)]
+
+
+<a name="1.0.280"></a>
+## 1.0.280 (2021-07-28)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.280 [[2df592d](https://github.com/MarkLyck/formula-stocks/commit/2df592d6e39c04d0ad822287c9c3310fb95f6e2f)]
+
+
+<a name="1.0.279"></a>
+## 1.0.279 (2021-07-28)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.279 [[4ee7113](https://github.com/MarkLyck/formula-stocks/commit/4ee7113725f204de61c51a7b917c25fccb38e92b)]
+
+
+<a name="1.0.278"></a>
+## 1.0.278 (2021-07-28)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.278 [[062fa59](https://github.com/MarkLyck/formula-stocks/commit/062fa59f1866ba879cb640b69b6f57cf3c6c1ad4)]
+
+
+<a name="1.0.277"></a>
+## 1.0.277 (2021-07-28)
+
+### Changed
+
+- ⬆️ Update dependency date-fns-tz to v1.1.6 [[97d82fe](https://github.com/MarkLyck/formula-stocks/commit/97d82feaf28f61c4e5bd85772d4ab6f2ca665faf)]
+- ⬆️ Update dependency @ant-design/charts to v1.2.4 [[c10710c](https://github.com/MarkLyck/formula-stocks/commit/c10710c95c50a6c51df41f60fec78fc5126d1b6c)]
+- ⬆️ Update storybook monorepo to v6.3.6 [[430fe6e](https://github.com/MarkLyck/formula-stocks/commit/430fe6e824352ffa1a8aa28a7b74de5bd4b5829a)]
+- ⬆️ Update dependency gitmoji-cli to v4.2.0 [[6b55f28](https://github.com/MarkLyck/formula-stocks/commit/6b55f283bc75008099fe9c2019cfaf3676af0e2a)]
+- ⬆️ Update dependency react-scroll to v1.8.3 [[355fc22](https://github.com/MarkLyck/formula-stocks/commit/355fc220b288cfd37fc7eb0782f61bc95946bd51)]
+- ⬆️ Update dependency ahooks to v2.10.9 [[301716c](https://github.com/MarkLyck/formula-stocks/commit/301716c25256629c1a255b24424c90ff956bd566)]
+
+### Miscellaneous
+
+-  Merge pull request [#362](https://github.com/MarkLyck/formula-stocks/issues/362) from MarkLyck/renovate/ant-design-charts-1.x [[0eeccf6](https://github.com/MarkLyck/formula-stocks/commit/0eeccf69567454ad772d433608d17c2571ad559e)]
+-  Merge pull request [#364](https://github.com/MarkLyck/formula-stocks/issues/364) from MarkLyck/renovate/ahooks-2.x [[453b537](https://github.com/MarkLyck/formula-stocks/commit/453b537fb523db0b1f17afc3b7112a6c5fd14812)]
+-  Merge pull request [#365](https://github.com/MarkLyck/formula-stocks/issues/365) from MarkLyck/renovate/storybook-monorepo [[fb8aee3](https://github.com/MarkLyck/formula-stocks/commit/fb8aee34ceda55f1231c1d2e85147c9a65078c46)]
+-  Merge pull request [#366](https://github.com/MarkLyck/formula-stocks/issues/366) from MarkLyck/renovate/react-scroll-1.x [[1a3bd48](https://github.com/MarkLyck/formula-stocks/commit/1a3bd480dc7dbf9815b5efed51991d2ee8c04381)]
+-  Merge pull request [#369](https://github.com/MarkLyck/formula-stocks/issues/369) from MarkLyck/renovate/gitmoji-cli-4.x [[a5f1593](https://github.com/MarkLyck/formula-stocks/commit/a5f1593778b8d1176ece2cca0cfef447f697c519)]
+-  Merge pull request [#371](https://github.com/MarkLyck/formula-stocks/issues/371) from MarkLyck/renovate/date-fns-tz-1.x [[32c382c](https://github.com/MarkLyck/formula-stocks/commit/32c382c08abfc34d72fedbbeaa0ae0df7e4d9271)]
+- 📝 version bump to v1.0.277 [[2dc0081](https://github.com/MarkLyck/formula-stocks/commit/2dc00818df62c173d3576314d0924c7137a2bab1)]
+- 📝 generated changelog [[d6f3eb5](https://github.com/MarkLyck/formula-stocks/commit/d6f3eb53165e320541326b8a5c5a211e1e5e054a)]
+
+
 <a name="1.0.276"></a>
 ## 1.0.276 (2021-07-18)
 
