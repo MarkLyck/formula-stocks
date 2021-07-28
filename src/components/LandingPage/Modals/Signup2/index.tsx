@@ -15,13 +15,15 @@ interface SignupModalProps {
 const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
   const [page, setPage] = useState(1)
   const [plan, setPlan] = useState('')
-  const [schedule, setSchedule] = useState('yearly')
+  const [schedule, setSchedule]: any = useState('yearly')
   const [accountInfo, setAccountInfo] = useState(null)
 
   let title = 'Sign up'
   if (page === 1) title = 'Choose a plan'
   if (page === 2) title = 'Select payment schedule'
   if (page === 3) title = 'Create account'
+
+  const nextPage = () => setPage(page + 1)
 
   const handleAccountInfoSubmit = (values: any) => {
     setAccountInfo(values)
@@ -37,7 +39,7 @@ const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
     <Modal visible={isVisible} onCancel={onClose} footer={null} centered>
       <Typography.Title level={3}>{title}</Typography.Title>
       {page === 1 && <PlanPicker setPlan={handleSelectPlan} />}
-      {page === 2 && <SchedulePicker plan={plan} schedule={schedule} setSchedule={setSchedule} />}
+      {page === 2 && <SchedulePicker plan={plan} schedule={schedule} setSchedule={setSchedule} onSubmit={nextPage} />}
       {page === 3 && <AccountForm onSubmit={handleAccountInfoSubmit} />}
     </Modal>
   )
