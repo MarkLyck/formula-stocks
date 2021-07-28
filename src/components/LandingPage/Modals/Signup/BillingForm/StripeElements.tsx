@@ -1,7 +1,8 @@
-import { CardNumberElement, CardExpiryElement, CardCvcElement, useStripe, useElements } from '@stripe/react-stripe-js'
+import { CardNumberElement, CardExpiryElement, CardCvcElement } from '@stripe/react-stripe-js'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import theme from 'src/lib/theme'
+import { ErrorMessage } from 'src/ui-components'
 
 const Container = styled.div`
   display: flex;
@@ -45,16 +46,14 @@ const stripeElementOptions = {
   },
 }
 
-const StripeElements = ({ setStripeError }: any) => {
-  //   const stripe = useStripe()
-  //   const elements = useElements()
-
+const StripeElements = ({ stripeError, setStripeError }: any) => {
   const onInteract = () => {
     setStripeError(null)
   }
 
   return (
     <Container>
+      {stripeError && <ErrorMessage>{stripeError}</ErrorMessage>}
       <Field>
         <FieldIcon icon={['fad', 'credit-card']} />
         {/* @ts-ignore */}
