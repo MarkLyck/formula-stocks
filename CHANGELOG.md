@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.285"></a>
+## 1.0.285 (2021-07-28)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.285 [[124988d](https://github.com/MarkLyck/formula-stocks/commit/124988d25ae10bf71706fe82799835dc28fd8dd6)]
+
+
+<a name="1.0.284"></a>
+## 1.0.284 (2021-07-28)
+
+### Changed
+
+- ⬆️ Update dependency @types/node to v14.17.6 [[7b53d2a](https://github.com/MarkLyck/formula-stocks/commit/7b53d2a9814ee1e16ad8781c6d4d1c3c8e7d4f6d)]
+- ⬆️ Update dependency antd to v4.16.9 [[cf9e3ad](https://github.com/MarkLyck/formula-stocks/commit/cf9e3ad94b3438bff8a0c61ad1d355d2a9f5bc66)]
+
+### Miscellaneous
+
+-  Merge pull request [#361](https://github.com/MarkLyck/formula-stocks/issues/361) from MarkLyck/renovate/antd-4.x [[ea5ddb9](https://github.com/MarkLyck/formula-stocks/commit/ea5ddb9e0d6cf788442c2e771e032930cc8073d3)]
+-  Merge pull request [#368](https://github.com/MarkLyck/formula-stocks/issues/368) from MarkLyck/renovate/node-14.x [[d659e6d](https://github.com/MarkLyck/formula-stocks/commit/d659e6d123280f1deeaf0a8d32759fdaddb31018)]
+- 📝 version bump to v1.0.284 [[e752d9f](https://github.com/MarkLyck/formula-stocks/commit/e752d9ffbc653073020efcf7d7631e9df2a0339f)]
+- 📝 generated changelog [[9910bd3](https://github.com/MarkLyck/formula-stocks/commit/9910bd3c1d3cb2bd1ef3d82a42f2919ebc0fa44e)]
+
+
 <a name="1.0.283"></a>
 ## 1.0.283 (2021-07-28)
 
