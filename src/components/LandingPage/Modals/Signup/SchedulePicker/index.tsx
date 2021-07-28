@@ -42,9 +42,17 @@ type SchedulePickerProps = {
 }
 
 const SchedulePicker = ({ plan, schedule, setSchedule, onSubmit }: SchedulePickerProps) => {
+  let yearlyPrice = 49
+  let monthlyPrice = 59
+
+  if (plan === 'premium') {
+    yearlyPrice = 99
+    monthlyPrice = 119
+  }
+
   return (
     <div>
-      <ChosenPlan plan={plan} />
+      <ChosenPlan plan={plan} schedule={schedule} />
       {/* @ts-ignore */}
       <Badge.Ribbon text="Save 20%">
         <ScheduleContainer
@@ -59,11 +67,11 @@ const SchedulePicker = ({ plan, schedule, setSchedule, onSubmit }: SchedulePicke
               <Title level={4} style={{ marginBottom: 0 }}>
                 Yearly
               </Title>
-              <Text>Pay for a full year ($708)</Text>
+              <Text>Pay for a full year - ${yearlyPrice * 12} / year</Text>
             </div>
             <div style={{ marginLeft: 'auto' }}>
               <Title level={4} style={{ margin: '12px 0 0 auto' }}>
-                $49 / Mo
+                ${yearlyPrice} / Mo
               </Title>
             </div>
           </Beside>
@@ -80,7 +88,7 @@ const SchedulePicker = ({ plan, schedule, setSchedule, onSubmit }: SchedulePicke
             <Text>Pay monthly, cancel anytime</Text>
           </div>
           <Title level={4} style={{ margin: '12px 0 0 auto' }}>
-            $59 / Mo
+            ${monthlyPrice} / Mo
           </Title>
         </Beside>
       </ScheduleContainer>

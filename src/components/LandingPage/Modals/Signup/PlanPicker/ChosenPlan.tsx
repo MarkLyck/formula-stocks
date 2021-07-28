@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { Typography, Button } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const { Title } = Typography
+const { Title, Text } = Typography
 
 const ChosenPlanContainer = styled.div`
   border-radius: 8px;
@@ -11,10 +11,6 @@ const ChosenPlanContainer = styled.div`
   padding: 12px;
   border: 2px solid ${(p) => p.theme.palette.border};
   margin-bottom: 24px;
-`
-
-const Description = styled.p`
-  font-size: 16px;
 `
 
 const Beside = styled.div`
@@ -37,18 +33,31 @@ const IconContainer = styled.div`
   box-shadow: 0 0px 5px rgba(18, 62, 138, 0.15);
 `
 
-const ChosenPlan = ({ plan }: any) => {
-  const planTitle = plan === 'entry' ? 'Starter' : 'Premium'
+type ChosenPlanProps = {
+  plan: 'entry' | 'premium'
+  schedule: 'monthly' | 'yearly'
+}
+
+const ScheduleText = styled(Text)`
+  text-transform: capitalize;
+  font-size: 12px;
+`
+
+const ChosenPlan = ({ plan, schedule }: ChosenPlanProps) => {
+  const planTitle = plan === 'entry' ? 'Small portfolio' : 'Medium portfolio'
   return (
     <ChosenPlanContainer>
       <Beside>
-        <IconContainer color="primary">
-          <FontAwesomeIcon icon={['fad', 'chart-line']} />
+        <IconContainer color={plan === 'entry' ? 'primary' : 'success'}>
+          <FontAwesomeIcon icon={['fad', plan === 'entry' ? 'chart-line' : 'analytics']} />
         </IconContainer>
 
-        <Title level={5} style={{ marginBottom: 0 }}>
-          {planTitle}
-        </Title>
+        <div>
+          <Title level={5} style={{ marginBottom: 0, lineHeight: 1.2 }}>
+            {planTitle}
+          </Title>
+          <ScheduleText>{schedule}</ScheduleText>
+        </div>
       </Beside>
       {/* @ts-ignore */}
     </ChosenPlanContainer>

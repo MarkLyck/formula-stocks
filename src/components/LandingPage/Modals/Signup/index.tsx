@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { Modal } from 'antd'
+import { Modal, Typography } from 'antd'
 import dynamic from 'next/dynamic'
 
-import { ModalTitle } from 'src/ui-components'
+import PlanPicker from './PlanPicker'
+import SchedulePicker from './SchedulePicker'
+import BillingForm from './BillingForm'
 
 const AccountForm = dynamic(() => import('./AccountForm'))
-const BillingForm = dynamic(() => import('./BillingForm2'))
 
 interface SignupModalProps {
   onClose: () => void
@@ -13,23 +14,37 @@ interface SignupModalProps {
 }
 
 const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
-  const [page, setPage] = useState(2)
+  const [page, setPage] = useState(1)
+  const [plan, setPlan] = useState('')
+  const [schedule, setSchedule]: any = useState('yearly')
   const [accountInfo, setAccountInfo] = useState(null)
+
+  let title = 'Sign up'
+  if (page === 1) title = 'Choose a plan'
+  if (page === 2) title = 'Select payment schedule'
+  if (page === 3) title = 'Create account'
+
+  const nextPage = () => setPage(page + 1)
 
   const handleAccountInfoSubmit = (values: any) => {
     setAccountInfo(values)
-    setPage(2)
+    nextPage()
   }
 
-  if (page === 2) {
-    return <BillingForm onClose={onClose} accountInfo={accountInfo} />
+  const handleSelectPlan = (plan: string) => {
+    setPlan(plan)
+    nextPage()
   }
 
   return (
-    <Modal visible={isVisible} onCancel={onClose} footer={null} centered>
-      <ModalTitle>Sign up</ModalTitle>
-      {page === 1 && <AccountForm onSubmit={handleAccountInfoSubmit} />}
-      {/* {page === 2 && <BillingForm accountInfo={accountInfo} />} */}
+    <Modal visible={isVisible} onCancel={onClose} footer={null} centered width={page === 1 ? 700 : undefined}>
+      <Typography.Title level={3} style={{ marginBottom: 24 }}>
+        {title}
+      </Typography.Title>
+      {page === 1 && <PlanPicker setPlan={handleSelectPlan} />}
+      {page === 2 && <SchedulePicker plan={plan} schedule={schedule} setSchedule={setSchedule} onSubmit={nextPage} />}
+      {page === 3 && <AccountForm onSubmit={handleAccountInfoSubmit} />}
+      {page === 4 && <BillingForm accountInfo={accountInfo} schedule={schedule} plan={plan} onSubmit={console.log} />}
     </Modal>
   )
 }

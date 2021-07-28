@@ -7,7 +7,7 @@ const { Title } = Typography
 
 const PlanContainer = styled.div`
   border-radius: 8px;
-  width: 320px;
+  width: 460px;
   background: ${(p) => p.theme.palette.neutral[200]};
   padding: 24px;
   border: 2px solid ${(p) => p.theme.palette.border};
@@ -59,7 +59,7 @@ const StyledList = styled.div`
 
 const PlanPicker = ({ setPlan }: any) => (
   <div>
-    <Description>Select the plan that best suits your needs</Description>
+    {/* <Description>Select the plan that best suits your needs</Description> */}
     <Beside>
       <PlanContainer style={{ marginRight: 16 }}>
         <Beside>
@@ -68,14 +68,14 @@ const PlanPicker = ({ setPlan }: any) => (
           </IconContainer>
           <div>
             <Title level={4} style={{ marginBottom: 0 }}>
-              Starter
+              Small Portfolio
             </Title>
             <Description>$49 / month</Description>
           </div>
         </Beside>
         <StyledList color="neutral">
           <li>7-day free trial</li>
-          <li>Best for portfolios under $100k</li>
+          <li>For portfolios under $100k</li>
         </StyledList>
         {/* @ts-ignore */}
         <ActionButton style={{ width: '100%', marginTop: 16 }} onClick={() => setPlan('entry')}>
@@ -89,14 +89,14 @@ const PlanPicker = ({ setPlan }: any) => (
           </IconContainer>
           <div>
             <Title level={4} style={{ marginBottom: 0 }}>
-              Premium
+              Medium Portfolio
             </Title>
             <Description>$99 / month</Description>
           </div>
         </Beside>
         <StyledList color="neutral">
           <li>7-day free trial</li>
-          <li>Best for portfolios from $100k to $1M</li>
+          <li>For portfolios from $100k to $1M</li>
         </StyledList>
         {/* @ts-ignore */}
         <ActionButton status="success" style={{ width: '100%', marginTop: 16 }} onClick={() => setPlan('premium')}>

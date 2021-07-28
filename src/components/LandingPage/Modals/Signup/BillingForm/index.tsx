@@ -1,13 +1,10 @@
 import { useState } from 'react'
 import styled from '@emotion/styled'
-import { Form, Typography, Button } from 'antd'
+import { Form, Button } from 'antd'
 
-import ScheduleToggle from 'src/components/LandingPage/Pricing/ScheduleToggle'
 import StripeWrapper from './StripeWrapper'
 import StripeElements from './StripeElements'
 import Invoice from './Invoice'
-
-const { Text } = Typography
 
 const StyledForm = styled(Form)`
   svg {
@@ -55,24 +52,18 @@ const validateMessages = {
   },
 }
 
-const Beside = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-`
-
 const Disclaimer = styled.div`
   text-align: center;
   font-size: 12px;
 `
 
 type BillingFormProps = {
+  plan: 'entry' | 'premium'
   accountInfo: any
+  schedule: 'monthly' | 'yearly'
 }
 
-const BillingForm = ({ accountInfo }: BillingFormProps) => {
-  const [term, setTerm] = useState('annually')
+const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
   const [stripeError, setStripeError] = useState(null)
   const [form] = Form.useForm()
 
@@ -87,17 +78,12 @@ const BillingForm = ({ accountInfo }: BillingFormProps) => {
       validateMessages={validateMessages}
       validateTrigger="onSubmit"
     >
-      <Beside>
-        <Text>Billing period:</Text>
-        {/* @ts-ignore */}
-        <ScheduleToggle term={term} setTerm={setTerm} />
-      </Beside>
       <StripeElements setStripeError={setStripeError} />
-      <Invoice term={term} />
+      <Invoice schedule={schedule} plan={plan} />
 
       <Form.Item style={{ marginBottom: 6, marginTop: 16 }}>
         <Button type="primary" htmlType="submit" block>
-          Sign up for free trial
+          Try it free for 7 days
         </Button>
       </Form.Item>
       <Disclaimer>No lock-in contract, you can cancel anytime.</Disclaimer>

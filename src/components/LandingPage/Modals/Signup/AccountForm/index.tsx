@@ -20,6 +20,9 @@ const StyledForm = styled(Form)`
   .ant-select-selector {
     height: 52px !important;
   }
+  .ant-select-selection-placeholder {
+    line-height: 52px !important;
+  }
   .ant-select-selection-item > div {
     height: 52px;
     display: flex;
