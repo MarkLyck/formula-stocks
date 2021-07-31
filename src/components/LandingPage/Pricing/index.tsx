@@ -139,7 +139,7 @@ const Pricing = ({ showSignup }: any) => {
               Large portfolios
             </SmallFeatureCard>
           </Tooltip>
-          <PriceTag>Contact us</PriceTag>
+          <PriceTag>Get a quote</PriceTag>
           <Button size="large" style={{ fontWeight: 'bold' }} href="mailto:mark@formulastocks.com">
             Send email
           </Button>

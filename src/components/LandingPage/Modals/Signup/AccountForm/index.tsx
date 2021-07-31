@@ -20,6 +20,9 @@ const StyledForm = styled(Form)`
   .ant-select-selector {
     height: 52px !important;
   }
+  .ant-select-selection-placeholder {
+    line-height: 52px !important;
+  }
   .ant-select-selection-item > div {
     height: 52px;
     display: flex;
@@ -34,13 +37,6 @@ const StyledForm = styled(Form)`
     svg {
       color: ${(props: any) => props.theme.palette.primary[600]};
     }
-  }
-
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px 2px;
   }
 `
 
