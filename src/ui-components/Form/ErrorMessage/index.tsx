@@ -6,8 +6,11 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${(props: any) => props.theme.colors.error};
+  color: ${(p: any) => p.theme.palette.danger[600]};
+  background: ${(p: any) => p.theme.palette.danger[200]};
   margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 4px;
 
   svg {
     margin-right: 8px;
