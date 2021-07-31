@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import styled from '@emotion/styled'
 import { Form, Button, Input } from 'antd'
+import { useRouter } from 'next/router'
 import { CardNumberElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import { useMutation } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import { Alert } from 'src/ui-components'
 import { USER_SIGNUP, USER_LOGIN } from 'src/common/queries'
 import StripeWrapper from './StripeWrapper'
 import StripeElements from './StripeElements'
@@ -52,6 +54,12 @@ const Disclaimer = styled.div`
   font-size: 12px;
 `
 
+const SuccessAlert = styled(Alert)`
+  padding: 14px;
+  width: 100%;
+  justify-content: center;
+`
+
 type BillingFormProps = {
   plan: 'entry' | 'premium'
   accountInfo: any
@@ -61,6 +69,7 @@ type BillingFormProps = {
 const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
   const stripe: any = useStripe()
   const elements: any = useElements()
+  const router = useRouter()
   const [stripeError, setStripeError] = useState(null)
   const [success, setSuccess] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -69,7 +78,6 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
   const [userLogin] = useMutation(USER_LOGIN)
 
   const handleSubmit = async (values: any) => {
-    console.log('🔈 ~ values', values)
     // Don't bother trying if there is a stripe error.
     if (stripeError) return
 
@@ -89,9 +97,11 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
           userSignup,
           userLogin,
           plan,
+          name: values.name,
           accountInfo,
           stripeToken: payload.token,
           setSuccess,
+          router,
         })
       }
     })
@@ -115,9 +125,13 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
       <Invoice schedule={schedule} plan={plan} />
 
       <Form.Item style={{ marginBottom: 6, marginTop: 16 }}>
-        <Button type="primary" htmlType="submit" block loading={loading}>
-          Try it free for 7 days
-        </Button>
+        {success ? (
+          <SuccessAlert type="success" message="successfully signed up" />
+        ) : (
+          <Button type="primary" htmlType="submit" block loading={loading}>
+            Try it free for 7 days
+          </Button>
+        )}
       </Form.Item>
       <Disclaimer>No lock-in contract, you can cancel anytime.</Disclaimer>
     </StyledForm>

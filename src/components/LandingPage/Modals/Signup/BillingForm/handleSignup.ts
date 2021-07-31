@@ -5,11 +5,13 @@ const handleSignup = async ({
   userLogin,
   accountInfo,
   plan,
+  name,
   schedule,
   coupon,
   setSuccess,
   stripeToken,
   setSignupError,
+  router,
 }: any) => {
   setSignupError(null)
   try {
@@ -17,12 +19,12 @@ const handleSignup = async ({
       variables: {
         plan,
         billingInterval: schedule,
-        firstName: accountInfo.name.split(' ')[0],
-        lastName: accountInfo.name.split(' ').slice(1).join(' '),
-        coupon,
+        firstName: name.split(' ')[0],
+        lastName: name.split(' ').slice(1).join(' '),
         email: accountInfo.email,
         password: accountInfo.password,
         stripeToken,
+        coupon,
       },
     })
 
@@ -37,7 +39,7 @@ const handleSignup = async ({
     setSuccess()
 
     // shortly show the signup success message before sending them to the dashboard
-    setTimeout(() => Router.push('/dashboard/stocktip'), 200)
+    setTimeout(() => router.push('/dashboard/stocktip'), 200)
   } catch (error) {
     let errorMessage = error.message
 
