@@ -1,5 +1,27 @@
 # Changelog
 
+<a name="1.0.287"></a>
+## 1.0.287 (2021-07-31)
+
+### Added
+
+- ✨ add success state and router redirect on success [[3025498](https://github.com/MarkLyck/formula-stocks/commit/30254985ca2183581078024fa42e63219412b450)]
+- ✨ add name field [[53cf53c](https://github.com/MarkLyck/formula-stocks/commit/53cf53cdc3c28404de9c13a521a858c464b4c096)]
+- ✨ improvements [[ca11e5b](https://github.com/MarkLyck/formula-stocks/commit/ca11e5bfa0fac18fb172d6f4c1e7ff4b608f8f00)]
+- ✨ signup progress [[0dde723](https://github.com/MarkLyck/formula-stocks/commit/0dde7234d4986a0a207469fe67de612615b07d83)]
+- ✨ signup flow complete [[fd27f33](https://github.com/MarkLyck/formula-stocks/commit/fd27f3301a9fd0bdd8e5927821cc5463cd006b39)]
+- ✨ better signup flow [[7ac963b](https://github.com/MarkLyck/formula-stocks/commit/7ac963b413294c80b245a5e8c8227ad3bb0b0ceb)]
+- ✨ schedule picker [[a1afb7a](https://github.com/MarkLyck/formula-stocks/commit/a1afb7a78f7a903eeefdf6f185eadafa0a937f71)]
+- ✨ progress [[b931be1](https://github.com/MarkLyck/formula-stocks/commit/b931be1554df244fbf7ec2d365d52c4adf51b710)]
+
+### Miscellaneous
+
+-  Merge pull request [#372](https://github.com/MarkLyck/formula-stocks/issues/372) from MarkLyck/signup-modal [[e03e6e6](https://github.com/MarkLyck/formula-stocks/commit/e03e6e657cfa59655ff58bb4088831eaad64e078)]
+- 📝 version bump to v1.0.287 [[43e6761](https://github.com/MarkLyck/formula-stocks/commit/43e67612799729642abedb0cd94664663979eceb)]
+- 📝 generated changelog [[651eeee](https://github.com/MarkLyck/formula-stocks/commit/651eeee32ef8bb347d4f0628110d5531739509f8)]
+- 🏷️ fix ts issues [[ff58d3a](https://github.com/MarkLyck/formula-stocks/commit/ff58d3aa689e8f3607756db4a2a55fa8a85ef30d)]
+
+
 <a name="1.0.286"></a>
 ## 1.0.286 (2021-07-31)
 
