@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import styled from '@emotion/styled'
-import { Form, Button } from 'antd'
+import { Form, Button, Input } from 'antd'
 import { CardNumberElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import { useMutation } from '@apollo/client'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { USER_SIGNUP, USER_LOGIN } from 'src/common/queries'
 import StripeWrapper from './StripeWrapper'
@@ -43,10 +44,7 @@ const StyledForm = styled(Form)`
 `
 
 const validateMessages = {
-  required: 'Please input your email',
-  types: {
-    email: 'This is not a valid email',
-  },
+  required: 'Please input your first and last name',
 }
 
 const Disclaimer = styled.div`
@@ -71,6 +69,7 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
   const [userLogin] = useMutation(USER_LOGIN)
 
   const handleSubmit = async (values: any) => {
+    console.log('🔈 ~ values', values)
     // Don't bother trying if there is a stripe error.
     if (stripeError) return
 
@@ -109,6 +108,9 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
       validateMessages={validateMessages}
       validateTrigger="onSubmit"
     >
+      <Form.Item name="name" rules={[{ required: true }]} style={{ marginBottom: 16 }}>
+        <Input prefix={<FontAwesomeIcon icon={['fad', 'user']} />} placeholder="First and last name" />
+      </Form.Item>
       <StripeElements setStripeError={setStripeError} stripeError={stripeError} />
       <Invoice schedule={schedule} plan={plan} />
 

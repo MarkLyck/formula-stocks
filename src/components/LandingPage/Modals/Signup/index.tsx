@@ -33,6 +33,7 @@ const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
   if (page === 1) title = 'Choose a plan'
   if (page === 2) title = 'Select payment schedule'
   if (page === 3) title = 'Create account'
+  if (page === 4) title = 'Payment details'
 
   const nextPage = () => setPage(page + 1)
 
