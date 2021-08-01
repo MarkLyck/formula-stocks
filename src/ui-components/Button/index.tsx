@@ -45,6 +45,8 @@ const FilledButton = styled.button`
   font-size: ${(p: any) => getButtonFontSize(p.size)};
   border-radius: 4px;
   outline: none;
+  display: flex;
+  align-items: center;
 
   &:hover {
     cursor: pointer;

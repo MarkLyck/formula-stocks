@@ -33,28 +33,6 @@ export const USER_SIGNUP = gql`
   }
 `
 
-// {
-//     "data": null,
-//     "errors": [
-//         {
-//             "message": "You don't have permission to perform this operation",
-//             "locations": [
-//                 {
-//                     "line": 2,
-//                     "column": 3
-//                 }
-//             ],
-//             "path": [
-//                 "userSignUpWithPassword"
-//             ],
-//             "code": "NotAuthorizedError",
-//             "details": {
-//                 "permissions": "You don't have permission to perform this operation"
-//             }
-//         }
-//     ]
-// }
-
 // export const USER_SIGNUP_MANUAL = gql`
 //   mutation userSignUpWithPassword(
 //     $email: String!
@@ -95,6 +73,12 @@ export const CURRENT_USER_QUERY = gql`
       intros
       type
       phoneNumber
+      roles {
+        items {
+          name
+          id
+        }
+      }
       stripe {
         subscription
         customer

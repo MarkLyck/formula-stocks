@@ -1,7 +1,8 @@
 import { Select } from 'antd'
+import { useQuery } from '@apollo/client'
 import styled from '@emotion/styled'
 import useStore from 'src/lib/useStore'
-
+import { CURRENT_USER_QUERY } from 'src/common/queries'
 const { Option } = Select
 
 const Container = styled.div`
@@ -9,7 +10,13 @@ const Container = styled.div`
 `
 
 const PlanSelect = () => {
+  const { data } = useQuery(CURRENT_USER_QUERY)
   const { plan, setPlan } = useStore((state: any) => ({ setPlan: state.setPlan, plan: state.plan }))
+
+  const userRoles = data?.user?.roles.items || []
+  const hasAdmin = userRoles.filter((role: any) => role.name === 'admin').length === 1
+
+  if (!hasAdmin) return null
 
   return (
     <Container>

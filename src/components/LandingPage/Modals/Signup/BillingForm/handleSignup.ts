@@ -40,7 +40,7 @@ const handleSignup = async ({
     setSuccess()
 
     // shortly show the signup success message before sending them to the dashboard
-    setTimeout(() => router.push('/dashboard/stocktip'), 200)
+    setTimeout(() => router.push('/dashboard/portfolio'), 200)
   } catch (error) {
     let errorMessage = error.message
 
