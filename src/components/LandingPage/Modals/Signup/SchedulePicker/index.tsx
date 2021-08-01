@@ -11,6 +11,11 @@ const ScheduleContainer = styled.div`
   background: ${(p: any) => p.theme.palette.neutral[100]};
   padding: 20px;
   border: 2px solid ${(p: any) => (p.selected ? p.theme.palette.primary[600] : p.theme.palette.border)};
+
+  &:hover {
+    cursor: pointer;
+    border: 2px solid ${(p: any) => p.theme.palette.primary[500]};
+  }
 `
 
 const Beside = styled.div`

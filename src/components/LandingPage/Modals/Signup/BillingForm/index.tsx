@@ -6,7 +6,7 @@ import { CardNumberElement, useStripe, useElements } from '@stripe/react-stripe-
 import { useMutation } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { Alert } from 'src/ui-components'
+import { Alert, ErrorMessage } from 'src/ui-components'
 import { USER_SIGNUP, USER_LOGIN } from 'src/common/queries'
 import StripeWrapper from './StripeWrapper'
 import StripeElements from './StripeElements'
@@ -71,6 +71,7 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
   const elements: any = useElements()
   const router = useRouter()
   const [stripeError, setStripeError] = useState(null)
+  const [signupError, setSignupError] = useState(null)
   const [success, setSuccess] = useState(false)
   const [loading, setLoading] = useState(false)
   const [form] = Form.useForm()
@@ -99,9 +100,11 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
           plan,
           name: values.name,
           accountInfo,
+          billingPeriod: schedule,
           stripeToken: payload.token,
           setSuccess,
           router,
+          setSignupError,
         })
       }
     })
@@ -118,6 +121,7 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
       validateMessages={validateMessages}
       validateTrigger="onSubmit"
     >
+      {signupError && <ErrorMessage>{signupError}</ErrorMessage>}
       <Form.Item name="name" rules={[{ required: true }]} style={{ marginBottom: 16 }}>
         <Input prefix={<FontAwesomeIcon icon={['fad', 'user']} />} placeholder="First and last name" />
       </Form.Item>
