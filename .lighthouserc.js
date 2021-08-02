@@ -56,7 +56,8 @@ module.exports = {
         'unused-javascript': ['error', { maxLength: 7 }],
         'uses-http2': ['error', { minScore: 0.7 }],
         'uses-passive-event-listeners': 'off',
-        'ses-long-cache-ttl': ['error', { minScore: 0.5 }],
+        'ses-long-cache-ttl': ['error', { minScore: 0 }],
+        'uses-long-cache-ttl': ['error', { minScore: 0 }],
         // FIX THIS !!!
         'content-width': ['error', { minScore: 0 }],
         // FIX THIS !!!
