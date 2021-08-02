@@ -12,7 +12,7 @@ const Container = styled.div`
 
   svg {
     margin: 16px 0;
-    color: ${(props: any) => props.theme.colors.scale.perfect};
+    color: ${(p: any) => p.theme.palette.success[600]};
     font-size: 2rem;
   }
 `

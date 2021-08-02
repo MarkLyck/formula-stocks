@@ -9,7 +9,7 @@ import Statistics from './Statistics'
 import UpdatePaymentDetails from './UpdatePaymentDetails'
 
 const Account = () => {
-  const { data } = useQuery(CURRENT_USER_QUERY)
+  const { data, loading: userLoading } = useQuery(CURRENT_USER_QUERY)
   const [updateUser] = useMutation(USER_UPDATE)
   const { 'isTablet-': isTabletMinus } = useBreakpoint()
 
@@ -30,7 +30,12 @@ const Account = () => {
         <UpdatePaymentDetails customerID={user?.stripe?.customerID} />
       </Col>
       <Col span={colSpan}>
-        <ManageSubscription subscription={user?.stripe?.subscription} updateUser={updateUser} user={user} />
+        <ManageSubscription
+          userLoading={userLoading}
+          subscription={user?.stripe?.subscription}
+          updateUser={updateUser}
+          user={user}
+        />
       </Col>
     </Row>
   )
