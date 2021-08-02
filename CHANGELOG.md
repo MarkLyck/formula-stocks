@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.292"></a>
+## 1.0.292 (2021-08-02)
+
+### Added
+
+- ✨ account improvements and signup complete [[c6e3842](https://github.com/MarkLyck/formula-stocks/commit/c6e38427fc9779ba7405170e5a4b88d25b23ec99)]
+- ✨ improvements [[404e57f](https://github.com/MarkLyck/formula-stocks/commit/404e57fc505d540bbf93af28428043ff83d2ac69)]
+
+### Fixed
+
+- 💚 fix lh [[805ded6](https://github.com/MarkLyck/formula-stocks/commit/805ded62e877dba45a0d1fd1e6cdbd95b44d74c8)]
+- 💚 fix lighthouse [[c2b7df6](https://github.com/MarkLyck/formula-stocks/commit/c2b7df68b50e574bbfa475d42be2783c67d296b2)]
+- 💚 silence lighthouse [[bf12d0c](https://github.com/MarkLyck/formula-stocks/commit/bf12d0cb713ac6a54fcf272eeede5c38de438dec)]
+
+### Miscellaneous
+
+-  Merge pull request [#378](https://github.com/MarkLyck/formula-stocks/issues/378) from MarkLyck/signup-modal [[011444d](https://github.com/MarkLyck/formula-stocks/commit/011444d1ede36ea472167ed3f14844ad7883016e)]
+- 📝 version bump to v1.0.292 [[ffa16c2](https://github.com/MarkLyck/formula-stocks/commit/ffa16c244648d49b10c8c9d53da327713f461d4a)]
+- 📝 generated changelog [[cadf162](https://github.com/MarkLyck/formula-stocks/commit/cadf162a368fb6070a652e9caaa4c8563f56fcbb)]
+- 🚩 turn on stripe live mode [[1663ae6](https://github.com/MarkLyck/formula-stocks/commit/1663ae6fb9f58bdf2850ec430dfdfc9c41185bbd)]
+- 🏷️ fix ts [[1b611db](https://github.com/MarkLyck/formula-stocks/commit/1b611dbbcb0de2d41a23cdb7d682e5efa30bc1ab)]
+-  signup working [[3e35545](https://github.com/MarkLyck/formula-stocks/commit/3e355455c0d6c9b14dd7dc28a194ea1e66584eb2)]
+
+
 <a name="1.0.291"></a>
 ## 1.0.291 (2021-08-02)
 
