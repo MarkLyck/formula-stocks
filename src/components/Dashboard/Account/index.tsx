@@ -3,7 +3,6 @@ import { Row, Col } from 'antd'
 import useBreakpoint from '@w11r/use-breakpoint'
 
 import { CURRENT_USER_QUERY, USER_UPDATE } from 'src/common/queries'
-import { DashboardHeader } from 'src/ui-components'
 import AccountHeader from './Header'
 import ManageSubscription from './ManageSubscription'
 import Statistics from './Statistics'
