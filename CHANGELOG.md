@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.290"></a>
+## 1.0.290 (2021-08-02)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.290 [[8d1c6c0](https://github.com/MarkLyck/formula-stocks/commit/8d1c6c085e60d8a375f597a82be6c74ce974c3cb)]
+
+
+<a name="1.0.289"></a>
+## 1.0.289 (2021-08-02)
+
+### Changed
+
+- ⬆️ Update dependency @apollo/client to v3.4.2 [[fb8ce51](https://github.com/MarkLyck/formula-stocks/commit/fb8ce51f922c71e85b953a9b2b6a3eaa99431501)]
+- ⬆️ Update dependency antd to v4.16.10 [[eaf3501](https://github.com/MarkLyck/formula-stocks/commit/eaf35018d12d5f38203d395b6b310176b11f0e46)]
+
+### Miscellaneous
+
+-  Merge pull request [#380](https://github.com/MarkLyck/formula-stocks/issues/380) from MarkLyck/renovate/apollo-graphql-packages [[f88cc87](https://github.com/MarkLyck/formula-stocks/commit/f88cc870ce48a08d59b17232a3d5c8a6bf18e985)]
+-  Merge pull request [#379](https://github.com/MarkLyck/formula-stocks/issues/379) from MarkLyck/renovate/antd-4.x [[8777ed2](https://github.com/MarkLyck/formula-stocks/commit/8777ed2a1b33edccc43e1746273be2b9cb850f00)]
+- 📝 version bump to v1.0.289 [[83acc76](https://github.com/MarkLyck/formula-stocks/commit/83acc768c166ee75be5ba3a0b5e06a1e0044ae20)]
+- 📝 generated changelog [[1e24dd7](https://github.com/MarkLyck/formula-stocks/commit/1e24dd71525d54ab05d655c767a6d042c04c8a3f)]
+
+
 <a name="1.0.288"></a>
 ## 1.0.288 (2021-07-31)
 
