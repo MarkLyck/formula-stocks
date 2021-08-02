@@ -25,12 +25,6 @@ const CancelOptions = ({ setPage }: CancelOptionsPropsType) => {
         <Button block type="default" onClick={() => handleClick('UNHAPPY_RETURNS')}>
           I'm not satisfied with the returns
         </Button>
-        <Button block type="default" onClick={() => handleClick('WANT_MORE_SIGNALS')}>
-          I want more signals
-        </Button>
-        <Button block type="default" onClick={() => handleClick('NO_TRUST')}>
-          I don't trust it
-        </Button>
         <Button block type="dashed" onClick={() => handleClick('OTHER')}>
           Other
         </Button>

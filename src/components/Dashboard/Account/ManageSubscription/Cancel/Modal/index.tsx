@@ -7,8 +7,7 @@ import { CANCEL_SUBSCRIPTION, UPDATE_SUBSCRIPTION } from '~/common/queries'
 import CancelOptions from './CancelOptions'
 import TooExpensive from './TooExpensive'
 import UnhappyReturns from './UnhappyReturns'
-import MoreSignals from './MoreSignals'
-import NoTrust from './NoTrust'
+
 import Other from './Other'
 // import Error from './Error'
 // import Success from './Success'
@@ -82,10 +81,6 @@ const CancelModal = ({ open, onModalDismiss, user, subscription, updateUser }: C
         applyCouponLoading={applyCouponLoading}
       />
     ),
-    WANT_MORE_SIGNALS: (
-      <MoreSignals cancelLoading={cancelLoading} onCancel={onCancel} onModalDismiss={onModalDismiss} />
-    ),
-    NO_TRUST: <NoTrust onCancel={onCancel} cancelLoading={cancelLoading} onModalDismiss={onModalDismiss} />,
     OTHER: (
       <Other
         setCancelReason={setCancelReason}
@@ -103,8 +98,6 @@ const CancelModal = ({ open, onModalDismiss, user, subscription, updateUser }: C
     OPTIONS: "We're sorry to see you go!",
     TOO_EXPENSIVE: 'We can help with that!',
     UNHAPPY_RETURNS: "It's a little early...",
-    WANT_MORE_SIGNALS: 'more signals?',
-    NO_TRUST: 'How can we fix that?',
     OTHER: 'Please tell us!',
     ERROR: 'Whoops...',
     SUCCESS: "We're sorry to see you go!",

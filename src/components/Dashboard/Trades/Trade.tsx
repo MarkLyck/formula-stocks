@@ -175,8 +175,8 @@ const Trade = ({ trade, colSpan }: TradeProps) => {
           {trade.action === 'BUY' && <SmallDivider />}
           <Link href={`/dashboard/reports/${trade.ticker}`}>
             <Button block>
-              <FontAwesomeIcon icon={['fad', 'file-chart-line']} style={{ marginRight: 8 }} />
-              Full Report
+              <FontAwesomeIcon icon={['fad', 'tachometer-alt']} style={{ marginRight: 8 }} />
+              AI Report
             </Button>
           </Link>
         </Space>

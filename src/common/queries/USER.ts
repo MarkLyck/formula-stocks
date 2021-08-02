@@ -5,11 +5,13 @@ import { AUTH_PROFILE_ID } from 'src/common/constants'
 export const USER_SIGNUP = gql`
   mutation userSignUpWithPassword(
     $email: String!
-    $billingInterval: String!
+    $plan: String!
+    $billingPeriod: String!
     $password: String!
     $firstName: String!
     $lastName: String!
     $coupon: String
+    $country: String
     $stripeToken: JSON!
   ) {
     userSignUpWithPassword(
@@ -17,9 +19,11 @@ export const USER_SIGNUP = gql`
       password: $password
       user: {
         email: $email
-        billingInterval: $billingInterval
+        plan: $plan
+        billingPeriod: $billingPeriod
         firstName: $firstName
         lastName: $lastName
+        country: $country
         coupon: $coupon
         stripe: { create: { token: $stripeToken } }
       }
@@ -69,6 +73,12 @@ export const CURRENT_USER_QUERY = gql`
       intros
       type
       phoneNumber
+      roles {
+        items {
+          name
+          id
+        }
+      }
       stripe {
         subscription
         customer

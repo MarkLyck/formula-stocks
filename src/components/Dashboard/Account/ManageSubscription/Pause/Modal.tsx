@@ -43,12 +43,11 @@ const PauseModal = ({ open, onModalDismiss, subscription }: PauseModalType) => {
     <Modal
       title="Pause subscription"
       visible={open}
-      onOk={() => {}}
       onCancel={onModalDismiss}
       width={600}
       footer={[
-        <Button key="dismiss" onClick={onModalDismiss}>
-          Dismiss
+        <Button key="close-modal-btn" onClick={onModalDismiss}>
+          Close
         </Button>,
       ]}
     >

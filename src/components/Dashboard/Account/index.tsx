@@ -3,13 +3,13 @@ import { Row, Col } from 'antd'
 import useBreakpoint from '@w11r/use-breakpoint'
 
 import { CURRENT_USER_QUERY, USER_UPDATE } from 'src/common/queries'
-import { DashboardHeader } from 'src/ui-components'
+import AccountHeader from './Header'
 import ManageSubscription from './ManageSubscription'
 import Statistics from './Statistics'
 import UpdatePaymentDetails from './UpdatePaymentDetails'
 
 const Account = () => {
-  const { data } = useQuery(CURRENT_USER_QUERY)
+  const { data, loading: userLoading } = useQuery(CURRENT_USER_QUERY)
   const [updateUser] = useMutation(USER_UPDATE)
   const { 'isTablet-': isTabletMinus } = useBreakpoint()
 
@@ -20,16 +20,22 @@ const Account = () => {
   return (
     <Row gutter={[16, 16]}>
       <Col span={24}>
-        <DashboardHeader title="My Account" showExchangeStatuses={false} />
+        <AccountHeader user={user} />
+        {/* <DashboardHeader title="My Account" showExchangeStatuses={false} /> */}
       </Col>
       <Col span={24}>
         <Statistics />
       </Col>
       <Col span={colSpan}>
-        <UpdatePaymentDetails customerID={user?.stripe.customerID} />
+        <UpdatePaymentDetails customerID={user?.stripe?.customerID} />
       </Col>
       <Col span={colSpan}>
-        <ManageSubscription subscription={user?.stripe.subscription} updateUser={updateUser} user={user} />
+        <ManageSubscription
+          userLoading={userLoading}
+          subscription={user?.stripe?.subscription}
+          updateUser={updateUser}
+          user={user}
+        />
       </Col>
     </Row>
   )
