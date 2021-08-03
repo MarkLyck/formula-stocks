@@ -25,7 +25,7 @@ const TooExpensive = ({ onCancel, cancelLoading, onApplyDiscount, applyCouponLoa
 
   return (
     <div>
-      <Title>Weekly Stocktip is built to pay for itself in returns & dividends many times over.</Title>
+      <Title>Formula Stocks is built to pay for itself in returns & dividends many times over.</Title>
       <Paragraph>Please see our returns calculator to see how the system pays for itself.</Paragraph>
       {!calculatorVisible ? (
         <CalculatorButton

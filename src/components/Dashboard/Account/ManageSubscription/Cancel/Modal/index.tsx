@@ -9,8 +9,8 @@ import TooExpensive from './TooExpensive'
 import UnhappyReturns from './UnhappyReturns'
 
 import Other from './Other'
-// import Error from './Error'
-// import Success from './Success'
+import Success from './Success'
+import Error from './Error'
 // import DiscountSuccess from './DiscountSuccess'
 
 type onCancelType = () => void
@@ -46,6 +46,11 @@ const CancelModal = ({ open, onModalDismiss, user, subscription, updateUser }: C
 
   if (applyCouponError) {
     console.error('applyCouponError', applyCouponError)
+  }
+
+  const closeModal = () => {
+    setPage('OPTIONS')
+    onModalDismiss()
   }
 
   const onCancel: onCancelType = async () => {
@@ -89,8 +94,8 @@ const CancelModal = ({ open, onModalDismiss, user, subscription, updateUser }: C
         onCancel={onCancel}
       />
     ),
-    // ERROR: <Error onModalDismiss={onModalDismiss} />,
-    // SUCCESS: <Success cancelReason={cancelReason} onModalDismiss={onModalDismiss} />,
+    SUCCESS: <Success cancelReason={cancelReason} onModalDismiss={onModalDismiss} />,
+    ERROR: <Error onModalDismiss={onModalDismiss} />,
     // DISCOUNT_SUCCESS: <DiscountSuccess onModalDismiss={onModalDismiss} />,
   }
 
@@ -110,10 +115,10 @@ const CancelModal = ({ open, onModalDismiss, user, subscription, updateUser }: C
       title={titleMap[page]}
       visible={open}
       onOk={() => {}}
-      onCancel={onModalDismiss}
+      onCancel={closeModal}
       width={page === 'OPTIONS' || page === 'OTHER' || page === 'SUCCESS' || page === 'DISCOUNT_SUCCESS' ? 500 : 800}
       footer={[
-        <Button key="dismiss" onClick={onModalDismiss}>
+        <Button key="dismiss" onClick={closeModal}>
           Dismiss
         </Button>,
       ]}

@@ -74,8 +74,8 @@ export const Statistic = ({ label, value, notAvailable, prefix = '', suffix = ''
 )
 
 export const NotNeededToUseService = ({
-  title = "You don't need to know any of this information to use Weekly Stocktip!",
-  text = "We've added this additional information for those who prefer to dig into the numbers and do their own analysis. All statistics & Financial reports for this stock have already been analyzed and taken into account for all Weekly Stocktip Signals",
+  title = "You don't need to know any of this information to use Formula Stocks!",
+  text = "We've added this additional information for those who prefer to dig into the numbers and do their own analysis. All statistics & Financial reports for this stock have already been analyzed and taken into account for all Formula Stocks Signals",
 }) => (
   <InfoBox>
     <FontAwesomeIcon icon={['far', 'info-circle']} />

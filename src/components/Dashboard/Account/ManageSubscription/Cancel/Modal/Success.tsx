@@ -31,9 +31,7 @@ const Success = ({ cancelReason, onModalDismiss }: { cancelReason: string; onMod
         We publish all of our SELL signals publicly, so you can always check back to our home page to see what we ended
         up selling that stock pick for.
       </Paragraph>
-      <Paragraph>
-        From the team at Weekly Stocktip, we wish you good luck in your future investment endeavors!
-      </Paragraph>
+      <Paragraph>From the team at Formula Stocks, we wish you good luck in your future investment endeavors!</Paragraph>
       <Button onClick={onModalDismiss}>Return to My Account</Button>
     </Container>
   )
