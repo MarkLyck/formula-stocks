@@ -14,6 +14,7 @@ const Account = () => {
   const { 'isTablet-': isTabletMinus } = useBreakpoint()
 
   const user = data?.user
+  console.log('🔈 ~ user', user)
 
   const colSpan = isTabletMinus ? 24 : 12
 

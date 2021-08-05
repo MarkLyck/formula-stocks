@@ -10,8 +10,8 @@ import UnhappyReturns from './UnhappyReturns'
 
 import Other from './Other'
 import Success from './Success'
+import DiscountSuccess from './DiscountSuccess'
 import Error from './Error'
-// import DiscountSuccess from './DiscountSuccess'
 
 type onCancelType = () => void
 
@@ -96,13 +96,12 @@ const CancelModal = ({ open, onModalDismiss, user, subscription, updateUser }: C
     ),
     SUCCESS: <Success cancelReason={cancelReason} onModalDismiss={onModalDismiss} />,
     ERROR: <Error onModalDismiss={onModalDismiss} />,
-    // DISCOUNT_SUCCESS: <DiscountSuccess onModalDismiss={onModalDismiss} />,
+    DISCOUNT_SUCCESS: <DiscountSuccess onModalDismiss={onModalDismiss} />,
   }
 
   const titleMap = {
     OPTIONS: "We're sorry to see you go!",
-    TOO_EXPENSIVE: 'We can help with that!',
-    UNHAPPY_RETURNS: "It's a little early...",
+    TOO_EXPENSIVE: 'We can help with that.',
     OTHER: 'Please tell us!',
     ERROR: 'Whoops...',
     SUCCESS: "We're sorry to see you go!",
