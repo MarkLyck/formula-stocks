@@ -1,5 +1,53 @@
 # Changelog
 
+<a name="1.0.296"></a>
+## 1.0.296 (2021-08-06)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.296 [[6aaa95d](https://github.com/MarkLyck/formula-stocks/commit/6aaa95d99562b3dc9a23766e967fb5b1d572cd45)]
+
+
+<a name="1.0.295"></a>
+## 1.0.295 (2021-08-06)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.295 [[d894ebd](https://github.com/MarkLyck/formula-stocks/commit/d894ebdc5de4f26a2c9a241ef05043e7b4b21f52)]
+
+
+<a name="1.0.294"></a>
+## 1.0.294 (2021-08-06)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.294 [[bf212b5](https://github.com/MarkLyck/formula-stocks/commit/bf212b522c14cd3ca767f0fdcd2984402b864024)]
+
+
+<a name="1.0.293"></a>
+## 1.0.293 (2021-08-06)
+
+### Changed
+
+- ⬆️ Update dependency storybook-addon-apollo-client to v4.0.9 [[3c1b844](https://github.com/MarkLyck/formula-stocks/commit/3c1b84466352072ce5fa242030b69c1831337a4a)]
+- ⬆️ Update dependency gitmoji-cli to v4.5.0 [[d331be9](https://github.com/MarkLyck/formula-stocks/commit/d331be9caed570f8d40a70848ade933fb24db8a2)]
+- ⬆️ Update dependency @apollo/client to v3.4.5 [[c5f115d](https://github.com/MarkLyck/formula-stocks/commit/c5f115daed084fc581fe4e764bd39e5d8dd17af5)]
+- ⬆️ Update Font Awesome [[f9f8d9f](https://github.com/MarkLyck/formula-stocks/commit/f9f8d9f9c71a8f15d14a69885d157fe219444e23)]
+- ⬆️ Update dependency @types/node to v14.17.9 [[cbb93e2](https://github.com/MarkLyck/formula-stocks/commit/cbb93e2ef8e65f09b97cd268f3a08a5a998bd259)]
+- ⬆️ Update dependency @types/lodash to v4.14.172 [[a6472fb](https://github.com/MarkLyck/formula-stocks/commit/a6472fbbd6f3b39fc0c466e1ec447d0e17aa0471)]
+
+### Miscellaneous
+
+-  Merge pull request [#389](https://github.com/MarkLyck/formula-stocks/issues/389) from MarkLyck/renovate/storybook-addon-apollo-client-4.x [[210ced9](https://github.com/MarkLyck/formula-stocks/commit/210ced9a676fba90d466922a55f1010f58b5e6b7)]
+-  Merge pull request [#386](https://github.com/MarkLyck/formula-stocks/issues/386) from MarkLyck/renovate/gitmoji-cli-4.x [[b219f5b](https://github.com/MarkLyck/formula-stocks/commit/b219f5b020c3684ab155fb9195e91e5220fa84c9)]
+-  Merge pull request [#384](https://github.com/MarkLyck/formula-stocks/issues/384) from MarkLyck/renovate/lodash-4.x [[671b8bf](https://github.com/MarkLyck/formula-stocks/commit/671b8bf26617c5856fdb97ff27eec4bd171dc56d)]
+-  Merge pull request [#387](https://github.com/MarkLyck/formula-stocks/issues/387) from MarkLyck/renovate/node-14.x [[5e734c7](https://github.com/MarkLyck/formula-stocks/commit/5e734c7ba67f2398cf4cd629a116610eda42ae81)]
+-  Merge pull request [#385](https://github.com/MarkLyck/formula-stocks/issues/385) from MarkLyck/renovate/font-awesome [[3db866b](https://github.com/MarkLyck/formula-stocks/commit/3db866bec954f8600f06c0cdb76ca4559e19c29c)]
+-  Merge pull request [#381](https://github.com/MarkLyck/formula-stocks/issues/381) from MarkLyck/renovate/apollo-graphql-packages [[5b09f43](https://github.com/MarkLyck/formula-stocks/commit/5b09f438ee423ccf637f2e8eaf90b73344459350)]
+- 📝 version bump to v1.0.293 [[7751d29](https://github.com/MarkLyck/formula-stocks/commit/7751d29eacb2345b39523cb522be85d83c8b4793)]
+- 📝 generated changelog [[11a8844](https://github.com/MarkLyck/formula-stocks/commit/11a8844a9ce3097603d8377b4e8be20baf249885)]
+
+
 <a name="1.0.292"></a>
 ## 1.0.292 (2021-08-02)
 
