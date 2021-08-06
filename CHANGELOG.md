@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.298"></a>
+## 1.0.298 (2021-08-06)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.298 [[31dd9d9](https://github.com/MarkLyck/formula-stocks/commit/31dd9d94814b9be319b645916aa68f2cffaac821)]
+
+
+<a name="1.0.297"></a>
+## 1.0.297 (2021-08-06)
+
+### Changed
+
+- ⬆️ Update dependency @types/react to v17.0.16 [[a6b1df2](https://github.com/MarkLyck/formula-stocks/commit/a6b1df2a99ed043ccca529755a78e68dc679e8ac)]
+- ⬆️ Update dependency @ant-design/charts to v1.2.5 [[8557b4e](https://github.com/MarkLyck/formula-stocks/commit/8557b4e5ca784ffaba723663285cee6f1d651817)]
+
+### Miscellaneous
+
+-  Merge pull request [#388](https://github.com/MarkLyck/formula-stocks/issues/388) from MarkLyck/renovate/react-17.x [[bf66b4e](https://github.com/MarkLyck/formula-stocks/commit/bf66b4e7c8bdf721e9733a35e1d24c60368cedd0)]
+-  Merge pull request [#382](https://github.com/MarkLyck/formula-stocks/issues/382) from MarkLyck/renovate/ant-design-charts-1.x [[31bb114](https://github.com/MarkLyck/formula-stocks/commit/31bb1141568cac6d4d551f179baf92df10813fb0)]
+- 📝 version bump to v1.0.297 [[8e9c5af](https://github.com/MarkLyck/formula-stocks/commit/8e9c5af259b9a333de1a7c6ec7b5e36113ea707d)]
+- 📝 generated changelog [[974275d](https://github.com/MarkLyck/formula-stocks/commit/974275d7e7d1ceba95301b3315fcaf08414fa4f1)]
+
+
 <a name="1.0.296"></a>
 ## 1.0.296 (2021-08-06)
 
