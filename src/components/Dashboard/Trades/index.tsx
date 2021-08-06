@@ -5,7 +5,7 @@ import useBreakpoint from '@w11r/use-breakpoint'
 import useStore from 'src/lib/useStore'
 
 import { TRADES_QUERY } from 'src/common/queries'
-import { LoadingError, DashboardHeader } from 'src/ui-components'
+import { LoadingError, DashboardHeader, PermissionWrapper } from 'src/ui-components'
 import Trade from './Trade'
 
 const Trades = () => {
@@ -37,9 +37,11 @@ const Trades = () => {
         </Col>
       </Row>
       <Row gutter={16}>
-        {data?.signalsList.items.map((trade: any) => (
-          <Trade trade={trade} key={trade.ticker + trade.action} colSpan={colSpan} />
-        ))}
+        <PermissionWrapper>
+          {data?.signalsList.items.map((trade: any) => (
+            <Trade trade={trade} key={trade.ticker + trade.action} colSpan={colSpan} />
+          ))}
+        </PermissionWrapper>
       </Row>
     </>
   )

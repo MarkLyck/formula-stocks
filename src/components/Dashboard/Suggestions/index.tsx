@@ -4,7 +4,7 @@ import { Row, Col } from 'antd'
 import useBreakpoint from '@w11r/use-breakpoint'
 import useStore from 'src/lib/useStore'
 import { SUGGESTIONS_QUERY } from 'src/common/queries'
-import { LoadingError, DashboardHeader } from 'src/ui-components'
+import { LoadingError, DashboardHeader, PermissionWrapper } from 'src/ui-components'
 import Suggestion from './Suggestion'
 
 const Suggestions = () => {
@@ -35,9 +35,11 @@ const Suggestions = () => {
         </Col>
       </Row>
       <Row gutter={16}>
-        {data?.signalsList.items.map((trade: any) => (
-          <Suggestion trade={trade} key={trade.ticker + trade.action} colSpan={colSpan} />
-        ))}
+        <PermissionWrapper>
+          {data?.signalsList.items.map((trade: any) => (
+            <Suggestion trade={trade} key={trade.ticker + trade.action} colSpan={colSpan} />
+          ))}
+        </PermissionWrapper>
       </Row>
     </>
   )
