@@ -94,7 +94,7 @@ const CancelModal = ({ open, onModalDismiss, user, subscription, updateUser }: C
         onCancel={onCancel}
       />
     ),
-    SUCCESS: <Success cancelReason={cancelReason} onModalDismiss={onModalDismiss} />,
+    SUCCESS: <Success onModalDismiss={onModalDismiss} />,
     ERROR: <Error onModalDismiss={onModalDismiss} />,
     DISCOUNT_SUCCESS: <DiscountSuccess onModalDismiss={onModalDismiss} />,
   }
