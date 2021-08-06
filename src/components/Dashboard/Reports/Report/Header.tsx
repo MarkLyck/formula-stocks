@@ -18,7 +18,6 @@ const Logo = styled.img`
 `
 
 const Header = ({ profile, report }: any) => {
-  console.log('🔈 ~ report', report)
   const [image, setImage] = useState(profile?.image)
   const aiScore = report?.scores?.ai_score
   const companyName = profile?.companyName || report.name

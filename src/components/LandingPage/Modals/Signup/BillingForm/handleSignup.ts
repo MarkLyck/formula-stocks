@@ -48,7 +48,6 @@ const handleSignup = async ({
       errorMessage = error.errors[0].message
     } else if (error.graphQLErrors && error.graphQLErrors.length) {
       const graphQLError = error.graphQLErrors[0]
-      console.log('🔈 ~ graphQLError', graphQLError)
 
       if (graphQLError.details && graphQLError.details.password) errorMessage = error.graphQLErrors[0].details.password
       if (graphQLError.details && graphQLError.details.email) errorMessage = error.graphQLErrors[0].details.email

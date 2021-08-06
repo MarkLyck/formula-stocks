@@ -16,9 +16,7 @@ const Container = styled.div`
     font-size: 2rem;
   }
 `
-const Success = ({ cancelReason, onModalDismiss }: { cancelReason: string; onModalDismiss: () => void }) => {
-  console.log('🔈 ~ cancelReason', cancelReason)
-
+const Success = ({ onModalDismiss }: { onModalDismiss: () => void }) => {
   return (
     <Container>
       <FontAwesomeIcon icon={['fas', 'tags']} />

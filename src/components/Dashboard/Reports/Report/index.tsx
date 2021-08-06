@@ -38,7 +38,6 @@ const StockReport = () => {
   })
   const profile = fmpProfile?.FMP?.response[0]
   const report = reportData?.aIReport
-  console.log('🔈 ~ report', report)
 
   if (loading) return <Spin />
 

@@ -30,7 +30,6 @@ const ButtonContainer = styled.div`
 `
 
 const Subscription = ({ subscription, updateUser, user, userLoading }: SubscriptionPropsType) => {
-  console.log('🔈 ~ subscription', subscription)
   let status = subscription?.status
   if (subscription?.pause_collection) {
     status = 'paused'

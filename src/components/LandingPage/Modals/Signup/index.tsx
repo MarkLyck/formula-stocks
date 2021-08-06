@@ -56,7 +56,7 @@ const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
         {page === 1 && <PlanPicker setPlan={handleSelectPlan} />}
         {page === 2 && <SchedulePicker plan={plan} schedule={schedule} setSchedule={setSchedule} onSubmit={nextPage} />}
         {page === 3 && <AccountForm onSubmit={handleAccountInfoSubmit} />}
-        {page === 4 && <BillingForm accountInfo={accountInfo} schedule={schedule} plan={plan} onSubmit={console.log} />}
+        {page === 4 && <BillingForm accountInfo={accountInfo} schedule={schedule} plan={plan} />}
       </ModalContent>
     </Modal>
   )
