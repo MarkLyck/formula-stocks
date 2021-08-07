@@ -1,7 +1,6 @@
 import React from 'react'
-import { Space } from 'antd'
 import styled from '@emotion/styled'
-import useBreakpoint from '@w11r/use-breakpoint'
+import { mediaQuery } from '@w11r/use-breakpoint'
 
 import { LandingPageContainer } from 'src/ui-components'
 
@@ -20,21 +19,27 @@ const Exchange = styled.img`
   &:hover {
     background-color: ${(p) => p.theme.palette.neutral[200]};
   }
+
+  ${mediaQuery(['mobile-', 'width: 100%'])}
+  ${mediaQuery(['mobile-', 'margin: 0'])}
 `
 
-const ExchangesSupported = () => {
-  const { 'isMobile-': isMobileMinus } = useBreakpoint()
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  ${mediaQuery(['mobile-', 'flex-direction: column'])}
+`
 
-  return (
-    <LandingPageContainer align="center">
-      <Title>Exchanges supported</Title>
-      <Space size="middle" direction={isMobileMinus ? 'vertical' : 'horizontal'}>
-        <Exchange src="/logos/exchanges/nyse.svg" />
-        <Exchange src="/logos/exchanges/nasdaq.svg" />
-        <Exchange src="/logos/exchanges/tsx.svg" />
-      </Space>
-    </LandingPageContainer>
-  )
-}
+const ExchangesSupported = () => (
+  <LandingPageContainer align="center">
+    <Title>Exchanges supported</Title>
+    <Container>
+      <Exchange src="/logos/exchanges/nyse.svg" />
+      <Exchange src="/logos/exchanges/nasdaq.svg" />
+      <Exchange src="/logos/exchanges/tsx.svg" />
+    </Container>
+  </LandingPageContainer>
+)
 
 export default ExchangesSupported
