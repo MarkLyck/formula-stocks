@@ -198,24 +198,26 @@ const Performance = ({ padding }: any) => {
             {/* <Disclaimer>*Past performance verified by 3rd party auditor</Disclaimer> */}
           </Tabs.TabPane>
         </StyledTabs>
-        <ButtonContainer direction={isMobileMinus ? 'vertical' : 'horizontal'}>
-          <Button
-            block={isMobileMinus ? true : false}
-            size="large"
-            icon={<ButtonIcon icon={['fad', 'calculator']} />}
-            onClick={() => setCalculatorVisible(true)}
-          >
-            Interest calculator
-          </Button>
-          <Button
-            block={isMobileMinus ? true : false}
-            size="large"
-            icon={<ButtonIcon icon={['fad', 'calendar']} />}
-            onClick={toggleModal}
-          >
-            See yearly returns
-          </Button>
-        </ButtonContainer>
+        {process.browser && (
+          <ButtonContainer direction={isMobileMinus ? 'vertical' : 'horizontal'}>
+            <Button
+              block={isMobileMinus ? true : false}
+              size="large"
+              icon={<ButtonIcon icon={['fad', 'calculator']} />}
+              onClick={() => setCalculatorVisible(true)}
+            >
+              Interest calculator
+            </Button>
+            <Button
+              block={isMobileMinus ? true : false}
+              size="large"
+              icon={<ButtonIcon icon={['fad', 'calendar']} />}
+              onClick={toggleModal}
+            >
+              See yearly returns
+            </Button>
+          </ButtonContainer>
+        )}
         <ReturnsCalculatorModal isVisible={calculatorVisible} onClose={() => setCalculatorVisible(false)} />
         <StyledModal
           title="Yearly returns"

@@ -3,6 +3,7 @@ import dayjs from 'dayjs'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Space, Card } from 'antd'
+import useBreakpoint, { mediaQuery } from '@w11r/use-breakpoint'
 
 import { AnimationChart } from 'src/ui-components'
 import { currencyRoundedFormatter, numberFormatter } from 'src/common/utils/formatters'
@@ -20,17 +21,19 @@ const BalanceContainer = styled.div`
   top: 24px;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
 `
 
 const BalanceTag = styled(Card)`
-  width: 270px;
+  width: 240px;
   display: flex;
   justify-content: space-between;
   background: ${(p) => p.theme.palette.neutral[200]};
   border-radius: 8px;
-  padding: 16px;
+  padding: 8px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
+  margin-bottom: 8px;
 
   .ant-card-body {
     padding: 0;
@@ -48,14 +51,14 @@ const CounterText = styled.span`
 const Positive = styled.span`
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
   color: ${(p: any) => p.theme.palette.success[600]};
 `
 
 const BlueCount = styled.span`
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
   color: ${(p) => p.theme.palette.primary[600]};
 `
 const IconContainer = styled.div`
@@ -98,6 +101,7 @@ const createPlanData = (data: any[]) => {
 const dollarFormatterRounded = (value: number) => currencyRoundedFormatter.format(value)
 
 const AnimatedChart = ({ data, setTab }: any) => {
+  const { 'isMobile-': isMobileMinus } = useBreakpoint()
   const [animating, setAnimating] = useState(false)
   const [chartData, setChartData]: any = useState(data)
 
@@ -128,7 +132,7 @@ const AnimatedChart = ({ data, setTab }: any) => {
 
     return (
       <BalanceContainer>
-        <Space>
+        <Space direction={isMobileMinus ? 'vertical' : 'horizontal'}>
           <BalanceTag>
             <CounterText>
               <IconContainer>
