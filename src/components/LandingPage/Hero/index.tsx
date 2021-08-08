@@ -59,16 +59,24 @@ const Hero = ({ showSignup }: any) => {
         <Space direction="vertical">
           <Title />
           <Description statistics={statistics} />
-          <Space size="middle" direction={isMobileMinus ? 'vertical' : 'horizontal'} style={{ width: '100%' }}>
-            <ActionButton onClick={showSignup} status="success">
-              <ButtonIcon icon={['fad', 'gift']} />
-              TRY IT FOR $0
-            </ActionButton>
-            <ActionButton onClick={learnMore}>
-              <ButtonIcon icon={['fad', 'info-square']} />
-              LEARN MORE
-            </ActionButton>
-          </Space>
+          {process.browser && (
+            <Space
+              id={String(isMobileMinus)}
+              key={String(isMobileMinus)}
+              size="middle"
+              direction={isMobileMinus ? 'vertical' : 'horizontal'}
+              style={{ width: '100%' }}
+            >
+              <ActionButton onClick={showSignup} status="success">
+                <ButtonIcon icon={['fad', 'gift']} />
+                TRY IT FOR $0
+              </ActionButton>
+              <ActionButton onClick={learnMore}>
+                <ButtonIcon icon={['fad', 'info-square']} />
+                LEARN MORE
+              </ActionButton>
+            </Space>
+          )}
         </Space>
       </Content>
       <Features statistics={statistics} statisticsLoading={statisticsLoading} statisticsError={statisticsError} />

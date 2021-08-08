@@ -9,10 +9,12 @@ import { STATISTICS_SINCE_LAUNCH } from 'src/common/queries'
 import { SmallFeatureCard } from 'src/ui-components'
 import { numberFormatter } from 'src/common/utils/formatters'
 import { useWindowSize } from 'src/common/hooks'
+import { maxSiteWidth } from 'src/common/styles'
 
 const Container = styled.div`
   padding: 0 8%;
   margin-left: -8px;
+  ${maxSiteWidth}
 `
 
 const NextButton = styled.button`
