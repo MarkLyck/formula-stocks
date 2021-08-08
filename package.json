@@ -16,7 +16,7 @@
   "dependencies": {
     "@ant-design/charts": "1.2.5",
     "@apollo/client": "3.4.5",
-    "@emotion/react": "11.1.5",
+    "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
     "@fortawesome/fontawesome-svg-core": "1.2.36",
     "@fortawesome/free-brands-svg-icons": "5.15.4",
