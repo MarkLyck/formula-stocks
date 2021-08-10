@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.303"></a>
+## 1.0.303 (2021-08-10)
+
+### Fixed
+
+- 🐛 fix PermissionsWrapper issue [[b71765f](https://github.com/MarkLyck/formula-stocks/commit/b71765fefb2488611b0bcec400af161f2f23cf2e)]
+
+### Miscellaneous
+
+-  Merge pull request [#395](https://github.com/MarkLyck/formula-stocks/issues/395) from MarkLyck/user-testing [[5e644f0](https://github.com/MarkLyck/formula-stocks/commit/5e644f0969556782165fe864ea497786ab0fd704)]
+- 📝 version bump to v1.0.303 [[0e2c7d0](https://github.com/MarkLyck/formula-stocks/commit/0e2c7d014776ea7cd8fa79488204a8c853461dff)]
+- 📝 generated changelog [[60737d9](https://github.com/MarkLyck/formula-stocks/commit/60737d9a32066b8637185abe575659410e4dc120)]
+
+
 <a name="1.0.302"></a>
 ## 1.0.302 (2021-08-10)
 
