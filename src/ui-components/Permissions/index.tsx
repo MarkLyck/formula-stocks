@@ -46,6 +46,7 @@ export const PermissionWrapper = ({ children, ErrorComponent }: any) => {
   const router = useRouter()
   const { user, userRoles } = useStore((state: any) => ({ user: state.user, userRoles: state.userRoles }))
 
+  if (!children) return null
   if (user === null) return children
 
   let title = 'Inactive subscription'
