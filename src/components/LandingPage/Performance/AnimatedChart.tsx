@@ -3,7 +3,7 @@ import dayjs from 'dayjs'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Space, Card } from 'antd'
-import useBreakpoint, { mediaQuery } from '@w11r/use-breakpoint'
+import useBreakpoint from '@w11r/use-breakpoint'
 
 import { AnimationChart } from 'src/ui-components'
 import { currencyRoundedFormatter, numberFormatter } from 'src/common/utils/formatters'
