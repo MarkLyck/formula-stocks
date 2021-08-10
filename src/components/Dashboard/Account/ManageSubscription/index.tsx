@@ -7,7 +7,7 @@ import Cancel from './Cancel'
 import Pause from './Pause'
 import ReActivate from './ReActivate'
 import CurrentSubscription from './CurrentSubscription'
-
+import SubscriptionStatus from './CurrentSubscription/SubscriptionStatus'
 import { subscriptionType } from './types'
 
 interface SubscriptionPropsType {
@@ -39,7 +39,7 @@ const Subscription = ({ subscription, updateUser, user, userLoading }: Subscript
   }
 
   return (
-    <Card title="Subscription">
+    <Card title="Subscription" extra={<SubscriptionStatus status={status} />}>
       {userLoading ? (
         <Spin />
       ) : (

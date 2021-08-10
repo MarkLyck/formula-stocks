@@ -38,9 +38,7 @@ const handleSignup = async ({
     if (isBrowser) window.authToken = authToken
 
     setSuccess()
-
-    // shortly show the signup success message before sending them to the dashboard
-    setTimeout(() => router.push('/dashboard/portfolio'), 200)
+    router.push('/dashboard/portfolio')
   } catch (error) {
     let errorMessage = error.message
 

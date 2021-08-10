@@ -22,9 +22,6 @@ const CurrentSubscription = ({ subscription, status }: any) => {
   return (
     <Container>
       <Text>
-        Status: <b>{status}</b>
-      </Text>
-      <Text>
         Price:{' '}
         <b>
           ${subscription.plan.amount / 100} / {subscription.plan.interval}
@@ -38,7 +35,7 @@ const CurrentSubscription = ({ subscription, status }: any) => {
           Subscription resumes on: <b>{dayjs.unix(subscription.pause_collection.resumes_at).format('MMMM Do YYYY')}</b>
         </Text>
       )}
-      {isBillingDateInFuture && status === 'active' && (
+      {isBillingDateInFuture && (status === 'active' || status === 'trialing') && (
         <Text>
           Next billing date: <b>{nextBillingDate}</b>
         </Text>
