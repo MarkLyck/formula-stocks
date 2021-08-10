@@ -125,6 +125,7 @@ const Statistics = () => {
             )}
           </StatisticsCard>
         </Space>
+
         <Space direction={isMobileMinus ? 'vertical' : 'horizontal'} style={{ width: '100%' }}>
           <ActionButton onClick={() => setDialogVisible(true)}>
             <ButtonIcon icon={['fad', 'analytics']} />
@@ -153,13 +154,17 @@ const Statistics = () => {
         isVisible={compoundInterestCalculatorVisible}
         onClose={() => setCompoundInterestCalculatorVisible(false)}
       />
-      {isSmallMinus ? (
-        Content
-      ) : (
-        <Beside>
-          <SpaceImage src="/images/space/space-3.svg" />
-          {Content}
-        </Beside>
+      {process.browser && (
+        <>
+          {isSmallMinus ? (
+            Content
+          ) : (
+            <Beside>
+              <SpaceImage src="/images/space/space-3.svg" />
+              {Content}
+            </Beside>
+          )}
+        </>
       )}
     </LandingPageContainer>
   )

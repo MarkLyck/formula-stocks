@@ -103,8 +103,8 @@ const StockArticles = ({ ticker }: { ticker: string }) => {
   return (
     <ArticlesContainer>
       <NotNeededToUseService
-        title="You don't need to follow the news to use Weekly Stocktip!"
-        text="We've provided the latest related articles for those who prefer to do their own research and analysis. Weekly Stocktip does not rely on any news to function."
+        title="You don't need to follow the news to use Formula Stocks!"
+        text="We've provided the latest related articles for those who prefer to do their own research and analysis. Formula Stocks does not rely on any news to function."
       />
       {articles.map((article: any) => (
         <Article key={article.headline} href={article.url} target="_blank">

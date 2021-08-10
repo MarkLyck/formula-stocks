@@ -20,7 +20,7 @@ const Other = ({ setCancelReason, cancelReason, onCancel, cancelLoading }: Cance
     <>
       <Title>Please give us some feedback on what we could do better.</Title>
       <Space direction="vertical" style={{ width: '100%' }}>
-        <TextArea onChange={handleTextAreaChange} placeholder="Feedback" value={cancelReason} />
+        <TextArea onChange={handleTextAreaChange} placeholder="I am not satisfied with..." value={cancelReason} />
         <Button type="primary" danger block disabled={!cancelReason} onClick={onCancel} loading={cancelLoading}>
           <ButtonIcon icon={['fad', 'times-octagon']} />
           Cancel subscription

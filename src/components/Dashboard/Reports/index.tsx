@@ -11,7 +11,7 @@ import { getIndustryIcon } from 'src/components/Dashboard/Reports/utils'
 import { ButtonIcon, DashboardHeader, Ticker, LoadingError } from 'src/ui-components'
 import { DASHBOARD_GUTTER_SIZE } from 'src/common/constants'
 import { SEARCH_REPORTS_QUERY } from 'src/common/queries'
-import { AIScoreValue } from 'src/ui-components'
+import { AIScoreValue, PermissionWrapper } from 'src/ui-components'
 const { Text } = Typography
 const { Search } = Input
 
@@ -230,19 +230,21 @@ const Reports = () => {
       </Row>
       <Row gutter={[DASHBOARD_GUTTER_SIZE, DASHBOARD_GUTTER_SIZE]}>
         <Col span={24}>
-          <AIScoreBox>
-            <Table
-              // @ts-ignore
-              columns={columns}
-              dataSource={reports}
-              loading={loading}
-              ellipsis={true}
-              onRow={(record) => ({
-                onClick: () => router.push(`/dashboard/reports/${record.ticker.replace('_', '.')}`),
-              })}
-              pagination={{ simple: windowSize.width < 600 ? true : false }}
-            />
-          </AIScoreBox>
+          <PermissionWrapper>
+            <AIScoreBox>
+              <Table
+                // @ts-ignore
+                columns={columns}
+                dataSource={reports}
+                loading={loading}
+                ellipsis={true}
+                onRow={(record) => ({
+                  onClick: () => router.push(`/dashboard/reports/${record.ticker.replace('_', '.')}`),
+                })}
+                pagination={{ simple: windowSize.width < 600 ? true : false }}
+              />
+            </AIScoreBox>
+          </PermissionWrapper>
         </Col>
       </Row>
     </>

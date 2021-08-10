@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Space, Card } from 'antd'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { mediaQuery } from '@w11r/use-breakpoint'
+
 import {
   ActionButton,
   Highlight,
@@ -24,11 +26,19 @@ const ContentContainer = styled.div`
     width: 100%;
   }
 `
+const ReturnsContainer = styled.div`
+  display: flex;
+  margin-top: 8px;
+  ${mediaQuery(['mobile-', 'flex-direction: column'])}
+`
 
 const YearReturnContainer = styled(Card)`
   font-size: 16px;
   font-weight: bold;
   box-shadow: 0 4px 14px 0 rgba(111, 120, 156, 0.08);
+  margin: 0 8px 0 0;
+
+  ${mediaQuery(['mobile-', 'margin: 0 8px 8px 0'])}
 
   .ant-card-body {
     padding: 16px 24px;
@@ -57,7 +67,7 @@ const VerifiableResults = () => {
               <br />
               Upon launch we initiated a 3 year pilot program, as verified by a 3rd party licensed auditor:
               <br />
-              <Space style={{ margin: '16px 0' }}>
+              <ReturnsContainer>
                 <YearReturnContainer>
                   2009: <Return>+78.94%</Return>
                 </YearReturnContainer>
@@ -67,7 +77,7 @@ const VerifiableResults = () => {
                 <YearReturnContainer>
                   2011: <Return>+17.51%</Return>
                 </YearReturnContainer>
-              </Space>
+              </ReturnsContainer>
               <br />
               Optimizing the odds for great future results is what Joe does best, even as future results are always
               unknown.

@@ -24,7 +24,7 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   padding: 32px;
-  padding-top: 360px;
+  padding-top: 400px;
   text-align: center;
 
   @media (max-width: ${(p) => p.theme.breakpoints.large}) {

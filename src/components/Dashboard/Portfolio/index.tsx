@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'antd'
 
-import { PortfolioChart, DashboardHeader } from 'src/ui-components'
+import { PortfolioChart, DashboardHeader, PermissionWrapper } from 'src/ui-components'
 import Holdings from './Holdings'
 import Allocation from './Allocation'
 import Statistics from 'src/components/Dashboard/Account/Statistics'
@@ -26,13 +26,17 @@ const Portfolio = () => (
     </Row>
     <Row gutter={GUTTER_SIZE}>
       <Col span={24}>
-        <Holdings />
+        <PermissionWrapper>
+          <Holdings />
+        </PermissionWrapper>
       </Col>
     </Row>
 
     <Row gutter={GUTTER_SIZE}>
       <Col span={24}>
-        <Allocation />
+        <PermissionWrapper ErrorComponent={null}>
+          <Allocation />
+        </PermissionWrapper>
       </Col>
     </Row>
   </>

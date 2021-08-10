@@ -38,9 +38,7 @@ const handleSignup = async ({
     if (isBrowser) window.authToken = authToken
 
     setSuccess()
-
-    // shortly show the signup success message before sending them to the dashboard
-    setTimeout(() => router.push('/dashboard/portfolio'), 200)
+    router.push('/dashboard/portfolio')
   } catch (error) {
     let errorMessage = error.message
 
@@ -48,7 +46,6 @@ const handleSignup = async ({
       errorMessage = error.errors[0].message
     } else if (error.graphQLErrors && error.graphQLErrors.length) {
       const graphQLError = error.graphQLErrors[0]
-      console.log('🔈 ~ graphQLError', graphQLError)
 
       if (graphQLError.details && graphQLError.details.password) errorMessage = error.graphQLErrors[0].details.password
       if (graphQLError.details && graphQLError.details.email) errorMessage = error.graphQLErrors[0].details.email

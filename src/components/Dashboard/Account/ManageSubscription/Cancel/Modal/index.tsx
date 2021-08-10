@@ -9,9 +9,9 @@ import TooExpensive from './TooExpensive'
 import UnhappyReturns from './UnhappyReturns'
 
 import Other from './Other'
-// import Error from './Error'
-// import Success from './Success'
-// import DiscountSuccess from './DiscountSuccess'
+import Success from './Success'
+import DiscountSuccess from './DiscountSuccess'
+import Error from './Error'
 
 type onCancelType = () => void
 
@@ -46,6 +46,11 @@ const CancelModal = ({ open, onModalDismiss, user, subscription, updateUser }: C
 
   if (applyCouponError) {
     console.error('applyCouponError', applyCouponError)
+  }
+
+  const closeModal = () => {
+    setPage('OPTIONS')
+    onModalDismiss()
   }
 
   const onCancel: onCancelType = async () => {
@@ -89,15 +94,14 @@ const CancelModal = ({ open, onModalDismiss, user, subscription, updateUser }: C
         onCancel={onCancel}
       />
     ),
-    // ERROR: <Error onModalDismiss={onModalDismiss} />,
-    // SUCCESS: <Success cancelReason={cancelReason} onModalDismiss={onModalDismiss} />,
-    // DISCOUNT_SUCCESS: <DiscountSuccess onModalDismiss={onModalDismiss} />,
+    SUCCESS: <Success onModalDismiss={onModalDismiss} />,
+    ERROR: <Error onModalDismiss={onModalDismiss} />,
+    DISCOUNT_SUCCESS: <DiscountSuccess onModalDismiss={onModalDismiss} />,
   }
 
   const titleMap = {
     OPTIONS: "We're sorry to see you go!",
-    TOO_EXPENSIVE: 'We can help with that!',
-    UNHAPPY_RETURNS: "It's a little early...",
+    TOO_EXPENSIVE: 'We can help with that.',
     OTHER: 'Please tell us!',
     ERROR: 'Whoops...',
     SUCCESS: "We're sorry to see you go!",
@@ -110,10 +114,10 @@ const CancelModal = ({ open, onModalDismiss, user, subscription, updateUser }: C
       title={titleMap[page]}
       visible={open}
       onOk={() => {}}
-      onCancel={onModalDismiss}
+      onCancel={closeModal}
       width={page === 'OPTIONS' || page === 'OTHER' || page === 'SUCCESS' || page === 'DISCOUNT_SUCCESS' ? 500 : 800}
       footer={[
-        <Button key="dismiss" onClick={onModalDismiss}>
+        <Button key="dismiss" onClick={closeModal}>
           Dismiss
         </Button>,
       ]}

@@ -68,7 +68,6 @@ const Tooltip = (
   tooltipValueFormatter: (value: number) => string = (value: number) => String(value)
 ) => {
   if (!items[0]) return null
-  console.log('🔈 ~ items', items)
   const isBacktested = items[0]?.data?.backtested
 
   const FSValue = Number(items[0]?.value)

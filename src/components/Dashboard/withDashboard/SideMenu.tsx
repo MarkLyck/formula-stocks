@@ -110,7 +110,7 @@ const menuList = [
   { divider: true },
   { label: 'Account', icon: ['fad', 'user'], route: '/dashboard/account' },
   { label: 'Articles', icon: ['fad', 'newspaper'], route: 'https://medium.com/@FormulaStocks' },
-  { label: 'Road map', icon: ['fad', 'pennant'], route: '/dashboard/roadmap' },
+  // { label: 'Road map', icon: ['fad', 'pennant'], route: '/dashboard/roadmap' },
   { divider: true },
   { label: 'Admin', icon: ['fad', 'tools'], route: '/dashboard/admin' },
 ]

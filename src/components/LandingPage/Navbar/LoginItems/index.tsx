@@ -35,7 +35,7 @@ const LoginItems = ({ showSignup }: any) => {
     Router.push('/dashboard')
   }
 
-  if (loggedIn) {
+  if (loggedIn && process.browser) {
     return (
       <Space>
         <LogoutButton onClick={handleLogout} />

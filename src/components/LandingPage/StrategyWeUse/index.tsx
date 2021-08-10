@@ -44,25 +44,27 @@ const StrategyWeUse = ({ showSignup }: any) => {
             <CardSubtitle>
               We have shown you what we can do. Want to know more? Check out the FAQ or contact us.
             </CardSubtitle>
-            <ButtonContainer size="middle" direction={isMobileMinus ? 'vertical' : 'horizontal'}>
-              <ActionButton onClick={showSignup} status="success">
-                <ButtonIcon icon={['fad', 'gift']} />
-                TRY IT FOR FREE
-              </ActionButton>
-              <ActionButton
-                onClick={() => console.log('SEE FAQ')}
-                backgroundColor="#fff"
-                color={theme.palette.text[500]}
-                shadowColor={transparentize(0.5, theme.palette.neutral[600])}
-              >
-                <ButtonIcon icon={['fad', 'question']} />
-                SEE FAQ
-              </ActionButton>
-              <ActionButton onClick={() => console.log('OPEN CRISP')}>
-                <ButtonIcon icon={['fad', 'comment']} />
-                CONTACT US
-              </ActionButton>
-            </ButtonContainer>
+            {process.browser && (
+              <ButtonContainer size="middle" direction={isMobileMinus ? 'vertical' : 'horizontal'}>
+                <ActionButton onClick={showSignup} status="success">
+                  <ButtonIcon icon={['fad', 'gift']} />
+                  TRY IT FOR FREE
+                </ActionButton>
+                <ActionButton
+                  onClick={() => console.log('SEE FAQ')}
+                  backgroundColor="#fff"
+                  color={theme.palette.text[500]}
+                  shadowColor={transparentize(0.5, theme.palette.neutral[600])}
+                >
+                  <ButtonIcon icon={['fad', 'question']} />
+                  SEE FAQ
+                </ActionButton>
+                <ActionButton onClick={() => console.log('OPEN CRISP')}>
+                  <ButtonIcon icon={['fad', 'comment']} />
+                  CONTACT US
+                </ActionButton>
+              </ButtonContainer>
+            )}
           </Space>
         </Content>
       </Card>

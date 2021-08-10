@@ -102,36 +102,38 @@ const Newsletter = () => {
               <Alert message="Success, you're on the list!" type="success" />
             ) : (
               <Form layout={'inline'} name="newsletter_signup" onFinish={onFinish}>
-                <Space direction={isMobileMinus ? 'vertical' : 'horizontal'} style={{ width: '100%' }}>
-                  <Form.Item name="firstName" rules={[{ required: true, message: 'Please input your first name' }]}>
-                    <Input
-                      onChange={handleNameInput}
-                      size="large"
-                      placeholder="First name"
-                      prefix={<InputIcon icon={['fad', 'user']} color={theme.palette.neutral[500]} />}
-                    />
-                  </Form.Item>
-                  <Form.Item
-                    name="email"
-                    validateStatus={!!emailError ? 'error' : undefined}
-                    help={!!emailError ? emailError : undefined}
-                    rules={[{ required: true, message: 'Please input your email' }]}
-                  >
-                    <Input
-                      onChange={handleEmailInput}
-                      size="large"
-                      placeholder="Email address"
-                      prefix={<InputIcon icon={['fad', 'envelope']} color={theme.palette.neutral[500]} />}
-                    />
-                  </Form.Item>
-                  <Form.Item shouldUpdate={true}>
-                    {() => (
-                      <Button block size="large" type="primary" htmlType="submit" loading={createLoading}>
-                        Join newsletter
-                      </Button>
-                    )}
-                  </Form.Item>
-                </Space>
+                {process.browser && (
+                  <Space direction={isMobileMinus ? 'vertical' : 'horizontal'} style={{ width: '100%' }}>
+                    <Form.Item name="firstName" rules={[{ required: true, message: 'Please input your first name' }]}>
+                      <Input
+                        onChange={handleNameInput}
+                        size="large"
+                        placeholder="First name"
+                        prefix={<InputIcon icon={['fad', 'user']} color={theme.palette.neutral[500]} />}
+                      />
+                    </Form.Item>
+                    <Form.Item
+                      name="email"
+                      validateStatus={!!emailError ? 'error' : undefined}
+                      help={!!emailError ? emailError : undefined}
+                      rules={[{ required: true, message: 'Please input your email' }]}
+                    >
+                      <Input
+                        onChange={handleEmailInput}
+                        size="large"
+                        placeholder="Email address"
+                        prefix={<InputIcon icon={['fad', 'envelope']} color={theme.palette.neutral[500]} />}
+                      />
+                    </Form.Item>
+                    <Form.Item shouldUpdate={true}>
+                      {() => (
+                        <Button block size="large" type="primary" htmlType="submit" loading={createLoading}>
+                          Join newsletter
+                        </Button>
+                      )}
+                    </Form.Item>
+                  </Space>
+                )}
               </Form>
             )}
           </Space>

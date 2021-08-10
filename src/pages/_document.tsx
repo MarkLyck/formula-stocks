@@ -29,6 +29,14 @@ class _Document extends Document {
         <body>
           <Main />
           <NextScript />
+
+          {/* CRISP live chat */}
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `window.$crisp=[];window.CRISP_WEBSITE_ID="661b2a78-03b3-4033-9b04-03bd9334368d";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`,
+            }}
+          />
         </body>
       </Html>
     )
