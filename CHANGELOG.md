@@ -1,5 +1,34 @@
 # Changelog
 
+<a name="1.0.301"></a>
+## 1.0.301 (2021-08-10)
+
+### Added
+
+- ✨ add Crisp [[0a32676](https://github.com/MarkLyck/formula-stocks/commit/0a32676ec26f94c73c0eb97c5a6778a6f94fdeec)]
+- ✨ cancel improvements [[5f50cdb](https://github.com/MarkLyck/formula-stocks/commit/5f50cdb06b8a07550ec51cc6bf25b13a8e05423c)]
+- ✨ improvements [[9e2e5db](https://github.com/MarkLyck/formula-stocks/commit/9e2e5dbbea221927cf16c125c09ece5efc461697)]
+
+### Changed
+
+- 📱 landing page fully responsive [[937fcc9](https://github.com/MarkLyck/formula-stocks/commit/937fcc95916c1ba466307fad4776e874afda6d55)]
+- 📱 responsive design [[91d64ed](https://github.com/MarkLyck/formula-stocks/commit/91d64edf9a34f944e61092bcbf675dece9d8efc4)]
+- 💄 improve phone layout [[e43d408](https://github.com/MarkLyck/formula-stocks/commit/e43d4089f7ba5ccec11c82ba18d25863d3d89ed2)]
+
+### Removed
+
+- 🔇 remove logs [[7c0847c](https://github.com/MarkLyck/formula-stocks/commit/7c0847cb2956611b771c220b905d56836587c981)]
+
+### Miscellaneous
+
+-  Merge pull request [#383](https://github.com/MarkLyck/formula-stocks/issues/383) from MarkLyck/user-testing [[4fd35e9](https://github.com/MarkLyck/formula-stocks/commit/4fd35e903c49970faf872bbb5f53b49ff0f00796)]
+- 📝 version bump to v1.0.301 [[1538e36](https://github.com/MarkLyck/formula-stocks/commit/1538e364ebb20adb91966d6c8dea64924bf52487)]
+- 📝 generated changelog [[2c2e229](https://github.com/MarkLyck/formula-stocks/commit/2c2e229f58681341c720016592b0ea1e0b1b434b)]
+- 🏷️ fix ts [[59c2f9e](https://github.com/MarkLyck/formula-stocks/commit/59c2f9eedae8bfff4f388b847e525cfc151a145a)]
+- 🛂 hide components from users without Subscriber role [[881946e](https://github.com/MarkLyck/formula-stocks/commit/881946e8e7794e7d70cf4aa65a50c4de30dc211e)]
+- 🌐 fix test [[f913ea1](https://github.com/MarkLyck/formula-stocks/commit/f913ea188daff281b75b7cab66c39031e1d6a3f5)]
+
+
 <a name="1.0.300"></a>
 ## 1.0.300 (2021-08-10)
 
