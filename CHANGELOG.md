@@ -1,5 +1,31 @@
 # Changelog
 
+<a name="1.0.300"></a>
+## 1.0.300 (2021-08-10)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.300 [[e446fd4](https://github.com/MarkLyck/formula-stocks/commit/e446fd47e555c9e21613f75fdf427c94f8488457)]
+
+
+<a name="1.0.299"></a>
+## 1.0.299 (2021-08-10)
+
+### Changed
+
+- ⬆️ Update storybook monorepo to v6.3.7 [[5879a0f](https://github.com/MarkLyck/formula-stocks/commit/5879a0ffaa78970dfa90acb27b637ee1914981e1)]
+- ⬆️ Update dependency antd to v4.16.11 [[6cdc87f](https://github.com/MarkLyck/formula-stocks/commit/6cdc87f5f7906e26924880ec17b76231b5f5ecdd)]
+- ⬆️ Update dependency @emotion/react to v11.4.1 [[79fc2c0](https://github.com/MarkLyck/formula-stocks/commit/79fc2c0384f2cdb6d484e01ad10c8a876e24f114)]
+
+### Miscellaneous
+
+-  Merge pull request [#393](https://github.com/MarkLyck/formula-stocks/issues/393) from MarkLyck/renovate/storybook-monorepo [[bab2556](https://github.com/MarkLyck/formula-stocks/commit/bab2556966b4c04f25fec841dfe4550b8fb3fbde)]
+-  Merge pull request [#390](https://github.com/MarkLyck/formula-stocks/issues/390) from MarkLyck/renovate/emotion-monorepo [[0d5a25e](https://github.com/MarkLyck/formula-stocks/commit/0d5a25e93c137b3789974a9a4329501769eb6a8f)]
+-  Merge pull request [#391](https://github.com/MarkLyck/formula-stocks/issues/391) from MarkLyck/renovate/antd-4.x [[3384eeb](https://github.com/MarkLyck/formula-stocks/commit/3384eebe246df572d51c9e957758d60c14d6c343)]
+- 📝 version bump to v1.0.299 [[afe3157](https://github.com/MarkLyck/formula-stocks/commit/afe3157a3c9211cabffaaae5c1e8e3614773e743)]
+- 📝 generated changelog [[b193b5a](https://github.com/MarkLyck/formula-stocks/commit/b193b5a8320311e586ed6c04ee378ad15c8a60d3)]
+
+
 <a name="1.0.298"></a>
 ## 1.0.298 (2021-08-06)
 
