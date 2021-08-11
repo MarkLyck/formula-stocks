@@ -5,6 +5,8 @@ import { useApollo } from '../lib/apolloClient'
 import AppProvider from '../lib/AppProvider'
 import 'src/lib/iconLibrary'
 
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
 const App = ({ Component, pageProps }: any) => {
   const apolloClient = useApollo(pageProps)
 
