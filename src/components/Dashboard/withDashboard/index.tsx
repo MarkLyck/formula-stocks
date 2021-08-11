@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import dayjs from 'dayjs'
 import { useQuery, useMutation } from '@apollo/client'
 import { ErrorBoundary } from 'react-error-boundary'
 import { ErrorFallback } from 'src/ui-components'
