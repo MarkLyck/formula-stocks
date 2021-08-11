@@ -1,5 +1,16 @@
 # Changelog
 
+<a name="1.0.310"></a>
+## 1.0.310 (2021-08-11)
+
+### Miscellaneous
+
+-  Merge pull request [#401](https://github.com/MarkLyck/formula-stocks/issues/401) from MarkLyck/stripe-prod [[9ec9483](https://github.com/MarkLyck/formula-stocks/commit/9ec948390c06cb451ef957300f165f645b3ff1ac)]
+- 🚀 production stripe key [[f2e9d7d](https://github.com/MarkLyck/formula-stocks/commit/f2e9d7d327d85fe159e48f6f28a69a3b90a4c067)]
+- 📝 version bump to v1.0.310 [[f95b6f4](https://github.com/MarkLyck/formula-stocks/commit/f95b6f46a6b55fcb704b5bcd557ba8d509efc3b5)]
+- 📝 generated changelog [[4c6a15b](https://github.com/MarkLyck/formula-stocks/commit/4c6a15b017bc367d3634ad8d179742c149834dce)]
+
+
 <a name="1.0.309"></a>
 ## 1.0.309 (2021-08-11)
 
