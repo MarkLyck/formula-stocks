@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.308"></a>
+## 1.0.308 (2021-08-11)
+
+### Changed
+
+- 🏗️ update to webpack 5 [[8a6a57a](https://github.com/MarkLyck/formula-stocks/commit/8a6a57ab46e96e870525cc8bdf70405e4615fe1d)]
+
+### Miscellaneous
+
+-  Merge pull request [#399](https://github.com/MarkLyck/formula-stocks/issues/399) from MarkLyck/webpack-5 [[d3cf58a](https://github.com/MarkLyck/formula-stocks/commit/d3cf58a460a7b6cb7231e1c5417991e914be9b36)]
+- 📝 version bump to v1.0.308 [[1afb44e](https://github.com/MarkLyck/formula-stocks/commit/1afb44eac0aff3bbc008c4a742e65bbd47ea9c0f)]
+- 📝 generated changelog [[64c5281](https://github.com/MarkLyck/formula-stocks/commit/64c5281457214020c3cb1ea89ef6e5599195b305)]
+
+
 <a name="1.0.307"></a>
 ## 1.0.307 (2021-08-11)
 
