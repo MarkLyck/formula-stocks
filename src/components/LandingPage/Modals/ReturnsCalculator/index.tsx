@@ -75,7 +75,7 @@ const ReturnsCalculatorModal = ({ isVisible, onClose }: ReturnsCalculatorModalPr
       key: 'year',
     },
     {
-      title: `Future Value (${rateOfReturn.toFixed(2)}%)`,
+      title: `Future Value (${rateOfReturn?.toFixed(2) || ''}%)`,
       dataIndex: 'value',
       key: 'value',
       render: (value: number) => (

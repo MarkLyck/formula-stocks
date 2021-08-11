@@ -1,6 +1,6 @@
 import { Row, Col } from 'antd'
 import { DashboardHeader } from 'src/ui-components'
-import Uploader from './API'
+import UsersTable from './UsersTable'
 
 const GUTTER_SIZE = 24
 
@@ -14,7 +14,7 @@ const Admin = () => {
       </Row>
       <Row gutter={GUTTER_SIZE}>
         <Col span={24}>
-          <Uploader />
+          <UsersTable />
         </Col>
       </Row>
     </>

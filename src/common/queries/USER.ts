@@ -88,6 +88,14 @@ export const CURRENT_USER_QUERY = gql`
   }
 `
 
+export const USER_LAST_SEEN = gql`
+  mutation userUpdate($id: ID!, $lastSeen: DateTime) {
+    userUpdate(data: { id: $id, lastSeen: $lastSeen }) {
+      id
+    }
+  }
+`
+
 export const USER_UPDATE = gql`
   mutation userUpdate($id: ID!, $cancelReason: String) {
     userUpdate(data: { id: $id, cancelReason: $cancelReason }) {

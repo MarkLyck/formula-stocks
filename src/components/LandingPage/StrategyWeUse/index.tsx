@@ -51,7 +51,7 @@ const StrategyWeUse = ({ showSignup }: any) => {
                   TRY IT FOR FREE
                 </ActionButton>
                 <ActionButton
-                  onClick={() => console.log('SEE FAQ')}
+                  onClick={() => window.open('https://help.formulastocks.com', '_blank')}
                   backgroundColor="#fff"
                   color={theme.palette.text[500]}
                   shadowColor={transparentize(0.5, theme.palette.neutral[600])}
@@ -59,7 +59,8 @@ const StrategyWeUse = ({ showSignup }: any) => {
                   <ButtonIcon icon={['fad', 'question']} />
                   SEE FAQ
                 </ActionButton>
-                <ActionButton onClick={() => console.log('OPEN CRISP')}>
+                {/* @ts-ignore */}
+                <ActionButton onClick={() => $crisp.push(['do', 'chat:open'])}>
                   <ButtonIcon icon={['fad', 'comment']} />
                   CONTACT US
                 </ActionButton>

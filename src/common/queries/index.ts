@@ -1,4 +1,5 @@
 export * from './USER'
+export * from './USERS'
 export * from './SELL_SIGNALS'
 export * from './EMAIL'
 export * from './STOCK_TIPS'
