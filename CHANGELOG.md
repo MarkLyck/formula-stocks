@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.309"></a>
+## 1.0.309 (2021-08-11)
+
+### Changed
+
+- ⬆️ Pin dependency next-plugin-antd-less to 1.3.0 [[fdaf506](https://github.com/MarkLyck/formula-stocks/commit/fdaf506e99628d653c0d9c0d41ae32374a80310f)]
+
+### Miscellaneous
+
+-  Merge pull request [#400](https://github.com/MarkLyck/formula-stocks/issues/400) from MarkLyck/renovate/pin-dependencies [[bb98aca](https://github.com/MarkLyck/formula-stocks/commit/bb98acaf35f899044d273714c6d31d55c15190fe)]
+- 📝 version bump to v1.0.309 [[48ff4fc](https://github.com/MarkLyck/formula-stocks/commit/48ff4fc515857cc81a45c6023f0b5f5d4db2f59d)]
+- 📝 generated changelog [[ac56db3](https://github.com/MarkLyck/formula-stocks/commit/ac56db38823b935d8bb5211c43462d59fb0f2628)]
+
+
 <a name="1.0.308"></a>
 ## 1.0.308 (2021-08-11)
 
