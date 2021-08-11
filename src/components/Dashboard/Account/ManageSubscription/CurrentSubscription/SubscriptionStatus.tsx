@@ -29,6 +29,20 @@ const Container = styled.div`
   border: 1px solid ${(p: any) => p.theme.palette[p.color][300]};
 `
 
+export const getSubscriptionStatus = (subscription: any) => {
+  if (!subscription) return null
+
+  let status = subscription?.status
+  if (subscription?.pause_collection) {
+    status = 'paused'
+  }
+  if (subscription?.cancel_at_period_end) {
+    status = 'canceled'
+  }
+
+  return status
+}
+
 const SubscriptionStatus = ({ status }: any) => {
   if (!status) return null
   return (

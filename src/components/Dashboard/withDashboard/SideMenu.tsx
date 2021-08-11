@@ -160,7 +160,7 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
             if (item.adminOnly) {
               if (!user) return null
               if (user?.type !== 'admin') return null
-              if (item.label === 'Users' && user.firstName !== 'TMark') return null
+              if (item.label === 'Users' && user.firstName !== 'Mark') return null
             }
 
             if (item.divider) return <MenuDivider key={'divider' + i} role="menuitem" />
