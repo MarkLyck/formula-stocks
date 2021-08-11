@@ -14,7 +14,7 @@ const PlanSelect = () => {
   const { plan, setPlan } = useStore((state: any) => ({ setPlan: state.setPlan, plan: state.plan }))
 
   const userRoles = data?.user?.roles.items || []
-  const hasAdmin = userRoles.filter((role: any) => role.name === 'admin').length === 1
+  const hasAdmin = userRoles.filter((role: any) => role.name === 'Administrator').length === 1
 
   if (!hasAdmin) return null
 
