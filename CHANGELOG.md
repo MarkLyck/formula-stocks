@@ -1,5 +1,41 @@
 # Changelog
 
+<a name="1.0.307"></a>
+## 1.0.307 (2021-08-11)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.307 [[c812cab](https://github.com/MarkLyck/formula-stocks/commit/c812cab1674bb9ecbf89ba24ec0fc2f4715eb2e0)]
+
+
+<a name="1.0.306"></a>
+## 1.0.306 (2021-08-11)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.306 [[d91e0c1](https://github.com/MarkLyck/formula-stocks/commit/d91e0c1f0543bfc0108a394a6be57128514997fc)]
+
+
+<a name="1.0.305"></a>
+## 1.0.305 (2021-08-11)
+
+### Changed
+
+- ⬆️ Update dependency next to v11.1.0 [[6cf20b0](https://github.com/MarkLyck/formula-stocks/commit/6cf20b01aaeea5e45dfc54a3d68a54a504f2a968)]
+- ⬆️ Update dependency @types/react to v17.0.17 [[21a24a5](https://github.com/MarkLyck/formula-stocks/commit/21a24a56edd2119ea9ddef1b89fe9bcbe2549241)]
+- ⬆️ Update dependency @apollo/client to v3.4.7 [[65720dd](https://github.com/MarkLyck/formula-stocks/commit/65720dd77d64eaffd8b55208f1bfdebcd26be926)]
+
+### Miscellaneous
+
+-  Merge pull request [#392](https://github.com/MarkLyck/formula-stocks/issues/392) from MarkLyck/renovate/apollo-graphql-packages [[16e1867](https://github.com/MarkLyck/formula-stocks/commit/16e186724c4d392d5249da51233896f3dfc906ea)]
+-  Merge pull request [#396](https://github.com/MarkLyck/formula-stocks/issues/396) from MarkLyck/renovate/react-17.x [[e367dbf](https://github.com/MarkLyck/formula-stocks/commit/e367dbf5db1c4a5feb5b75e4ba8e7d3264368f6a)]
+-  Merge pull request [#397](https://github.com/MarkLyck/formula-stocks/issues/397) from MarkLyck/renovate/nextjs-monorepo [[ed4c525](https://github.com/MarkLyck/formula-stocks/commit/ed4c5255952bb841ac66a4148d6880f9c50656d9)]
+- 📦 update next [[611ec30](https://github.com/MarkLyck/formula-stocks/commit/611ec30bf4ea2381b398b8adcb84533071b62d0f)]
+-  update package.json [[443893f](https://github.com/MarkLyck/formula-stocks/commit/443893f5b82a1f082f0c1a8ddbba16ee082d12d8)]
+- 📝 version bump to v1.0.305 [[623cba2](https://github.com/MarkLyck/formula-stocks/commit/623cba22eadca3a49bad04f9a96c397701348a1b)]
+- 📝 generated changelog [[42c30a6](https://github.com/MarkLyck/formula-stocks/commit/42c30a6680009f1206b4dc3e8af7bbc239ceeb25)]
+
+
 <a name="1.0.304"></a>
 ## 1.0.304 (2021-08-11)
 
