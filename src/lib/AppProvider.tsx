@@ -3,8 +3,6 @@ import { ThemeProvider } from '@emotion/react'
 import ComposeProviders from './ComposeProviders'
 import { BreakpointProvider } from '@w11r/use-breakpoint'
 
-import '@fortawesome/fontawesome-svg-core/styles.css'
-import 'antd/dist/antd.less'
 import 'src/lib/iconLibrary'
 import 'src/lib/dayjs'
 
