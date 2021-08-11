@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.311"></a>
+## 1.0.311 (2021-08-11)
+
+### Fixed
+
+- 🐛 fix plan select not showing for admin [[9db61fd](https://github.com/MarkLyck/formula-stocks/commit/9db61fdb25571762725c63f0c99c9c4883b4b2e0)]
+
+### Miscellaneous
+
+-  Merge pull request [#402](https://github.com/MarkLyck/formula-stocks/issues/402) from MarkLyck/plan-select [[f629d48](https://github.com/MarkLyck/formula-stocks/commit/f629d483c7986690477f5196f00b34c1848e52b2)]
+- 📝 version bump to v1.0.311 [[979da4f](https://github.com/MarkLyck/formula-stocks/commit/979da4fabc618281b276521148ace687ddb91051)]
+- 📝 generated changelog [[f6b5fbd](https://github.com/MarkLyck/formula-stocks/commit/f6b5fbd613a431429959534933411713e1f0fc46)]
+
+
 <a name="1.0.310"></a>
 ## 1.0.310 (2021-08-11)
 
