@@ -44,6 +44,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>http://localhost:3000/dashboard/users</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>http://localhost:3000/dashboard/reports/[symbol]</loc>
     <changefreq>hourly</changefreq>
   </url>

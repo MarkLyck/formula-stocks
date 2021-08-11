@@ -5,6 +5,7 @@ const colorMap = {
   trialing: 'primary',
   active: 'success',
   canceled: 'danger',
+  unpaid: 'danger',
   paused: 'warning',
 }
 
@@ -13,6 +14,7 @@ const iconMap = {
   active: ['fas', 'check'],
   paused: ['fad', 'pause'],
   canceled: ['fas', 'times'],
+  unpaid: ['fad', 'money-bill'],
 }
 
 const Container = styled.div`

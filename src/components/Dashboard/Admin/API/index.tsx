@@ -6,10 +6,6 @@ import { FILE_STACK_INFO, FILE_CREATE_MUTATION } from '~/common/queries'
 import LatestUploads from './LatestUploads'
 const { Dragger } = Upload
 
-const APIContainer = styled.div`
-  padding: 48px;
-`
-
 const StyledDragger = styled(Dragger)`
   padding: 64px;
 `
@@ -96,7 +92,7 @@ const Uploader = () => {
   }
 
   return (
-    <APIContainer>
+    <div>
       <StyledDragger
         name="file"
         multiple
@@ -113,7 +109,7 @@ const Uploader = () => {
         <p className="ant-upload-hint">Support for a single or bulk upload.</p>
       </StyledDragger>
       <LatestUploads />
-    </APIContainer>
+    </div>
   )
 }
 

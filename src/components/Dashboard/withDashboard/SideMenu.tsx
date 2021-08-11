@@ -108,11 +108,12 @@ const menuList = [
   { label: 'Suggestions', icon: ['fad', 'lightbulb'], route: '/dashboard/suggestions' },
   { label: 'AI Reports', icon: ['fad', 'tachometer-alt'], route: '/dashboard/reports' },
   { divider: true },
-  { label: 'Account', icon: ['fad', 'user'], route: '/dashboard/account' },
+  { label: 'My Account', icon: ['fad', 'user'], route: '/dashboard/account' },
   { label: 'Articles', icon: ['fad', 'newspaper'], route: 'https://medium.com/@FormulaStocks' },
   // { label: 'Road map', icon: ['fad', 'pennant'], route: '/dashboard/roadmap' },
   { divider: true },
-  { label: 'Admin', icon: ['fad', 'tools'], route: '/dashboard/admin' },
+  { label: 'Admin', icon: ['fad', 'tools'], route: '/dashboard/admin', adminOnly: true },
+  { label: 'Users', icon: ['fad', 'users'], route: '/dashboard/users', adminOnly: true },
 ]
 
 export type SideMenuProps = {
@@ -156,9 +157,10 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
         {/* @ts-ignore */}
         <StyledMenu collapsed={collapsed} defaultSelectedKeys={[activeItem]} mode="inline">
           {menuList.map((item, i) => {
-            if (item.label === 'Admin') {
+            if (item.adminOnly) {
               if (!user) return null
               if (user?.type !== 'admin') return null
+              if (item.label === 'Users' && user.firstName !== 'TMark') return null
             }
 
             if (item.divider) return <MenuDivider key={'divider' + i} role="menuitem" />
