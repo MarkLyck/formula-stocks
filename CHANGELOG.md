@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.316"></a>
+## 1.0.316 (2021-08-12)
+
+### Changed
+
+- ⬆️ Update dependency @stripe/stripe-js to v1.17.0 [[1a23a35](https://github.com/MarkLyck/formula-stocks/commit/1a23a35017425ff199191d54d7a00f9d4e739a0b)]
+
+### Miscellaneous
+
+-  Merge pull request [#411](https://github.com/MarkLyck/formula-stocks/issues/411) from MarkLyck/renovate/stripe-stripe-js-1.x [[1a0a6f1](https://github.com/MarkLyck/formula-stocks/commit/1a0a6f182c007be73ce433cfe08ad44133de6986)]
+- 📝 version bump to v1.0.316 [[4bff546](https://github.com/MarkLyck/formula-stocks/commit/4bff546d326e4d9668619ab7c8a517e0d014710d)]
+- 📝 generated changelog [[0afd934](https://github.com/MarkLyck/formula-stocks/commit/0afd93446f705f15e51908873de0712bc7b128fa)]
+
+
 <a name="1.0.315"></a>
 ## 1.0.315 (2021-08-12)
 
