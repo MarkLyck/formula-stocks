@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.312"></a>
+## 1.0.312 (2021-08-12)
+
+### Added
+
+- ✨ terms and privacy policy [[53d95d9](https://github.com/MarkLyck/formula-stocks/commit/53d95d9edbcda3f0b2a67f47763a8d36c2591f0d)]
+
+### Miscellaneous
+
+-  Merge pull request [#408](https://github.com/MarkLyck/formula-stocks/issues/408) from MarkLyck/terms [[36cc66d](https://github.com/MarkLyck/formula-stocks/commit/36cc66d081609afcf4edc4ced619d14cfc68e23d)]
+- 📝 version bump to v1.0.312 [[cf0288b](https://github.com/MarkLyck/formula-stocks/commit/cf0288becf093ebff7bffb6caf0f7b21e732c9e8)]
+- 📝 generated changelog [[004e724](https://github.com/MarkLyck/formula-stocks/commit/004e72465e517732b589ed522af4e55aa1aa3b93)]
+
+
 <a name="1.0.311"></a>
 ## 1.0.311 (2021-08-11)
 
