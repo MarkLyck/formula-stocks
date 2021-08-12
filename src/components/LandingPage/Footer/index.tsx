@@ -12,6 +12,7 @@ const { Link } = Typography
 
 const Logo = styled.img`
   height: 48px;
+  max-width: 100%;
   margin-bottom: 16px;
 
   @media (max-width: ${(p) => p.theme.breakpoints.extraSmall}) {
@@ -55,10 +56,12 @@ const MainDisclaimer = styled(Disclaimer)`
   text-align: justify;
   line-height: 1.4rem;
   max-width: 1400px;
+  margin: 0 auto;
 `
 
 const FooterDisclaimer = styled(Disclaimer)`
   color: ${(p) => p.theme.palette.text[100]};
+  line-height: 1.3rem;
 `
 
 const StyledLink = styled(Link)`
@@ -74,7 +77,7 @@ const Footer = () => {
 
   return (
     <Container>
-      <Space direction="vertical" size="middle">
+      <Space direction="vertical" size="middle" style={{ width: '100%' }}>
         <Logo src="/logos/formula_stocks/logo_horizontal_white.svg" />
         <Space size="middle">
           {SOCIAL_MEDIA_LINKS.map((link) => (
