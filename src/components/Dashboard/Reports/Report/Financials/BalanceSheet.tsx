@@ -81,7 +81,7 @@ const BalanceSheet = ({ symbol }: any) => {
     return { label: lowerCase(label), value }
   })
 
-  return <Table columns={columns} dataSource={balanceSheetData} pagination={false} />
+  return <Table columns={columns} dataSource={balanceSheetData} pagination={false} scroll={{ x: 'max-content' }} />
 }
 
 export default BalanceSheet

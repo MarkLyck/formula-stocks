@@ -112,7 +112,7 @@ const columns = [
 const Recessions = () => {
   return (
     <div>
-      <Table dataSource={data} columns={columns} pagination={false} />
+      <Table dataSource={data} columns={columns} pagination={false} scroll={{ x: 'max-content' }} />
     </div>
   )
 }

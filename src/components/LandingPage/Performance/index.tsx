@@ -81,7 +81,7 @@ const Performance = ({ padding }: any) => {
   const [calculatorVisible, setCalculatorVisible] = useState(false)
   const [log, setLog] = useState(true)
   const [chartType, setChartType] = useState('backtested')
-  const { 'isMobile-': isMobileMinus } = useBreakpoint()
+  const { 'isMobile-': isMobileMinus, 'isMedium+': isMediumPlus } = useBreakpoint()
 
   const Query = chartType === 'launch' ? LAUNCH_PERFORMANCE_HISTORY : BACKTESTED_PERFORMANCE_HISTORY
   const { data: planData, loading: planLoading, error: planError } = useQuery(Query, {
@@ -152,10 +152,12 @@ const Performance = ({ padding }: any) => {
           >
             <ScalingSubTitle>
               {log && 'Log scale '}chart showing how <b>$25,000</b> would have multiplied since 1970
-              <LogSwitchContainer>
-                <Text>Logarithmic</Text>
-                <Switch checked={log} style={{ marginLeft: 8 }} onChange={setLog} />
-              </LogSwitchContainer>
+              {isMediumPlus && (
+                <LogSwitchContainer>
+                  <Text>Logarithmic</Text>
+                  <Switch checked={log} style={{ marginLeft: 8 }} onChange={setLog} />
+                </LogSwitchContainer>
+              )}
             </ScalingSubTitle>
             {chartType === 'backtested' ? (
               <BacktestedChart

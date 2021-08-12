@@ -98,7 +98,9 @@ const UsersTable = () => {
   const usersData = data?.usersList?.items || []
 
   // @ts-ignore
-  return <Table loading={loading} dataSource={usersData} columns={columns} rowKey="email" />
+  return (
+    <Table loading={loading} dataSource={usersData} columns={columns} rowKey="email" scroll={{ x: 'max-content' }} />
+  )
 }
 
 export default UsersTable
