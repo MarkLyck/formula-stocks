@@ -1,12 +1,15 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Layout, Menu, Tooltip } from 'antd'
+import { useQuery } from '@apollo/client'
+import { Layout, Menu, Tooltip, Badge } from 'antd'
 import styled from '@emotion/styled'
+import { useTheme } from '@emotion/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ErrorBoundary } from 'react-error-boundary'
 
 import useStore from 'src/lib/useStore'
+import { ACTIVE_USERS_QUERY } from 'src/common/queries'
 import { ErrorFallback } from 'src/ui-components'
 import { resetApplication, logout } from 'src/common/utils'
 import SupportButton from './SupportButton'
@@ -124,6 +127,8 @@ export type SideMenuProps = {
 
 const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
   const router = useRouter()
+  const theme = useTheme()
+  const { data } = useQuery(ACTIVE_USERS_QUERY)
   const user = useStore((state: any) => state.user)
   const activeItem =
     menuList.filter((item) => item.route && router.pathname?.includes(item.route))[0]?.route || '/dashboard/portfolio'
@@ -160,7 +165,22 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
             if (item.adminOnly) {
               if (!user) return null
               if (user?.type !== 'admin') return null
-              if (item.label === 'Users' && user.firstName !== 'Mark') return null
+              if (item.label === 'Users') {
+                if (user.firstName !== 'Mark') return null
+
+                const numberOfUsers = data?.usersList?.items?.length
+
+                return (
+                  // @ts-ignore
+                  <Menu.Item onClick={onLinkClick} key={item.route} icon={<MenuIcon icon={item.icon} />}>
+                    <Badge count={numberOfUsers} offset={[60, 7]} style={{ background: theme.palette.primary[600] }}>
+                      <Link href={item.route}>
+                        <a>{item.label}</a>
+                      </Link>
+                    </Badge>
+                  </Menu.Item>
+                )
+              }
             }
 
             if (item.divider) return <MenuDivider key={'divider' + i} role="menuitem" />

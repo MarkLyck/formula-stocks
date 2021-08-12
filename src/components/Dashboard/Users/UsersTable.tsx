@@ -45,7 +45,11 @@ const columns = [
     dataIndex: 'email',
     key: 'email',
     sorter: (a: any, b: any) => (a.email < b.email ? -1 : 1),
-    render: (value: string) => <Paragraph copyable>{value}</Paragraph>,
+    render: (value: string) => (
+      <Paragraph copyable style={{ marginBottom: 0 }}>
+        {value}
+      </Paragraph>
+    ),
   },
   {
     title: 'Plan',
@@ -79,8 +83,8 @@ const columns = [
     key: 'status',
     width: 20,
     sorter: (a: any, b: any) => {
-      const aStatus = getSubscriptionStatus(a?.stripe?.subscription)
-      const bStatus = getSubscriptionStatus(b?.stripe?.subscription)
+      const aStatus = getSubscriptionStatus(a?.stripe?.subscription, a.type)
+      const bStatus = getSubscriptionStatus(b?.stripe?.subscription, b.type)
 
       return aStatus < bStatus ? -1 : 1
     },
@@ -88,7 +92,7 @@ const columns = [
       if (!row.stripe) return null
       const { subscription } = row.stripe
 
-      return <SubscriptionStatus status={getSubscriptionStatus(subscription)} />
+      return <SubscriptionStatus status={getSubscriptionStatus(subscription, row.type)} />
     },
   },
 ]

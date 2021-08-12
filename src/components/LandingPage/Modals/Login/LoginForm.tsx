@@ -79,8 +79,7 @@ const LoginForm = () => {
         Mixpanel.track('Login Success', { email: email, uniq: btoa(password) })
 
         setSuccess(true)
-        // shortly show the login success message before sending them to portfolio
-        setTimeout(() => Router.push('/dashboard'), 100)
+        Router.push('/dashboard')
       })
       .catch((error: any) => {
         console.info('login error: ', error)

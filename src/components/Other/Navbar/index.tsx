@@ -59,7 +59,7 @@ const LogoPlaceholder = styled.div`
 `
 
 const goTo = (location: any) => Router.push(location)
-const openWhitePaper = () => window.open('/assets/whitepaper_2008.pdf', '_blank')
+// const openWhitePaper = () => window.open('/assets/whitepaper_2008.pdf', '_blank')
 
 const Nav = () => {
   // @ts-ignore
@@ -94,7 +94,7 @@ const Nav = () => {
               href="https://help.formulastocks.com/en/category/faq-h9v423/"
               target="_blank"
             />
-            <NavItem variant="light" title="WHITE PAPER" onClick={() => openWhitePaper()} />
+            {/* <NavItem variant="light" title="WHITE PAPER" onClick={() => openWhitePaper()} /> */}
           </NavLinks>
           <ActionButton onClick={() => goTo('/?signup')}>SIGN UP TO BEAT THE MARKET</ActionButton>
         </LinkContainer>
