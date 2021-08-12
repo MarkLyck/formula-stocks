@@ -95,9 +95,9 @@ const Navbar = ({ showSignup }: any) => {
             <NavItem onClick={goToPricing} href={false}>
               Pricing
             </NavItem>
-            <NavItem realLink href="/assets/whitepaper_2008.pdf" target="_blank">
+            {/* <NavItem realLink href="/assets/whitepaper_2008.pdf" target="_blank">
               White paper
-            </NavItem>
+            </NavItem> */}
           </NavItems>
         </Space>
         <LoginItems showSignup={showSignup} />

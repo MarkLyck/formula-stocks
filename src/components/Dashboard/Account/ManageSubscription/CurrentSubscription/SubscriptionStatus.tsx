@@ -7,6 +7,7 @@ const colorMap = {
   canceled: 'danger',
   unpaid: 'danger',
   paused: 'warning',
+  admin: 'neutral',
 }
 
 const iconMap = {
@@ -15,6 +16,7 @@ const iconMap = {
   paused: ['fad', 'pause'],
   canceled: ['fas', 'times'],
   unpaid: ['fad', 'money-bill'],
+  admin: ['fad', 'tools'],
 }
 
 const Container = styled.div`
@@ -29,8 +31,9 @@ const Container = styled.div`
   border: 1px solid ${(p: any) => p.theme.palette[p.color][300]};
 `
 
-export const getSubscriptionStatus = (subscription: any) => {
+export const getSubscriptionStatus = (subscription: any, type?: string) => {
   if (!subscription) return null
+  if (type === 'admin') return 'admin'
 
   let status = subscription?.status
   if (subscription?.pause_collection) {
