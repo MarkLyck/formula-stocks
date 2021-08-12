@@ -37,6 +37,23 @@ class _Document extends Document {
               __html: `window.$crisp=[];window.CRISP_WEBSITE_ID="661b2a78-03b3-4033-9b04-03bd9334368d";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`,
             }}
           />
+
+          {/* WOOPRA analytics */}
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `
+              (function(){
+                  var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+              })("woopra");
+
+              woopra.config({
+                  domain: 'formulastocks.com'
+              });
+              woopra.track();
+              `,
+            }}
+          />
         </body>
       </Html>
     )

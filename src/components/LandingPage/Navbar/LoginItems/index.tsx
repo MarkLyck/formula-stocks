@@ -20,6 +20,7 @@ const LoginItems = ({ showSignup }: any) => {
   )
 
   const handleLogout = () => {
+    woopra.track('Click - Logout')
     logout()
     setLoggedIn(false)
   }
@@ -32,7 +33,13 @@ const LoginItems = ({ showSignup }: any) => {
   }
 
   const handleDashboardClick = () => {
+    woopra.track('Click - Dashboard Link')
     Router.push('/dashboard')
+  }
+
+  const handleSignupClick = () => {
+    woopra.track('Click - Signup Button')
+    showSignup()
   }
 
   if (loggedIn && process.browser) {
@@ -47,7 +54,7 @@ const LoginItems = ({ showSignup }: any) => {
   return (
     <Space>
       <LoginButton />
-      <SignupButton onClick={showSignup} />
+      <SignupButton onClick={handleSignupClick} />
     </Space>
   )
 }

@@ -4,6 +4,7 @@ import { ApolloProvider } from '@apollo/client'
 import { useApollo } from '../lib/apolloClient'
 import AppProvider from '../lib/AppProvider'
 import 'src/lib/iconLibrary'
+import 'src/lib/types.d.ts'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
