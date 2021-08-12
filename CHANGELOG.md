@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.317"></a>
+## 1.0.317 (2021-08-12)
+
+### Added
+
+- 📈 add analytics [[fa60dcb](https://github.com/MarkLyck/formula-stocks/commit/fa60dcbc29a70f5c9abd8d668f2d7ba12701e431)]
+
+### Miscellaneous
+
+-  Merge pull request [#413](https://github.com/MarkLyck/formula-stocks/issues/413) from MarkLyck/woopra [[e34d81e](https://github.com/MarkLyck/formula-stocks/commit/e34d81e9583905dcec741b7236bc2f0a3fe31508)]
+- 📝 version bump to v1.0.317 [[f9cfec1](https://github.com/MarkLyck/formula-stocks/commit/f9cfec1e303099c57347c838aaf205a1c3445306)]
+- 📝 generated changelog [[b878d65](https://github.com/MarkLyck/formula-stocks/commit/b878d659b9cefcc9c177910d8b1671613a5089ee)]
+
+
 <a name="1.0.316"></a>
 ## 1.0.316 (2021-08-12)
 
