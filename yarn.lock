@@ -3291,11 +3291,6 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.1.tgz#283f669ff76d7b8260df8ab7a4262cc83d988256"
   integrity sha512-fZQQafSREFyuZcdWFAExYjBiCL7AUCdgsk80iO0q4yihYYdcIiH28CcuPTGFgLOCC8RlW49GSQxdHwZP+I7CNg==
 
-"@types/mixpanel-browser@2.35.7":
-  version "2.35.7"
-  resolved "https://registry.yarnpkg.com/@types/mixpanel-browser/-/mixpanel-browser-2.35.7.tgz#9ff36890cf069ab557d556a945c2cd47906c13db"
-  integrity sha512-cisiRR1Fky5X1g9Z7tKliR8fB6V6TJ+7oa7Xca2AcYhtpOR8Otp4/pMdd9tLFPKqOLTWiD2S4gfN2zHFv7Z7KA==
-
 "@types/node-fetch@^2.5.7":
   version "2.5.10"
   resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-2.5.10.tgz#9b4d4a0425562f9fcea70b12cb3fcdd946ca8132"
@@ -9058,11 +9053,6 @@ mixin-deep@^1.2.0:
   dependencies:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
-
-mixpanel-browser@2.41.0:
-  version "2.41.0"
-  resolved "https://registry.yarnpkg.com/mixpanel-browser/-/mixpanel-browser-2.41.0.tgz#d49753b4e4a7e6ddd18c126be4a917fff4ce3039"
-  integrity sha512-IEuc9cH44hba9a3KEyulXINLn+gpFqluBDo7xiTk1h3j111dmmsctaE6tUzZYxgGLVqeNhTpsccdliOeX24Wlw==
 
 mkdirp@^0.5.1, mkdirp@^0.5.3:
   version "0.5.5"

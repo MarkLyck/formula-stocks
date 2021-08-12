@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { Mixpanel } from '~/common/analytics/mixpanel'
+
 import PauseModal from './Modal'
 
 export interface PauseSubscriptionType {
@@ -16,9 +16,7 @@ const PauseSubscription = ({ subscription, user }: PauseSubscriptionType) => {
   if (subscription.cancel_at_period_end) return null
 
   const handleOnClick = () => {
-    // Mixpanel.track('Pause subscription click', {
-    //   email: user.email,
-    // })
+    woopra.track('Click - Pause subscription')
     setModalVisible(true)
   }
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button, Space } from 'antd'
 import { Title } from './styles'
-// import { Mixpanel } from '~/common/analytics/mixpanel'
 
 type CancelOptionsPropsType = {
   setPage: any
@@ -9,9 +8,6 @@ type CancelOptionsPropsType = {
 
 const CancelOptions = ({ setPage }: CancelOptionsPropsType) => {
   const handleClick = (reason: string) => {
-    // Mixpanel.track('Cancel Reason Click', {
-    //   reason,
-    // })
     setPage(reason)
   }
 

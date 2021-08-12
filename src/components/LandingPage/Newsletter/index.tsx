@@ -8,7 +8,6 @@ import useBreakpoint from '@w11r/use-breakpoint'
 
 import { LandingPageContainer, Card, Highlight, Alert, ScalingTitle, ScalingSubTitle } from 'src/ui-components'
 import { CREATE_NEWSLETTER } from 'src/common/queries'
-import { Mixpanel } from 'src/lib/analytics/mixpanel'
 import { validateEmail, capitalize } from 'src/common/utils/helpers'
 
 const Content = styled.div`
@@ -75,10 +74,8 @@ const Newsletter = () => {
     }
 
     executeCreateNewsletter({ variables: { email, firstName } })
-    Mixpanel.track('Newsletter Signup', { email })
-    Mixpanel.people.set({
-      $email: email,
-    })
+    woopra.identify({ email })
+    woopra.track('Newsletter signup', { email })
 
     // @ts-ignore
     if (window && window.fbq) {

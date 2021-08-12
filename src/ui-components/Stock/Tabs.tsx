@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Mixpanel } from 'src/lib/analytics/mixpanel'
 import { Tabs } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { About, Articles, Report, Stats, Financials } from 'src/ui-components/Stock'
@@ -39,9 +38,7 @@ const index = ({ stockTip = {} }: TabsPropsType) => {
   if (!stockTip) return null
 
   const handleChange = (value: string) => {
-    Mixpanel.track(`Stock tab - ${value}`, {
-      ticker: stockTip.ticker,
-    })
+    woopra.track(`Click - report tab - ${value}`, { tab: value, ticker: stockTip.ticker })
   }
 
   return (
