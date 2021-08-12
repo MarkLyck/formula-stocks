@@ -238,6 +238,7 @@ const Reports = () => {
                 dataSource={reports}
                 loading={loading}
                 ellipsis={true}
+                scroll={{ x: 'max-content' }}
                 onRow={(record) => ({
                   onClick: () => router.push(`/dashboard/reports/${record.ticker.replace('_', '.')}`),
                 })}

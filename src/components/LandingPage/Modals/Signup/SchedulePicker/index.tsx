@@ -2,6 +2,7 @@ import { Radio, Typography, Badge, Button } from 'antd'
 import ChosenPlan from '../PlanPicker/ChosenPlan'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import useBreakpoint from '@w11r/use-breakpoint'
 import { currencyRoundedFormatter } from 'src/common/utils/formatters'
 
 const { Title, Text } = Typography
@@ -46,12 +47,20 @@ type SchedulePickerProps = {
 }
 
 const SchedulePicker = ({ plan, schedule, setSchedule, onSubmit }: SchedulePickerProps) => {
+  const { 'isMobile-': isMobileMinus } = useBreakpoint()
   let yearlyPrice = 49
   let monthlyPrice = 59
 
   if (plan === 'premium') {
     yearlyPrice = 99
     monthlyPrice = 119
+  }
+
+  let yearlyDescription = `Pay for a full year - ${currencyRoundedFormatter.format(yearlyPrice * 12)} / year`
+  let monthlyDescription = 'Pay monthly, cancel anytime'
+  if (isMobileMinus) {
+    yearlyDescription = 'Pay for a full year'
+    monthlyDescription = 'Pay monthly'
   }
 
   return (
@@ -71,7 +80,7 @@ const SchedulePicker = ({ plan, schedule, setSchedule, onSubmit }: SchedulePicke
               <Title level={4} style={{ marginBottom: 0 }}>
                 Yearly
               </Title>
-              <Text>Pay for a full year - {currencyRoundedFormatter.format(yearlyPrice * 12)} / year</Text>
+              <Text>{yearlyDescription}</Text>
             </div>
             <div style={{ marginLeft: 'auto' }}>
               <Title level={4} style={{ margin: '12px 0 0 auto' }}>
@@ -89,7 +98,7 @@ const SchedulePicker = ({ plan, schedule, setSchedule, onSubmit }: SchedulePicke
             <Title level={4} style={{ marginBottom: 0 }}>
               Monthly
             </Title>
-            <Text>Pay monthly, cancel anytime</Text>
+            <Text>{monthlyDescription}</Text>
           </div>
           <Title level={4} style={{ margin: '12px 0 0 auto' }}>
             ${monthlyPrice} / Mo

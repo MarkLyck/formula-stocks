@@ -204,6 +204,7 @@ const ReturnsCalculatorModal = ({ isVisible, onClose }: ReturnsCalculatorModalPr
         dataSource={yearByYearReturns}
         columns={columns}
         pagination={{ hideOnSinglePage: true, pageSize: years + 1 }}
+        scroll={{ x: 'max-content' }}
       />
       <Disclaimer>*Past returns does not guarantee similar future results.</Disclaimer>
     </Modal>

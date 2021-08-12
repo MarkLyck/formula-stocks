@@ -74,7 +74,7 @@ const CashflowStatement = ({ symbol }: any) => {
     return { label: lowerCase(label), value }
   })
 
-  return <Table columns={columns} dataSource={cashflowData} pagination={false} />
+  return <Table columns={columns} dataSource={cashflowData} pagination={false} scroll={{ x: 'max-content' }} />
 }
 
 export default CashflowStatement

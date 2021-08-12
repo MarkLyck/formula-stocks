@@ -3,6 +3,7 @@ import React from 'react'
 import dayjs from 'dayjs'
 import { maxBy } from 'lodash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { Legends, Legend } from 'src/ui-components/Charts/Legends'
 import { currencyRoundedFormatter } from 'src/common/utils/formatters'
 import theme from 'src/lib/theme'

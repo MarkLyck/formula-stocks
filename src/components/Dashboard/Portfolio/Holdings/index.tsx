@@ -32,6 +32,7 @@ const Holdings = () => {
         dataSource={holdings}
         pagination={false}
         rowKey="ticker"
+        scroll={{ x: 'max-content' }}
         onRow={(record) => ({
           onClick: () => router.push(`/dashboard/reports/${record.ticker.replace('_', '.')}`),
         })}

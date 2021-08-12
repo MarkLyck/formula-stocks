@@ -67,7 +67,7 @@ const IncomeStatement = ({ symbol }: any) => {
     return { label: lowerCase(label), value }
   })
 
-  return <Table columns={columns} dataSource={incomeStatementData} pagination={false} />
+  return <Table columns={columns} dataSource={incomeStatementData} pagination={false} scroll={{ x: 'max-content' }} />
 }
 
 export default IncomeStatement

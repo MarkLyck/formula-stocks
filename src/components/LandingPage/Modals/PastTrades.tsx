@@ -109,7 +109,7 @@ const PastTradesModal = ({ isVisible, onClose }: PastTradesModalProps) => {
         </StatisticsCard>
       </Space>
       <Divider />
-      <Table dataSource={finalTrades} columns={columns} size="small" />
+      <Table dataSource={finalTrades} columns={columns} size="small" scroll={{ x: 'max-content' }} />
     </Modal>
   )
 }

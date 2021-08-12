@@ -1,6 +1,8 @@
 import styled from '@emotion/styled'
 import { Typography, Button } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { mediaQuery } from '@w11r/use-breakpoint'
+
 const { Title } = Typography
 
 const PlanContainer = styled.div`
@@ -9,14 +11,22 @@ const PlanContainer = styled.div`
   background: ${(p) => p.theme.palette.neutral[200]};
   padding: 24px;
   border: 2px solid ${(p) => p.theme.palette.border};
+
+  ${mediaQuery(['mobile-', 'width: 100%'])}
+  ${mediaQuery(['mobile-', 'margin-bottom: 24px'])}
 `
 
 const Description = styled.p`
   font-size: 16px;
 `
 
+const Header = styled.div`
+  display: flex;
+`
+
 const Beside = styled.div`
   display: flex;
+  ${mediaQuery(['mobile-', 'flex-direction: column'])}
 `
 
 const IconContainer = styled.div`
@@ -75,7 +85,7 @@ const PlanPicker = ({ setPlan }: any) => (
     {/* <Description>Select the plan that best suits your needs</Description> */}
     <Beside>
       <PlanContainer style={{ marginRight: 16 }}>
-        <Beside>
+        <Header>
           <IconContainer color="primary">
             <FontAwesomeIcon icon={['fad', 'chart-line']} />
           </IconContainer>
@@ -85,7 +95,7 @@ const PlanPicker = ({ setPlan }: any) => (
             </Title>
             <Description>$49 / month</Description>
           </div>
-        </Beside>
+        </Header>
         <StyledList color="neutral">
           <li>7-day free trial</li>
           <li>For portfolios under $100k</li>
@@ -96,7 +106,7 @@ const PlanPicker = ({ setPlan }: any) => (
         </Button>
       </PlanContainer>
       <PlanContainer>
-        <Beside>
+        <Header>
           <IconContainer color="success">
             <FontAwesomeIcon icon={['fad', 'analytics']} />
           </IconContainer>
@@ -106,7 +116,7 @@ const PlanPicker = ({ setPlan }: any) => (
             </Title>
             <Description>$99 / month</Description>
           </div>
-        </Beside>
+        </Header>
         <StyledList color="neutral">
           <li>7-day free trial</li>
           <li>For portfolios from $100k to $1M</li>
