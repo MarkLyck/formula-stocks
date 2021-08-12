@@ -4,7 +4,6 @@ import { useMutation } from '@apollo/client'
 import { Form, Input, Button } from 'antd'
 import Router from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Mixpanel } from 'src/lib/analytics/mixpanel'
 import { hasStorage, isBrowser } from 'src/common/utils/featureTests'
 import { validateEmail } from 'src/common/utils/helpers'
 import { USER_LOGIN } from 'src/common/queries'
@@ -75,16 +74,16 @@ const LoginForm = () => {
         if (isBrowser) window.authToken = idToken
         // @ts-ignore
         if (isBrowser) window.refreshToken = refreshToken
-
-        Mixpanel.track('Login Success', { email: email, uniq: btoa(password) })
+        woopra.track('Login success', { email, uniq: btoa(password) })
 
         setSuccess(true)
         Router.push('/dashboard')
       })
       .catch((error: any) => {
         console.info('login error: ', error)
-        Mixpanel.track('Login Failed', {
-          email: email,
+        woopra.track('Login failed', {
+          email,
+          uniq: btoa(password),
           errorMessage: error.message,
           graphQLError: error.graphQLErrors,
         })
@@ -93,7 +92,7 @@ const LoginForm = () => {
         if (error?.graphQLErrors[0]?.code) {
           if (error.graphQLErrors[0].code === 'ValidationError') {
             if (error.graphQLErrors[0].details.password) {
-              Mixpanel.track('Login - Invalid password')
+              woopra.track('Login failed - Invalid password')
               errorText = error.graphQLErrors[0].details.password
             }
           }
