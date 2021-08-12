@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.314"></a>
+## 1.0.314 (2021-08-12)
+
+### Changed
+
+- 📱 fix responsive issues [[5a13ad8](https://github.com/MarkLyck/formula-stocks/commit/5a13ad860552af0077f804e6b23cdee26fc8cc8e)]
+
+### Miscellaneous
+
+-  Merge pull request [#410](https://github.com/MarkLyck/formula-stocks/issues/410) from MarkLyck/responsive-issues [[182e207](https://github.com/MarkLyck/formula-stocks/commit/182e207026120509edc03c326e1928a1cff373a7)]
+- 🏷️ fix ts [[a568cfd](https://github.com/MarkLyck/formula-stocks/commit/a568cfdb76d58ea28411e3b17ffe8f9a2a2707c3)]
+- 📝 version bump to v1.0.314 [[2ee63fd](https://github.com/MarkLyck/formula-stocks/commit/2ee63fd729c91089755f31cc9b76aae0c19aa064)]
+- 📝 generated changelog [[a8f9fc7](https://github.com/MarkLyck/formula-stocks/commit/a8f9fc79a4005eb4bf701a3ae729ca0c83708a65)]
+
+
 <a name="1.0.313"></a>
 ## 1.0.313 (2021-08-12)
 
