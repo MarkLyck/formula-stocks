@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.319"></a>
+## 1.0.319 (2021-08-13)
+
+### Added
+
+- 📈 woopra and coupon feature [[792cf5e](https://github.com/MarkLyck/formula-stocks/commit/792cf5ecbdf6050ce9454bb2aa717a195c24c7fe)]
+
+### Miscellaneous
+
+-  Merge pull request [#416](https://github.com/MarkLyck/formula-stocks/issues/416) from MarkLyck/woopra [[b2faf94](https://github.com/MarkLyck/formula-stocks/commit/b2faf94d7871b612f59299468998efaf6c03616e)]
+- 🏷️ fix ts [[d65e2f3](https://github.com/MarkLyck/formula-stocks/commit/d65e2f376c0becf47a2381e4f7fb910eb87d43b4)]
+- 📝 version bump to v1.0.319 [[897d840](https://github.com/MarkLyck/formula-stocks/commit/897d840a60410aa9da883574cb8e1990b5ad3e01)]
+- 📝 generated changelog [[9bd87b1](https://github.com/MarkLyck/formula-stocks/commit/9bd87b17650ddd043a6f55350b53f0657c443fec)]
+
+
 <a name="1.0.318"></a>
 ## 1.0.318 (2021-08-12)
 
