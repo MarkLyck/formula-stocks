@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.325"></a>
+## 1.0.325 (2021-08-13)
+
+### Fixed
+
+- 🐛 fix stripe token [[73552e0](https://github.com/MarkLyck/formula-stocks/commit/73552e0282bf964863ce8edd73b54b0520c9af6b)]
+
+### Miscellaneous
+
+-  Merge pull request [#421](https://github.com/MarkLyck/formula-stocks/issues/421) from MarkLyck/woopra [[8ee97df](https://github.com/MarkLyck/formula-stocks/commit/8ee97df03ad98f16f20077ca755ca066c89aa998)]
+- 📝 version bump to v1.0.325 [[c53274f](https://github.com/MarkLyck/formula-stocks/commit/c53274f1a128e730d5eb6dcce113f948e648fabc)]
+- 📝 generated changelog [[fd911b3](https://github.com/MarkLyck/formula-stocks/commit/fd911b32903bc7e420628d97fc82ec6f16a6f898)]
+
+
 <a name="1.0.324"></a>
 ## 1.0.324 (2021-08-13)
 
