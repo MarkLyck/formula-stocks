@@ -1,5 +1,42 @@
 # Changelog
 
+<a name="1.0.323"></a>
+## 1.0.323 (2021-08-13)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.323 [[8b93358](https://github.com/MarkLyck/formula-stocks/commit/8b93358ade6ccc9ab3948c9d8a356344dadb1e45)]
+
+
+<a name="1.0.322"></a>
+## 1.0.322 (2021-08-13)
+
+### Changed
+
+- ⬆️ Update dependency @ant-design/charts to v1.2.7 [[051a131](https://github.com/MarkLyck/formula-stocks/commit/051a1316198d3575a8ee927c63f66148c678573b)]
+- ⬆️ Update dependency zustand to v3.5.8 [[84f5037](https://github.com/MarkLyck/formula-stocks/commit/84f5037b637832b4f0f7060d3be4daed8aaeada7)]
+
+### Miscellaneous
+
+-  Merge pull request [#417](https://github.com/MarkLyck/formula-stocks/issues/417) from MarkLyck/renovate/zustand-3.x [[1abcb85](https://github.com/MarkLyck/formula-stocks/commit/1abcb85de4a0ccd88799f6b4a4848c6d538dc32e)]
+-  Merge pull request [#418](https://github.com/MarkLyck/formula-stocks/issues/418) from MarkLyck/renovate/ant-design-charts-1.x [[353e050](https://github.com/MarkLyck/formula-stocks/commit/353e0500a4d2439e56881aa99a1f0d6e5be6df95)]
+- 📝 version bump to v1.0.322 [[facf75a](https://github.com/MarkLyck/formula-stocks/commit/facf75ab8110fdb9d0e4b993ad3194a4df26f1d0)]
+
+
+<a name="1.0.321"></a>
+## 1.0.321 (2021-08-13)
+
+### Added
+
+- ✨ add password requirements, reset signup to page 1, add analytics [[815ab35](https://github.com/MarkLyck/formula-stocks/commit/815ab354a889a5f9a826cbe56703fbfcbff9d006)]
+
+### Miscellaneous
+
+-  Merge pull request [#419](https://github.com/MarkLyck/formula-stocks/issues/419) from MarkLyck/woopra [[3a5d313](https://github.com/MarkLyck/formula-stocks/commit/3a5d313e674e5a20a596ea1f86a68df3d1eff1be)]
+- 📝 version bump to v1.0.321 [[d7eec95](https://github.com/MarkLyck/formula-stocks/commit/d7eec95beb056e9aacda48910427dc3966628af8)]
+- 📝 generated changelog [[8b1935d](https://github.com/MarkLyck/formula-stocks/commit/8b1935d0bd0c4be701667e2f4c7a41c33e8812d0)]
+
+
 <a name="1.0.320"></a>
 ## 1.0.320 (2021-08-13)
 
