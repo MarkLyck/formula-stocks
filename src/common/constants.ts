@@ -3,7 +3,7 @@ export const GRAPHQL_ENDPOINT = `https://api.8base.com/${WORK_SPACE_ID}`
 export const AUTH_PROFILE_ID = 'ck3689vfo00xk01l5g4we1bp1'
 
 // export const STRIPE_TEST_API_KEY = 'pk_test_hh5vsZ7wNnMi80XJgzHVanEm'
-export const STRIPE_API_KEY = 'pk_live_3kRhRm6wqrUJ3ThsaDlf0f8w'
+export const STRIPE_API_KEY = 'pk_live_UTFEdLHeTQIAA0o2JSBM3fwL'
 export const PLAN_PREFIX = 'weekly-'
 export const PRICE = 50
 
