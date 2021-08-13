@@ -16,6 +16,7 @@ const CancelSubscription = ({ subscription, updateUser, user }: CancelSubscripti
   if (subscription.cancel_at_period_end) return null
 
   const handleOnClick = () => {
+    woopra.track('click', { element: 'cancel subscription' })
     setCancelModalVisible(true)
   }
 
@@ -28,13 +29,7 @@ const CancelSubscription = ({ subscription, updateUser, user }: CancelSubscripti
         updateUser={updateUser}
         user={user}
       />
-      <Button
-        onClick={handleOnClick}
-        type="primary"
-        ghost
-        danger
-        icon={<FontAwesomeIcon icon={['fad', 'times-octagon']} />}
-      >
+      <Button onClick={handleOnClick} danger icon={<FontAwesomeIcon icon={['fad', 'times-octagon']} />}>
         Cancel subscription
       </Button>
     </>
