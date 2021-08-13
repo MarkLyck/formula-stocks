@@ -6,7 +6,7 @@ import { CardNumberElement, useStripe, useElements } from '@stripe/react-stripe-
 import { useMutation } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { Alert, ErrorMessage } from 'src/ui-components'
+import { ErrorMessage } from 'src/ui-components'
 import { USER_SIGNUP, USER_LOGIN } from 'src/common/queries'
 import StripeWrapper from './StripeWrapper'
 import StripeElements from './StripeElements'
@@ -52,12 +52,6 @@ const validateMessages = {
 const Disclaimer = styled.div`
   text-align: center;
   font-size: 12px;
-`
-
-const SuccessAlert = styled(Alert)`
-  padding: 14px;
-  width: 100%;
-  justify-content: center;
 `
 
 type BillingFormProps = {
