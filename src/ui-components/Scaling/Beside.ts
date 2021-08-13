@@ -6,7 +6,7 @@ export const Beside = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: ${(p) => p.theme.breakpoints.small}) {
+  @media (max-width: 1300px) {
     flex-direction: ${(p: any) => (p.reverse ? 'column-reverse' : 'column')};
   }
 `

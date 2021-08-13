@@ -10,7 +10,7 @@ import Trade from './Trade'
 
 const Trades = () => {
   const plan = useStore((state: any) => state.plan)
-  const { 'isMobile-': isMobileMinus, 'isTablet-': isTabletMinus } = useBreakpoint()
+  const { 'isTablet-': isTabletMinus } = useBreakpoint()
 
   const { data, loading, error } = useQuery(TRADES_QUERY, {
     variables: {
@@ -23,9 +23,6 @@ const Trades = () => {
 
   let colSpan = 8
   if (isTabletMinus) {
-    colSpan = 12
-  }
-  if (isMobileMinus) {
     colSpan = 24
   }
 

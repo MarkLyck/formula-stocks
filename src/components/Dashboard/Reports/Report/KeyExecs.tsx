@@ -26,7 +26,7 @@ const KeyExecs = ({ symbol }: any) => {
   if (keyExecs.length === 0) {
     return (
       <Card>
-        <Empty description="No insider trades found" />
+        <Empty description="No key executives data found" />
       </Card>
     )
   }

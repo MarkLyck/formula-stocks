@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import dayjs from 'dayjs'
 import { Space } from 'antd'
+import useBreakpoint from '@w11r/use-breakpoint'
 
 const ExchangeContainer = styled.div`
   padding: 8px 16px;
@@ -88,6 +89,10 @@ const CanadaHolidays = {
 }
 
 const ExchangeStatuses = () => {
+  const { 'isTablet-': isTabletMinus } = useBreakpoint()
+
+  if (isTabletMinus) return null
+
   let NYSEIsOpen = false
   let NASDAQIsOpen = false
   let TSXIsOpen = false

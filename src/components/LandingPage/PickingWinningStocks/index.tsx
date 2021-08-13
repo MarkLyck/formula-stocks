@@ -19,7 +19,7 @@ const BackgroundContainer = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: ${(p) => p.theme.breakpoints.medium}) {
+  @media (max-width: ${(p) => p.theme.breakpoints.large}) {
     background-image: none;
     padding-bottom: 0;
   }
@@ -40,7 +40,7 @@ const Content = styled.div`
   max-width: 36vw;
   margin-left: auto;
 
-  @media (max-width: ${(p) => p.theme.breakpoints.medium}) {
+  @media (max-width: ${(p) => p.theme.breakpoints.large}) {
     max-width: 100%;
     display: block;
     margin-left: 0;
@@ -66,7 +66,7 @@ const HowItWorks = () => {
     <BackgroundContainer>
       <Container>
         <Element name="how-we-pick-winning-stocks" />
-        {windowSize.width <= theme.breakpoints.values.medium && (
+        {windowSize.width <= theme.breakpoints.values.large && (
           <ProductImage src="/images/product_images/mobile-screenshot.png" />
         )}
         <Content>
