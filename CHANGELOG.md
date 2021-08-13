@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.327"></a>
+## 1.0.327 (2021-08-13)
+
+### Changed
+
+- 📱 make dashboard look good on iPad [[ea944af](https://github.com/MarkLyck/formula-stocks/commit/ea944af75f70cf3b6eda0f0ddb97b82b085d55ad)]
+
+### Miscellaneous
+
+-  Merge pull request [#423](https://github.com/MarkLyck/formula-stocks/issues/423) from MarkLyck/responsive-issues2 [[c1be7c6](https://github.com/MarkLyck/formula-stocks/commit/c1be7c63ded4fc43c7aa847e58cd983fad7187c1)]
+- 🏷️ fix ts [[9e09bb8](https://github.com/MarkLyck/formula-stocks/commit/9e09bb88e3047511fa5f2844a32a3466135a3b13)]
+- 📝 version bump to v1.0.327 [[7988c9f](https://github.com/MarkLyck/formula-stocks/commit/7988c9f904d624b722b25e7f506da78e699c5d4e)]
+- 📝 generated changelog [[0ccd01d](https://github.com/MarkLyck/formula-stocks/commit/0ccd01da132d98086fa05223856782f8cb2af550)]
+
+
 <a name="1.0.326"></a>
 ## 1.0.326 (2021-08-13)
 
