@@ -44,19 +44,25 @@ const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
 
   const handleAccountInfoSubmit = (values: any) => {
     woopra.identify({ email: values.email })
-    woopra.track('Signup - Submitted account details')
+    woopra.track('navigate', { to: 'billing' })
     setAccountInfo(values)
     nextPage()
   }
 
   const handleSelectPlan = (plan: 'entry' | 'premium') => {
-    woopra.track('Signup - Selected plan', { plan })
+    woopra.track('navigate', { to: 'payment schedule' })
     setPlan(plan)
     nextPage()
   }
 
+  const onCancel = () => {
+    woopra.track('close_modal', { name: 'signup' })
+    onClose()
+    setPage(1)
+  }
+
   return (
-    <Modal visible={isVisible} onCancel={onClose} footer={null} centered width={page === 1 ? 700 : undefined}>
+    <Modal visible={isVisible} onCancel={onCancel} footer={null} centered width={page === 1 ? 700 : undefined}>
       <Typography.Title level={3} style={{ marginBottom: 24 }}>
         {title}
       </Typography.Title>

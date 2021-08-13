@@ -85,7 +85,7 @@ const PaymentDetails = ({ customerID }: { customerID: string }) => {
 
   const handleSubmit = async () => {
     setLoading(true)
-    woopra.track('Click - Update payment details')
+    woopra.track('click', { element: 'update payment details' })
 
     // Stripe uses this  to get all the card data
     const cardNumberElement = elements.getElement(CardNumberElement)

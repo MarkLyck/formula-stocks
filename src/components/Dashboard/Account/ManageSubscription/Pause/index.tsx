@@ -16,7 +16,7 @@ const PauseSubscription = ({ subscription, user }: PauseSubscriptionType) => {
   if (subscription.cancel_at_period_end) return null
 
   const handleOnClick = () => {
-    woopra.track('Click - Pause subscription')
+    woopra.track('click', { element: 'pause subscription' })
     setModalVisible(true)
   }
 
