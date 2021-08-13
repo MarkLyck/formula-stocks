@@ -8,7 +8,7 @@ import { LoadingError, DashboardHeader, PermissionWrapper } from 'src/ui-compone
 import Suggestion from './Suggestion'
 
 const Suggestions = () => {
-  const { 'isMobile-': isMobileMinus, 'isTablet-': isTabletMinus } = useBreakpoint()
+  const { 'isTablet-': isTabletMinus } = useBreakpoint()
   const plan = useStore((state: any) => state.plan)
 
   const { data, error } = useQuery(SUGGESTIONS_QUERY, {
@@ -21,9 +21,6 @@ const Suggestions = () => {
 
   let colSpan = 8
   if (isTabletMinus) {
-    colSpan = 12
-  }
-  if (isMobileMinus) {
     colSpan = 24
   }
 

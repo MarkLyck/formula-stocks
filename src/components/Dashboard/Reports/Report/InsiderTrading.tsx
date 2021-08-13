@@ -33,7 +33,7 @@ const InsiderTrading = ({ symbol }: any) => {
   if (insiderTrades.length === 0) {
     return (
       <Card>
-        <Empty description="No insider trades found" />
+        <Empty description="No insider trades data found" />
       </Card>
     )
   }

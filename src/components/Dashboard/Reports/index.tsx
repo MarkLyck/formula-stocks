@@ -8,11 +8,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { useWindowSize } from 'src/common/hooks'
 import { getIndustryIcon } from 'src/components/Dashboard/Reports/utils'
-import { ButtonIcon, DashboardHeader, Ticker, LoadingError } from 'src/ui-components'
+import { ButtonIcon, Ticker, LoadingError } from 'src/ui-components'
 import { DASHBOARD_GUTTER_SIZE } from 'src/common/constants'
 import { SEARCH_REPORTS_QUERY } from 'src/common/queries'
 import { AIScoreValue, PermissionWrapper } from 'src/ui-components'
-const { Text } = Typography
+
+const { Text, Title } = Typography
 const { Search } = Input
 
 const AIScoreBox = styled.div`
@@ -46,6 +47,14 @@ const FilterIconContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
+`
+
+const HeaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24px;
 `
 
 var formatter = new Intl.NumberFormat('en-US', {
@@ -151,49 +160,22 @@ const Reports = () => {
       render: (ticker: string) => <Ticker ticker={ticker} />,
     },
     {
-      title: 'AI Score',
-      dataIndex: 'aIScore',
-      defaultSortOrder: 'descend',
-      width: 130,
-      sorter: (a: any, b: any) => a.aIScore - b.aIScore,
-      render: (aiScore: number) => <AIScoreValue score={aiScore * 100} />,
-    },
-  ]
-
-  if (windowSize.width > 460) {
-    columns.splice(1, 0, {
       title: 'Name',
       dataIndex: 'name',
       // @ts-ignore
       ellipsis: true,
       sorter: (a: any, b: any) => (a.ticker < b.ticker ? 1 : -1),
       ...getColumnSearchProps('name'),
-    })
-  }
-
-  if (windowSize.width > 720) {
-    // @ts-ignore
-    columns.splice(2, 0, {
-      title: 'Price',
-      dataIndex: 'price',
-      sorter: (a: any, b: any) => a.price - b.price,
-      render: (price: any) => <Text>{formatter.format(price)}</Text>,
-    })
-  }
-
-  if (windowSize.width > 1000) {
-    columns.splice(2, 0, {
+    },
+    {
       title: 'Sector',
       dataIndex: 'sector',
       // @ts-ignore
       ellipsis: true,
       sorter: (a: any, b: any) => (a.sector < b.sector ? 1 : -1),
       ...getColumnSearchProps('sector'),
-    })
-  }
-
-  if (windowSize.width > 1200) {
-    columns.splice(3, 0, {
+    },
+    {
       title: 'Industry',
       dataIndex: 'industry',
       // @ts-ignore
@@ -207,8 +189,23 @@ const Reports = () => {
           {sector}
         </div>
       ),
-    })
-  }
+    },
+    {
+      title: 'Price',
+      dataIndex: 'price',
+      sorter: (a: any, b: any) => a.price - b.price,
+      render: (price: any) => <Text>{formatter.format(price)}</Text>,
+    },
+    {
+      title: 'AI Score',
+      dataIndex: 'aIScore',
+      defaultSortOrder: 'descend',
+      width: 130,
+      fixed: 'right',
+      sorter: (a: any, b: any) => a.aIScore - b.aIScore,
+      render: (aiScore: number) => <AIScoreValue score={aiScore * 100} />,
+    },
+  ]
 
   const reports =
     data && data.aIReportsList
@@ -220,14 +217,12 @@ const Reports = () => {
 
   return (
     <>
-      <Row gutter={DASHBOARD_GUTTER_SIZE}>
-        <Col span={18}>
-          <DashboardHeader showExchangeStatuses={false} />
-        </Col>
-        <Col span={6}>
-          <Search placeholder="search for a stock" onSearch={onMainSearch} />
-        </Col>
-      </Row>
+      <HeaderContainer>
+        <Title level={3} style={{ marginBottom: 0, marginRight: 32 }}>
+          Reports
+        </Title>
+        <Search placeholder="search for a stock" onSearch={onMainSearch} style={{ width: 400 }} />
+      </HeaderContainer>
       <Row gutter={[DASHBOARD_GUTTER_SIZE, DASHBOARD_GUTTER_SIZE]}>
         <Col span={24}>
           <PermissionWrapper>
