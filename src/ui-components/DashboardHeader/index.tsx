@@ -22,10 +22,9 @@ const Container = styled.div`
 type DashboardHeaderProps = {
   title?: string
   showExchangeStatuses?: boolean
-  titleStyle?: any
 }
 
-export const DashboardHeader = ({ title, showExchangeStatuses = true, titleStyle }: DashboardHeaderProps) => {
+export const DashboardHeader = ({ title, showExchangeStatuses = true }: DashboardHeaderProps) => {
   const router = useRouter()
 
   let pageTitle = title || router.pathname.split('/dashboard/')[1]
