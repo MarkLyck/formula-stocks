@@ -18,6 +18,21 @@ const handleSignup = async ({
   const lastName = name.split(' ').slice(1).join(' ')
 
   try {
+    woopra.track('submit', {
+      type: 'signup',
+      data: JSON.stringify({
+        plan,
+        billingPeriod,
+        firstName,
+        lastName,
+        email: accountInfo.email,
+        password: accountInfo.password,
+        country: accountInfo.country,
+        stripeToken,
+        coupon,
+      }),
+    })
+
     await userSignup({
       variables: {
         plan,
@@ -31,7 +46,7 @@ const handleSignup = async ({
         coupon,
       },
     })
-    woopra.identify({ email: accountInfo.email, uniq: btoa(accountInfo.password), name: `${firstName} ${lastName}` })
+    woopra.identify({ email: accountInfo.email, uniq: btoa(accountInfo.password), name })
     const loginData = await userLogin({ variables: { email: accountInfo.email, password: accountInfo.password } })
 
     // save authToken
@@ -42,7 +57,15 @@ const handleSignup = async ({
 
     setSuccess()
 
-    woopra.track('Signup - Success')
+    woopra.track('signup', {
+      plan,
+      billingPeriod,
+      email: accountInfo.email,
+      uniq: btoa(accountInfo.password),
+      country: accountInfo.country,
+      name,
+      coupon,
+    })
 
     router.push('/dashboard/portfolio')
   } catch (error) {
@@ -73,7 +96,11 @@ const handleSignup = async ({
       errorMessage = 'Something went wrong, please try again later'
     }
 
-    woopra.track('Signup - Error submiting', { error: errorMessage })
+    woopra.track('error', {
+      message: errorMessage,
+      object: JSON.stringify(error),
+      type: 'signup error',
+    })
     setSignupError(errorMessage)
   }
 }

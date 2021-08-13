@@ -51,6 +51,7 @@ const Invoice = ({ plan, schedule, couponCode }: InvoiceProps) => {
   if (coupons[couponCode]) {
     // @ts-ignore
     const coupon = coupons[couponCode]
+    woopra.track('applied_coupon', { code: couponCode, config: JSON.stringify(coupon) })
     couponApplied = true
     couponPrice = price * coupon.priceMultiplier
     couponText = coupon.text

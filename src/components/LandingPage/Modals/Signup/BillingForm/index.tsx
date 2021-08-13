@@ -74,7 +74,6 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
   const [userLogin] = useMutation(USER_LOGIN)
 
   const handleSubmit = async (values: any) => {
-    woopra.track('Signup - Submitting')
     // Don't bother trying if there is a stripe error.
     if (stripeError) return
 
@@ -84,7 +83,7 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
     const cardNumberElement = elements.getElement(CardNumberElement)
     stripe.createToken(cardNumberElement).then((payload: any) => {
       if (payload.error) {
-        woopra.track('Signup - Stripe error', { error: payload.error.message })
+        woopra.track('error', { type: 'stripe error', message: payload.error.message })
         setStripeError(payload.error.message)
         setLoading(false)
         return null
