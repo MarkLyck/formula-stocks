@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.326"></a>
+## 1.0.326 (2021-08-13)
+
+### Changed
+
+- 💄 fix cancel button styles and add tracking [[9666de2](https://github.com/MarkLyck/formula-stocks/commit/9666de20fb49b40acf6cc672cf16255a91c10c30)]
+
+### Miscellaneous
+
+-  Merge pull request [#422](https://github.com/MarkLyck/formula-stocks/issues/422) from MarkLyck/woopra [[e4af146](https://github.com/MarkLyck/formula-stocks/commit/e4af1462acabbbf9acdd42917f8bc6e8cdc58519)]
+- 📝 version bump to v1.0.326 [[60ea817](https://github.com/MarkLyck/formula-stocks/commit/60ea8172243938375af601aff1a3c1f2384db3ae)]
+- 📝 generated changelog [[e232da8](https://github.com/MarkLyck/formula-stocks/commit/e232da8a88da2490ca589efd8fdda9c8535fde39)]
+
+
 <a name="1.0.325"></a>
 ## 1.0.325 (2021-08-13)
 
