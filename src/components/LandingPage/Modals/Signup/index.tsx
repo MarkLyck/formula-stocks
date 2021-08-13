@@ -35,14 +35,22 @@ const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
   if (page === 3) title = 'Create account'
   if (page === 4) title = 'Payment details'
 
-  const nextPage = () => setPage(page + 1)
+  const nextPage = () => {
+    if (page === 2) {
+      woopra.track('Signup - Selected schedule', { schedule })
+    }
+    setPage(page + 1)
+  }
 
   const handleAccountInfoSubmit = (values: any) => {
+    woopra.identify({ email: values.email })
+    woopra.track('Signup - Submitted account details')
     setAccountInfo(values)
     nextPage()
   }
 
   const handleSelectPlan = (plan: 'entry' | 'premium') => {
+    woopra.track('Signup - Selected plan', { plan })
     setPlan(plan)
     nextPage()
   }
