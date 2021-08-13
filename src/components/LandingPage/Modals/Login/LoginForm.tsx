@@ -80,19 +80,16 @@ const LoginForm = () => {
         Router.push('/dashboard')
       })
       .catch((error: any) => {
-        console.info('login error: ', error)
-        woopra.track('Login failed', {
-          email,
-          uniq: btoa(password),
-          errorMessage: error.message,
-          graphQLError: error.graphQLErrors,
+        woopra.track('error', {
+          message: error.message,
+          object: JSON.stringify(error),
+          type: 'login error',
         })
 
         let errorText = 'Something went wrong, please try again.'
         if (error?.graphQLErrors[0]?.code) {
           if (error.graphQLErrors[0].code === 'ValidationError') {
             if (error.graphQLErrors[0].details.password) {
-              woopra.track('Login failed - Invalid password')
               errorText = error.graphQLErrors[0].details.password
             }
           }

@@ -37,7 +37,7 @@ const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
 
   const nextPage = () => {
     if (page === 2) {
-      woopra.track('Signup - Selected schedule', { schedule })
+      woopra.track('navigate', { to: 'account details' })
     }
     setPage(page + 1)
   }

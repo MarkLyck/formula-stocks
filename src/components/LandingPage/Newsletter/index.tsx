@@ -75,14 +75,7 @@ const Newsletter = () => {
 
     executeCreateNewsletter({ variables: { email, firstName } })
     woopra.identify({ email })
-    woopra.track('Newsletter signup', { email })
-
-    // @ts-ignore
-    if (window && window.fbq) {
-      // Facebook pixel tracking
-      // @ts-ignore
-      window.fbq('track', 'Lead')
-    }
+    woopra.track('newsletter', { email })
   }
 
   return (
