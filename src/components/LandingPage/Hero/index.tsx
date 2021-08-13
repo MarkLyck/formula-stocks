@@ -43,7 +43,7 @@ const Hero = ({ showSignup }: any) => {
   const { data, loading: statisticsLoading, error: statisticsError } = useQuery(STATISTICS)
 
   const learnMore = () => {
-    woopra.track('Click - Learn more')
+    woopra.track('click', { element: 'learn more button' })
     scroller.scrollTo('how-we-pick-winning-stocks', {
       duration: 500,
       delay: 50,
@@ -55,7 +55,7 @@ const Hero = ({ showSignup }: any) => {
   const statistics = data ? data.statisticsList.items[0] : {}
 
   const handleSignupClick = () => {
-    woopra.track('Click - Signup Button')
+    woopra.track('click', { element: 'signup button' })
     showSignup()
   }
 

@@ -20,7 +20,7 @@ const LoginItems = ({ showSignup }: any) => {
   )
 
   const handleLogout = () => {
-    woopra.track('Click - Logout')
+    woopra.track('click', { element: 'logout button' })
     logout()
     setLoggedIn(false)
   }
@@ -33,12 +33,12 @@ const LoginItems = ({ showSignup }: any) => {
   }
 
   const handleDashboardClick = () => {
-    woopra.track('Click - Dashboard Link')
+    woopra.track('click', { element: 'dashboard link' })
     Router.push('/dashboard')
   }
 
   const handleSignupClick = () => {
-    woopra.track('Click - Signup Button')
+    woopra.track('click', { element: 'signup button' })
     showSignup()
   }
 

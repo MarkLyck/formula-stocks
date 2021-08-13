@@ -81,8 +81,33 @@ const SignupForm = ({ onSubmit }: any) => {
       </Form.Item>
       <Form.Item
         name="password"
-        rules={[{ required: true, message: 'Please input your password!' }]}
-        validateTrigger="onChange"
+        rules={[
+          () => ({
+            validator(_rule, value) {
+              if (!value) {
+                return Promise.reject('Please input your Password!')
+              }
+              if (value.length < 8) {
+                return Promise.reject('Password must be at least 8 characters')
+              }
+              // contains a number
+              if (!/\d/.test(value)) {
+                return Promise.reject('Password must contain a number')
+              }
+              // contains an lowercase letter
+              if (!/[a-z]/.test(value)) {
+                return Promise.reject('Password must contain a lowercase letter')
+              }
+              // contains an uppercase letter
+              if (!/[A-Z]/.test(value)) {
+                return Promise.reject('Password must contain an UPPERCASE letter')
+              }
+              return Promise.resolve()
+            },
+            validateTrigger: 'onBlur',
+          }),
+        ]}
+        validateTrigger={['onChange', 'onBlur']}
       >
         <Input.Password prefix={<FontAwesomeIcon icon={['fad', 'lock-alt']} />} placeholder="password" />
       </Form.Item>
