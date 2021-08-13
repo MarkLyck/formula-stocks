@@ -6,7 +6,7 @@ import { CardNumberElement, useStripe, useElements } from '@stripe/react-stripe-
 import { useMutation } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { Alert, ErrorMessage } from 'src/ui-components'
+import { ErrorMessage } from 'src/ui-components'
 import { USER_SIGNUP, USER_LOGIN } from 'src/common/queries'
 import StripeWrapper from './StripeWrapper'
 import StripeElements from './StripeElements'
@@ -54,12 +54,6 @@ const Disclaimer = styled.div`
   font-size: 12px;
 `
 
-const SuccessAlert = styled(Alert)`
-  padding: 14px;
-  width: 100%;
-  justify-content: center;
-`
-
 type BillingFormProps = {
   plan: 'entry' | 'premium'
   accountInfo: any
@@ -72,13 +66,15 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
   const router = useRouter()
   const [stripeError, setStripeError] = useState(null)
   const [signupError, setSignupError] = useState(null)
-  const [success, setSuccess] = useState(false)
+  const [coupon, setCoupon] = useState(router.query.coupon ? router.query.coupon : undefined)
+  const [_success, setSuccess] = useState(false)
   const [loading, setLoading] = useState(false)
   const [form] = Form.useForm()
   const [userSignup] = useMutation(USER_SIGNUP)
   const [userLogin] = useMutation(USER_LOGIN)
 
   const handleSubmit = async (values: any) => {
+    woopra.track('Signup - Submitting')
     // Don't bother trying if there is a stripe error.
     if (stripeError) return
 
@@ -88,6 +84,7 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
     const cardNumberElement = elements.getElement(CardNumberElement)
     stripe.createToken(cardNumberElement).then((payload: any) => {
       if (payload.error) {
+        woopra.track('Signup - Stripe error', { error: payload.error.message })
         setStripeError(payload.error.message)
         setLoading(false)
         return null
@@ -102,6 +99,7 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
           accountInfo,
           billingPeriod: schedule,
           stripeToken: payload.token,
+          coupon: values.coupon,
           setSuccess,
           router,
           setSignupError,
@@ -114,28 +112,36 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
     <StyledForm
       form={form}
       name="account-form"
-      initialValues={{ remember: true }}
+      initialValues={{ remember: true, coupon: router.query.coupon ? router.query.coupon : undefined }}
       size="large"
       // @ts-ignore
       onFinish={handleSubmit}
       validateMessages={validateMessages}
       validateTrigger="onSubmit"
+      onValuesChange={(values) => {
+        if (values.coupon) {
+          setCoupon(values.coupon)
+        }
+      }}
     >
       {signupError && <ErrorMessage>{signupError}</ErrorMessage>}
       <Form.Item name="name" rules={[{ required: true }]} style={{ marginBottom: 16 }}>
         <Input prefix={<FontAwesomeIcon icon={['fad', 'user']} />} placeholder="First and last name" />
       </Form.Item>
       <StripeElements setStripeError={setStripeError} stripeError={stripeError} />
-      <Invoice schedule={schedule} plan={plan} />
+      {(router.query.coupon === '' || router.query.coupon) && (
+        <Form.Item name="coupon" style={{ marginBottom: 16 }}>
+          <Input prefix={<FontAwesomeIcon icon={['fad', 'tags']} />} placeholder="Coupon code" />
+        </Form.Item>
+      )}
+      <Invoice schedule={schedule} plan={plan} couponCode={coupon} />
 
       <Form.Item style={{ marginBottom: 6, marginTop: 16 }}>
-        {success ? (
-          <SuccessAlert type="success" message="successfully signed up" />
-        ) : (
+        {
           <Button type="primary" htmlType="submit" block loading={loading}>
             Try it free for 7 days
           </Button>
-        )}
+        }
       </Form.Item>
       <Disclaimer>No lock-in contract, you can cancel anytime.</Disclaimer>
     </StyledForm>

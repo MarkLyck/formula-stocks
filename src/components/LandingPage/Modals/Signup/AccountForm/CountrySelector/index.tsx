@@ -8,7 +8,7 @@ const CountrySelector = () => {
     <Form.Item name="country" rules={[{ required: true }]}>
       <Select showSearch placeholder="Country" optionFilterProp="label">
         {COUNTRY_OPTIONS.map((option) => (
-          <Option value={option.value} label={option.label}>
+          <Option key={option.value} value={option.value} label={option.label}>
             <div>
               <span role="img" style={{ marginRight: 8 }}>
                 {option.emoji}

@@ -14,13 +14,16 @@ const handleSignup = async ({
   router,
 }: any) => {
   setSignupError(null)
+  const firstName = name.split(' ')[0]
+  const lastName = name.split(' ').slice(1).join(' ')
+
   try {
     await userSignup({
       variables: {
         plan,
         billingPeriod,
-        firstName: name.split(' ')[0],
-        lastName: name.split(' ').slice(1).join(' '),
+        firstName,
+        lastName,
         email: accountInfo.email,
         password: accountInfo.password,
         country: accountInfo.country,
@@ -28,7 +31,7 @@ const handleSignup = async ({
         coupon,
       },
     })
-
+    woopra.identify({ email: accountInfo.email, uniq: btoa(accountInfo.password), name: `${firstName} ${lastName}` })
     const loginData = await userLogin({ variables: { email: accountInfo.email, password: accountInfo.password } })
 
     // save authToken
@@ -38,6 +41,9 @@ const handleSignup = async ({
     if (isBrowser) window.authToken = authToken
 
     setSuccess()
+
+    woopra.track('Signup - Success')
+
     router.push('/dashboard/portfolio')
   } catch (error) {
     let errorMessage = error.message
@@ -67,6 +73,7 @@ const handleSignup = async ({
       errorMessage = 'Something went wrong, please try again later'
     }
 
+    woopra.track('Signup - Error submiting', { error: errorMessage })
     setSignupError(errorMessage)
   }
 }
