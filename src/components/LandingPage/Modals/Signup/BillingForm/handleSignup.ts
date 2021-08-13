@@ -42,7 +42,7 @@ const handleSignup = async ({
 
     setSuccess()
 
-    woopra.track('Signup - Success')
+    woopra.track('signup')
 
     router.push('/dashboard/portfolio')
   } catch (error) {
