@@ -5,7 +5,7 @@ import { Card, Divider, Space } from 'antd'
 import AIScore from './AIScore'
 import { ScoreList, BesideSection, BoldValue } from './styles'
 import { HorizontalScore, RadarChart } from 'src/ui-components/Charts'
-import { AIScorePreview, AIScoreReturn } from 'src/ui-components'
+import { AIScorePreview, AIScoreReturn } from 'src/ui-components/AIScore'
 import { getAIScoreColor } from 'src/common/utils/reportUtils'
 
 const ChartContainer = styled(Card)`

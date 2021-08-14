@@ -3,7 +3,7 @@ import { useToggle } from 'ahooks'
 
 import styled from '@emotion/styled'
 import { Result, Button, Alert } from 'antd'
-import { RetryButton, SupportButton } from 'src/ui-components'
+import { RetryButton, SupportButton } from 'src/ui-components/Button'
 
 const Container = styled.div`
   height: 100%;

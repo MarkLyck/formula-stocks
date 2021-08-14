@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'antd'
-import { ButtonIcon } from 'src/ui-components'
+import { ButtonIcon } from './ButtonIcon'
 
 export const RetryButton = ({ children, ...props }: any) => {
   return (

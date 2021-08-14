@@ -3,7 +3,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Gauge } from 'src/ui-components/Charts'
-import { Card } from 'src/ui-components'
+import { Card } from 'src/ui-components/Card'
 
 // @ts-ignore
 export const AIScoreContainer = styled(Card)`

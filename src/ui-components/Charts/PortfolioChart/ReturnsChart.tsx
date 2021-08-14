@@ -3,8 +3,9 @@ import dynamic from 'next/dynamic'
 import styled from '@emotion/styled'
 import { maxBy } from 'lodash'
 import { format } from 'date-fns'
-import { numberFormatter, decimalNumberFormatter } from 'src/common/utils/formatters'
 import { useTheme } from '@emotion/react'
+
+import { numberFormatter, decimalNumberFormatter } from 'src/common/utils/formatters'
 
 // const Line = dynamic(() => import('@ant-design/charts').then((mod) => mod.Line) as any, { ssr: false })
 const Area = dynamic(() => import('@ant-design/charts').then((mod) => mod.Area) as any, { ssr: false })

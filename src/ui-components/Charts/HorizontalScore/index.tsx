@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import styled from '@emotion/styled'
 import { getAIScoreColor } from 'src/common/utils/reportUtils'
 import theme from 'src/lib/theme'
-import { Card } from 'src/ui-components'
+import { Card } from 'src/ui-components/Card'
 
 const Container = styled(Card)`
   display: flex;

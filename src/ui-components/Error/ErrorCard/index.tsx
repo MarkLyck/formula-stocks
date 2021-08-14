@@ -2,7 +2,7 @@ import React from 'react'
 
 import styled from '@emotion/styled'
 import { Card, Alert, Space, Typography } from 'antd'
-import { RetryButton, SupportButton } from 'src/ui-components'
+import { RetryButton, SupportButton } from 'src/ui-components/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const { Title, Text } = Typography

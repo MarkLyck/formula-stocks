@@ -1,7 +1,7 @@
 import React from 'react'
 import { Empty as EmptyAntD } from 'antd'
 import styled from '@emotion/styled'
-import { Card } from 'src/ui-components'
+import { Card } from 'src/ui-components/Card'
 
 export interface EmptyProps {
   label?: string

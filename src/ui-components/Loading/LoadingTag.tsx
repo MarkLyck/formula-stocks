@@ -1,5 +1,6 @@
 import React from 'react'
-import { Tag, LoadingIndicator } from 'src/ui-components'
+import { Tag } from 'src/ui-components/Tag'
+import { LoadingIndicator } from './LoadingIndicator'
 import theme from 'src/lib/theme'
 
 export const LoadingTag = () => (

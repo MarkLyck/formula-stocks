@@ -7,9 +7,11 @@ import { ErrorBoundary } from 'react-error-boundary'
 
 import useStore from 'src/lib/useStore'
 import { LAUNCH_PERFORMANCE_HISTORY } from 'src/common/queries'
+
 import ReturnsChart from './ReturnsChart'
 import BarChart from './Histogram'
-import { Card as DashboardCard, ErrorFallback, LoadingError } from 'src/ui-components'
+import { Card as DashboardCard } from 'src/ui-components/Card'
+import { ErrorFallback, LoadingError } from 'src/ui-components/Error'
 
 const { Option } = Select
 const { Title } = Typography
@@ -59,6 +61,12 @@ const TypeSelect = styled(Select)`
 `
 
 const START_VALUE = 200000000
+
+type returnsDataPointType = {
+  balance: number
+  cash: number
+  date: string
+}
 
 const generateMonthlyReturns = (data: returnsDataPointType[] = []) => {
   const returns = data.map((point, i) => {
@@ -125,106 +133,106 @@ const generateAnnualReturns = (data: returnsDataPointType[] = []) => {
   return yearlyReturns
 }
 
-type returnsDataPointType = {
-  balance: number
-  cash: number
-  date: string
-}
-
 const PortfolioChart = () => {
-  const plan = useStore((state: any) => state.plan)
-  const [chartType, setChartType] = useState('total_return')
-  const [startDate, setStartDate] = useState('all_time')
-  const { data, loading, error } = useQuery(LAUNCH_PERFORMANCE_HISTORY, {
-    variables: { plan },
-    // client: FSApolloClient,
-  })
+  console.log('TEST', useStore)
+  // const plan = useStore((state: any) => state.plan)
+  console.log('END')
+  // const [chartType, setChartType] = useState('total_return')
+  // const [startDate, setStartDate] = useState('all_time')
+  // const { data, loading, error } = useQuery(LAUNCH_PERFORMANCE_HISTORY, {
+  //   variables: { plan },
+  //   // client: FSApolloClient,
+  // })
 
-  if (error) return <LoadingError error={error} />
+  return null
 
-  const dateMap = {
-    all_time: new Date(2008, 11, 31),
-    since_signup: new Date(),
-    last_10_years: subMonths(subYears(new Date(), 10), 0),
-    last_5_years: subMonths(subYears(new Date(), 5), 0),
-    last_3_years: subMonths(subYears(new Date(), 3), 0),
-    last_2_years: subMonths(subYears(new Date(), 2), 0),
-    last_12_months: subMonths(subYears(new Date(), 1), 0),
-  }
+  // if (error) return <LoadingError error={error} />
 
-  let totalReturnsData: returnsDataPointType[] = []
+  // const dateMap = {
+  //   all_time: new Date(2008, 11, 31),
+  //   since_signup: new Date(),
+  //   last_10_years: subMonths(subYears(new Date(), 10), 0),
+  //   last_5_years: subMonths(subYears(new Date(), 5), 0),
+  //   last_3_years: subMonths(subYears(new Date(), 3), 0),
+  //   last_2_years: subMonths(subYears(new Date(), 2), 0),
+  //   last_12_months: subMonths(subYears(new Date(), 1), 0),
+  // }
 
-  if (data?.plan?.launchHistory) {
-    totalReturnsData = [
-      {
-        balance: 0,
-        cash: START_VALUE,
-        date: '2009-01-01T00:00:00.000Z',
-      },
-      ...data.plan.launchHistory,
-    ]
+  // let totalReturnsData: returnsDataPointType[] = []
 
-    totalReturnsData = totalReturnsData.filter((point) => {
-      // @ts-ignore
-      if (isAfter(new Date(point.date), dateMap[startDate])) {
-        return true
-      }
-      return false
-    })
-  }
+  // if (data?.plan?.launchHistory) {
+  //   totalReturnsData = [
+  //     {
+  //       balance: 0,
+  //       cash: START_VALUE,
+  //       date: '2009-01-01T00:00:00.000Z',
+  //     },
+  //     ...data.plan.launchHistory,
+  //   ]
 
-  const monthlyReturnsData = generateMonthlyReturns(totalReturnsData)
-  const annualReturnsData = generateAnnualReturns(totalReturnsData)
+  //   totalReturnsData = totalReturnsData.filter((point) => {
+  //     // @ts-ignore
+  //     if (isAfter(new Date(point.date), dateMap[startDate])) {
+  //       return true
+  //     }
+  //     return false
+  //   })
+  // }
 
-  return (
-    <DashboardCard>
-      <ErrorBoundary
-        FallbackComponent={ErrorFallback}
-        onReset={() => {
-          // reset the state of your app so the error doesn't happen again
-          location.reload(true)
-        }}
-      >
-        <Space direction="vertical">
-          <Flex>
-            <Title level={4}>Performance</Title>
-            <Space>
-              {/* @ts-ignore */}
-              <TypeSelect defaultValue="total_return" onChange={(val: string) => setChartType(val)}>
-                <Option value="total_return">Total return</Option>
-                <Option value="monthly_returns">Monthly returns</Option>
-                <Option value="annual_returns">Annual returns</Option>
-              </TypeSelect>
-              {/* @ts-ignore */}
-              <StyledSelect defaultValue="all_time" onChange={(val: string) => setStartDate(val)}>
-                <Option value="all_time">All time</Option>
-                <Option value="since_signup" disabled>
-                  Since I signed up
-                </Option>
-                <Option value="last_10_years">Last 10 years</Option>
-                <Option value="last_5_years">Last 5 years</Option>
-                <Option value="last_3_years">Last 3 years</Option>
-                <Option value="last_2_years">Last 2 years</Option>
-                <Option value="last_12_months">Last 12 months</Option>
-              </StyledSelect>
-            </Space>
-          </Flex>
-          <ChartContainer>
-            {/* @ts-ignore */}
-            {chartType === 'total_return' && <ReturnsChart data={totalReturnsData} loading={loading} error={error} />}
-            {(chartType === 'annual_returns' || chartType === 'monthly_returns') && (
-              <BarChart
-                data={chartType === 'monthly_returns' ? monthlyReturnsData : annualReturnsData}
-                chartType={chartType}
-                loading={loading}
-                error={error}
-              />
-            )}
-          </ChartContainer>
-        </Space>
-      </ErrorBoundary>
-    </DashboardCard>
-  )
+  // const monthlyReturnsData = generateMonthlyReturns(totalReturnsData)
+  // const annualReturnsData = generateAnnualReturns(totalReturnsData)
+
+  // return (
+  //   <DashboardCard>
+  //     <ErrorBoundary
+  //       FallbackComponent={ErrorFallback}
+  //       onReset={() => {
+  //         // reset the state of your app so the error doesn't happen again
+  //         location.reload(true)
+  //       }}
+  //     >
+  //       <Space direction="vertical">
+  //         <Flex>
+  //           <Title level={4}>Performance</Title>
+  //           <Space>
+  //             {/* @ts-ignore */}
+  //             <TypeSelect defaultValue="total_return" onChange={(val: string) => setChartType(val)}>
+  //               <Option value="total_return">Total return</Option>
+  //               <Option value="monthly_returns">Monthly returns</Option>
+  //               <Option value="annual_returns">Annual returns</Option>
+  //             </TypeSelect>
+  //             {/* @ts-ignore */}
+  //             <StyledSelect defaultValue="all_time" onChange={(val: string) => setStartDate(val)}>
+  //               <Option value="all_time">All time</Option>
+  //               <Option value="since_signup" disabled>
+  //                 Since I signed up
+  //               </Option>
+  //               <Option value="last_10_years">Last 10 years</Option>
+  //               <Option value="last_5_years">Last 5 years</Option>
+  //               <Option value="last_3_years">Last 3 years</Option>
+  //               <Option value="last_2_years">Last 2 years</Option>
+  //               <Option value="last_12_months">Last 12 months</Option>
+  //             </StyledSelect>
+  //           </Space>
+  //         </Flex>
+  //         <ChartContainer>
+  //           {/* @ts-ignore */}
+  //           {chartType === 'total_return' && <ReturnsChart data={totalReturnsData} loading={loading} error={error} />}
+  //           {(chartType === 'annual_returns' || chartType === 'monthly_returns') && (
+  //             <BarChart
+  //               data={chartType === 'monthly_returns' ? monthlyReturnsData : annualReturnsData}
+  //               chartType={chartType}
+  //               loading={loading}
+  //               error={error}
+  //             />
+  //           )}
+  //         </ChartContainer>
+  //       </Space>
+  //     </ErrorBoundary>
+  //   </DashboardCard>
+  // )
 }
 
-export default PortfolioChart
+const TestChart = (_props: any) => <div>test</div>
+
+export default TestChart

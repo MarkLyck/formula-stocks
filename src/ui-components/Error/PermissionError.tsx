@@ -3,7 +3,8 @@ import styled from '@emotion/styled'
 import { useRouter } from 'next/router'
 import { Button, Space } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Card, ButtonIcon } from 'src/ui-components'
+import { Card } from 'src/ui-components/Card'
+import { ButtonIcon } from 'src/ui-components/Button'
 import { ErrorHeader, ErrorText } from './styles'
 
 const Container = styled(Card)`

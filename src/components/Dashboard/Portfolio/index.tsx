@@ -19,24 +19,24 @@ const Portfolio = () => (
         <Statistics />
       </Col>
     </Row>
-    <Row gutter={[GUTTER_SIZE, GUTTER_SIZE]} style={{ marginBottom: GUTTER_SIZE }}>
+    {/* <Row gutter={[GUTTER_SIZE, GUTTER_SIZE]} style={{ marginBottom: GUTTER_SIZE }}>
       <Col span={24}>
         <PortfolioChart />
-      </Col>
-    </Row>
-    <Row gutter={GUTTER_SIZE}>
+      </Col>x
+    </Row> */}
+    {/* <Row gutter={GUTTER_SIZE}>
       <Col span={24}>
         <PermissionWrapper>
           <Holdings />
         </PermissionWrapper>
       </Col>
-    </Row>
+    </Row> */}
 
     <Row gutter={GUTTER_SIZE}>
       <Col span={24}>
-        <PermissionWrapper ErrorComponent={null}>
-          <Allocation />
-        </PermissionWrapper>
+        {/* <PermissionWrapper ErrorComponent={null}> */}
+        <Allocation />
+        {/* </PermissionWrapper> */}
       </Col>
     </Row>
   </>

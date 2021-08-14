@@ -42,13 +42,13 @@ const NavItems = styled(Space)`
   align-items: center;
 
   @media (max-width: 700px) {
-    .ant-space-item:nth-child(1) {
+    .ant-space-item:nth-of-type(1) {
       display: none;
     }
   }
 
   @media (max-width: 600px) {
-    .ant-space-item:nth-child(2) {
+    .ant-space-item:nth-of-type(2) {
       display: none;
     }
   }

@@ -1,14 +1,23 @@
 const withAntdLess = require('next-plugin-antd-less')
-const { withPlausibleProxy } = require('next-plausible')
+// const { withPlausibleProxy } = require('next-plausible')
 
-module.exports = withPlausibleProxy()(
-  withAntdLess({
-    modifyVars: { '@primary-color': '#3366ff' },
-    lessVarsFilePathAppendToEndOfContent: false,
-    cssLoaderOptions: {},
+// module.exports = withPlausibleProxy()(
+//   withAntdLess({
+//     modifyVars: { '@primary-color': '#3366ff' },
+//     lessVarsFilePathAppendToEndOfContent: false,
+//     cssLoaderOptions: {},
 
-    webpack(config) {
-      return config
-    },
-  })
-)
+//     webpack(config) {
+//       return config
+//     },
+//   })
+// )
+module.exports = withAntdLess({
+  modifyVars: { '@primary-color': '#3366ff' },
+  lessVarsFilePathAppendToEndOfContent: false,
+  cssLoaderOptions: {},
+
+  webpack(config) {
+    return config
+  },
+})

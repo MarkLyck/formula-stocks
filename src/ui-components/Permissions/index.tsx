@@ -3,7 +3,8 @@ import { Button } from 'antd'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { Card, ButtonIcon } from 'src/ui-components'
+import { Card } from 'src/ui-components/Card'
+import { ButtonIcon } from 'src/ui-components/Button'
 import useStore from 'src/lib/useStore'
 
 const Container = styled(Card)`
@@ -46,6 +47,7 @@ export const PermissionWrapper = ({ children, ErrorComponent }: any) => {
   const router = useRouter()
   const { user, userRoles } = useStore((state: any) => ({ user: state.user, userRoles: state.userRoles }))
 
+  console.log('🔈 ~ user', user)
   if (!children) return null
   if (user === null) return children
 

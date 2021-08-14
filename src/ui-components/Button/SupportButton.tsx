@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'antd'
-import { ButtonIcon } from 'src/ui-components'
+import { ButtonIcon } from './ButtonIcon'
 
 export const SupportButton = (props: any) => {
   return (

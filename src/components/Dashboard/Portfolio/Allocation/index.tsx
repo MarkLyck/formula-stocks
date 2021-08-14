@@ -4,6 +4,7 @@ import { Card } from 'antd'
 
 import { PORTFOLIO_HOLDINGS } from 'src/common/queries'
 import { BulletAllocationChart, LoadingError } from 'src/ui-components'
+// import BulletAllocationChart from 'src/ui-components/Charts/BulletAllocationChart'
 import useStore from 'src/lib/useStore'
 
 const Allocation = () => {

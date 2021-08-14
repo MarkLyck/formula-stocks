@@ -1,9 +1,10 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 import styled from '@emotion/styled'
-import { numberFormatter, decimalNumberFormatter } from 'src/common/utils/formatters'
 import { format } from 'date-fns'
 import { useTheme } from '@emotion/react'
+
+import { numberFormatter, decimalNumberFormatter } from 'src/common/utils/formatters'
 
 const Column = dynamic(() => import('@ant-design/charts').then((mod) => mod.Column) as any, { ssr: false })
 
