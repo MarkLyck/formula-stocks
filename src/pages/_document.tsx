@@ -50,7 +50,7 @@ class _Document extends Document {
               woopra.config({
                   domain: 'formulastocks.com'
               });
-              track();
+              woopra.track();
               `,
             }}
           />
