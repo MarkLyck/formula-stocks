@@ -8388,6 +8388,11 @@ log-symbols@^4.1.0:
     chalk "^4.1.0"
     is-unicode-supported "^0.1.0"
 
+logrocket@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-2.0.0.tgz#331065873429cf70fb7cf84b676900baf9988a4e"
+  integrity sha512-O+YdrtpQn7oOmrxCqOyUcaB1+ONrhyJuB9CX57PQ0JJzNrYstxd0Oyg6UdLisA7UjNmwTr6fixMO3WOysDTFFA==
+
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
