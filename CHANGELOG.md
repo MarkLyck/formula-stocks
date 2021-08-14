@@ -1,5 +1,23 @@
 # Changelog
 
+<a name="1.0.336"></a>
+## 1.0.336 (2021-08-14)
+
+### Added
+
+- 📈 plausible proxy [[7330b3c](https://github.com/MarkLyck/formula-stocks/commit/7330b3c492bd87559162eab2496221c0d438874b)]
+
+### Removed
+
+- 🔥 remove plausible script tag [[23df3af](https://github.com/MarkLyck/formula-stocks/commit/23df3afdfd981a6e480e54098f5a37ca01396aaa)]
+
+### Miscellaneous
+
+-  Merge pull request [#436](https://github.com/MarkLyck/formula-stocks/issues/436) from MarkLyck/plausible-analytics [[25d251b](https://github.com/MarkLyck/formula-stocks/commit/25d251bf2b8304db751d6be9c2d7231a56a4ad35)]
+- 📝 version bump to v1.0.336 [[cca7656](https://github.com/MarkLyck/formula-stocks/commit/cca7656c8949f7e6336d9758721f88016788e8ee)]
+- 📝 generated changelog [[d38f7e5](https://github.com/MarkLyck/formula-stocks/commit/d38f7e547dd9295913666643c25f54eeee438f70)]
+
+
 <a name="1.0.335"></a>
 ## 1.0.335 (2021-08-14)
 
