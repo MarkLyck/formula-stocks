@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.347"></a>
+## 1.0.347 (2021-08-14)
+
+### Added
+
+- 📈 track errors [[c25076d](https://github.com/MarkLyck/formula-stocks/commit/c25076d31539223c72290f0c973b433b00c4179d)]
+
+### Miscellaneous
+
+-  Merge pull request [#451](https://github.com/MarkLyck/formula-stocks/issues/451) from MarkLyck/analytics-errors [[6fb9639](https://github.com/MarkLyck/formula-stocks/commit/6fb9639c428bacd905a774cf396994ebb8919c76)]
+- 📝 version bump to v1.0.347 [[3d65538](https://github.com/MarkLyck/formula-stocks/commit/3d6553868da1ff197b32237f2e774ac35097a292)]
+- 📝 generated changelog [[dbe5171](https://github.com/MarkLyck/formula-stocks/commit/dbe5171f65d776827782966f7942d6e52c9b94ea)]
+
+
 <a name="1.0.346"></a>
 ## 1.0.346 (2021-08-14)
 
