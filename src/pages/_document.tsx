@@ -54,9 +54,6 @@ class _Document extends Document {
               `,
             }}
           />
-
-          {/* Plausible analytics */}
-          <script defer data-domain="formulastocks.com" src="https://plausible.io/js/plausible.js" />
         </body>
       </Html>
     )
