@@ -1,5 +1,27 @@
 # Changelog
 
+<a name="1.0.348"></a>
+## 1.0.348 (2021-08-14)
+
+### Changed
+
+- 🔧 sentry env config [[bdc4153](https://github.com/MarkLyck/formula-stocks/commit/bdc415319913087d4c3d0aa38d08d9fb4ad7fd51)]
+- 🔧 update sentry config [[a4b4645](https://github.com/MarkLyck/formula-stocks/commit/a4b4645c91bbb942a679ec204fee63c34cafec9e)]
+
+### Removed
+
+- 🔥 remove generated config file [[9e46fc2](https://github.com/MarkLyck/formula-stocks/commit/9e46fc23737ad04dda55664bf11155b68ba67cd3)]
+
+### Miscellaneous
+
+-  Merge pull request [#452](https://github.com/MarkLyck/formula-stocks/issues/452) from MarkLyck/sentry [[87eeecb](https://github.com/MarkLyck/formula-stocks/commit/87eeecbaeb1e37ff8743f7f8a7bdc431ac2b4aa1)]
+- 🗑️ cleanup [[c0f6278](https://github.com/MarkLyck/formula-stocks/commit/c0f627803ff64730794341a1b0f2243883f10e9b)]
+- 🥅 add sentry environments [[6b7745e](https://github.com/MarkLyck/formula-stocks/commit/6b7745e0bce0e15ad20b5a217e31b023f7638ee4)]
+- 🥅 add sentry to track errors and performance [[5c4d08f](https://github.com/MarkLyck/formula-stocks/commit/5c4d08fb5cf1fb3022a0e46dcb0e84c447bf0ab5)]
+- 📝 version bump to v1.0.348 [[a6a1d9a](https://github.com/MarkLyck/formula-stocks/commit/a6a1d9a594effe8b2819dbd61cf51935f739f8ed)]
+- 📝 generated changelog [[147ef9b](https://github.com/MarkLyck/formula-stocks/commit/147ef9b34dcfdd524d86b8ba55896007660a8d1c)]
+
+
 <a name="1.0.347"></a>
 ## 1.0.347 (2021-08-14)
 
