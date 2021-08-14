@@ -15,16 +15,14 @@ const withDashboard = (Component: React.ReactNode) => () => {
 
   useEffect(() => {
     if (data?.user) {
-      woopra
-        .identify({
-          email: data.user.email,
-          name: `${data.user.firstName || ''} ${data.user.lastName || ''}`,
-        })
-        .push()
-
       setUser(data.user)
+
+      analyticsIdentify({
+        id: data.user.id,
+        email: data.user.email,
+        name: `${data.user.firstName || ''} ${data.user.lastName || ''}`,
+      })
       updateLastSeen({ variables: { id: data.user.id, lastSeen: new Date() } })
-      // updateLastSeen({ variables: { id: data.user.id, lastSeen: dayjs(new Date()).format('YYYY-MM-DD') } })
     }
     // @ts-ignore
     $crisp.push(['do', 'chat:hide'])
