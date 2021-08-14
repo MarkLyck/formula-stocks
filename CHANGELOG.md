@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.0.352"></a>
+## 1.0.352 (2021-08-14)
+
+### Changed
+
+- ⬆️ Pin dependency logrocket to 2.0.0 [[71d32a1](https://github.com/MarkLyck/formula-stocks/commit/71d32a1cc753c11407e1542692efd181f4723861)]
+- ⬆️ Pin dependency @sentry/nextjs to 6.11.0 [[1e373bf](https://github.com/MarkLyck/formula-stocks/commit/1e373bf73ba8e63347dd31e3fcadaadac2329cad)]
+
+### Miscellaneous
+
+-  Merge pull request [#453](https://github.com/MarkLyck/formula-stocks/issues/453) from MarkLyck/renovate/sentry-monorepo [[e922e4d](https://github.com/MarkLyck/formula-stocks/commit/e922e4d8d500b4d230bb6fbb04c47ded6a885b9a)]
+-  Merge pull request [#455](https://github.com/MarkLyck/formula-stocks/issues/455) from MarkLyck/renovate/pin-dependencies [[cb7c932](https://github.com/MarkLyck/formula-stocks/commit/cb7c9325e3221f5fc65ea4c7b0d8e4a6d02d1d37)]
+- 📝 version bump to v1.0.352 [[6dbd529](https://github.com/MarkLyck/formula-stocks/commit/6dbd529496cb800dda46bf1717dfab74ed882901)]
+- 📝 generated changelog [[2bf09d7](https://github.com/MarkLyck/formula-stocks/commit/2bf09d70312a1deda6fdf79f7de8676f03fa2c55)]
+
+
 <a name="1.0.351"></a>
 ## 1.0.351 (2021-08-14)
 
