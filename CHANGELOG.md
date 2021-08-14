@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.349"></a>
+## 1.0.349 (2021-08-14)
+
+### Added
+
+- 📈 add logrocket [[002ba9c](https://github.com/MarkLyck/formula-stocks/commit/002ba9c4ffed73ced8fa05eb88a06bd298b52de0)]
+
+### Miscellaneous
+
+-  Merge pull request [#454](https://github.com/MarkLyck/formula-stocks/issues/454) from MarkLyck/logrocket [[90b4d78](https://github.com/MarkLyck/formula-stocks/commit/90b4d78686cb2f20c1f3afdff9b954dd9a118d94)]
+- 📝 version bump to v1.0.349 [[a23b498](https://github.com/MarkLyck/formula-stocks/commit/a23b498f161560fe8a548f67949fdaf753ff5527)]
+- 📝 generated changelog [[719adb8](https://github.com/MarkLyck/formula-stocks/commit/719adb89a324fb6755971251a75580d52dc0768e)]
+
+
 <a name="1.0.348"></a>
 ## 1.0.348 (2021-08-14)
 
