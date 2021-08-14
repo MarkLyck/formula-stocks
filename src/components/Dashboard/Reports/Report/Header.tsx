@@ -20,9 +20,9 @@ const Logo = styled.img`
 const Header = ({ profile, report }: any) => {
   const [image, setImage] = useState(profile?.image)
   const aiScore = report?.scores?.ai_score
-  const companyName = profile?.companyName || report.name
-  const symbol = profile?.symbol || report.ticker
-  const price = profile?.price || report.price
+  const companyName = profile?.companyName || report?.name
+  const symbol = profile?.symbol || report?.ticker
+  const price = profile?.price || report?.price
 
   return (
     <Card>
