@@ -16,7 +16,7 @@ const CancelSubscription = ({ subscription, updateUser, user }: CancelSubscripti
   if (subscription.cancel_at_period_end) return null
 
   const handleOnClick = () => {
-    woopra.track('click', { element: 'cancel subscription' })
+    track('click', { element: 'cancel subscription' })
     setCancelModalVisible(true)
   }
 

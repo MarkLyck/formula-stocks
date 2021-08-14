@@ -74,13 +74,13 @@ const LoginForm = () => {
         if (isBrowser) window.authToken = idToken
         // @ts-ignore
         if (isBrowser) window.refreshToken = refreshToken
-        woopra.track('login', { email, uniq: btoa(password) })
+        track('login', { email, uniq: btoa(password) })
 
         setSuccess(true)
         Router.push('/dashboard')
       })
       .catch((error: any) => {
-        woopra.track('error', {
+        track('error', {
           message: error.message,
           object: JSON.stringify(error),
           type: 'login error',

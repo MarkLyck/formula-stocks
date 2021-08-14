@@ -3,6 +3,7 @@ import { ThemeProvider } from '@emotion/react'
 import ComposeProviders from './ComposeProviders'
 import { BreakpointProvider } from '@w11r/use-breakpoint'
 import PlausibleProvider from 'next-plausible'
+import AnalyticsProvider from './AnalyticsProvider'
 
 import 'src/lib/iconLibrary'
 import 'src/lib/dayjs'
@@ -21,6 +22,7 @@ const AppProvider = ({ children }: AppProviderProps) => {
         BreakpointProvider,
         [ThemeProvider, { theme }],
         [PlausibleProvider, { domain: 'formulastocks.com' }],
+        AnalyticsProvider,
       ]}
     >
       {children}

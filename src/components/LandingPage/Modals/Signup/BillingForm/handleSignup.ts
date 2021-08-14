@@ -18,7 +18,7 @@ const handleSignup = async ({
   const lastName = name.split(' ').slice(1).join(' ')
 
   try {
-    woopra.track('submit', {
+    track('submit', {
       type: 'signup',
       data: JSON.stringify({
         plan,
@@ -57,7 +57,7 @@ const handleSignup = async ({
 
     setSuccess()
 
-    woopra.track('signup', {
+    track('signup', {
       plan,
       billingPeriod,
       email: accountInfo.email,
@@ -96,7 +96,7 @@ const handleSignup = async ({
       errorMessage = 'Something went wrong, please try again later'
     }
 
-    woopra.track('error', {
+    track('error', {
       message: errorMessage,
       object: JSON.stringify(error),
       type: 'signup error',

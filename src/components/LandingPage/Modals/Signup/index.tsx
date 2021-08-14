@@ -37,26 +37,26 @@ const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
 
   const nextPage = () => {
     if (page === 2) {
-      woopra.track('navigate', { to: 'account details' })
+      track('navigate', { to: 'account details' })
     }
     setPage(page + 1)
   }
 
   const handleAccountInfoSubmit = (values: any) => {
     woopra.identify({ email: values.email })
-    woopra.track('navigate', { to: 'billing' })
+    track('navigate', { to: 'billing' })
     setAccountInfo(values)
     nextPage()
   }
 
   const handleSelectPlan = (plan: 'entry' | 'premium') => {
-    woopra.track('navigate', { to: 'payment schedule' })
+    track('navigate', { to: 'payment schedule' })
     setPlan(plan)
     nextPage()
   }
 
   const onCancel = () => {
-    woopra.track('close_modal', { name: 'signup' })
+    track('close_modal', { name: 'signup' })
     onClose()
     setPage(1)
   }
