@@ -12,6 +12,11 @@ const analyticsTrack = (plausible: any) => (key: string, data: any) => {
   })
 }
 
+const analyticsIdentify = (data: any) => {
+  woopra.identify(data)
+  LogRocket.identify(data.email, { ...data })
+}
+
 const AnalyticsProvider = ({ children }: any) => {
   const plausible = usePlausible()
 
@@ -19,6 +24,8 @@ const AnalyticsProvider = ({ children }: any) => {
   if (process.browser) {
     // @ts-ignore
     window.track = analyticsTrack(plausible)
+    // @ts-ignore
+    window.analyticsIdentify = analyticsIdentify
   }
 
   return children
