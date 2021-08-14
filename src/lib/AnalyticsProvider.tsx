@@ -13,7 +13,7 @@ const analyticsTrack = (plausible: any) => (key: string, data: any) => {
 }
 
 const analyticsIdentify = (data: any) => {
-  woopra.identify(data)
+  woopra.identify(data).push()
   LogRocket.identify(data.email, { ...data })
 }
 
