@@ -1,5 +1,16 @@
 # Changelog
 
+<a name="1.0.346"></a>
+## 1.0.346 (2021-08-14)
+
+### Miscellaneous
+
+-  Merge pull request [#447](https://github.com/MarkLyck/formula-stocks/issues/447) from MarkLyck/analytics-iframe [[43fcb47](https://github.com/MarkLyck/formula-stocks/commit/43fcb47d21148ca81675f7a41741f59ca91ed932)]
+- 🗑️ hide analytics menu item for non-admin [[695a331](https://github.com/MarkLyck/formula-stocks/commit/695a3312776ded7507d0dc90f0660e6649ab0ac3)]
+- 📝 version bump to v1.0.346 [[c9d1afe](https://github.com/MarkLyck/formula-stocks/commit/c9d1afe6eafafd5a9150e433cd36ad2710a3ca23)]
+- 📝 generated changelog [[60a3f2c](https://github.com/MarkLyck/formula-stocks/commit/60a3f2c4d4b7a21fd7054fe6127b99aeafa77efd)]
+
+
 <a name="1.0.345"></a>
 ## 1.0.345 (2021-08-14)
 
