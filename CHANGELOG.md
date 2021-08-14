@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.341"></a>
+## 1.0.341 (2021-08-14)
+
+### Added
+
+- 📈 add analytics dashboard [[cd9e1cc](https://github.com/MarkLyck/formula-stocks/commit/cd9e1cc87c8b0e6ca22f8fcdd47933485b47fd08)]
+
+### Miscellaneous
+
+-  Merge pull request [#442](https://github.com/MarkLyck/formula-stocks/issues/442) from MarkLyck/analytics-provider2 [[8975d5a](https://github.com/MarkLyck/formula-stocks/commit/8975d5ab7ee22754efa1061653bfd81943d2adfd)]
+- 📝 version bump to v1.0.341 [[14db01a](https://github.com/MarkLyck/formula-stocks/commit/14db01a4419c2e2c1211fb5aa93e733417247074)]
+- 📝 generated changelog [[1fbaea5](https://github.com/MarkLyck/formula-stocks/commit/1fbaea5988f42bc7ec587a43e1401654aff17ce5)]
+
+
 <a name="1.0.340"></a>
 ## 1.0.340 (2021-08-14)
 
