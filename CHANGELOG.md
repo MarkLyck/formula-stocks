@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.328"></a>
+## 1.0.328 (2021-08-14)
+
+### Fixed
+
+- 🐛 fix report not loading if profile fails [[0cb5855](https://github.com/MarkLyck/formula-stocks/commit/0cb5855ffca4a8359904df16f28890f2113855b9)]
+
+### Miscellaneous
+
+-  Merge pull request [#424](https://github.com/MarkLyck/formula-stocks/issues/424) from MarkLyck/fix-report-name [[55d4f06](https://github.com/MarkLyck/formula-stocks/commit/55d4f062c642bfba30314a1d0c85d9f82d1f8f65)]
+- 📝 version bump to v1.0.328 [[8935df2](https://github.com/MarkLyck/formula-stocks/commit/8935df2209eb01eadd2a92e6ccbcb6b8eb099213)]
+- 📝 generated changelog [[fe4e1ed](https://github.com/MarkLyck/formula-stocks/commit/fe4e1edc2995c3297a5adb6245783fb17ebefb5c)]
+
+
 <a name="1.0.327"></a>
 ## 1.0.327 (2021-08-13)
 
