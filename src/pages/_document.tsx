@@ -30,6 +30,9 @@ class _Document extends Document {
           <Main />
           <NextScript />
 
+          {/* Data Unblocker */}
+          <script type="text/javascript" src="/scripts/dataUnblocker.js" />
+
           {/* CRISP live chat */}
           <script
             type="text/javascript"
