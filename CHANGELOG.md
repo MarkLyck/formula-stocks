@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.331"></a>
+## 1.0.331 (2021-08-14)
+
+### Added
+
+- 📈 data unblocker attempt [#3](https://github.com/MarkLyck/formula-stocks/issues/3) [[6ab6ee3](https://github.com/MarkLyck/formula-stocks/commit/6ab6ee3f3c6d1f6e37316badfa4f5f09314271ac)]
+
+### Miscellaneous
+
+-  Merge pull request [#431](https://github.com/MarkLyck/formula-stocks/issues/431) from MarkLyck/data-unblocker [[eb15c6a](https://github.com/MarkLyck/formula-stocks/commit/eb15c6aa8487f3f210597812b15d4b15f9a27a21)]
+- 📝 version bump to v1.0.331 [[c1b4f8f](https://github.com/MarkLyck/formula-stocks/commit/c1b4f8f42a936956ecf21dc7bde665e3fd986a52)]
+- 📝 generated changelog [[f7983f4](https://github.com/MarkLyck/formula-stocks/commit/f7983f46f9572b8dbabd68dfd48c0dfc31f00936)]
+
+
 <a name="1.0.330"></a>
 ## 1.0.330 (2021-08-14)
 
