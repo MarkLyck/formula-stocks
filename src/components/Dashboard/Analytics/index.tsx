@@ -3,7 +3,7 @@ const index = () => {
     <div>
       <iframe
         plausible-embed="true"
-        src="https://plausible.io/formulastocks.com?embed=true&theme=light"
+        src="https://plausible.io/share/formulastocks.com?auth=DC44D8p7T-nPreq68XB7i&embed=true&theme=light"
         scrolling="no"
         frameBorder="0"
         loading="lazy"
