@@ -74,7 +74,7 @@ const Newsletter = () => {
     }
 
     executeCreateNewsletter({ variables: { email, firstName } })
-    woopra.identify({ email })
+    analyticsIdentify.identify({ email })
     track('newsletter', { email })
   }
 

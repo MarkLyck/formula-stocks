@@ -43,7 +43,7 @@ const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
   }
 
   const handleAccountInfoSubmit = (values: any) => {
-    woopra.identify({ email: values.email })
+    analyticsIdentify.identify({ email: values.email })
     track('navigate', { to: 'billing' })
     setAccountInfo(values)
     nextPage()
