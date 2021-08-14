@@ -1,5 +1,32 @@
 # Changelog
 
+<a name="1.0.339"></a>
+## 1.0.339 (2021-08-14)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.339 [[bcd6c1e](https://github.com/MarkLyck/formula-stocks/commit/bcd6c1e35533504669e022d41292b447dab61fee)]
+
+
+<a name="1.0.338"></a>
+## 1.0.338 (2021-08-14)
+
+### Added
+
+- 📈 improve tracking [[da9f903](https://github.com/MarkLyck/formula-stocks/commit/da9f903525d60319d1a2a11f14433391a1939bd6)]
+
+### Changed
+
+- ⬆️ Update dependency @types/react to v17.0.18 [[0749826](https://github.com/MarkLyck/formula-stocks/commit/074982677a8c549a0adce98128ae7b0558a215d7)]
+
+### Miscellaneous
+
+-  Merge pull request [#441](https://github.com/MarkLyck/formula-stocks/issues/441) from MarkLyck/analytics-provider2 [[0bacdf5](https://github.com/MarkLyck/formula-stocks/commit/0bacdf5fac88fb839c494c859f241597f0f67e8d)]
+-  Merge pull request [#439](https://github.com/MarkLyck/formula-stocks/issues/439) from MarkLyck/renovate/react-17.x [[e53b489](https://github.com/MarkLyck/formula-stocks/commit/e53b489ac1ce757342d59d2d53550e3e5376b3aa)]
+- 📝 version bump to v1.0.338 [[cfafea1](https://github.com/MarkLyck/formula-stocks/commit/cfafea17e074ea1e1e89ba7a59dc796986eae955)]
+- 📝 generated changelog [[e025a0a](https://github.com/MarkLyck/formula-stocks/commit/e025a0a41d8b4f4c742d4c9996d87203fd2a8c23)]
+
+
 <a name="1.0.337"></a>
 ## 1.0.337 (2021-08-14)
 
