@@ -117,6 +117,7 @@ const menuList = [
   { divider: true },
   { label: 'Admin', icon: ['fad', 'tools'], route: '/dashboard/admin', adminOnly: true },
   { label: 'Users', icon: ['fad', 'users'], route: '/dashboard/users', adminOnly: true },
+  { label: 'Analytics', icon: ['fad', 'analytics'], route: '/dashboard/analytics', adminOnly: true },
 ]
 
 export type SideMenuProps = {
