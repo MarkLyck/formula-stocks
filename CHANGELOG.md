@@ -1,5 +1,32 @@
 # Changelog
 
+<a name="1.0.344"></a>
+## 1.0.344 (2021-08-14)
+
+### Added
+
+- ✨ analytics button [[c74975c](https://github.com/MarkLyck/formula-stocks/commit/c74975cffc66e57c9a5a8dd60f6e83764e1cce7a)]
+
+### Miscellaneous
+
+-  Merge pull request [#445](https://github.com/MarkLyck/formula-stocks/issues/445) from MarkLyck/analytics-iframe [[13420ee](https://github.com/MarkLyck/formula-stocks/commit/13420ee8f1723ec8fe7d04599e67e826dc944e0e)]
+- 📝 version bump to v1.0.344 [[4f69ab6](https://github.com/MarkLyck/formula-stocks/commit/4f69ab6bc520680034cec9b7c1944296514ca9c8)]
+
+
+<a name="1.0.343"></a>
+## 1.0.343 (2021-08-14)
+
+### Added
+
+- 📈 fix embed [[2b1996a](https://github.com/MarkLyck/formula-stocks/commit/2b1996a23e9fc4b50c6b7dc2cdbaaf2d6e5bc670)]
+
+### Miscellaneous
+
+-  Merge pull request [#444](https://github.com/MarkLyck/formula-stocks/issues/444) from MarkLyck/analytics-iframe [[e1e21be](https://github.com/MarkLyck/formula-stocks/commit/e1e21befeaf47defc8cba46f13a04143690cd40d)]
+- 📝 version bump to v1.0.343 [[cfc6d98](https://github.com/MarkLyck/formula-stocks/commit/cfc6d986d01a9b3543bdbfa7f07eb7a76c5ab4cc)]
+- 📝 generated changelog [[eae7382](https://github.com/MarkLyck/formula-stocks/commit/eae73827b2d8e0a597cc74acabcefdabb36f7fb0)]
+
+
 <a name="1.0.342"></a>
 ## 1.0.342 (2021-08-14)
 
