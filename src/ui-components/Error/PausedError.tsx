@@ -32,6 +32,7 @@ const PermissionError = () => {
   let buttonText = 'My Account'
 
   const goToAccount = () => {
+    track('navigate', { to: '/dashboard/account' })
     router.push('/dashboard/account')
   }
 
