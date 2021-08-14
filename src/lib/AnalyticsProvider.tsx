@@ -1,7 +1,13 @@
 import { usePlausible } from 'next-plausible'
 import LogRocket from 'logrocket'
+import * as Sentry from '@sentry/nextjs'
 
 LogRocket.init('hlvawe/formula-stocks')
+LogRocket.getSessionURL((sessionURL) => {
+  Sentry.configureScope((scope) => {
+    scope.setExtra('sessionURL', sessionURL)
+  })
+})
 
 const analyticsTrack = (plausible: any) => (key: string, data: any) => {
   // woopra tracking
