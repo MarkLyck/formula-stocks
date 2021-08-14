@@ -30,9 +30,6 @@ class _Document extends Document {
           <Main />
           <NextScript />
 
-          {/* Data unlocker */}
-          <script type="text/javascript" src="/scripts/dataUnlocker.js" />
-
           {/* CRISP live chat */}
           <script
             type="text/javascript"
