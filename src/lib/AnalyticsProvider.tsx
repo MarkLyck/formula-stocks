@@ -1,4 +1,7 @@
 import { usePlausible } from 'next-plausible'
+import LogRocket from 'logrocket'
+
+LogRocket.init('hlvawe/formula-stocks')
 
 const analyticsTrack = (plausible: any) => (key: string, data: any) => {
   // woopra tracking

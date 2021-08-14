@@ -33,7 +33,7 @@ const LoginItems = ({ showSignup }: any) => {
   }
 
   const handleDashboardClick = () => {
-    track('navigate', { to: 'dashboard' })
+    track('navigate', { to: '/dashboard' })
     Router.push('/dashboard')
   }
 
