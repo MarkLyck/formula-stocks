@@ -38,7 +38,7 @@ const index = ({ stockTip = {} }: TabsPropsType) => {
   if (!stockTip) return null
 
   const handleChange = (value: string) => {
-    woopra.track('click', { element: `report tab - ${value}` })
+    track('click', { element: `report tab - ${value}` })
   }
 
   return (
