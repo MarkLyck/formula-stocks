@@ -1,5 +1,32 @@
 # Changelog
 
+<a name="1.0.335"></a>
+## 1.0.335 (2021-08-14)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.335 [[0657a88](https://github.com/MarkLyck/formula-stocks/commit/0657a8890428e60eeadcc797fa4cc15fd3a7a109)]
+
+
+<a name="1.0.334"></a>
+## 1.0.334 (2021-08-14)
+
+### Added
+
+- 📈 plausible analytics [[ae569c3](https://github.com/MarkLyck/formula-stocks/commit/ae569c3c32c4f32587a7a3e631b5c04d4114b738)]
+
+### Removed
+
+- 🔥 remove data unlocker [[cf96b97](https://github.com/MarkLyck/formula-stocks/commit/cf96b975954a69105f2cf4dbdee09e6c2a4b613a)]
+
+### Miscellaneous
+
+-  Merge pull request [#434](https://github.com/MarkLyck/formula-stocks/issues/434) from MarkLyck/data-unblocker [[658f13b](https://github.com/MarkLyck/formula-stocks/commit/658f13b4f5bbe81c935051e1250de2f406180bfb)]
+-  Merge pull request [#435](https://github.com/MarkLyck/formula-stocks/issues/435) from MarkLyck/plausible-analytics [[d10b6a6](https://github.com/MarkLyck/formula-stocks/commit/d10b6a65847ef7650b07a34dfb8a56a7003dfbe4)]
+- 📝 version bump to v1.0.334 [[2d8ec74](https://github.com/MarkLyck/formula-stocks/commit/2d8ec74522f0a92bbd0e58ed47d2cd55af6a6e80)]
+- 📝 generated changelog [[e992f1e](https://github.com/MarkLyck/formula-stocks/commit/e992f1e7d51934262c2bacb07068f6308e06bbdd)]
+
+
 <a name="1.0.333"></a>
 ## 1.0.333 (2021-08-14)
 
