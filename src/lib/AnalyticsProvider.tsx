@@ -3,9 +3,6 @@ import LogRocket from 'logrocket'
 import * as Sentry from '@sentry/nextjs'
 
 const analyticsInit = () => {
-  woopra.config({ domain: 'formulastocks.com' })
-  woopra.track()
-
   LogRocket.init('hlvawe/formula-stocks')
   LogRocket.getSessionURL((sessionURL) => {
     Sentry.configureScope((scope) => {
