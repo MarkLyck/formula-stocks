@@ -5,14 +5,20 @@ import useBreakpoint from '@w11r/use-breakpoint'
 
 import { numberFormatter } from 'src/common/utils/formatters'
 import { STATISTICS, STATISTICS_SINCE_LAUNCH } from 'src/common/queries'
+import useStore from 'src/lib/useStore'
 import { StatBox } from 'src/ui-components'
 
 const GUTTER = 16
 
 const Statistics = () => {
+  const plan = useStore((state: any) => state.plan)
   const theme = useTheme()
-  const { data: statisticsData } = useQuery(STATISTICS)
-  const { data: launchStatsData } = useQuery(STATISTICS_SINCE_LAUNCH)
+  const { data: statisticsData } = useQuery(STATISTICS, {
+    variables: { planName: plan },
+  })
+  const { data: launchStatsData } = useQuery(STATISTICS_SINCE_LAUNCH, {
+    variables: { planName: plan },
+  })
   const { 'isTablet-': isTabletMinus } = useBreakpoint()
 
   const statistics = statisticsData ? statisticsData.statisticsList.items[0] : {}
