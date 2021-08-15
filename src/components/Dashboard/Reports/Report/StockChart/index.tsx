@@ -24,9 +24,9 @@ type StockChartProps = {
 
 const StockChart = ({ symbol }: StockChartProps) => {
   const [dateRange, setDateRange] = useState({
-    from: dayjs().subtract(1, 'month').format('YYYY-MM-DD'),
+    from: dayjs().subtract(6, 'month').format('YYYY-MM-DD'),
     to: dayjs().format('YYYY-MM-DD'),
-    value: '1-month',
+    value: '6-month',
   })
 
   const [interval, setInterval] = useState('daily')
