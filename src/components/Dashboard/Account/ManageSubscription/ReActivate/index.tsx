@@ -21,7 +21,7 @@ const reactivateSubscription = async (
   executeReactivateSubscription: executeReactivateSubscription,
   user: any
 ) => {
-  track('click', { element: 're-activate subscription' })
+  analyticsTrack('click', { element: 're-activate subscription' })
   await executeReactivateSubscription({
     variables: { subscriptionID: subscription.id, cancel_at_period_end: false, email: user.email },
   })

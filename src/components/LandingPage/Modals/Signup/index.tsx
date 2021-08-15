@@ -37,26 +37,26 @@ const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
 
   const nextPage = () => {
     if (page === 2) {
-      track('navigate', { to: 'account details' })
+      analyticsTrack('navigate', { to: 'account details' })
     }
     setPage(page + 1)
   }
 
   const handleAccountInfoSubmit = (values: any) => {
     analyticsIdentify.identify({ email: values.email })
-    track('navigate', { to: 'billing' })
+    analyticsTrack('navigate', { to: 'billing' })
     setAccountInfo(values)
     nextPage()
   }
 
   const handleSelectPlan = (plan: 'entry' | 'premium') => {
-    track('navigate', { to: 'payment schedule' })
+    analyticsTrack('navigate', { to: 'payment schedule' })
     setPlan(plan)
     nextPage()
   }
 
   const onCancel = () => {
-    track('close_modal', { name: 'signup' })
+    analyticsTrack('close_modal', { name: 'signup' })
     onClose()
     setPage(1)
   }

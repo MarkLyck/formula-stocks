@@ -2,20 +2,24 @@ import { usePlausible } from 'next-plausible'
 import LogRocket from 'logrocket'
 import * as Sentry from '@sentry/nextjs'
 
-LogRocket.init('hlvawe/formula-stocks')
-LogRocket.getSessionURL((sessionURL) => {
-  Sentry.configureScope((scope) => {
-    scope.setExtra('sessionURL', sessionURL)
+const analyticsInit = () => {
+  LogRocket.init('hlvawe/formula-stocks')
+  LogRocket.getSessionURL((sessionURL) => {
+    Sentry.configureScope((scope) => {
+      scope.setExtra('sessionURL', sessionURL)
+      woopra.track()
+    })
   })
-})
+}
+
+// Only initialize analytics in production
+if (process.env.NODE_ENV === 'production') {
+  analyticsInit()
+}
 
 const analyticsTrack = (plausible: any) => (key: string, data: any) => {
-  // woopra tracking
   woopra.track(key, data)
-  // plausible tracking
-  plausible(key, {
-    props: data,
-  })
+  plausible(key, { props: data })
 }
 
 const analyticsIdentify = (data: any) => {
@@ -26,12 +30,18 @@ const analyticsIdentify = (data: any) => {
 const AnalyticsProvider = ({ children }: any) => {
   const plausible = usePlausible()
 
-  // @ts-ignore
   if (process.browser) {
-    // @ts-ignore
-    window.track = analyticsTrack(plausible)
-    // @ts-ignore
-    window.analyticsIdentify = analyticsIdentify
+    if (process.env.NODE_ENV === 'production') {
+      // @ts-ignore
+      window.analyticsTrack = analyticsTrack(plausible)
+      // @ts-ignore
+      window.analyticsIdentify = analyticsIdentify
+    } else {
+      // @ts-ignore
+      window.analyticsTrack = () => {}
+      // @ts-ignore
+      window.analyticsIdentify = () => {}
+    }
   }
 
   return children

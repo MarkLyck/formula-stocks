@@ -18,7 +18,7 @@ const handleSignup = async ({
   const lastName = name.split(' ').slice(1).join(' ')
 
   try {
-    track('submit', {
+    analyticsTrack('submit', {
       type: 'signup',
       data: JSON.stringify({
         plan,
@@ -57,7 +57,7 @@ const handleSignup = async ({
 
     setSuccess()
 
-    track('signup', {
+    analyticsTrack('signup', {
       plan,
       billingPeriod,
       email: accountInfo.email,
@@ -96,7 +96,7 @@ const handleSignup = async ({
       errorMessage = 'Something went wrong, please try again later'
     }
 
-    track('error', {
+    analyticsTrack('error', {
       message: errorMessage,
       object: JSON.stringify(error),
       type: 'signup error',

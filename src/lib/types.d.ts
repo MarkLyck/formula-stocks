@@ -1,11 +1,11 @@
 declare global {
   interface Window {
     woopra: any
-    track: any
+    analyticsTrack: any
     analyticsIdentify: any
   }
 }
 
 let woopra = typeof window !== 'undefined' ? window.woopra : {}
-let track = typeof window !== 'undefined' ? window.track : {}
+let analyticsTrack = typeof window !== 'undefined' ? window.analyticsTrack : {}
 let analyticsIdentify = typeof window !== 'undefined' ? window.analyticsIdentify : {}

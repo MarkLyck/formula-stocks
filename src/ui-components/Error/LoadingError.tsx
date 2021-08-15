@@ -31,7 +31,7 @@ const refreshPage = () => {
 }
 
 const LoadingError = ({ error }: any) => {
-  track('error', { message: error.message })
+  analyticsTrack('error', { message: error.message })
   let errorText = 'Please try to refresh the page.'
 
   if (error && error.message.includes('permission')) {
