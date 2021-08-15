@@ -1,5 +1,23 @@
 # Changelog
 
+<a name="1.0.354"></a>
+## 1.0.354 (2021-08-15)
+
+### Added
+
+- 📈 remove woopra setup from init [[f2c0d33](https://github.com/MarkLyck/formula-stocks/commit/f2c0d33100d3d187edf39bf3fe04169c2d2864cd)]
+- 📈 move woopra to head [[4255aea](https://github.com/MarkLyck/formula-stocks/commit/4255aeac792c1c86ac93f1f99739c336dc29aad3)]
+- 📈 only track analytics in production [[641520e](https://github.com/MarkLyck/formula-stocks/commit/641520e5c04fcc8368c12b32a04e39f996f81fb2)]
+- 📈 fix sentry environment [[e94d0e7](https://github.com/MarkLyck/formula-stocks/commit/e94d0e762dbe047ce84efaa70ad3dae390a6bd45)]
+
+### Miscellaneous
+
+-  Merge pull request [#459](https://github.com/MarkLyck/formula-stocks/issues/459) from MarkLyck/logrocket [[45be6af](https://github.com/MarkLyck/formula-stocks/commit/45be6af98c67002d69131e6f7a813b60daf7bf1d)]
+- 🏷️ update ts name for track [[04750c5](https://github.com/MarkLyck/formula-stocks/commit/04750c5cd85d66e5d5719bdd701866e1815d1d82)]
+- 📝 version bump to v1.0.354 [[30ddbc9](https://github.com/MarkLyck/formula-stocks/commit/30ddbc96db47b23715bc408ef7b47bf98b12d363)]
+- 📝 generated changelog [[1a40972](https://github.com/MarkLyck/formula-stocks/commit/1a409728143c8d66707ed26ebb2a8deb23947450)]
+
+
 <a name="1.0.353"></a>
 ## 1.0.353 (2021-08-14)
 
