@@ -16,7 +16,7 @@ const PauseSubscription = ({ subscription, user }: PauseSubscriptionType) => {
   if (subscription.cancel_at_period_end) return null
 
   const handleOnClick = () => {
-    track('click', { element: 'pause subscription' })
+    analyticsTrack('click', { element: 'pause subscription' })
     setModalVisible(true)
   }
 

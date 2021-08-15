@@ -16,7 +16,7 @@ const CancelSubscription = ({ subscription, updateUser, user }: CancelSubscripti
   if (subscription.cancel_at_period_end) return null
 
   const handleOnClick = () => {
-    track('click', { element: 'cancel subscription' })
+    analyticsTrack('click', { element: 'cancel subscription' })
     setCancelModalVisible(true)
   }
 

@@ -20,7 +20,7 @@ const LoginItems = ({ showSignup }: any) => {
   )
 
   const handleLogout = () => {
-    track('logout')
+    analyticsTrack('logout')
     logout()
     setLoggedIn(false)
   }
@@ -33,12 +33,12 @@ const LoginItems = ({ showSignup }: any) => {
   }
 
   const handleDashboardClick = () => {
-    track('navigate', { to: '/dashboard' })
+    analyticsTrack('navigate', { to: '/dashboard' })
     Router.push('/dashboard')
   }
 
   const handleSignupClick = () => {
-    track('click', { element: 'signup button' })
+    analyticsTrack('click', { element: 'signup button' })
     showSignup()
   }
 

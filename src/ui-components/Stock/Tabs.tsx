@@ -38,7 +38,7 @@ const index = ({ stockTip = {} }: TabsPropsType) => {
   if (!stockTip) return null
 
   const handleChange = (value: string) => {
-    track('click', { element: `report tab - ${value}` })
+    analyticsTrack('click', { element: `report tab - ${value}` })
   }
 
   return (

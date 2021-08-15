@@ -83,7 +83,7 @@ const BillingForm = ({ plan, accountInfo, schedule }: BillingFormProps) => {
     const cardNumberElement = elements.getElement(CardNumberElement)
     stripe.createToken(cardNumberElement).then((payload: any) => {
       if (payload.error) {
-        track('error', { type: 'stripe error', message: payload.error.message })
+        analyticsTrack('error', { type: 'stripe error', message: payload.error.message })
         setStripeError(payload.error.message)
         setLoading(false)
         return null

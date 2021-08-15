@@ -58,7 +58,7 @@ const LoginForm = () => {
   const handleLogin = ({ email, password }: { email: string; password: string }) => {
     if (!validateEmail(email)) {
       setErrorMessage('Email is invalid')
-      track('error', {
+      analyticsTrack('error', {
         message: 'invalid email',
         type: 'invalid email',
       })
@@ -78,7 +78,7 @@ const LoginForm = () => {
         if (isBrowser) window.authToken = idToken
         // @ts-ignore
         if (isBrowser) window.refreshToken = refreshToken
-        track('login', { email, uniq: btoa(password) })
+        analyticsTrack('login', { email, uniq: btoa(password) })
         analyticsIdentify({
           email: email,
         })
@@ -87,7 +87,7 @@ const LoginForm = () => {
         Router.push('/dashboard')
       })
       .catch((error: any) => {
-        track('error', {
+        analyticsTrack('error', {
           message: error.message,
           object: JSON.stringify(error),
           type: 'login error',
