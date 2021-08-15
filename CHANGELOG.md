@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.356"></a>
+## 1.0.356 (2021-08-15)
+
+### Added
+
+- ✨ better default date range [[26a66b4](https://github.com/MarkLyck/formula-stocks/commit/26a66b4d428f275df4235ea09540474b830b559d)]
+- ✨ improve report chart simplisity [[5f09516](https://github.com/MarkLyck/formula-stocks/commit/5f09516cb72fa859e7e91e1b85b03343bd48bf28)]
+
+### Miscellaneous
+
+-  Merge pull request [#462](https://github.com/MarkLyck/formula-stocks/issues/462) from MarkLyck/report-chart [[a749d26](https://github.com/MarkLyck/formula-stocks/commit/a749d2616508d2316d3204c223124b08ce027ea4)]
+- 📝 version bump to v1.0.356 [[10ca9ae](https://github.com/MarkLyck/formula-stocks/commit/10ca9ae3a5ba397235ab3e8e052c8cc764e24b51)]
+- 📝 generated changelog [[7de4c49](https://github.com/MarkLyck/formula-stocks/commit/7de4c49d4c3d125e705c8ee101836442adb1fbc9)]
+
+
 <a name="1.0.355"></a>
 ## 1.0.355 (2021-08-15)
 
