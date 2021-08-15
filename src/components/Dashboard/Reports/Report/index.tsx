@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { Spin, Space, Tabs, Typography, Breadcrumb, Row } from 'antd'
+import { Spin, Space, Tabs, Typography, Breadcrumb } from 'antd'
 import { useQuery } from '@apollo/client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -17,9 +17,8 @@ import PressReleases from './PressReleases'
 import InsiderTrading from './InsiderTrading'
 import KeyExecs from './KeyExecs'
 import EarningsCalls from './EarningsCalls'
-import { DebtCheck, InsiderTradesCheck, ROICCheck, ProfitabilityCheck, GrowthRateCheck, DividendsCheck } from './Checks'
 
-const { Text, Title } = Typography
+const { Text } = Typography
 const { TabPane } = Tabs
 
 const StockReport = () => {
@@ -64,34 +63,6 @@ const StockReport = () => {
           >
             {reportLoading && <Spin />}
             {report && <Report price={report.price} scores={report.scores} ticker={symbol} />}
-            <Title level={4}>Metrics</Title>
-            <Row gutter={[16, 16]}>
-              <ROICCheck symbol={symbol} />
-              <GrowthRateCheck
-                label="Equity Growth"
-                url={`https://financialmodelingprep.com/api/v3/key-metrics/${symbol}?limit=10`}
-                metricName="bookValuePerShare"
-              />
-              <GrowthRateCheck
-                label="Earnings Growth"
-                url={`https://financialmodelingprep.com/api/v3/income-statement/${symbol}?limit=10`}
-                metricName="eps"
-              />
-              <GrowthRateCheck
-                label="Sales Growth"
-                url={`https://financialmodelingprep.com/api/v3/income-statement/${symbol}?limit=10`}
-                metricName="revenue"
-              />
-              <GrowthRateCheck
-                label="Cash Flow Growth"
-                url={`https://financialmodelingprep.com/api/v3/cash-flow-statement/${symbol}?limit=10`}
-                metricName="freeCashFlow"
-              />
-              <DebtCheck symbol={symbol} />
-              <InsiderTradesCheck symbol={symbol} />
-              <ProfitabilityCheck symbol={symbol} />
-              <DividendsCheck symbol={symbol} />
-            </Row>
           </TabPane>
           <TabPane
             tab={
@@ -103,7 +74,7 @@ const StockReport = () => {
             key="profile"
           >
             {loading && <Spin />}
-            {report && <Profile profile={profile} />}
+            {report && <Profile profile={profile} symbol={symbol} />}
           </TabPane>
           <TabPane
             tab={
