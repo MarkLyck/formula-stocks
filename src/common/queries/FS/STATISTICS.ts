@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client'
 
 export const STATISTICS = gql`
-  query STATISTICS {
-    statisticsList(filter: { plan: { planID: { equals: "entry" } } }) {
+  query STATISTICS($planName: String) {
+    statisticsList(filter: { plan: { planID: { equals: $planName } } }) {
       items {
         gainToPainRatio
         winLossRatio
@@ -29,8 +29,8 @@ export const STATISTICS = gql`
 `
 
 export const STATISTICS_SINCE_LAUNCH = gql`
-  query STATISTICS {
-    statisticsSinceLaunchesList(filter: { plan: { planID: { equals: "entry" } } }) {
+  query STATISTICS($planName: String) {
+    statisticsSinceLaunchesList(filter: { plan: { planID: { equals: $planName } } }) {
       items {
         totalReturn
         winLossRatio

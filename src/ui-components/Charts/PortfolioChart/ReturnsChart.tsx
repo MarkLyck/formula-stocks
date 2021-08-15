@@ -127,10 +127,10 @@ const ReturnsChart = ({ data, loading }: PortfolioChartProps) => {
         },
       },
     },
-    color: lastPoint?.value > 0 ? theme.palette.success[600] : theme.palette.danger[600],
-    lineStyle: {
-      lineWidth: 4,
+    areaStyle: {
+      fill: 'l(270) 0:#ffffff 0.05:#e6fff2 1:#00b07b',
     },
+    color: lastPoint?.value > 0 ? theme.palette.success[600] : theme.palette.danger[600],
     tooltip: {
       customContent: (title: string, items: any[]) => chartTooltip(title, items, theme),
     },
