@@ -109,10 +109,10 @@ const Risk = () => {
             </ListItem>
           </StyledCard>
           <Paragraph>
-            Formula Stocks win {winRatio}% of the time. We can calculate a mathematical expectation of (
-            {(winRatio / 100).toFixed(2)} * {averageGainRounded}) - ({((100 - winLossRatio) / 100).toFixed(2)} *{' '}
-            {averageLossRounded}) = +{expectedReturn.toFixed(2)}%. Taking an average of 2.2 years per trade we get an
-            expected annualized return of {(expectedReturn / 2.2).toFixed(2)}%.
+            Formula Stocks win {winRatio}% of the time. Based on 50 years of data we can calculate a mathematical
+            expectation of ({(winRatio / 100).toFixed(2)} * {averageGainRounded}) - (
+            {((100 - winLossRatio) / 100).toFixed(2)} * {averageLossRounded}) = +{expectedReturn.toFixed(2)}%. Taking an
+            average of 2.2 years per trade we get an expected annualized return of {(expectedReturn / 2.2).toFixed(2)}%.
           </Paragraph>
           <Paragraph>The reward is very well defined up to this date. The future may deviate.</Paragraph>
           <Paragraph>
@@ -122,30 +122,29 @@ const Risk = () => {
           <Title level={4}>Diversification</Title>
           <Paragraph>
             Any single investment can result in a loss, but having a larger basket of Formula stocks, held over a longer
-            period will reduce the odds of this. Indeed, in the past that would have resulted in a very safe and very
-            rewarding portfolio.<sup>*</sup>
+            period will reduce odds of a net loss. Indeed, in the past a diversified longer term portfolio would have
+            been a very safe and very rewarding portfolio.<sup>*</sup>
           </Paragraph>
           <Paragraph>
-            For that reason, one should be diversified in order to reduce the risk of any one single event impacting a
-            portfolio in a very significant manner.
+            For that reason, one should always be diversified in order to reduce the risk of any one single event
+            impacting a portfolio in a very significant manner.
           </Paragraph>
           <Disclaimer style={{ marginBottom: 32 }}>
             <sup>*</sup>Past returns does not guarantee future results
           </Disclaimer>
           <Title level={4}>Facts instead of emotion</Title>
           <Paragraph>The biggest risk factor is always the human factor.</Paragraph>
-
           <Paragraph>
-            Formula Stocks uses unbiased logic that looks for wonderful growing businesses to in. Unlike algorithms
-            however, humans have to deal with emotions like fear, greed, and impatience.
+            Formula Stocks uses unbiased logic that looks for wonderful growing businesses to invest in. Unlike
+            algorithms however, humans have to deal with emotions like fear, greed, uncertainty and impatience.
           </Paragraph>
           <Paragraph>
-            Controlling emotions is key. If you cannot control emotions, you would be likely to lose money or miss out.
-            For example if you had invested $25,000 using Formula Stocks in December 1972 just before the crash, and had
-            sold in fear when the stock market went down -10%, -20%, or -40% in value, yYou would then have ended up
-            with a loss. Whereas if you used Formula Stocks and let the system do it's thing, it would instead have
-            turned $25,000 into millions over a longer period of time, by utilizing the opportunities afforded by the
-            very same stock market correction.
+            Controlling emotions is key. If you cannot control emotions, you are much more likely to lose money or miss
+            out. For example if you had invested $25,000 using Formula Stocks back in December 1972 just before the
+            downturn, and had sold in fear when the stock market went down -10%, -20%, or -40% in value, you would then
+            have ended up with a loss. Whereas if you used Formula Stocks and let the system do it's thing, it would
+            instead have turned $25,000 into millions over a longer period of time, by utilizing the opportunities
+            afforded by the very same stock market correction.
           </Paragraph>
           <Paragraph>
             The same goes for greed. Many of the businesses Formula Stocks have invested in over time, have had
@@ -157,30 +156,30 @@ const Risk = () => {
             cannot control your fear, greed and impatience, you may well lose money. On the flip side of this, if you
             can manage your emotions, the sky is the limit.
           </Paragraph>
-          <Title level={4}>How does Formula Stocks handle a stock market correction?</Title>
+          <Title level={4}>How does Formula Stocks typically handle a stock market correction?</Title>
           <Paragraph>
-            Below is a table of larger stock market corrections Formula Stocks hasinvesting through. It shows how big
-            each drawdown was in every major correction/recession since 1970 for both Formula Stocks and the S&P500. You
-            can also see how many months it took to Formula Stocks and the S&P500 to fully recover from these drawdowns
-            (reach their previous high).
+            Corrections are seen from time to time in the markets. Below is a table of larger stock market corrections
+            and how Formula Stocks typically responds to said situation. It shows how big each drawdown was in every
+            major correction/recession since 1970 for both Formula Stocks and the S&P500. You can also see how many
+            months it took to Formula Stocks and the S&P500 to fully recover from these drawdowns (reach their previous
+            high).
           </Paragraph>
           <Recessions />
           <Paragraph style={{ marginTop: 32 }}>
             While Formula Stocks is not immune to stock market crashes (like any trading system), it has managed to
-            recover effectively from the crashes faster than the general market.
+            recover effectively from the crashes much faster than the general market.
           </Paragraph>
           <Paragraph>
-            You will notice that Formula Stocks doubled in value during the Dot-com bubble. This is attributed to our
-            investing strategy. Since most of the over-hyped internet companies that crashed in the early 2000s, were
-            far from the stocks which we would invest in, our portfolio at the time held up extremely well.
+            Formula Stocks doubled in value during the Dot-com bubble. Since most of the over-hyped internet companies
+            that crashed in the early 2000s, were very far from the stocks which we would invest in, our portfolio at
+            the time went up instead of down.
           </Paragraph>
           <Paragraph>
-            In the case of any future larger correction, Formula Stocks are likely to correct with the market, but this
-            does not mean that corrections should necessarily be avoided. In fact, Formula Stocks benefits very much
-            from draw-downs in the long term. During a downturn or "price reset", Formula Stocks will be able to find
-            much better buying opportunities. In fact many of the stocks bought during such a market crash ends up being
-            the biggest winners in the years following. Investments made during these times is largely why Formula
-            Stocks is able to recover so quickly. The seed for future success is often found in a correction.
+            Formula Stocks generally corrects along with the broader market, but it should be observed that a downturn
+            immediately increases future returns of the strategy. During a downturn or "price reset", Formula Stocks
+            will be able to find much better buying opportunities. Many stocks bought during downturns ends up being the
+            biggest winners in the years following. Investments made during drawdowns are largely why Formula Stocks is
+            able to recover so quickly. The seed for future success is often found in a correction.
           </Paragraph>
           <Paragraph>
             Explore the chart below to see how each recession impacted the portfolio. You can compare Formula Stocks vs.
