@@ -1,5 +1,32 @@
 # Changelog
 
+<a name="1.0.358"></a>
+## 1.0.358 (2021-08-15)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.358 [[72db80b](https://github.com/MarkLyck/formula-stocks/commit/72db80b1c8ef226202acf033f16197c8cc7f8c3f)]
+
+
+<a name="1.0.357"></a>
+## 1.0.357 (2021-08-15)
+
+### Added
+
+- ✨ better portfolio chart and statistics update with plan [[3e2f5d6](https://github.com/MarkLyck/formula-stocks/commit/3e2f5d6b511cb4a963e39b5ecaa3936f3684e2c5)]
+
+### Changed
+
+- ⬆️ Pin dependency query-string to 7.0.1 [[cb353ee](https://github.com/MarkLyck/formula-stocks/commit/cb353ee8963d7a0e12ed4edf55af58596d708057)]
+
+### Miscellaneous
+
+-  Merge pull request [#463](https://github.com/MarkLyck/formula-stocks/issues/463) from MarkLyck/renovate/pin-dependencies [[7e121f3](https://github.com/MarkLyck/formula-stocks/commit/7e121f323f05d0c7675295889c453b5907dbafae)]
+-  Merge pull request [#464](https://github.com/MarkLyck/formula-stocks/issues/464) from MarkLyck/report-chart [[9311e16](https://github.com/MarkLyck/formula-stocks/commit/9311e164b6e023af5eb582cc72382336a45204f5)]
+- 📝 version bump to v1.0.357 [[92e53dc](https://github.com/MarkLyck/formula-stocks/commit/92e53dcdf2e2c56c48cbe03571791a05e72d96a5)]
+- 📝 generated changelog [[2ac7193](https://github.com/MarkLyck/formula-stocks/commit/2ac71931d5fc25309a43ec1ef62bce77097f2cc6)]
+
+
 <a name="1.0.356"></a>
 ## 1.0.356 (2021-08-15)
 
