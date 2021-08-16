@@ -25,6 +25,21 @@ class _Document extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
             rel="stylesheet"
           />
+
+          {/* GOOGLE analytics */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z74039GKKT" />
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-Z74039GKKT');
+              `,
+            }}
+          />
         </Head>
         <body>
           <Main />
