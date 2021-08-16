@@ -40,6 +40,8 @@ class _Document extends Document {
               `,
             }}
           />
+          {/* GOOGLE Optimize */}
+          <script src="https://www.googleoptimize.com/optimize.js?id=OPT-NBXZHTT" />
         </Head>
         <body>
           <Main />
