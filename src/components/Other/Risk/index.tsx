@@ -182,8 +182,8 @@ const Risk = () => {
             able to recover so quickly. The seed for future success is often found in a correction.
           </Paragraph>
           <Paragraph>
-            Explore the chart below to see how each recession impacted the portfolio. You can compare Formula Stocks vs.
-            the S&P500
+            Explore the logarithmic chart below to see how each recession impacted the portfolio. You can compare
+            Formula Stocks vs. the S&P500
           </Paragraph>
           <BacktestedChart
             name={COMPANY_NAME}
@@ -209,10 +209,11 @@ const Risk = () => {
           </Paragraph>
           <Paragraph>
             Lets have a look at how this works. In the chart below the red periods indicate the historical probability
-            of losing money with Formula Stock picks, under various different time frames. Hold one month, and you have
-            a ~70% probability of a net profit. conversely ~30% for a net loss. Hold 3 years, and you have a ~97%
-            probability of a net profit, and only a ~3% probability of a net loss. All 5 year periods with Formula
-            Stocks has been profitable without exception. Note these are historical numbers, future returns may deviate.
+            of losing money with Formula Stock picks, under various different time frames. Hold one month, and you
+            statistically speaking have a ~70% probability of a net profit. conversely ~30% for a net loss. Hold 3
+            years, and a ~97% statistical probability of a net profit, and only a ~3% probability of a net loss. All 5
+            year periods with Formula Stocks has been profitable without exception. Note these are historical numbers,
+            future returns may deviate.
           </Paragraph>
           <Tabs defaultActiveKey="1">
             <TabPane tab="Formula Stocks" key="1">
