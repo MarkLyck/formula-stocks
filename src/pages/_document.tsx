@@ -27,21 +27,22 @@ class _Document extends Document {
           />
 
           {/* GOOGLE analytics */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z74039GKKT" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-68151102-1" />
           <script
             type="text/javascript"
             dangerouslySetInnerHTML={{
               __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
 
-                gtag('config', 'G-Z74039GKKT');
+              gtag('config', 'UA-68151102-1');
               `,
             }}
           />
+
           {/* GOOGLE Optimize */}
-          <script src="https://www.googleoptimize.com/optimize.js?id=OPT-NBXZHTT" />
+          <script async src="https://www.googleoptimize.com/optimize.js?id=OPT-NBXZHTT" />
         </Head>
         <body>
           <Main />
