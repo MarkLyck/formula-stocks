@@ -3,8 +3,8 @@ import styled from '@emotion/styled'
 import { Typography, Card, Spin, Tabs } from 'antd'
 import { useQuery } from '@apollo/client'
 
-import Navbar from '../Navbar'
-import { StockReturn } from '~/ui-components/Stock'
+import Navbar from '../../LandingPage/Navbar'
+import { StockReturn } from 'src/ui-components'
 import { STATISTICS, BACKTESTED_PERFORMANCE_HISTORY, MARKET_PRICE_HISTORY } from 'src/common/queries'
 import { Disclaimer } from 'src/ui-components'
 import BacktestedChart from 'src/components/LandingPage/Performance/BacktestedChart'
@@ -27,7 +27,6 @@ const Content = styled(Card)`
   width: 100%;
   max-width: 1200px;
   padding: 0 32px;
-  padding-top: 100px;
   margin-bottom: 32px;
 
   background: white;

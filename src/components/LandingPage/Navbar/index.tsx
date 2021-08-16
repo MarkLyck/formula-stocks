@@ -1,66 +1,100 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Link from 'next/link'
-import { Space, Divider } from 'antd'
 import { scroller } from 'react-scroll'
-import { NavItem, LandingPageContainer } from 'src/ui-components'
-import LoginItems from './LoginItems'
+
+import { isBrowser } from 'src/common/utils/featureTests'
 import useWindowSize from 'src/common/hooks/useWindowSize'
+import LoginItems from 'src/components/LandingPage/Navbar/LoginItems'
+import NavItem from './NavItem'
 
-const Header = styled.header`
-  position: absolute;
-  top: 0;
+const Navbar = styled.div`
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 32px 0;
+  height: 68px;
+  position: ${(p: any) => (p.type === 'homepage' ? 'absolute' : 'static')};
+  top: ${(p: any) => (p.type === 'homepage' ? '24px' : '0')};
+  z-index: 99;
+  background: ${(p: any) => (p.type === 'homepage' ? 'transparent' : '#fff')};
+  box-shadow: ${(p: any) => (p.type === 'homepage' ? 'none' : '0 2px 33px 0 rgb(0 0 0 / 5%);')};
 `
 
-const Logo = styled.img`
-  height: 24px;
-  background: white;
-  border-radius: 4px;
+const Container = styled.div`
+  width: 100%;
+  padding: 0 8%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+`
 
-  @media (max-width: ${(p) => p.theme.breakpoints.small}) {
-    padding: 8px;
-    height: 32px;
+const LinkContainer = styled.nav`
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  padding: 0;
+  height: 100%;
+
+  &:hover {
+    cursor: pointer;
   }
 `
 
-const Container = styled(LandingPageContainer)`
+const NavLinks = styled.ul`
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: static;
+  padding-left: 0;
   width: 100%;
-  flex-direction: row;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
+  list-style: none;
+  margin-bottom: 0;
 
-const NavItems = styled(Space)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  @media (max-width: 700px) {
-    .ant-space-item:nth-child(1) {
+  @media (max-width: 1600px) {
+    li:nth-of-type(4) {
+      display: none;
+    }
+  }
+  @media (max-width: 1500px) {
+    li:nth-of-type(3) {
+      display: none;
+    }
+  }
+  @media (max-width: 1300px) {
+    li:nth-of-type(2) {
       display: none;
     }
   }
 
-  @media (max-width: 600px) {
-    .ant-space-item:nth-child(2) {
-      display: none;
-    }
-  }
-
-  @media (max-width: 500px) {
+  @media (max-width: 1100px) {
     display: none;
   }
 `
 
-export interface NavbarProps {}
+const Logo = styled.img`
+  display: flex;
+  height: 44px;
+  align-items: center;
+  margin-right: 48px;
+  background: white;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: -7px;
 
-const Navbar = ({ showSignup }: any) => {
+  @media (max-width: 1100px) {
+    margin-top: 0;
+  }
+`
+
+const LogoPlaceholder = styled.div`
+  width: 150px;
+  margin-left: 7px;
+`
+
+// const openWhitePaper = () => window.open('/assets/whitepaper_2008.pdf', '_blank')
+
+const Nav = ({ showSignup, type }: any) => {
+  // @ts-ignore
+  if (isBrowser && window.$crisp) $crisp.push(['do', 'chat:show'])
   const windowSize = useWindowSize()
 
   const goToPricing = () => {
@@ -73,37 +107,39 @@ const Navbar = ({ showSignup }: any) => {
   }
 
   return (
-    <Header>
+    // @ts-ignore
+    <Navbar type={type}>
       <Container>
-        <Space>
-          <Link href="/">
-            <a>
+        <LinkContainer>
+          {isBrowser ? (
+            <Link href="/">
               <Logo
-                data-id="components-navbar"
-                // @ts-ignore
+                data-id="sales-navbar"
                 src={
-                  windowSize.width > 1000
+                  windowSize.width > 800
                     ? '/logos/formula_stocks/logo_horizontal.svg'
                     : '/logos/formula_stocks/logo_square.svg'
                 }
               />
-            </a>
-          </Link>
-          <Divider type="vertical" />
-          <NavItems>
-            <NavItem href="/strategy">Strategy</NavItem>
-            <NavItem onClick={goToPricing} href={false}>
-              Pricing
-            </NavItem>
-            {/* <NavItem realLink href="/assets/whitepaper_2008.pdf" target="_blank">
-              White paper
-            </NavItem> */}
-          </NavItems>
-        </Space>
-        <LoginItems showSignup={showSignup} />
+            </Link>
+          ) : (
+            <LogoPlaceholder />
+          )}
+
+          <NavLinks>
+            {type !== 'homepage' && <NavItem variant="light" title="HOME" to="/" />}
+            <NavItem variant="light" title="STRATEGY" to="/strategy" />
+            <NavItem variant="light" title="RISK" to="/risk" />
+            {type === 'homepage' && <NavItem variant="light" title="PRICING" onClick={goToPricing} href={false} />}
+            <NavItem variant="light" title="FAQ" href="https://help.formulastocks.com/en/" target="_blank" />
+
+            {/* <NavItem variant="light" title="WHITE PAPER" onClick={() => openWhitePaper()} /> */}
+          </NavLinks>
+          <LoginItems showSignup={showSignup} dark={type === 'homepage' ? false : true} />
+        </LinkContainer>
       </Container>
-    </Header>
+    </Navbar>
   )
 }
 
-export default Navbar
+export default Nav

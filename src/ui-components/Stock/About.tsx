@@ -6,7 +6,6 @@ import { Card, GenericLoading, Empty } from 'src/ui-components'
 import { capitalize } from 'src/common/utils/helpers'
 import { STOCK_ABOUT_QUERY } from 'src/common/queries'
 import { numberFormatter } from 'src/common/utils/formatters'
-// import FSApolloClient from 'src/common/FSApolloClient'
 
 const Info = styled(Card)`
   grid-area: info;

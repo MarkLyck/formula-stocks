@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { Typography, Card, List } from 'antd'
 import ExampleTrade from './ExampleTrade'
 
-import Navbar from '../Navbar'
+import Navbar from '../../LandingPage/Navbar'
 
 const { Title, Paragraph } = Typography
 
@@ -19,7 +19,6 @@ const Content = styled(Card)`
   width: 100%;
   max-width: 1200px;
   padding: 0 32px;
-  padding-top: 100px;
   margin-bottom: 32px;
 
   background: white;

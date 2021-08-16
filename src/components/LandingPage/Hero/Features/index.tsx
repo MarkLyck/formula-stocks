@@ -144,8 +144,8 @@ const Features = ({ statistics, statisticsLoading, statisticsError }: FeaturesPr
             <StyledSmallFeatureCard icon="analytics" color={theme.palette.primary[600]}>
               Portfolio management
             </StyledSmallFeatureCard>
-            <StyledSmallFeatureCard icon="money-bill-wave" color={theme.palette.success[600]}>
-              Money back guarantee
+            <StyledSmallFeatureCard icon="gift" color={theme.palette.danger[600]}>
+              Free 7-day trial
             </StyledSmallFeatureCard>
             <NextButton onClick={handleClick}>
               <FontAwesomeIcon icon="chevron-double-right" />

@@ -4,18 +4,8 @@ import { Button } from 'src/ui-components'
 import { LoginModal } from 'src/components/LandingPage/Modals'
 
 const StyledButton = styled(Button)`
-  color: ${(p) => p.theme.palette.neutral[100]};
-  border: 2px solid ${(p) => p.theme.palette.neutral[100]};
-
-  &:hover {
-    background-color: ${(p) => p.theme.palette.neutral[100]};
-    border: 2px solid ${(p) => p.theme.palette.neutral[400]};
-    color: ${(p) => p.theme.palette.text[500]};
-  }
-
-  &:active {
-    color: ${(p) => p.theme.palette.primary[600]};
-  }
+  color: ${(p: any) => p.theme.palette.neutral[p.dark ? 600 : 100]};
+  width: 80px;
 `
 
 const LoginButton = (props: any) => {
