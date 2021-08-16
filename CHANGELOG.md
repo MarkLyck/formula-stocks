@@ -1,5 +1,24 @@
 # Changelog
 
+<a name="1.0.368"></a>
+## 1.0.368 (2021-08-16)
+
+### Changed
+
+- ⬆️ Update dependency @ant-design/charts to v1.2.8 [[760049a](https://github.com/MarkLyck/formula-stocks/commit/760049a86628b2a7431c0794d8bb298df258acb6)]
+
+### Removed
+
+- 🔥 remove google optimize [[824035d](https://github.com/MarkLyck/formula-stocks/commit/824035d85ebbcb149ee936bd0f34ed452ba87bdd)]
+
+### Miscellaneous
+
+-  Merge pull request [#474](https://github.com/MarkLyck/formula-stocks/issues/474) from MarkLyck/renovate/ant-design-charts-1.x [[7827171](https://github.com/MarkLyck/formula-stocks/commit/7827171a8862bd3fc4c343b75853d0b13b521bda)]
+-  Merge pull request [#479](https://github.com/MarkLyck/formula-stocks/issues/479) from MarkLyck/google-analytics [[635db09](https://github.com/MarkLyck/formula-stocks/commit/635db093f5b743194b0ced34c32411eee4f4d22d)]
+- 📝 version bump to v1.0.368 [[5e9f769](https://github.com/MarkLyck/formula-stocks/commit/5e9f76915ce1737e37902f99dec3de2fe20e84b3)]
+- 📝 generated changelog [[aeb3013](https://github.com/MarkLyck/formula-stocks/commit/aeb30134d9ad6c6a32f88b39bf9cf46a6b06c3e3)]
+
+
 <a name="1.0.367"></a>
 ## 1.0.367 (2021-08-16)
 
