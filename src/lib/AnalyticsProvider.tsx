@@ -28,10 +28,10 @@ const analyticsTrack = (plausible: any) => (key: string, data: any) => {
   woopra.track(key, data)
   plausible(key, { props: data })
   gtag('event', key, {
-    event_category: data.category,
-    event_label: data.label,
-    value: data.value,
-    non_interaction: data.passive,
+    event_category: data?.category,
+    event_label: data?.label,
+    value: data?.value,
+    non_interaction: data?.passive,
   })
 }
 
