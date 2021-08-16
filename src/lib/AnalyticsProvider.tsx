@@ -5,10 +5,12 @@ import * as Sentry from '@sentry/nextjs'
 const analyticsInit = () => {
   LogRocket.init('hlvawe/formula-stocks')
   LogRocket.getSessionURL((sessionURL) => {
-    Sentry.configureScope((scope) => {
-      scope.setExtra('sessionURL', sessionURL)
-      woopra.track()
-    })
+    if (sessionURL) {
+      Sentry.configureScope((scope) => {
+        scope.setExtra('sessionURL', sessionURL)
+      })
+      woopra.track('session_url', { url: sessionURL })
+    }
   })
 }
 
