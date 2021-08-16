@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.362"></a>
+## 1.0.362 (2021-08-16)
+
+### Fixed
+
+- ✏️ improve wording on risk page [[9bd57a5](https://github.com/MarkLyck/formula-stocks/commit/9bd57a533d446864f3ca934c8ab6fecc42a0b297)]
+
+### Miscellaneous
+
+-  Merge pull request [#472](https://github.com/MarkLyck/formula-stocks/issues/472) from MarkLyck/feedback-improvements [[c79df57](https://github.com/MarkLyck/formula-stocks/commit/c79df572ed6d451a8e8895577c53de7d3eedd293)]
+- 📝 version bump to v1.0.362 [[0784e13](https://github.com/MarkLyck/formula-stocks/commit/0784e139d8cd12d9c993192cdff1338d00f797da)]
+- 📝 generated changelog [[b133222](https://github.com/MarkLyck/formula-stocks/commit/b13322270755de6564432aad82e34de46d28ab98)]
+
+
 <a name="1.0.361"></a>
 ## 1.0.361 (2021-08-16)
 
