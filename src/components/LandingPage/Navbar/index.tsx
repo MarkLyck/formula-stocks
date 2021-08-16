@@ -12,7 +12,7 @@ const Navbar = styled.div`
   width: 100%;
   height: 68px;
   position: ${(p: any) => (p.type === 'homepage' ? 'absolute' : 'static')};
-  top: 0;
+  top: ${(p: any) => (p.type === 'homepage' ? '24px' : '0')};
   z-index: 99;
   background: ${(p: any) => (p.type === 'homepage' ? 'transparent' : '#fff')};
   box-shadow: ${(p: any) => (p.type === 'homepage' ? 'none' : '0 2px 33px 0 rgb(0 0 0 / 5%);')};

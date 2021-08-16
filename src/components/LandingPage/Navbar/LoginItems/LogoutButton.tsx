@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from '@emotion/styled'
 import { Button } from 'src/ui-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 

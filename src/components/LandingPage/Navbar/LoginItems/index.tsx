@@ -24,6 +24,8 @@ const LoginItems = ({ showSignup, dark }: any) => {
     (hasStorage && localStorage.getItem('authToken')) || (isBrowser && window.authToken)
   )
 
+  if (!process.browser) return null
+
   const handleLogout = () => {
     analyticsTrack('logout')
     logout()

@@ -5,7 +5,7 @@ import { LoginModal } from 'src/components/LandingPage/Modals'
 
 const StyledButton = styled(Button)`
   color: ${(p: any) => p.theme.palette.neutral[p.dark ? 600 : 100]};
-  width: 120px;
+  width: 80px;
 `
 
 const LoginButton = (props: any) => {

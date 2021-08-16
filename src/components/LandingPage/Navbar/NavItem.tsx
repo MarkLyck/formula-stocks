@@ -8,6 +8,9 @@ const NavListItem = styled.li`
   display: flex;
   align-items: center;
 
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
   &:hover {
     background: ${(p) => p.theme.palette.neutral[200]};
     border-bottom: 3px solid ${(p) => p.theme.palette.neutral[600]};
