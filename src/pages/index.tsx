@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { initializeApollo, addApolloState } from 'src/lib/apolloClient'
 import { SignupModal } from 'src/components/LandingPage/Modals'
+import Navbar from '~/components/LandingPage/Navbar'
 import {
-  Navbar,
+  // Navbar,
   Hero,
   PickingWinningStocks,
   HowToGetStarted,
@@ -29,7 +30,7 @@ const IndexPage = () => {
       {/* Modals */}
       <SignupModal isVisible={signupVisible} onClose={() => setSignupVisible(false)} />
       {/* Page components */}
-      <Navbar showSignup={showSignup} />
+      <Navbar showSignup={showSignup} type="homepage" />
       <Hero showSignup={showSignup} />
       <PickingWinningStocks />
       <Performance />

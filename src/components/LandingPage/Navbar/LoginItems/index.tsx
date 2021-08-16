@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Router from 'next/router'
-import { Space } from 'antd'
 import { useQuery } from '@apollo/client'
+import styled from '@emotion/styled'
 
 import { logout } from 'src/common/utils'
 import { hasStorage, isBrowser } from 'src/common/utils/featureTests'
@@ -12,7 +12,12 @@ import SignupButton from './SignupButton'
 import LogoutButton from './LogoutButton'
 import DashboardButton from './DashboardButton'
 
-const LoginItems = ({ showSignup }: any) => {
+const Container = styled.div`
+  display: flex;
+  margin-left: auto;
+`
+
+const LoginItems = ({ showSignup, dark }: any) => {
   const { error } = useQuery(CURRENT_USER_QUERY, { fetchPolicy: 'cache-and-network' })
   const [loggedIn, setLoggedIn] = useState(
     // @ts-ignore window.authToken
@@ -44,18 +49,18 @@ const LoginItems = ({ showSignup }: any) => {
 
   if (loggedIn && process.browser) {
     return (
-      <Space>
+      <Container>
         <LogoutButton onClick={handleLogout} />
         <DashboardButton onClick={handleDashboardClick} />
-      </Space>
+      </Container>
     )
   }
 
   return (
-    <Space>
-      <LoginButton />
+    <Container>
+      <LoginButton dark={dark} />
       <SignupButton onClick={handleSignupClick} />
-    </Space>
+    </Container>
   )
 }
 
