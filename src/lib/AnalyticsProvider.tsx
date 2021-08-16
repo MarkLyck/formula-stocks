@@ -10,6 +10,11 @@ const analyticsInit = () => {
         scope.setExtra('sessionURL', sessionURL)
       })
       woopra.track('session_url', { url: sessionURL })
+      gtag('event', 'session_url', {
+        event_category: 'recording',
+        event_label: sessionURL,
+        non_interaction: true,
+      })
     }
   })
 }
@@ -22,6 +27,12 @@ if (process.env.NODE_ENV === 'production') {
 const analyticsTrack = (plausible: any) => (key: string, data: any) => {
   woopra.track(key, data)
   plausible(key, { props: data })
+  gtag('event', key, {
+    event_category: data.category,
+    event_label: data.label,
+    value: data.value,
+    non_interaction: data.passive,
+  })
 }
 
 const analyticsIdentify = (data: any) => {
