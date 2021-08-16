@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.365"></a>
+## 1.0.365 (2021-08-16)
+
+### Added
+
+- 📈 use UA google tag [[a9e2625](https://github.com/MarkLyck/formula-stocks/commit/a9e26250282f2eeb0a88df256fa0c258394cd136)]
+
+### Miscellaneous
+
+-  Merge pull request [#476](https://github.com/MarkLyck/formula-stocks/issues/476) from MarkLyck/google-analytics [[cf91014](https://github.com/MarkLyck/formula-stocks/commit/cf91014c16cdac66dbc871f73e498add812d1dc3)]
+- 📝 version bump to v1.0.365 [[0b09700](https://github.com/MarkLyck/formula-stocks/commit/0b097000bbb33ae697eb4dd7220536d4990b4d5f)]
+- 📝 generated changelog [[c0b800f](https://github.com/MarkLyck/formula-stocks/commit/c0b800ffb61426f33425fcb1761982f11673bca9)]
+
+
 <a name="1.0.364"></a>
 ## 1.0.364 (2021-08-16)
 
