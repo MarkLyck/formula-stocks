@@ -1,5 +1,37 @@
 # Changelog
 
+<a name="1.0.371"></a>
+## 1.0.371 (2021-08-16)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.371 [[c85ca2c](https://github.com/MarkLyck/formula-stocks/commit/c85ca2cf6c739fe19b4c787e876feb14ab8d11b5)]
+
+
+<a name="1.0.370"></a>
+## 1.0.370 (2021-08-16)
+
+### Added
+
+- ✨ new navbar [[ebe7c24](https://github.com/MarkLyck/formula-stocks/commit/ebe7c249412030a11212ecb33b2b2659710ccb67)]
+
+### Changed
+
+- 💄 navbar improvements [[b0eea96](https://github.com/MarkLyck/formula-stocks/commit/b0eea9682e9767c2597ea35a4782d6d7044b7289)]
+- ⬆️ Update dependency @apollo/client to v3.4.8 [[9188db1](https://github.com/MarkLyck/formula-stocks/commit/9188db14a166836685ece9e6db36bad7e7a7ddbe)]
+
+### Removed
+
+- 🔥 remove old navbar [[353f87d](https://github.com/MarkLyck/formula-stocks/commit/353f87daec3aacecc1346fa0d6dc464bd66f6172)]
+
+### Miscellaneous
+
+-  Merge pull request [#480](https://github.com/MarkLyck/formula-stocks/issues/480) from MarkLyck/renovate/apollo-graphql-packages [[c41fe1e](https://github.com/MarkLyck/formula-stocks/commit/c41fe1ea2aa8cb420c6af0cdaeb217d774353b5f)]
+-  Merge pull request [#481](https://github.com/MarkLyck/formula-stocks/issues/481) from MarkLyck/navbar-improvement [[bcf3a25](https://github.com/MarkLyck/formula-stocks/commit/bcf3a25819b784ff1c15328d2674cd1077b84fd6)]
+- 📝 version bump to v1.0.370 [[1f20a22](https://github.com/MarkLyck/formula-stocks/commit/1f20a22b560e54209adf65038ba2ff38c0e6e5e1)]
+- 📝 generated changelog [[17f06d6](https://github.com/MarkLyck/formula-stocks/commit/17f06d69586f626dee40cf7f2f9bd3e1cf21c4b2)]
+
+
 <a name="1.0.369"></a>
 ## 1.0.369 (2021-08-16)
 
