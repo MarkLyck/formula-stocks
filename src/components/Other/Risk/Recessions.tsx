@@ -49,7 +49,7 @@ const data = [
     marketRecover: '47 months',
   },
   {
-    key: '2011 - Short bear market',
+    key: '2011 - Stock market selloff',
     system: ((12419348519 - 13977877585) / 13977877585) * 100,
     market: ((1173.88 - 1338.31) / 1338.31) * 100,
     systemRecover: '2 months',
