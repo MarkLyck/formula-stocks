@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.360"></a>
+## 1.0.360 (2021-08-16)
+
+### Added
+
+- 📈 track session URL [[30a8c9a](https://github.com/MarkLyck/formula-stocks/commit/30a8c9a9f210a7fc268dbe12b4283532d0cee280)]
+
+### Miscellaneous
+
+-  Merge pull request [#470](https://github.com/MarkLyck/formula-stocks/issues/470) from MarkLyck/session-url [[08b0010](https://github.com/MarkLyck/formula-stocks/commit/08b0010414d12fb324d85c14eb5e35f2fca2e481)]
+- 📝 version bump to v1.0.360 [[dd0d61c](https://github.com/MarkLyck/formula-stocks/commit/dd0d61c72c1f8cb7e3b5579b658e59044fa10051)]
+- 📝 generated changelog [[dcfc563](https://github.com/MarkLyck/formula-stocks/commit/dcfc563b1a73732181d76f6321111e1813aee72a)]
+
+
 <a name="1.0.359"></a>
 ## 1.0.359 (2021-08-15)
 
