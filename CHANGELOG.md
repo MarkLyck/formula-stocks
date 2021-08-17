@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.375"></a>
+## 1.0.375 (2021-08-17)
+
+### Added
+
+- 📈 only init analytics on prod [[7c45386](https://github.com/MarkLyck/formula-stocks/commit/7c45386ccc5311496b86bdd7720d41535027d1a0)]
+
+### Miscellaneous
+
+-  Merge pull request [#486](https://github.com/MarkLyck/formula-stocks/issues/486) from MarkLyck/only-init-analytics-on-formulastockscom [[dbdc20c](https://github.com/MarkLyck/formula-stocks/commit/dbdc20c90adbae8bd757b068341b9d2f1c97a0ae)]
+- 📝 version bump to v1.0.375 [[91970db](https://github.com/MarkLyck/formula-stocks/commit/91970db071bc833cedc9901167afe2290d0b3e8d)]
+- 📝 generated changelog [[a2e4943](https://github.com/MarkLyck/formula-stocks/commit/a2e49434eedf935fec18bf4533eaf4b7896f3769)]
+
+
 <a name="1.0.374"></a>
 ## 1.0.374 (2021-08-17)
 
