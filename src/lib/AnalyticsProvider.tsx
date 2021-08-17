@@ -20,7 +20,7 @@ const analyticsInit = () => {
 }
 
 // Only initialize analytics in production
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production' && process.browser && window.location.href.includes('formulastocks.com')) {
   analyticsInit()
 }
 
