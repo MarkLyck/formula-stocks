@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.372"></a>
+## 1.0.372 (2021-08-17)
+
+### Changed
+
+- 🚸 improve reports UX [[fe4d2d3](https://github.com/MarkLyck/formula-stocks/commit/fe4d2d398c7c89b6a25be1fbcd3c5d40fbfbe1b5)]
+
+### Miscellaneous
+
+-  Merge pull request [#483](https://github.com/MarkLyck/formula-stocks/issues/483) from MarkLyck/CU-w8c3dw_AI-Report---only-load-components-if-there-is-data_Mark-Lyck [[bcd2d72](https://github.com/MarkLyck/formula-stocks/commit/bcd2d728bb8ccee5a3796fe13d03cf10c33dfc47)]
+- 📝 version bump to v1.0.372 [[096bdb7](https://github.com/MarkLyck/formula-stocks/commit/096bdb74da1b7746b24e36c1bac88ed1ef537953)]
+- 📝 generated changelog [[b87c946](https://github.com/MarkLyck/formula-stocks/commit/b87c946d3955684fe6ea1c133fa95a5fc03c4ac8)]
+
+
 <a name="1.0.371"></a>
 ## 1.0.371 (2021-08-16)
 
