@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.374"></a>
+## 1.0.374 (2021-08-17)
+
+### Fixed
+
+- 🐛 fix error with signup [[57eb785](https://github.com/MarkLyck/formula-stocks/commit/57eb7857a8da96a2b0a4d5f2c074eeebb7ee224f)]
+
+### Miscellaneous
+
+-  Merge pull request [#485](https://github.com/MarkLyck/formula-stocks/issues/485) from MarkLyck/fix-signup-error [[caf044a](https://github.com/MarkLyck/formula-stocks/commit/caf044a5e44c9d1a63cba331ff6f6843e63a6a7a)]
+- 📝 version bump to v1.0.374 [[14c3a77](https://github.com/MarkLyck/formula-stocks/commit/14c3a77353fc95d20c8730125dd3464b127153cf)]
+- 📝 generated changelog [[8a21fc2](https://github.com/MarkLyck/formula-stocks/commit/8a21fc262bf3f080a2c170a441bef723b7ca7d31)]
+
+
 <a name="1.0.373"></a>
 ## 1.0.373 (2021-08-17)
 
