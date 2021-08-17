@@ -12,6 +12,7 @@ import { ButtonIcon, Ticker, LoadingError } from 'src/ui-components'
 import { DASHBOARD_GUTTER_SIZE } from 'src/common/constants'
 import { SEARCH_REPORTS_QUERY } from 'src/common/queries'
 import { AIScoreValue, PermissionWrapper } from 'src/ui-components'
+import EmptyReports from './EmptyReports'
 
 const { Text, Title } = Typography
 const { Search } = Input
@@ -238,6 +239,7 @@ const Reports = () => {
                   onClick: () => router.push(`/dashboard/reports/${record.ticker.replace('_', '.')}`),
                 })}
                 pagination={{ simple: windowSize.width < 600 ? true : false }}
+                locale={{ emptyText: <EmptyReports /> }}
               />
             </AIScoreBox>
           </PermissionWrapper>
