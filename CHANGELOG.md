@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.377"></a>
+## 1.0.377 (2021-08-17)
+
+### Added
+
+- ✨ empty reports component [[2489702](https://github.com/MarkLyck/formula-stocks/commit/248970296d751ea5b7e3669ee70d46d3add69887)]
+
+### Miscellaneous
+
+-  Merge pull request [#488](https://github.com/MarkLyck/formula-stocks/issues/488) from MarkLyck/CU-w8ckvx_Report---company-not-found-error_Mark-Lyck [[c0ae12a](https://github.com/MarkLyck/formula-stocks/commit/c0ae12a0e94dc2521b380f78a4e4cc3742c707f6)]
+- 📝 version bump to v1.0.377 [[c02777c](https://github.com/MarkLyck/formula-stocks/commit/c02777ca153510d9493496ef4a9da57ea8364c60)]
+- 📝 generated changelog [[adf1243](https://github.com/MarkLyck/formula-stocks/commit/adf1243948df06f36a50c32636d0d21160ce20cb)]
+
+
 <a name="1.0.376"></a>
 ## 1.0.376 (2021-08-17)
 
