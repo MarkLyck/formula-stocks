@@ -43,7 +43,7 @@ const SignupModal = ({ onClose, isVisible }: SignupModalProps) => {
   }
 
   const handleAccountInfoSubmit = (values: any) => {
-    analyticsIdentify.identify({ email: values.email })
+    analyticsIdentify({ email: values.email })
     analyticsTrack('navigate', { to: 'billing' })
     setAccountInfo(values)
     nextPage()

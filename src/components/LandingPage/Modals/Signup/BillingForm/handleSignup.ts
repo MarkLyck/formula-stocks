@@ -46,7 +46,7 @@ const handleSignup = async ({
         coupon,
       },
     })
-    analyticsIdentify.identify({ email: accountInfo.email, uniq: btoa(accountInfo.password), name })
+    analyticsIdentify({ email: accountInfo.email, uniq: btoa(accountInfo.password), name })
     const loginData = await userLogin({ variables: { email: accountInfo.email, password: accountInfo.password } })
 
     // save authToken
