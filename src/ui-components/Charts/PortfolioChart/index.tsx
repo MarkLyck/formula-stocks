@@ -18,7 +18,7 @@ const ChartContainer = styled.div`
   width: 100%;
   height: 400px;
   .g2-tooltip {
-    border-radius: 8px !important;
+    border-radius: 4px !important;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
   }
 `

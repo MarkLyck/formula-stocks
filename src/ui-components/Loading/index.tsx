@@ -4,6 +4,7 @@ import { LoadingIndicator } from './LoadingIndicator'
 
 export * from './LoadingIndicator'
 export * from './LoadingTag'
+export * from './LoadingPage'
 
 const Container = styled.div`
     display: flex;

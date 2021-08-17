@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { FMP, GET_REPORT_QUERY } from 'src/common/queries'
 import { Report } from 'src/ui-components/Stock'
+import { LoadingPage } from 'src/ui-components'
 
 import Header from './Header'
 import Profile from './Profile'
@@ -38,7 +39,7 @@ const StockReport = () => {
   const profile = fmpProfile?.FMP?.response[0]
   const report = reportData?.aIReport
 
-  if (loading) return <Spin />
+  if (loading) return <LoadingPage title={`Loading report for ${symbol}...`} icon={['fad', 'file-chart-line']} />
 
   return (
     <div>
@@ -50,7 +51,7 @@ const StockReport = () => {
           <Breadcrumb.Item>{symbol}</Breadcrumb.Item>
         </Breadcrumb>
         <Header profile={profile} report={report} />
-        <StockChart symbol={symbol} />
+        {profile && <StockChart symbol={symbol} />}
         <Tabs type="card">
           <TabPane
             tab={
@@ -64,95 +65,111 @@ const StockReport = () => {
             {reportLoading && <Spin />}
             {report && <Report price={report.price} scores={report.scores} ticker={symbol} />}
           </TabPane>
-          <TabPane
-            tab={
-              <Text>
-                <FontAwesomeIcon icon={['fad', 'info-square']} style={{ marginRight: 8 }} />
-                Profile
-              </Text>
-            }
-            key="profile"
-          >
-            {loading && <Spin />}
-            {report && <Profile profile={profile} symbol={symbol} />}
-          </TabPane>
-          <TabPane
-            tab={
-              <Text>
-                <FontAwesomeIcon icon={['fad', 'chart-line']} style={{ marginRight: 8 }} />
-                Growth
-              </Text>
-            }
-            key="key-metrics"
-          >
-            <KeyMetrics symbol={symbol} />
-          </TabPane>
-          <TabPane
-            tab={
-              <Text>
-                <FontAwesomeIcon icon={['fad', 'dollar-sign']} style={{ marginRight: 8 }} />
-                Financials
-              </Text>
-            }
-            key="financials"
-          >
-            <Financials symbol={symbol} />
-          </TabPane>
-          <TabPane
-            tab={
-              <Text>
-                <FontAwesomeIcon icon={['fad', 'handshake']} style={{ marginRight: 8 }} />
-                Insider Trading
-              </Text>
-            }
-            key="insider-trading"
-          >
-            <InsiderTrading symbol={symbol} />
-          </TabPane>
-          <TabPane
-            tab={
-              <Text>
-                <FontAwesomeIcon icon={['fad', 'user-tie']} style={{ marginRight: 8 }} />
-                Key Executives
-              </Text>
-            }
-            key="key-executives"
-          >
-            <KeyExecs symbol={symbol} />
-          </TabPane>
-          <TabPane
-            tab={
-              <Text>
-                <FontAwesomeIcon icon={['fad', 'phone-office']} style={{ marginRight: 8 }} />
-                Earnings Call
-              </Text>
-            }
-            key="earnings-calls"
-          >
-            <EarningsCalls symbol={symbol} />
-          </TabPane>
-          <TabPane
-            tab={
-              <Text>
-                <FontAwesomeIcon icon={['fad', 'newspaper']} style={{ marginRight: 8 }} />
-                Latest News
-              </Text>
-            }
-            key="news"
-          >
-            <StockNews symbol={symbol} />
-          </TabPane>
-          <TabPane
-            tab={
-              <Text>
-                <FontAwesomeIcon icon={['fad', 'microphone-stand']} style={{ marginRight: 8 }} />
-                Press Releases
-              </Text>
-            }
-            key="press-releases"
-          >
-            <PressReleases symbol={symbol} />
-          </TabPane>
+          {profile && (
+            <TabPane
+              tab={
+                <Text>
+                  <FontAwesomeIcon icon={['fad', 'info-square']} style={{ marginRight: 8 }} />
+                  Profile
+                </Text>
+              }
+              key="profile"
+            >
+              {loading && <Spin />}
+              {report && <Profile profile={profile} symbol={symbol} />}
+            </TabPane>
+          )}
+          {profile && (
+            <TabPane
+              tab={
+                <Text>
+                  <FontAwesomeIcon icon={['fad', 'chart-line']} style={{ marginRight: 8 }} />
+                  Growth
+                </Text>
+              }
+              key="key-metrics"
+            >
+              <KeyMetrics symbol={symbol} />
+            </TabPane>
+          )}
+          {profile && (
+            <TabPane
+              tab={
+                <Text>
+                  <FontAwesomeIcon icon={['fad', 'dollar-sign']} style={{ marginRight: 8 }} />
+                  Financials
+                </Text>
+              }
+              key="financials"
+            >
+              <Financials symbol={symbol} />
+            </TabPane>
+          )}
+          {profile && (
+            <TabPane
+              tab={
+                <Text>
+                  <FontAwesomeIcon icon={['fad', 'handshake']} style={{ marginRight: 8 }} />
+                  Insider Trading
+                </Text>
+              }
+              key="insider-trading"
+            >
+              <InsiderTrading symbol={symbol} />
+            </TabPane>
+          )}
+          {profile && (
+            <TabPane
+              tab={
+                <Text>
+                  <FontAwesomeIcon icon={['fad', 'user-tie']} style={{ marginRight: 8 }} />
+                  Key Executives
+                </Text>
+              }
+              key="key-executives"
+            >
+              <KeyExecs symbol={symbol} />
+            </TabPane>
+          )}
+          {profile && (
+            <TabPane
+              tab={
+                <Text>
+                  <FontAwesomeIcon icon={['fad', 'phone-office']} style={{ marginRight: 8 }} />
+                  Earnings Call
+                </Text>
+              }
+              key="earnings-calls"
+            >
+              <EarningsCalls symbol={symbol} />
+            </TabPane>
+          )}
+          {profile && (
+            <TabPane
+              tab={
+                <Text>
+                  <FontAwesomeIcon icon={['fad', 'newspaper']} style={{ marginRight: 8 }} />
+                  Latest News
+                </Text>
+              }
+              key="news"
+            >
+              <StockNews symbol={symbol} />
+            </TabPane>
+          )}
+          {profile && (
+            <TabPane
+              tab={
+                <Text>
+                  <FontAwesomeIcon icon={['fad', 'microphone-stand']} style={{ marginRight: 8 }} />
+                  Press Releases
+                </Text>
+              }
+              key="press-releases"
+            >
+              <PressReleases symbol={symbol} />
+            </TabPane>
+          )}
         </Tabs>
       </Space>
     </div>
