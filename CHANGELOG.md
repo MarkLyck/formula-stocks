@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.376"></a>
+## 1.0.376 (2021-08-17)
+
+### Fixed
+
+- 🐛 fix bug where no authToken would not redirect to login [[0110e33](https://github.com/MarkLyck/formula-stocks/commit/0110e33179934ccf266ea19ae9548c6823b07634)]
+
+### Miscellaneous
+
+-  Merge pull request [#487](https://github.com/MarkLyck/formula-stocks/issues/487) from MarkLyck/fix-authToken-error [[1fcc4d5](https://github.com/MarkLyck/formula-stocks/commit/1fcc4d5bb2b3524b96b83562a32e692ba2157351)]
+- 🗑️ cleanup [[2cc432c](https://github.com/MarkLyck/formula-stocks/commit/2cc432cde5c970b650c0602aac9bbf6dce7c3083)]
+- 📝 version bump to v1.0.376 [[086c295](https://github.com/MarkLyck/formula-stocks/commit/086c2951f19fc5ecf3ec3d157bb998daf25108b4)]
+- 📝 generated changelog [[08a1089](https://github.com/MarkLyck/formula-stocks/commit/08a1089d6862b0566e298f638e0e7ea0a2969021)]
+
+
 <a name="1.0.375"></a>
 ## 1.0.375 (2021-08-17)
 
