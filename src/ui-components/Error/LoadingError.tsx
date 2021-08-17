@@ -2,6 +2,8 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Button, Space } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { hasStorage } from 'src/common/utils/featureTests'
 import { logout } from 'src/common/utils'
 import PermissionError from './PermissionError'
 import { Card } from 'src/ui-components'
@@ -33,6 +35,13 @@ const refreshPage = () => {
 const LoadingError = ({ error }: any) => {
   analyticsTrack('error', { message: error.message })
   let errorText = 'Please try to refresh the page.'
+  // @ts-ignore
+  const authToken = (hasStorage && localStorage.getItem('authToken')) || (process.browser && window?.authToken)
+
+  if (!authToken) {
+    logout(undefined, '/dashboard/login')
+    return null
+  }
 
   if (error && error.message.includes('permission')) {
     return <PermissionError />
