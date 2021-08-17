@@ -32,30 +32,6 @@ const refreshPage = () => {
   location.reload()
 }
 
-const error = `
-{
-    "data": null,
-    "errors": [
-        {
-            "message": "You don't have permission to perform this operation",
-            "locations": [
-                {
-                    "line": 2,
-                    "column": 3
-                }
-            ],
-            "path": [
-                "portfolioHoldingsList"
-            ],
-            "code": "NotAuthorizedError",
-            "details": {
-                "permissions": "You don't have permission to perform this operation"
-            }
-        }
-    ]
-}
-`
-
 const LoadingError = ({ error }: any) => {
   analyticsTrack('error', { message: error.message })
   let errorText = 'Please try to refresh the page.'
