@@ -1,7 +1,7 @@
 import { Layout, Button } from 'antd'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import { mediaQuery } from '@w11r/use-breakpoint'
 const { Header } = Layout
 
 const Logo = styled.img`
@@ -11,6 +11,8 @@ const Logo = styled.img`
   left: 50%;
   position: absolute;
   display: block;
+
+  ${mediaQuery(['mobile-', 'height: 48px;'])}
 `
 
 const StyledButton = styled(Button)`
@@ -24,6 +26,8 @@ const StyledButton = styled(Button)`
 `
 
 const StyledHeader = styled(Header)`
+  display: flex;
+  align-items: center;
   &&& {
     background-color: ${(p) => p.theme.palette.neutral[100]};
     padding-left: 0px;

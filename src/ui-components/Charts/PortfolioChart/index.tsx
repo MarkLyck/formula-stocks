@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client'
 import { Select, Space, Typography } from 'antd'
 import { subYears, subMonths, isAfter } from 'date-fns'
 import { ErrorBoundary } from 'react-error-boundary'
+import useBreakpoint from '@w11r/use-breakpoint'
 
 import useStore from 'src/lib/useStore'
 import { LAUNCH_PERFORMANCE_HISTORY } from 'src/common/queries'
@@ -132,6 +133,7 @@ type returnsDataPointType = {
 }
 
 const PortfolioChart = () => {
+  const { 'isTablet+': isTabletPlus } = useBreakpoint()
   const plan = useStore((state: any) => state.plan)
   const [chartType, setChartType] = useState('total_return')
   const [startDate, setStartDate] = useState('all_time')
@@ -187,14 +189,18 @@ const PortfolioChart = () => {
       >
         <Space direction="vertical">
           <Flex>
-            <Title level={4}>Performance</Title>
+            <Title level={4} style={{ marginBottom: 0 }}>
+              Performance
+            </Title>
             <Space>
-              {/* @ts-ignore */}
-              <TypeSelect defaultValue="total_return" onChange={(val: string) => setChartType(val)}>
-                <Option value="total_return">Total return</Option>
-                <Option value="monthly_returns">Monthly returns</Option>
-                <Option value="annual_returns">Annual returns</Option>
-              </TypeSelect>
+              {isTabletPlus && (
+                // @ts-ignore
+                <TypeSelect defaultValue="total_return" onChange={(val: string) => setChartType(val)}>
+                  <Option value="total_return">Total return</Option>
+                  <Option value="monthly_returns">Monthly returns</Option>
+                  <Option value="annual_returns">Annual returns</Option>
+                </TypeSelect>
+              )}
               {/* @ts-ignore */}
               <StyledSelect defaultValue="all_time" onChange={(val: string) => setStartDate(val)}>
                 <Option value="all_time">All time</Option>

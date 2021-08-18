@@ -183,13 +183,16 @@ const Reports = () => {
       ellipsis: true,
       sorter: (a: any, b: any) => (a.industry < b.industry ? 1 : -1),
       ...getColumnSearchProps('industry'),
-      render: (sector: string) => (
-        <div>
-          {/* @ts-ignore */}
-          <FontAwesomeIcon icon={['fad', getIndustryIcon(sector)]} style={{ marginRight: 8 }} />
-          {sector}
-        </div>
-      ),
+      render: (sector: string) => {
+        const icon = getIndustryIcon(sector)
+        return (
+          <div>
+            {/* @ts-ignore */}
+            {icon && <FontAwesomeIcon icon={['fad', getIndustryIcon(sector)]} style={{ marginRight: 8 }} />}
+            {sector}
+          </div>
+        )
+      },
     },
     {
       title: 'Price',

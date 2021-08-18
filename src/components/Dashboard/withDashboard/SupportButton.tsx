@@ -20,15 +20,9 @@ const StyledButton = styled(Button)`
   overflow: hidden;
   transition: all 0.2s;
 
-  @media (max-width: 960px) {
-    padding: ${(p: any) => (p.collapsed ? '8px' : '8px 16px')};
-  }
-
   span {
-    opacity: ${(p: any) => (p.collapsed ? '0' : '1')};
-    width: ${(p: any) => (p.collapsed ? '0px' : '100%')};
+    width: 100%;
     text-align: left;
-    transition: all 0.2s;
     font-weight: 400;
     font-size: 14px;
   }
@@ -41,12 +35,9 @@ const StyledButton = styled(Button)`
 `
 
 const handleClick = (_user: any) => {
-  // @ts-ignore
-  if (window.$crisp) {
-    // @ts-ignore
-    window.$crisp.push(['do', 'chat:show'])
-    // @ts-ignore
-    window.$crisp.push(['do', 'chat:open'])
+  if ($crisp) {
+    $crisp.push(['do', 'chat:show'])
+    $crisp.push(['do', 'chat:open'])
   }
 }
 
@@ -56,7 +47,7 @@ const SupportButton = ({ user, collapsed }: { user: any; collapsed: any }) => (
       {/* @ts-ignore */}
       <StyledButton onClick={() => handleClick(user)} collapsed={collapsed}>
         <ButtonIcon icon="question-circle" />
-        <span>Support</span>
+        {!collapsed && <span>Support</span>}
       </StyledButton>
     </Container>
   </Tooltip>
