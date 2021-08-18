@@ -1,6 +1,7 @@
 import { Col, Card, Typography, Spin, Space } from 'antd'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import useBreakpoint from '@w11r/use-breakpoint'
 
 const { Title, Text } = Typography
 
@@ -59,6 +60,7 @@ type CheckCardProps = {
 }
 
 export const CheckCard = ({ icon, title, description, sentiment, tags }: CheckCardProps) => {
+  const { 'isTablet-': isTabletMinus } = useBreakpoint()
   let sentimentIcon = ['fas', 'check']
   if (sentiment === 'warning') {
     sentimentIcon = ['fas', 'exclamation-triangle']
@@ -66,8 +68,11 @@ export const CheckCard = ({ icon, title, description, sentiment, tags }: CheckCa
     sentimentIcon = ['far', 'times']
   }
 
+  let COL_SPAN = 12
+  if (isTabletMinus) COL_SPAN = 24
+
   return (
-    <Col span={8}>
+    <Col span={COL_SPAN}>
       <StyledCard>
         <Space>
           <IconContainer color={sentiment}>

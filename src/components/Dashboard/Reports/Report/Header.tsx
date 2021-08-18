@@ -3,6 +3,7 @@ import { Card, Typography, Divider } from 'antd'
 import styled from '@emotion/styled'
 import { currencyFormatter } from 'src/common/utils/formatters'
 import { AIScoreValue } from 'src/ui-components'
+import useBreakpoint from '@w11r/use-breakpoint'
 
 const { Title } = Typography
 
@@ -18,6 +19,7 @@ const Logo = styled.img`
 `
 
 const Header = ({ profile, report }: any) => {
+  const { 'isTablet+': isTabletPlus } = useBreakpoint()
   const [image, setImage] = useState(profile?.image)
   const aiScore = report?.scores?.ai_score
   const companyName = profile?.companyName || report?.name
@@ -29,14 +31,18 @@ const Header = ({ profile, report }: any) => {
       <Container>
         {/* sets the image to empty if it fails */}
         <Logo src={image} onError={() => setImage('data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=')} />
-        <Title level={4} style={{ margin: 0 }}>
+        <Title level={5} style={{ margin: 0, marginRight: 16 }}>
           {companyName} ({symbol})
         </Title>
-        <Title level={5} style={{ margin: 0, marginLeft: 'auto' }}>
-          {currencyFormatter.format(price)}
-        </Title>
-        <Divider type="vertical" style={{ height: 32, margin: '0 16px' }} />
-        <AIScoreValue score={aiScore * 100} />
+        {isTabletPlus && (
+          <>
+            <Title level={5} style={{ margin: 0, marginLeft: 'auto' }}>
+              {currencyFormatter.format(price)}
+            </Title>
+            <Divider type="vertical" style={{ height: 32, margin: '0 16px' }} />
+            <AIScoreValue score={aiScore * 100} />
+          </>
+        )}
       </Container>
     </Card>
   )

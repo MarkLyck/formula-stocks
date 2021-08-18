@@ -7,6 +7,7 @@ import { useTheme } from '@emotion/react'
 import { minBy } from 'lodash'
 import dayjs from 'dayjs'
 import qs from 'query-string'
+import useBreakpoint from '@w11r/use-breakpoint'
 
 import { FMP } from 'src/common/queries'
 import { currencyFormatter } from 'src/common/utils/formatters'
@@ -23,6 +24,7 @@ type StockChartProps = {
 }
 
 const StockChart = ({ symbol }: StockChartProps) => {
+  const { 'isTablet+': isTabletPlus } = useBreakpoint()
   const [dateRange, setDateRange] = useState({
     from: dayjs().subtract(6, 'month').format('YYYY-MM-DD'),
     to: dayjs().format('YYYY-MM-DD'),
@@ -135,8 +137,10 @@ const StockChart = ({ symbol }: StockChartProps) => {
       title="Price chart"
       extra={
         <Space>
-          <IntervalSelector interval={interval} setInterval={setInterval} />
-          <DateRangeSelector dateRange={dateRange} setDateRange={setDateRange} setInterval={setInterval} />
+          {isTabletPlus && <IntervalSelector interval={interval} setInterval={setInterval} />}
+          {isTabletPlus && (
+            <DateRangeSelector dateRange={dateRange} setDateRange={setDateRange} setInterval={setInterval} />
+          )}
           <ChartSelector interval={interval} chartType={chartType} setChartType={setChartType} />
         </Space>
       }
