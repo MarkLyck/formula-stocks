@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.385"></a>
+## 1.0.385 (2021-08-18)
+
+### Added
+
+- ✨ detech bots to avoid bad analytics [[15e7dd3](https://github.com/MarkLyck/formula-stocks/commit/15e7dd3bf2f6eb29f6904011d067c851f22e5914)]
+
+### Miscellaneous
+
+-  Merge pull request [#496](https://github.com/MarkLyck/formula-stocks/issues/496) from MarkLyck/bot-detection [[1e3d5c2](https://github.com/MarkLyck/formula-stocks/commit/1e3d5c29f393d15cffd410ea808531fb82726c01)]
+- 📝 version bump to v1.0.385 [[3a10340](https://github.com/MarkLyck/formula-stocks/commit/3a1034058f3cce723ae068cbfd021bb56d37a306)]
+- 📝 generated changelog [[5135ada](https://github.com/MarkLyck/formula-stocks/commit/5135adad6f6ae75556c3ca0e506d7e33e18aef21)]
+
+
 <a name="1.0.384"></a>
 ## 1.0.384 (2021-08-18)
 
