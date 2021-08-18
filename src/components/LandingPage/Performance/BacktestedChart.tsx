@@ -109,7 +109,7 @@ const BacktestedHistoryChart = ({
         marketName="S&P500"
         labelFormatter={dollarFormatterRounded}
         tooltipValueFormatter={dollarFormatterRounded}
-        annotations={log ? annotations : [observedRegion]}
+        annotations={log ? annotations : []}
         log={log}
       />
     </GraphContainer>
