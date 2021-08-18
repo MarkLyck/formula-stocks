@@ -45,7 +45,9 @@ const AnimationChart = ({
     },
     isStack: false,
     legend: false,
-    areaStyle: { fillOpacity: 0.5 },
+    areaStyle: function areaStyle() {
+      return { fill: `l(270) 0:#ffffff 0.2:${theme.palette.primary[200]} 1:${theme.palette.primary[700]}` }
+    },
     tooltip: {
       customContent: (title: string, items: any[]) => Tooltip(title, items, tooltipValueFormatter),
     },

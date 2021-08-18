@@ -18,6 +18,7 @@ type AreaChartProps = {
   dateMask?: string
   yTickSpace?: number
   log?: boolean
+  marketName: string
   annotations?: any[]
   labelFormatter: (value: number) => string
   tooltipValueFormatter: (value: number) => string
@@ -32,6 +33,7 @@ const AreaChart = ({
   yTickSpace,
   log,
   annotations,
+  marketName,
   labelFormatter,
   tooltipValueFormatter,
 }: AreaChartProps) => {
@@ -47,9 +49,15 @@ const AreaChart = ({
     },
     isStack: false,
     legend: false,
-    areaStyle: { fillOpacity: 0.5 },
+    areaStyle: function areaStyle(point: any) {
+      if (point.type === 'Formula Stocks') {
+        return { fill: `l(270) 0:#ffffff 0.2:${theme.palette.primary[200]} 1:${theme.palette.primary[700]}` }
+      } else {
+        return { fill: `l(270) 0:#ffffff 0.2:${theme.palette.neutral[200]} 1:${theme.palette.neutral[700]}` }
+      }
+    },
     tooltip: {
-      customContent: (title: string, items: any[]) => Tooltip(title, items, tooltipValueFormatter),
+      customContent: (title: string, items: any[]) => Tooltip(title, items, tooltipValueFormatter, marketName),
     },
     xField: 'date',
     xAxis: {

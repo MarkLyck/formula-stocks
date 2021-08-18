@@ -89,15 +89,6 @@ const BacktestedHistoryChart = ({
 
   const annotations = markterCrashAnnotations
 
-  const observedRegion = {
-    type: 'region',
-    // @ts-ignore
-    start: () => ['01-31-2009', 'min'],
-    end: () => ['2050', 'max'],
-  }
-  // @ts-ignore
-  annotations.push(observedRegion)
-
   return (
     <GraphContainer>
       {/* @ts-ignore */}
@@ -115,9 +106,10 @@ const BacktestedHistoryChart = ({
         max={max}
         min={15000}
         dateMask="YYYY"
+        marketName="S&P500"
         labelFormatter={dollarFormatterRounded}
         tooltipValueFormatter={dollarFormatterRounded}
-        annotations={log ? annotations : [observedRegion]}
+        annotations={log ? annotations : []}
         log={log}
       />
     </GraphContainer>

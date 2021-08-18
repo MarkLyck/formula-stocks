@@ -93,6 +93,7 @@ const LaunchChart = ({ isLoading, error, planPerformance, marketPrices, marketNa
         min={0}
         yTickSpace={100}
         labelFormatter={percentFormatter}
+        marketName="DJIA"
         tooltipValueFormatter={(value: number) => `${value > 0 ? '+' : ''}${value}%`}
       />
     </GraphContainer>
