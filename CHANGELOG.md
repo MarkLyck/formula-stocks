@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.384"></a>
+## 1.0.384 (2021-08-18)
+
+### Changed
+
+- 📱 dashboard fully responsive [[4a37740](https://github.com/MarkLyck/formula-stocks/commit/4a3774038bf341029b39d17ae5d0faa86fbf3946)]
+
+### Miscellaneous
+
+-  Merge pull request [#495](https://github.com/MarkLyck/formula-stocks/issues/495) from MarkLyck/CU-w8ckgg_Make-dashboard-responsive_Mark-Lyck [[4661bf0](https://github.com/MarkLyck/formula-stocks/commit/4661bf059ae5ff997c99a218ea7c37f6845ceda7)]
+- 📝 version bump to v1.0.384 [[ef75767](https://github.com/MarkLyck/formula-stocks/commit/ef75767eeff11d9c15225de31c5ba030c06e14ab)]
+- 📝 generated changelog [[b064411](https://github.com/MarkLyck/formula-stocks/commit/b0644119b3dc59b2fcbc209168f290cdb71e578a)]
+
+
 <a name="1.0.383"></a>
 ## 1.0.383 (2021-08-18)
 
