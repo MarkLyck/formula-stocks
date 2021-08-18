@@ -1,4 +1,3 @@
-import { usePlausible } from 'next-plausible'
 import LogRocket from 'logrocket'
 import * as Sentry from '@sentry/nextjs'
 
@@ -24,9 +23,8 @@ if (process.env.NODE_ENV === 'production' && process.browser && window.location.
   analyticsInit()
 }
 
-const analyticsTrack = (plausible: any) => (key: string, data: any) => {
+const analyticsTrack = (key: string, data: any) => {
   woopra.track(key, data)
-  plausible(key, { props: data })
   gtag('event', key, {
     event_category: data?.category,
     event_label: data?.label,
@@ -41,12 +39,10 @@ const analyticsIdentify = (data: any) => {
 }
 
 const AnalyticsProvider = ({ children }: any) => {
-  const plausible = usePlausible()
-
   if (process.browser) {
     if (process.env.NODE_ENV === 'production') {
       // @ts-ignore
-      window.analyticsTrack = analyticsTrack(plausible)
+      window.analyticsTrack = analyticsTrack
       // @ts-ignore
       window.analyticsIdentify = analyticsIdentify
     } else {
