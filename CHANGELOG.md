@@ -1,5 +1,22 @@
 # Changelog
 
+<a name="1.0.378"></a>
+## 1.0.378 (2021-08-18)
+
+### Changed
+
+- 💄 improve holdings UI and UX [[8ddd6d6](https://github.com/MarkLyck/formula-stocks/commit/8ddd6d678362a1c623dc23586962ed9adb94dfaa)]
+- ⬆️ Update dependency @ant-design/charts to v1.2.9 [[f5a0a15](https://github.com/MarkLyck/formula-stocks/commit/f5a0a15d3fec16de4f1a240dfe309a89fb525674)]
+
+### Miscellaneous
+
+-  Merge pull request [#489](https://github.com/MarkLyck/formula-stocks/issues/489) from MarkLyck/renovate/ant-design-charts-1.x [[f3c0368](https://github.com/MarkLyck/formula-stocks/commit/f3c03689b241f8343e3ecf6c2951cfd1f5043bf2)]
+-  Merge pull request [#490](https://github.com/MarkLyck/formula-stocks/issues/490) from MarkLyck/CU-w8ckud_Refine-portfolio-names--ticker_Mark-Lyck [[c6391a1](https://github.com/MarkLyck/formula-stocks/commit/c6391a18469aca40209ac340ebcede0524c95e96)]
+- 🏷️ fix ts [[704f136](https://github.com/MarkLyck/formula-stocks/commit/704f136166e4714e6414bec490f9589505e18d36)]
+- 📝 version bump to v1.0.378 [[4b17d8b](https://github.com/MarkLyck/formula-stocks/commit/4b17d8b2d17efd8b08f2df44304fa0eebdcf95ad)]
+- 📝 generated changelog [[26c2147](https://github.com/MarkLyck/formula-stocks/commit/26c214737bf2e85074110f2dabbaf698f15ac19d)]
+
+
 <a name="1.0.377"></a>
 ## 1.0.377 (2021-08-17)
 
