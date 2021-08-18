@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.0.382"></a>
+## 1.0.382 (2021-08-18)
+
+### Fixed
+
+- 🐛 fix navbar and side menu issue. [[868c031](https://github.com/MarkLyck/formula-stocks/commit/868c0310505e80f784950bce21920146bd1f976b)]
+
+### Miscellaneous
+
+-  Merge pull request [#493](https://github.com/MarkLyck/formula-stocks/issues/493) from MarkLyck/CU-w8ckgg_Make-dashboard-responsive_Mark-Lyck [[adc53f9](https://github.com/MarkLyck/formula-stocks/commit/adc53f993f4a472f1e20f1281f4ecbbe437ced13)]
+- 🏷️ fis unused var [[bb52d78](https://github.com/MarkLyck/formula-stocks/commit/bb52d78080bc559b8251c5c3cf358a5a36cf03e3)]
+- 🗑️ cleanup [[b8d6e59](https://github.com/MarkLyck/formula-stocks/commit/b8d6e591db88205c6b43166dee26007ec5a29994)]
+- 📝 version bump to v1.0.382 [[6ccc124](https://github.com/MarkLyck/formula-stocks/commit/6ccc1243d5fefc288759c0eab093587358526bff)]
+- 📝 generated changelog [[56abb19](https://github.com/MarkLyck/formula-stocks/commit/56abb19f0643122094de6740a7250adbf32c6ff8)]
+
+
 <a name="1.0.381"></a>
 ## 1.0.381 (2021-08-18)
 
