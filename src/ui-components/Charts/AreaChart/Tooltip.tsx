@@ -65,7 +65,8 @@ const LiveTag = styled.div`
 const Tooltip = (
   _title: string,
   items: any[],
-  tooltipValueFormatter: (value: number) => string = (value: number) => String(value)
+  tooltipValueFormatter: (value: number) => string = (value: number) => String(value),
+  marketName: string
 ) => {
   if (!items[0]) return null
 
@@ -101,7 +102,7 @@ const Tooltip = (
       </ul>
       {comparisonValue >= 2 && (
         <Text>
-          FS outperforms S&P500 by a factor of: <b>{comparisonValue.toFixed(0)}x</b>
+          FS outperforms {marketName} by a factor of: <b>{comparisonValue.toFixed(0)}x</b>
         </Text>
       )}
     </Container>
