@@ -143,6 +143,7 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
         style={{
           position: 'fixed',
           height: '100vh',
+          top: 0,
           left: 0,
           overflow: 'auto',
         }}

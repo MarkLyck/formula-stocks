@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import isPropValid from '@emotion/is-prop-valid'
 import { useLocalStorageState, useToggle } from 'ahooks'
 import { ErrorBoundary } from 'react-error-boundary'
-import useBreakpoint from '@w11r/use-breakpoint'
+import useBreakpoint, { mediaQuery } from '@w11r/use-breakpoint'
 
 import { COMPANY_NAME } from 'src/common/constants'
 import { ErrorFallback } from 'src/ui-components'
@@ -28,6 +28,7 @@ const ContentLayout = styled(Layout, {
 
 const DashboardContent = styled(Content)`
   margin: 32px;
+  ${mediaQuery(['mobile-', 'margin: 16px;'])}
 `
 
 const DashboardFooter = styled(Footer)`
@@ -48,40 +49,41 @@ const LayoutComponent = ({ children }: LayoutProps) => {
   let marginLeft = '0px'
 
   // istanbul ignore next
-  if (isTabletPlus) {
-    width = sideMenuCollapsed ? '100vw - 8px' : '100vw - 200px'
-    marginLeft = sideMenuCollapsed ? '80px' : '200px'
-  }
+
+  width = sideMenuCollapsed ? 'calc(100vw - 8px)' : 'calc(100vw - 200px)'
+  marginLeft = sideMenuCollapsed ? '80px' : '200px'
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback} onReset={resetApplication}>
-      <DashboardLayout>
-        {isTabletPlus ? (
-          <SideMenu
-            collapsed={!!sideMenuCollapsed}
-            // @ts-ignore
-            setCollapsed={setSideMenuCollapsed}
-            onLinkClick={() => toggleSideMenu(false)}
-          />
-        ) : (
-          <ResponsiveSideMenu
-            collapsed={!!sideMenuCollapsed}
-            // @ts-ignore
-            setCollapsed={setSideMenuCollapsed}
-            sideMenuIsVisible={sideMenuIsVisible}
-            onClose={() => toggleSideMenu(false)}
-            onLinkClick={() => toggleSideMenu(false)}
-          />
-        )}
-        {/* @ts-ignore */}
-        <ContentLayout width={width} marginLeft={marginLeft}>
-          {!isTabletPlus && <Navbar toggleSideMenu={/* istanbul ignore next */ () => toggleSideMenu()} />}
-          <DashboardContent>{children}</DashboardContent>
-          <DashboardFooter>
-            {COMPANY_NAME} ©{new Date().getFullYear()}
-          </DashboardFooter>
-        </ContentLayout>
-      </DashboardLayout>
+      {process.browser && (
+        <DashboardLayout>
+          {isTabletPlus ? (
+            <SideMenu
+              collapsed={!!sideMenuCollapsed}
+              // @ts-ignore
+              setCollapsed={setSideMenuCollapsed}
+              onLinkClick={() => toggleSideMenu(false)}
+            />
+          ) : (
+            <ResponsiveSideMenu
+              collapsed={!!sideMenuCollapsed}
+              // @ts-ignore
+              setCollapsed={setSideMenuCollapsed}
+              sideMenuIsVisible={sideMenuIsVisible}
+              onClose={() => toggleSideMenu(false)}
+              onLinkClick={() => toggleSideMenu(false)}
+            />
+          )}
+          {/* @ts-ignore */}
+          <ContentLayout width={width} marginLeft={marginLeft}>
+            {!isTabletPlus && <Navbar toggleSideMenu={/* istanbul ignore next */ () => toggleSideMenu()} />}
+            <DashboardContent>{children}</DashboardContent>
+            <DashboardFooter>
+              {COMPANY_NAME} ©{new Date().getFullYear()}
+            </DashboardFooter>
+          </ContentLayout>
+        </DashboardLayout>
+      )}
     </ErrorBoundary>
   )
 }

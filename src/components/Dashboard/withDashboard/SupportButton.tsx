@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, ButtonIcon } from 'src/ui-components'
 import { Tooltip } from 'antd'
+// import useBreakpoint, { mediaQuery } from '@w11r/use-breakpoint'
 
 import styled from '@emotion/styled'
 
@@ -20,15 +21,9 @@ const StyledButton = styled(Button)`
   overflow: hidden;
   transition: all 0.2s;
 
-  @media (max-width: 960px) {
-    padding: ${(p: any) => (p.collapsed ? '8px' : '8px 16px')};
-  }
-
   span {
-    opacity: ${(p: any) => (p.collapsed ? '0' : '1')};
-    width: ${(p: any) => (p.collapsed ? '0px' : '100%')};
+    width: 100%;
     text-align: left;
-    transition: all 0.2s;
     font-weight: 400;
     font-size: 14px;
   }
@@ -56,7 +51,7 @@ const SupportButton = ({ user, collapsed }: { user: any; collapsed: any }) => (
       {/* @ts-ignore */}
       <StyledButton onClick={() => handleClick(user)} collapsed={collapsed}>
         <ButtonIcon icon="question-circle" />
-        <span>Support</span>
+        {!collapsed && <span>Support</span>}
       </StyledButton>
     </Container>
   </Tooltip>
