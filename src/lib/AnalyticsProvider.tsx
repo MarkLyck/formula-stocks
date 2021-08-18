@@ -1,5 +1,9 @@
 import LogRocket from 'logrocket'
+import isbot from 'isbot'
 import * as Sentry from '@sentry/nextjs'
+
+const isBrowser = process.browser
+const isBot = isBrowser ? isbot(navigator.userAgent) : true
 
 const analyticsInit = () => {
   LogRocket.init('hlvawe/formula-stocks')
@@ -19,18 +23,23 @@ const analyticsInit = () => {
 }
 
 // Only initialize analytics in production
-if (process.env.NODE_ENV === 'production' && process.browser && window.location.href.includes('formulastocks.com')) {
-  analyticsInit()
+if (isBrowser && process.env.NODE_ENV === 'production' && window.location.href.includes('formulastocks.com')) {
+  // only initialize if user is not a bot.
+  if (!isBot) {
+    analyticsInit()
+  }
 }
 
 const analyticsTrack = (key: string, data: any) => {
-  woopra.track(key, data)
-  gtag('event', key, {
-    event_category: data?.category,
-    event_label: data?.label,
-    value: data?.value,
-    non_interaction: data?.passive,
-  })
+  if (isBrowser && !isBot) {
+    woopra.track(key, data)
+    gtag('event', key, {
+      event_category: data?.category,
+      event_label: data?.label,
+      value: data?.value,
+      non_interaction: data?.passive,
+    })
+  }
 }
 
 const analyticsIdentify = (data: any) => {
@@ -39,7 +48,7 @@ const analyticsIdentify = (data: any) => {
 }
 
 const AnalyticsProvider = ({ children }: any) => {
-  if (process.browser) {
+  if (isBrowser) {
     if (process.env.NODE_ENV === 'production') {
       // @ts-ignore
       window.analyticsTrack = analyticsTrack
