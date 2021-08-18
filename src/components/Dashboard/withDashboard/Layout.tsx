@@ -48,10 +48,10 @@ const LayoutComponent = ({ children }: LayoutProps) => {
   let width = '100%'
   let marginLeft = '0px'
 
-  // istanbul ignore next
-
-  width = sideMenuCollapsed ? 'calc(100vw - 8px)' : 'calc(100vw - 200px)'
-  marginLeft = sideMenuCollapsed ? '80px' : '200px'
+  if (isTabletPlus) {
+    width = sideMenuCollapsed ? 'calc(100vw - 8px)' : 'calc(100vw - 200px)'
+    marginLeft = sideMenuCollapsed ? '80px' : '200px'
+  }
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback} onReset={resetApplication}>
