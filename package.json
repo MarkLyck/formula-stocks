@@ -14,7 +14,7 @@
     "chromatic": "npx chromatic --project-token h4efxyoutie"
   },
   "dependencies": {
-    "@ant-design/charts": "1.2.8",
+    "@ant-design/charts": "1.2.9",
     "@apollo/client": "3.4.8",
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
