@@ -34,7 +34,10 @@ const Holdings = () => {
         rowKey="ticker"
         scroll={{ x: 'max-content' }}
         onRow={(record) => ({
-          onClick: () => router.push(`/dashboard/reports/${record.ticker.replace('_', '.')}`),
+          onClick: () => {
+            if (record.ticker === 'CASH') return
+            router.push(`/dashboard/reports/${record.ticker.replace('_', '.')}`)
+          },
         })}
       />
     </Container>

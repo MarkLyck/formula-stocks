@@ -30,10 +30,11 @@ export type HoldingType = {
 
 const columns = [
   {
-    title: 'Company',
-    dataIndex: 'name',
-    key: 'name',
-    render: (stockName: any, item: any) => {
+    title: 'Symbol',
+    dataIndex: 'ticker',
+    key: 'ticker',
+    width: 80,
+    render: (value: string, item: any) => {
       if (item.ticker === 'CASH') {
         return (
           <Tag>
@@ -42,13 +43,17 @@ const columns = [
           </Tag>
         )
       }
-
-      return (
-        <Space>
-          <Ticker ticker={item.ticker} />
-          <Text>{stockName}</Text>
-        </Space>
-      )
+      return <Ticker ticker={value} />
+    },
+    sorter: (a: any, b: any) => (a.name < b.name ? -1 : 1),
+  },
+  {
+    title: 'Company',
+    dataIndex: 'name',
+    key: 'name',
+    render: (stockName: any) => {
+      if (stockName === 'CASH') return null
+      return <Text>{stockName}</Text>
     },
     sorter: (a: any, b: any) => (a.name < b.name ? -1 : 1),
   },
