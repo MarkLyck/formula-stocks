@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button, ButtonIcon } from 'src/ui-components'
 import { Tooltip } from 'antd'
-// import useBreakpoint, { mediaQuery } from '@w11r/use-breakpoint'
 
 import styled from '@emotion/styled'
 
@@ -36,12 +35,9 @@ const StyledButton = styled(Button)`
 `
 
 const handleClick = (_user: any) => {
-  // @ts-ignore
-  if (window.$crisp) {
-    // @ts-ignore
-    window.$crisp.push(['do', 'chat:show'])
-    // @ts-ignore
-    window.$crisp.push(['do', 'chat:open'])
+  if ($crisp) {
+    $crisp.push(['do', 'chat:show'])
+    $crisp.push(['do', 'chat:open'])
   }
 }
 
