@@ -31,10 +31,12 @@ const Content = styled.div`
     font-weight: 600;
     font-size: 1.5rem;
     margin-bottom: 0;
+    white-space: nowrap;
   }
   h5 {
     color: ${(p: any) => p.color};
     font-weight: 400;
+    white-space: nowrap;
   }
 `
 

@@ -19,13 +19,15 @@ const Statistics = () => {
   const { data: launchStatsData } = useQuery(STATISTICS_SINCE_LAUNCH, {
     variables: { planName: plan },
   })
-  const { 'isTablet-': isTabletMinus } = useBreakpoint()
+  const { 'isTablet-': isTabletMinus, 'isMobile-': isMobileMinus } = useBreakpoint()
 
   const statistics = statisticsData ? statisticsData.statisticsList.items[0] : {}
   const launchStatistics = launchStatsData?.statisticsSinceLaunchesList?.items[0] || {}
   const totalReturn = launchStatistics.totalReturn
 
-  let COL_SPAN = isTabletMinus ? 12 : 6
+  let COL_SPAN = 6
+  if (isTabletMinus) COL_SPAN = 12
+  if (isMobileMinus) COL_SPAN = 24
 
   return (
     <Row gutter={[GUTTER, GUTTER]} style={{ marginBottom: 24 }}>
