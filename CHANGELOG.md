@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.0.380"></a>
+## 1.0.380 (2021-08-18)
+
+### Added
+
+- ✨ improve performance charts on landing page [[c95c40f](https://github.com/MarkLyck/formula-stocks/commit/c95c40fd5aa943fe674f6f35477aaea75005718b)]
+
+### Miscellaneous
+
+-  Merge pull request [#491](https://github.com/MarkLyck/formula-stocks/issues/491) from MarkLyck/CU-w8ckgg_Make-dashboard-responsive_Mark-Lyck [[e0b9e7e](https://github.com/MarkLyck/formula-stocks/commit/e0b9e7ee7810ee76e691a9d2a6a8418f67b795cb)]
+- 🏷️ fix ts [[d4c9b9f](https://github.com/MarkLyck/formula-stocks/commit/d4c9b9f5f5b7fb84195efee963b3c727c5a4e9ab)]
+- 🗑️ cleanup [[40a9ad2](https://github.com/MarkLyck/formula-stocks/commit/40a9ad2964b8d135d8783d82b56291eb2514f4e6)]
+- 📝 version bump to v1.0.380 [[80a8d76](https://github.com/MarkLyck/formula-stocks/commit/80a8d769e104ebffebdd8cf7d10cf09d0613918f)]
+- 📝 generated changelog [[ba2affc](https://github.com/MarkLyck/formula-stocks/commit/ba2affcb0bf0960d7928f349856b4802591af62a)]
+
+
 <a name="1.0.379"></a>
 ## 1.0.379 (2021-08-18)
 
