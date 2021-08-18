@@ -47,9 +47,11 @@ const Value = styled(Text)`
 `
 
 const GrowthRates = ({ growthRates }: any) => {
-  const { 'isTablet-': isTabletMinus } = useBreakpoint()
+  const { 'isTablet-': isTabletMinus, 'isMobile-': isMobileMinus } = useBreakpoint()
 
-  let COL_SPAN = isTabletMinus ? 12 : 6
+  let COL_SPAN = 6
+  if (isTabletMinus) COL_SPAN = 12
+  if (isMobileMinus) COL_SPAN = 24
 
   return (
     <Row gutter={[16, 16]} style={{ marginTop: 16 }}>
