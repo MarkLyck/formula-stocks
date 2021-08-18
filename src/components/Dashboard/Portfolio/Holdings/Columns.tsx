@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Progress, Typography, Space } from 'antd'
+import { Progress, Typography } from 'antd'
 import { calculatePercentIncrease } from 'src/common/utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { StockReturn, Ticker, Tag } from 'src/ui-components'
