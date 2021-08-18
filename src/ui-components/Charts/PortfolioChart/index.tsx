@@ -133,7 +133,7 @@ type returnsDataPointType = {
 }
 
 const PortfolioChart = () => {
-  const { 'isTablet+': isTabletPlus, 'isMobile-': isMobileMinus } = useBreakpoint()
+  const { 'isTablet+': isTabletPlus } = useBreakpoint()
   const plan = useStore((state: any) => state.plan)
   const [chartType, setChartType] = useState('total_return')
   const [startDate, setStartDate] = useState('all_time')
