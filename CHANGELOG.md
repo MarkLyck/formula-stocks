@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.0.386"></a>
+## 1.0.386 (2021-08-19)
+
+### Added
+
+- ✨ much improved latest 10 sell signals [[b9e9de3](https://github.com/MarkLyck/formula-stocks/commit/b9e9de3497d6a2c97160b883382cbf0b04f99649)]
+
+### Miscellaneous
+
+-  Merge pull request [#500](https://github.com/MarkLyck/formula-stocks/issues/500) from MarkLyck/CU-w8m5wk_Latest-trades-and-whats-in-the-latest-trades-modal-doesnt-match_Mark-Lyck [[bba36b5](https://github.com/MarkLyck/formula-stocks/commit/bba36b54125839594fb3d0e7c9dd3a9cfb3bfc46)]
+- 🏷️ fix imports [[e61ec52](https://github.com/MarkLyck/formula-stocks/commit/e61ec522ba4f65bafbeb0ed5761982c08d252e26)]
+- 🏷️ fix broken imports [[bc55040](https://github.com/MarkLyck/formula-stocks/commit/bc550403070bf1f543f75796da58f3729106a62c)]
+- 📝 version bump to v1.0.386 [[5a81321](https://github.com/MarkLyck/formula-stocks/commit/5a81321ff94590e12681b1f58b4f5b5b30c9d403)]
+- 📝 generated changelog [[a5883dd](https://github.com/MarkLyck/formula-stocks/commit/a5883ddb5ebec0771f87f5e87963ec7628f25f22)]
+
+
 <a name="1.0.385"></a>
 ## 1.0.385 (2021-08-18)
 
