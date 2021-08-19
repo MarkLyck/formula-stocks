@@ -5,7 +5,6 @@ export * from './stockTip'
 export * from './launchPerformance'
 export * from './backtestedPerformance'
 export * from './prices/sixMonthsPrices'
-export * from './latestSellSignals'
 
 export * from './LAUNCH_PERFORMANCE_HISTORY'
 export * from './BACKTESTED_HISTORY'
