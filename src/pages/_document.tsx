@@ -21,6 +21,7 @@ class _Document extends Document {
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="preconnect" href="https://api.8base.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Exo:wght@600;900&display=swap" rel="stylesheet" />
           <link
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
             rel="stylesheet"

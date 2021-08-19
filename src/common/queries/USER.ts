@@ -70,7 +70,7 @@ export const CURRENT_USER_QUERY = gql`
       email
       lastName
       firstName
-      intros
+      tutorials
       type
       phoneNumber
       roles {
@@ -115,11 +115,11 @@ export const USER_UPDATE_PHONE_NUMBER = gql`
   }
 `
 
-export const SET_INTROS = gql`
-  mutation userUpdate($id: ID!, $intros: JSON) {
-    userUpdate(data: { id: $id, intros: $intros }) {
+export const SET_TUTORIALS = gql`
+  mutation userUpdate($id: ID!, $tutorials: JSON) {
+    userUpdate(data: { id: $id, tutorials: $tutorials }) {
       id
-      intros
+      tutorials
     }
   }
 `

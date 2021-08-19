@@ -2,9 +2,11 @@ import React from 'react'
 import { Row, Col } from 'antd'
 
 import { PortfolioChart, DashboardHeader, PermissionWrapper } from 'src/ui-components'
+import Statistics from 'src/components/Dashboard/Account/Statistics'
 import Holdings from './Holdings'
 import Allocation from './Allocation'
-import Statistics from 'src/components/Dashboard/Account/Statistics'
+import WelcomeGuide from './WelcomeGuide'
+
 const GUTTER_SIZE = 24
 
 const Portfolio = () => (
@@ -17,6 +19,11 @@ const Portfolio = () => (
     <Row gutter={GUTTER_SIZE}>
       <Col span={24}>
         <Statistics />
+      </Col>
+    </Row>
+    <Row gutter={GUTTER_SIZE}>
+      <Col span={24}>
+        <WelcomeGuide />
       </Col>
     </Row>
     <Row gutter={[GUTTER_SIZE, GUTTER_SIZE]} style={{ marginBottom: GUTTER_SIZE }}>
