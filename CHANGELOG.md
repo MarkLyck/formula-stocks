@@ -1,5 +1,42 @@
 # Changelog
 
+<a name="1.0.389"></a>
+## 1.0.389 (2021-08-19)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.389 [[e8a06d1](https://github.com/MarkLyck/formula-stocks/commit/e8a06d11e87c5f34c374e1e1dcb3411abaac85df)]
+
+
+<a name="1.0.388"></a>
+## 1.0.388 (2021-08-19)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.388 [[04c461c](https://github.com/MarkLyck/formula-stocks/commit/04c461c64490144b27c0ef27d1576df33441c9a9)]
+
+
+<a name="1.0.387"></a>
+## 1.0.387 (2021-08-19)
+
+### Added
+
+- 📈 track all signup button clicks [[58aa450](https://github.com/MarkLyck/formula-stocks/commit/58aa45010f6f5ecf427fb861a607ba56f279797f)]
+
+### Changed
+
+- ⬆️ Pin dependency isbot to 3.3.1 [[dab9077](https://github.com/MarkLyck/formula-stocks/commit/dab9077430cc5b114affaddd36009aa28a5d7d5c)]
+- ⬆️ Update dependency @types/node to v14.17.10 [[27e66c5](https://github.com/MarkLyck/formula-stocks/commit/27e66c5cb86d9337772eafa310ccf7f4f3941026)]
+
+### Miscellaneous
+
+-  Merge pull request [#498](https://github.com/MarkLyck/formula-stocks/issues/498) from MarkLyck/renovate/node-14.x [[f2bc632](https://github.com/MarkLyck/formula-stocks/commit/f2bc632a946ddb550227d94b55e05000d9a8b901)]
+-  Merge pull request [#497](https://github.com/MarkLyck/formula-stocks/issues/497) from MarkLyck/renovate/pin-dependencies [[26bf0e5](https://github.com/MarkLyck/formula-stocks/commit/26bf0e5b46b497dcbfb3d50bc3648394d408f9e1)]
+-  Merge pull request [#501](https://github.com/MarkLyck/formula-stocks/issues/501) from MarkLyck/signup-events [[a827c9d](https://github.com/MarkLyck/formula-stocks/commit/a827c9dc729b2513560f46ca1d2df7572220433f)]
+- 📝 version bump to v1.0.387 [[40c82d5](https://github.com/MarkLyck/formula-stocks/commit/40c82d5e9555d6e8f41621e323820e4fe07ed214)]
+- 📝 generated changelog [[502032e](https://github.com/MarkLyck/formula-stocks/commit/502032e32065943d957121baed605c01c52c8e5c)]
+
+
 <a name="1.0.386"></a>
 ## 1.0.386 (2021-08-19)
 
