@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.391"></a>
+## 1.0.391 (2021-08-19)
+
+### Changed
+
+- 💄 refinement of allocaiton [[4af6014](https://github.com/MarkLyck/formula-stocks/commit/4af6014e8adf7259fd0d68e28344474ce189c659)]
+
+### Miscellaneous
+
+-  Merge pull request [#504](https://github.com/MarkLyck/formula-stocks/issues/504) from MarkLyck/getting-started-tutorial [[3493013](https://github.com/MarkLyck/formula-stocks/commit/3493013563363d1303560edcd3e66732b35873be)]
+- 📝 version bump to v1.0.391 [[d49e5eb](https://github.com/MarkLyck/formula-stocks/commit/d49e5eb354e78cba3532d5127e1388b1d6dc6db0)]
+- 📝 generated changelog [[8e9a9ab](https://github.com/MarkLyck/formula-stocks/commit/8e9a9ab3e111b052e188ed41a6d11f4701a915f2)]
+
+
 <a name="1.0.390"></a>
 ## 1.0.390 (2021-08-19)
 
