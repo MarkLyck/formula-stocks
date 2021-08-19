@@ -2,9 +2,9 @@ import { subscriptionMock } from './subscription'
 
 export const USER_MOCK = {
   id: 'ck40ei37x00ye08js7guo95e3',
-  intros: {
+  tutorials: {
     reports: true,
-    weeklyStocktip: true,
+    getting_started: true,
   },
   createdAt: '2019-12-10T21:52:49.870Z',
   firstName: 'Mock',
