@@ -1,7 +1,6 @@
 import React from 'react'
 import LandingPage from '../../pages'
 import {
-  LATEST_SELL_SIGNALS,
   LAUNCH_PERFORMANCE_HISTORY,
   BACKTESTED_PERFORMANCE_HISTORY,
   MARKET_PRICE_HISTORY,
@@ -9,7 +8,6 @@ import {
   STATISTICS_SINCE_LAUNCH,
 } from 'src/common/queries'
 import {
-  latestSellSignalsMock,
   LAUNCH_PERFORMANCE_HISTORY_MOCK,
   MARKET_PRICE_HISTORY_MOCK,
   STATISTICS_MOCK,
@@ -43,14 +41,6 @@ const mocks = [
     },
     result: {
       data: MARKET_PRICE_HISTORY_MOCK,
-    },
-  },
-  {
-    request: {
-      query: LATEST_SELL_SIGNALS,
-    },
-    result: {
-      data: latestSellSignalsMock,
     },
   },
   {
