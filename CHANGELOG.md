@@ -1,5 +1,22 @@
 # Changelog
 
+<a name="1.0.393"></a>
+## 1.0.393 (2021-08-19)
+
+### Changed
+
+- ⬆️ Update dependency @stripe/stripe-js to v1.17.1 [[6d0cb60](https://github.com/MarkLyck/formula-stocks/commit/6d0cb60a464b75ad5daa149dd885f8dba9ef6255)]
+- ⬆️ Update dependency @types/react to v17.0.19 [[cd22273](https://github.com/MarkLyck/formula-stocks/commit/cd22273809c3991b597444fe7a91ba14e2a775b4)]
+
+### Miscellaneous
+
+-  Merge pull request [#502](https://github.com/MarkLyck/formula-stocks/issues/502) from MarkLyck/renovate/stripe-stripe-js-1.x [[82257a4](https://github.com/MarkLyck/formula-stocks/commit/82257a44b44c43e8a22374a5fac809bdb53483d3)]
+-  Merge pull request [#499](https://github.com/MarkLyck/formula-stocks/issues/499) from MarkLyck/renovate/react-17.x [[7a00a7c](https://github.com/MarkLyck/formula-stocks/commit/7a00a7cd4dee110dfc4438f298e0515ddd2fb018)]
+- 📝 version bump to v1.0.393 [[8f58468](https://github.com/MarkLyck/formula-stocks/commit/8f584681d3b2be37f26d5a3d684c1271d676cf53)]
+- 📝 version bump to v1.0.392 [[000b38d](https://github.com/MarkLyck/formula-stocks/commit/000b38d2d724e9ec1cf88edbfc14a44888fd3bb8)]
+- 📝 generated changelog [[b18130c](https://github.com/MarkLyck/formula-stocks/commit/b18130ce07ff42982bc92cb8411938ddea0d6f61)]
+
+
 <a name="1.0.391"></a>
 ## 1.0.391 (2021-08-19)
 
