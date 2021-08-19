@@ -55,7 +55,6 @@ const Hero = ({ showSignup }: any) => {
   const statistics = data ? data.statisticsList.items[0] : {}
 
   const handleSignupClick = () => {
-    analyticsTrack('click', { element: 'signup button' })
     showSignup()
   }
 

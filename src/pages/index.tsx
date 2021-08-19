@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import { initializeApollo, addApolloState } from 'src/lib/apolloClient'
 import { SignupModal } from 'src/components/LandingPage/Modals'
-import Navbar from '~/components/LandingPage/Navbar'
 import {
-  // Navbar,
+  Navbar,
   Hero,
   PickingWinningStocks,
   HowToGetStarted,
@@ -23,7 +22,10 @@ import {
 const IndexPage = () => {
   const [signupVisible, setSignupVisible] = useState(false)
 
-  const showSignup = () => setSignupVisible(true)
+  const showSignup = () => {
+    analyticsTrack('click', { element: 'signup button' })
+    setSignupVisible(true)
+  }
 
   return (
     <>
