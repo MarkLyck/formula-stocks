@@ -45,7 +45,6 @@ const LoginItems = ({ showSignup, dark }: any) => {
   }
 
   const handleSignupClick = () => {
-    analyticsTrack('click', { element: 'signup button' })
     showSignup()
   }
 
