@@ -61,7 +61,8 @@ const columns = [
     title: 'Allocation',
     key: 'percentageWeight',
     dataIndex: 'percentageWeight',
-    render: (value: number) => <Progress percent={Number(value.toFixed(2))} />,
+    width: 240,
+    render: (value: number) => <Progress percent={Number(value.toFixed(2))} style={{ paddingRight: 8 }} />,
     sorter: (a: HoldingType, b: HoldingType) => a.percentageWeight - b.percentageWeight,
   },
   {

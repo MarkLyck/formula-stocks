@@ -8,7 +8,6 @@ const WelcomeGuide = () => {
   const user = useStore((state: any) => state.user)
   const [isVisible, setIsVisible] = useState(true)
   const [setTutorials] = useMutation(SET_TUTORIALS)
-  console.log('🔈 ~ isVisible', isVisible)
 
   if (!user || !isVisible) return null
   if (user.tutorials.includes('getting-started')) return null
