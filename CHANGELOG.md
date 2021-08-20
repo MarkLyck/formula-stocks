@@ -1,5 +1,34 @@
 # Changelog
 
+<a name="1.0.396"></a>
+## 1.0.396 (2021-08-20)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.396 [[8098940](https://github.com/MarkLyck/formula-stocks/commit/809894097ad9f4622bf7f3df5b36be5bbd6857cd)]
+
+
+<a name="1.0.395"></a>
+## 1.0.395 (2021-08-20)
+
+### Changed
+
+- ⬆️ Update dependency @ant-design/charts to v1.2.10 [[d8f026f](https://github.com/MarkLyck/formula-stocks/commit/d8f026f6c07d4c71761795b6b4031fb1534b0de6)]
+- ⬆️ Update dependency isbot to v3.3.2 [[d416f8e](https://github.com/MarkLyck/formula-stocks/commit/d416f8e3d9c55a24a46bd4f35c53a4554e94ea25)]
+
+### Fixed
+
+- 🐛 fix safari svg rotation bug [[868f53e](https://github.com/MarkLyck/formula-stocks/commit/868f53e43d215de8b62934cf489cf39bd1369fa1)]
+
+### Miscellaneous
+
+-  Merge pull request [#508](https://github.com/MarkLyck/formula-stocks/issues/508) from MarkLyck/getting-started-tutorial [[79b30ad](https://github.com/MarkLyck/formula-stocks/commit/79b30ad04e25f48c31bef1ea97e0552cced28589)]
+-  Merge pull request [#506](https://github.com/MarkLyck/formula-stocks/issues/506) from MarkLyck/renovate/ant-design-charts-1.x [[bdc9465](https://github.com/MarkLyck/formula-stocks/commit/bdc94656214a46dff492e85295f1c97707ccce7a)]
+-  Merge pull request [#505](https://github.com/MarkLyck/formula-stocks/issues/505) from MarkLyck/renovate/isbot-3.x [[3bb061a](https://github.com/MarkLyck/formula-stocks/commit/3bb061af7c6de920e1f7417da0b2c6646ae5b93b)]
+- 📝 version bump to v1.0.395 [[0dd398b](https://github.com/MarkLyck/formula-stocks/commit/0dd398b0434e42d3e2d4f0bce2ab0dae523216f6)]
+- 📝 generated changelog [[f028f10](https://github.com/MarkLyck/formula-stocks/commit/f028f10f0be86b495ea2d8d3fdbe3be1ec4bf50a)]
+
+
 <a name="1.0.394"></a>
 ## 1.0.394 (2021-08-20)
 
