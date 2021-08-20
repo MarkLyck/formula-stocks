@@ -114,6 +114,8 @@ const Nav = ({ showSignup, type }: any) => {
           {isBrowser ? (
             <Link href="/">
               <Logo
+                height={44}
+                width={248}
                 alt="Formula Stocks"
                 src={
                   windowSize.width > 800
