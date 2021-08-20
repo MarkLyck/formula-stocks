@@ -13,6 +13,7 @@ const SuggestionsGuide = () => {
   if (user.tutorials.includes('suggestions-tutorial')) return null
 
   const handleClick = () => {
+    analyticsTrack('open-tutorial', { tutorial: 'suggestions-tutorial' })
     $crisp.push(['do', 'helpdesk:article:open', ['en', '1si08de']])
   }
 

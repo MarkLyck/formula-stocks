@@ -6,14 +6,14 @@ import { useLocalStorageState, useToggle } from 'ahooks'
 import { ErrorBoundary } from 'react-error-boundary'
 import useBreakpoint, { mediaQuery } from '@w11r/use-breakpoint'
 
-import { COMPANY_NAME } from 'src/common/constants'
 import { ErrorFallback } from 'src/ui-components'
 import { resetApplication } from 'src/common/utils'
 import ResponsiveSideMenu from './ResponsiveSideMenu'
 import SideMenu from './SideMenu'
 import Navbar from './Navbar'
+import DashboardFooter from './Footer'
 
-const { Content, Footer } = Layout
+const { Content } = Layout
 
 const DashboardLayout = styled(Layout)`
   min-height: 100vh;
@@ -29,11 +29,6 @@ const ContentLayout = styled(Layout, {
 const DashboardContent = styled(Content)`
   margin: 32px;
   ${mediaQuery(['mobile-', 'margin: 16px;'])}
-`
-
-const DashboardFooter = styled(Footer)`
-  text-align: center;
-  padding-top: 0;
 `
 
 export type LayoutProps = {
@@ -78,9 +73,7 @@ const LayoutComponent = ({ children }: LayoutProps) => {
           <ContentLayout width={width} marginLeft={marginLeft}>
             {!isTabletPlus && <Navbar toggleSideMenu={/* istanbul ignore next */ () => toggleSideMenu()} />}
             <DashboardContent>{children}</DashboardContent>
-            <DashboardFooter>
-              {COMPANY_NAME} ©{new Date().getFullYear()}
-            </DashboardFooter>
+            <DashboardFooter />
           </ContentLayout>
         </DashboardLayout>
       )}

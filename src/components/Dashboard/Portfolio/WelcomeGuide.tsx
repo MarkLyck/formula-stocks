@@ -13,6 +13,7 @@ const WelcomeGuide = () => {
   if (user.tutorials.includes('getting-started')) return null
 
   const handleClick = () => {
+    analyticsTrack('open-tutorial', { tutorial: 'getting-started' })
     $crisp.push(['do', 'helpdesk:article:open', ['en', 'w64pew']])
   }
 

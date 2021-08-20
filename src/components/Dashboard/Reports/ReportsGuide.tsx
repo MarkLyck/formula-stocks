@@ -13,6 +13,7 @@ const ReportsGuide = () => {
   if (user.tutorials.includes('ai-reports-tutorial')) return null
 
   const handleClick = () => {
+    analyticsTrack('open-tutorial', { tutorial: 'ai-reports-tutorial' })
     $crisp.push(['do', 'helpdesk:article:open', ['en', '1xjhxg9']])
   }
 
