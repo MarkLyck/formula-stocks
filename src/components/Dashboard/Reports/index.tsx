@@ -13,6 +13,7 @@ import { DASHBOARD_GUTTER_SIZE } from 'src/common/constants'
 import { SEARCH_REPORTS_QUERY } from 'src/common/queries'
 import { AIScoreValue, PermissionWrapper } from 'src/ui-components'
 import EmptyReports from './EmptyReports'
+import ReportsGuide from './ReportsGuide'
 
 const { Text, Title } = Typography
 const { Search } = Input
@@ -227,6 +228,11 @@ const Reports = () => {
         </Title>
         <Search placeholder="search for a stock" onSearch={onMainSearch} style={{ width: 400 }} />
       </HeaderContainer>
+      <Row gutter={16}>
+        <Col span={24}>
+          <ReportsGuide />
+        </Col>
+      </Row>
       <Row gutter={[DASHBOARD_GUTTER_SIZE, DASHBOARD_GUTTER_SIZE]}>
         <Col span={24}>
           <PermissionWrapper>

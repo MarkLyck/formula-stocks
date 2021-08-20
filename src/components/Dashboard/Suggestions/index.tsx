@@ -6,6 +6,7 @@ import useStore from 'src/lib/useStore'
 import { SUGGESTIONS_QUERY } from 'src/common/queries'
 import { LoadingError, DashboardHeader, PermissionWrapper } from 'src/ui-components'
 import Suggestion from './Suggestion'
+import SuggestionsGuide from './SuggestionsGuide'
 
 const Suggestions = () => {
   const { 'isTablet-': isTabletMinus } = useBreakpoint()
@@ -29,6 +30,11 @@ const Suggestions = () => {
       <Row gutter={16}>
         <Col span={24}>
           <DashboardHeader />
+        </Col>
+      </Row>
+      <Row gutter={16}>
+        <Col span={24}>
+          <SuggestionsGuide />
         </Col>
       </Row>
       <Row gutter={16}>

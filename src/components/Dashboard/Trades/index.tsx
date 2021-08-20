@@ -7,6 +7,7 @@ import useStore from 'src/lib/useStore'
 import { TRADES_QUERY } from 'src/common/queries'
 import { LoadingError, DashboardHeader, PermissionWrapper } from 'src/ui-components'
 import Trade from './Trade'
+import TradesGuide from './TradesGuide'
 
 const Trades = () => {
   const plan = useStore((state: any) => state.plan)
@@ -31,6 +32,11 @@ const Trades = () => {
       <Row gutter={16}>
         <Col span={24}>
           <DashboardHeader />
+        </Col>
+      </Row>
+      <Row gutter={16}>
+        <Col span={24}>
+          <TradesGuide />
         </Col>
       </Row>
       <Row gutter={16}>
