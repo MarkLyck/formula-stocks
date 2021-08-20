@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.399"></a>
+## 1.0.399 (2021-08-20)
+
+### Changed
+
+- ♿ add width and height to nav loo [[ecdf2bb](https://github.com/MarkLyck/formula-stocks/commit/ecdf2bb6cc17ff6f9b732689938680fe13a06271)]
+
+### Miscellaneous
+
+-  Merge pull request [#511](https://github.com/MarkLyck/formula-stocks/issues/511) from MarkLyck/performance [[1e76a40](https://github.com/MarkLyck/formula-stocks/commit/1e76a40242a973707a32a7750ac7efc5ef293bd6)]
+- 📝 version bump to v1.0.399 [[44d3513](https://github.com/MarkLyck/formula-stocks/commit/44d3513825306dcb5911e83253ce1eb56ec9239f)]
+- 📝 generated changelog [[250b7d1](https://github.com/MarkLyck/formula-stocks/commit/250b7d1e5150fcea3e5f72082b2d362c3c5b2a00)]
+
+
 <a name="1.0.398"></a>
 ## 1.0.398 (2021-08-20)
 
