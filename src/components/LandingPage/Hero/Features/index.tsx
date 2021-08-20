@@ -15,6 +15,10 @@ const Container = styled.div`
   padding: 0 8%;
   margin-left: -8px;
   ${maxSiteWidth}
+
+  @media (max-width: ${(p) => p.theme.breakpoints.small}) {
+    display: none;
+  }
 `
 
 const NextButton = styled.button`
@@ -127,7 +131,7 @@ const Features = ({ statistics, statisticsLoading, statisticsError }: FeaturesPr
             <StyledSmallFeatureCard icon="hand-holding-usd" color={theme.palette.icon_colors.pink}>
               Stay in full control
             </StyledSmallFeatureCard>
-            <NextButton onClick={handleClick}>
+            <NextButton onClick={handleClick} tabIndex={-1} aria-label="next slide">
               <FontAwesomeIcon icon="chevron-double-right" />
             </NextButton>
           </StyledSpace>
@@ -147,7 +151,7 @@ const Features = ({ statistics, statisticsLoading, statisticsError }: FeaturesPr
             <StyledSmallFeatureCard icon="gift" color={theme.palette.danger[600]}>
               Free 7-day trial
             </StyledSmallFeatureCard>
-            <NextButton onClick={handleClick}>
+            <NextButton onClick={handleClick} tabIndex={-1} aria-label="next slide">
               <FontAwesomeIcon icon="chevron-double-right" />
             </NextButton>
           </StyledSpace>
@@ -167,7 +171,7 @@ const Features = ({ statistics, statisticsLoading, statisticsError }: FeaturesPr
             <StyledSmallFeatureCard icon="handshake" color={theme.palette.primary[600]}>
               Fully transparent
             </StyledSmallFeatureCard>
-            <NextButton onClick={handleClick}>
+            <NextButton onClick={handleClick} tabIndex={-1} aria-label="next slide">
               <FontAwesomeIcon icon="chevron-double-right" />
             </NextButton>
           </StyledSpace>

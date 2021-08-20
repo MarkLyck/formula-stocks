@@ -160,7 +160,7 @@ const Statistics = () => {
             Content
           ) : (
             <Beside>
-              <SpaceImage src="/images/space/space-3.svg" />
+              <SpaceImage src="/images/space/space-3.svg" alt="How to get higher investment returns" />
               {Content}
             </Beside>
           )}

@@ -114,7 +114,7 @@ const Nav = ({ showSignup, type }: any) => {
           {isBrowser ? (
             <Link href="/">
               <Logo
-                data-id="sales-navbar"
+                alt="Formula Stocks"
                 src={
                   windowSize.width > 800
                     ? '/logos/formula_stocks/logo_horizontal.svg'

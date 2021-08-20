@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { Space, Typography } from 'antd'
 import styled from '@emotion/styled'
 import { useToggle } from 'ahooks'
@@ -9,17 +10,6 @@ import TermsModal from 'src/components/LandingPage/Modals/Legal/Terms'
 import PrivacyPolicyModal from 'src/components/LandingPage/Modals/Legal/PrivacyPolicy'
 
 const { Link } = Typography
-
-const Logo = styled.img`
-  height: 48px;
-  max-width: 100%;
-  margin-bottom: 16px;
-
-  @media (max-width: ${(p) => p.theme.breakpoints.extraSmall}) {
-    height: auto;
-    width: 100%;
-  }
-`
 
 const Container = styled.div`
   background-color: #3c3fa3;
@@ -78,8 +68,13 @@ const Footer = () => {
   return (
     <Container>
       <Space direction="vertical" size="middle" style={{ width: '100%' }}>
-        <Logo src="/logos/formula_stocks/logo_horizontal_white.svg" />
-        <Space size="middle">
+        <Image
+          height={48}
+          width={400}
+          src="/logos/formula_stocks/logo_horizontal_white.svg"
+          alt="How to pick winning stocks"
+        />
+        <Space size="middle" style={{ marginTop: 16 }}>
           {SOCIAL_MEDIA_LINKS.map((link) => (
             <SocialMediaLink key={link.href} {...link} />
           ))}

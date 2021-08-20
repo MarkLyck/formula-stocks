@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import styled from '@emotion/styled'
 import { mediaQuery } from '@w11r/use-breakpoint'
 
@@ -11,15 +12,16 @@ const Title = styled.h2`
   margin-bottom: 16px;
 `
 
-const Exchange = styled.img`
+const ImageContainer = styled.div`
   height: 80px;
-  margin: 0 32px;
-  padding: 16px;
   border-radius: 4px;
+  padding: 16px;
+  margin: 0 32px;
+  box-sizing: border-box;
+
   &:hover {
     background-color: ${(p) => p.theme.palette.neutral[200]};
   }
-
   ${mediaQuery(['mobile-', 'width: 100%'])}
   ${mediaQuery(['mobile-', 'margin: 0'])}
 `
@@ -35,9 +37,20 @@ const ExchangesSupported = () => (
   <LandingPageContainer align="center">
     <Title>Exchanges supported</Title>
     <Container>
-      <Exchange src="/logos/exchanges/nyse.svg" />
-      <Exchange src="/logos/exchanges/nasdaq.svg" />
-      <Exchange src="/logos/exchanges/tsx.svg" />
+      <ImageContainer>
+        <Image width={46} height={48} src="/logos/exchanges/nyse.svg" alt="New York Stock Exchange" />
+      </ImageContainer>
+      <ImageContainer>
+        <Image
+          width={170}
+          height={48}
+          src="/logos/exchanges/nasdaq.svg"
+          alt="National Association of Securities Dealers Automated Quotations"
+        />
+      </ImageContainer>
+      <ImageContainer>
+        <Image width={53} height={48} src="/logos/exchanges/tsx.svg" alt="Toronto Stock Exchange" />
+      </ImageContainer>
     </Container>
   </LandingPageContainer>
 )
