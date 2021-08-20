@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.398"></a>
+## 1.0.398 (2021-08-20)
+
+### Changed
+
+- ♿ improve accessibility and SEO [[7145a5b](https://github.com/MarkLyck/formula-stocks/commit/7145a5b35da6e5d54462d5022ec92d1be6328480)]
+- ⚡ improve Image loading performance [[5f796f1](https://github.com/MarkLyck/formula-stocks/commit/5f796f1b055bee1d7708b7af53ff444670531a42)]
+
+### Miscellaneous
+
+-  Merge pull request [#510](https://github.com/MarkLyck/formula-stocks/issues/510) from MarkLyck/performance [[316a894](https://github.com/MarkLyck/formula-stocks/commit/316a894c760bd3980676fd241b3c1387e7a9331e)]
+- 📝 version bump to v1.0.398 [[2a09de4](https://github.com/MarkLyck/formula-stocks/commit/2a09de4beceeace336c91e7ace53452164aa0394)]
+- 📝 generated changelog [[fb7e6bf](https://github.com/MarkLyck/formula-stocks/commit/fb7e6bf20ad9d68489a996284130ecd20e65cc6e)]
+
+
 <a name="1.0.397"></a>
 ## 1.0.397 (2021-08-20)
 
