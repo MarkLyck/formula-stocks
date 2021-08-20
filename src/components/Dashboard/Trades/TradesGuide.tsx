@@ -13,6 +13,7 @@ const TradesGuide = () => {
   if (user.tutorials.includes('trades-tutorial')) return null
 
   const handleClick = () => {
+    analyticsTrack('open-tutorial', { tutorial: 'trades-tutorial' })
     $crisp.push(['do', 'helpdesk:article:open', ['en', 'ymtmaw']])
   }
 
