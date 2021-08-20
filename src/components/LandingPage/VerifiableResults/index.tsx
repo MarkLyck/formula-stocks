@@ -55,7 +55,7 @@ const VerifiableResults = () => {
     <LandingPageContainer marginBottom="4rem">
       <PastTradesModal isVisible={modalVisible} onClose={() => setModalVisible(false)} />
       <Beside>
-        <SpaceImage src="/images/space/space-1.svg" />
+        <SpaceImage src="/images/space/space-1.svg" alt="Investments that outperform the stock market" />
         <ContentContainer>
           <Space direction="vertical">
             <ScalingTitle>

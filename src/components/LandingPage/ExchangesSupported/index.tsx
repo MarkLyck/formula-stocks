@@ -38,13 +38,18 @@ const ExchangesSupported = () => (
     <Title>Exchanges supported</Title>
     <Container>
       <ImageContainer>
-        <Image width={46} height={48} src="/logos/exchanges/nyse.svg" />
+        <Image width={46} height={48} src="/logos/exchanges/nyse.svg" alt="New York Stock Exchange" />
       </ImageContainer>
       <ImageContainer>
-        <Image width={170} height={48} src="/logos/exchanges/nasdaq.svg" />
+        <Image
+          width={170}
+          height={48}
+          src="/logos/exchanges/nasdaq.svg"
+          alt="National Association of Securities Dealers Automated Quotations"
+        />
       </ImageContainer>
       <ImageContainer>
-        <Image width={53} height={48} src="/logos/exchanges/tsx.svg" />
+        <Image width={53} height={48} src="/logos/exchanges/tsx.svg" alt="Toronto Stock Exchange" />
       </ImageContainer>
     </Container>
   </LandingPageContainer>

@@ -67,7 +67,7 @@ const AIScore = () => {
             </ActionButton>
           </Space>
         </ContentContainer>
-        <SpaceImage src="/images/space/space-2.svg" />
+        <SpaceImage src="/images/space/space-2.svg" alt="Using artificial intelligence to beat the stock market" />
       </Beside>
     </LandingPageContainer>
   )

@@ -49,7 +49,7 @@ const NavItem = ({ title, to = '', href, target, onClick, variant }: any) => (
         <StyledA>{title}</StyledA>
       </Link>
     ) : (
-      <StyledA onClick={onClick} href={href ? href : undefined} target={target}>
+      <StyledA rel="noopener" onClick={onClick} href={href ? href : undefined} target={target}>
         {title}
       </StyledA>
     )}

@@ -68,7 +68,12 @@ const Footer = () => {
   return (
     <Container>
       <Space direction="vertical" size="middle" style={{ width: '100%' }}>
-        <Image height={48} width={400} src="/logos/formula_stocks/logo_horizontal_white.svg" />
+        <Image
+          height={48}
+          width={400}
+          src="/logos/formula_stocks/logo_horizontal_white.svg"
+          alt="How to pick winning stocks"
+        />
         <Space size="middle" style={{ marginTop: 16 }}>
           {SOCIAL_MEDIA_LINKS.map((link) => (
             <SocialMediaLink key={link.href} {...link} />

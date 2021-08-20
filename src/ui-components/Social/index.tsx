@@ -20,7 +20,7 @@ export interface SocialMediaLinkProps {
 }
 
 export const SocialMediaLink = ({ href, icon }: SocialMediaLinkProps) => (
-  <Container href={href} target="_blank">
+  <Container href={href} target="_blank" rel="noopener" aria-label="social media link">
     {/* @ts-ignore */}
     <FontAwesomeIcon icon={['fab', icon]} />
   </Container>
