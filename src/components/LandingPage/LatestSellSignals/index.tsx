@@ -84,6 +84,7 @@ const LatestSellSignals = () => {
         Here's our 10 latest sell signals (updated monthly)
       </ScalingSubTitle>
       <StyledTable
+        rowKey="name"
         dataSource={latestSells}
         loading={loading}
         // @ts-ignore

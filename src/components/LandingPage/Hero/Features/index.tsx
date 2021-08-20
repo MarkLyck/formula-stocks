@@ -15,6 +15,10 @@ const Container = styled.div`
   padding: 0 8%;
   margin-left: -8px;
   ${maxSiteWidth}
+
+  @media (max-width: ${(p) => p.theme.breakpoints.small}) {
+    display: none;
+  }
 `
 
 const NextButton = styled.button`

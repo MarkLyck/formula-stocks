@@ -4,10 +4,10 @@ import dynamic from 'next/dynamic'
 import styled from '@emotion/styled'
 
 import PlanPicker from './PlanPicker'
-import SchedulePicker from './SchedulePicker'
-import BillingForm from './BillingForm'
 
+const SchedulePicker = dynamic(() => import('./SchedulePicker'))
 const AccountForm = dynamic(() => import('./AccountForm'))
+const BillingForm = dynamic(() => import('./BillingForm'))
 
 interface SignupModalProps {
   onClose: () => void
