@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.397"></a>
+## 1.0.397 (2021-08-20)
+
+### Added
+
+- ✨ add help links to the footer [[621a14d](https://github.com/MarkLyck/formula-stocks/commit/621a14dc8ee77dd5bdda7316bbf419b02c42a744)]
+
+### Miscellaneous
+
+-  Merge pull request [#509](https://github.com/MarkLyck/formula-stocks/issues/509) from MarkLyck/getting-started-tutorial [[a210dcd](https://github.com/MarkLyck/formula-stocks/commit/a210dcdcc6f72447793d64f0e2c952475160c3ac)]
+- 📝 version bump to v1.0.397 [[9bbd70d](https://github.com/MarkLyck/formula-stocks/commit/9bbd70d521ed93686aebac448a58bc66eada4583)]
+- 📝 generated changelog [[669e150](https://github.com/MarkLyck/formula-stocks/commit/669e150d4755ec27ff9a01846517be8f92adcf34)]
+
+
 <a name="1.0.396"></a>
 ## 1.0.396 (2021-08-20)
 
