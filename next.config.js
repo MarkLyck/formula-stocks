@@ -13,16 +13,7 @@ const SentryWebpackPluginOptions = {
 
 const moduleExports = withPlugins(
   [
-    [
-      withPWA,
-      {
-        pwa: {
-          dest: 'public',
-          runtimeCaching,
-        },
-      },
-    ],
-    [withPlausibleProxy],
+    withPlausibleProxy,
     [
       withAntdLess,
       {
@@ -32,6 +23,15 @@ const moduleExports = withPlugins(
 
         webpack(config) {
           return config
+        },
+      },
+    ],
+    [
+      withPWA,
+      {
+        pwa: {
+          dest: 'public',
+          runtimeCaching,
         },
       },
     ],
