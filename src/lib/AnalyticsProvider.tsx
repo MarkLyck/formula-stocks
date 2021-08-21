@@ -45,6 +45,12 @@ const analyticsTrack = (key: string, data: any) => {
 const analyticsIdentify = (data: any) => {
   woopra.identify(data).push()
   LogRocket.identify(data.email, { ...data })
+  if (data.email) {
+    $crisp.push(['set', 'user:email', [data.email]])
+  }
+  if (data.firstName) {
+    $crisp.push(['set', 'user:nickname', [`${data.firstName} ${data.lastName}`]])
+  }
 }
 
 const AnalyticsProvider = ({ children }: any) => {
