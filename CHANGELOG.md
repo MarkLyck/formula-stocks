@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.400"></a>
+## 1.0.400 (2021-08-21)
+
+### Changed
+
+- ⬆️ Update dependency @types/node to v14.17.11 [[92493e1](https://github.com/MarkLyck/formula-stocks/commit/92493e104d100a436603399663ebff79e1a47a4c)]
+
+### Miscellaneous
+
+-  Merge pull request [#512](https://github.com/MarkLyck/formula-stocks/issues/512) from MarkLyck/renovate/node-14.x [[0c54280](https://github.com/MarkLyck/formula-stocks/commit/0c5428094129ec085c76c695cd02e08e1aab584b)]
+- 📝 version bump to v1.0.400 [[adaa98a](https://github.com/MarkLyck/formula-stocks/commit/adaa98a760b998ff4c2017b1ee94f2516f49edfd)]
+- 📝 generated changelog [[a140ece](https://github.com/MarkLyck/formula-stocks/commit/a140ece495e258ea6e089bbe2fa920f3b7420490)]
+
+
 <a name="1.0.399"></a>
 ## 1.0.399 (2021-08-20)
 
