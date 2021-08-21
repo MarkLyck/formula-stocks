@@ -73,6 +73,7 @@ const NavLinks = styled.ul`
 const Logo = styled.img`
   display: flex;
   height: 44px;
+  width: auto;
   align-items: center;
   margin-right: 48px;
   background: white;
@@ -82,6 +83,7 @@ const Logo = styled.img`
 
   @media (max-width: 1100px) {
     margin-top: 0;
+    margin-right: 0;
   }
 `
 
