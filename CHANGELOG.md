@@ -1,5 +1,26 @@
 # Changelog
 
+<a name="1.0.402"></a>
+## 1.0.402 (2021-08-21)
+
+### Added
+
+- ✨ PWA working [[950d52a](https://github.com/MarkLyck/formula-stocks/commit/950d52a6a3b720816f410051bb88d7a55ecdbc88)]
+- ✨ manifest url [[32f67ba](https://github.com/MarkLyck/formula-stocks/commit/32f67ba39620789ce98eae33b6be02417a51cfef)]
+- ✨ add PWA capabilities [[c96ad37](https://github.com/MarkLyck/formula-stocks/commit/c96ad3717cf09d382add4d620438ab227f328e46)]
+- ✨ add manifest [[a13f357](https://github.com/MarkLyck/formula-stocks/commit/a13f35765118ff4e049fdfa6225fcf76f6af8a39)]
+
+### Changed
+
+- 🍱 add manifest icons [[360587d](https://github.com/MarkLyck/formula-stocks/commit/360587d448ca5b68f33c080c2c40c0db902fe601)]
+
+### Miscellaneous
+
+-  Merge pull request [#514](https://github.com/MarkLyck/formula-stocks/issues/514) from MarkLyck/manifest-meta [[8de6683](https://github.com/MarkLyck/formula-stocks/commit/8de66831cf49884b9a59655a23ffdbbf7019ad91)]
+- 📝 version bump to v1.0.402 [[78ea0d0](https://github.com/MarkLyck/formula-stocks/commit/78ea0d0de670046cc474b50ea0759099a0ca5d03)]
+- 📝 generated changelog [[f2bf654](https://github.com/MarkLyck/formula-stocks/commit/f2bf654a6be61d6cb744bdb99ab203efb079a6dd)]
+
+
 <a name="1.0.401"></a>
 ## 1.0.401 (2021-08-21)
 
