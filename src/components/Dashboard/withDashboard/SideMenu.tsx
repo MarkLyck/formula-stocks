@@ -177,11 +177,11 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
                 return (
                   // @ts-ignore
                   <Menu.Item onClick={onLinkClick} key={item.route} icon={<MenuIcon icon={item.icon} />}>
-                    <Badge count={numberOfUsers} offset={[60, 7]} style={{ background: theme.palette.primary[600] }}>
-                      <Link href={item.route}>
+                    <Link href={item.route}>
+                      <Badge count={numberOfUsers} offset={[60, 7]} style={{ background: theme.palette.primary[600] }}>
                         <a>{item.label}</a>
-                      </Link>
-                    </Badge>
+                      </Badge>
+                    </Link>
                   </Menu.Item>
                 )
               }

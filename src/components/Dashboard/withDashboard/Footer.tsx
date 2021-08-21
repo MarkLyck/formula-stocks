@@ -39,7 +39,9 @@ const Footer = () => {
   const path = router.pathname.split('/')[2]
 
   // @ts-ignore
-  let helpArticle = helpArticles[path] ? helpArticles[path] : helpArticles.portfolio
+  let helpArticle = helpArticles[path] ? helpArticles[path] : null
+  if (!path) helpArticle = helpArticles.portfolio
+
   const openHelpArticle = () => {
     $crisp.push(['do', 'helpdesk:article:open', ['en', helpArticle.code]])
   }
@@ -47,8 +49,8 @@ const Footer = () => {
   return (
     <DashboardFooter>
       {COMPANY_NAME} ©{new Date().getFullYear()}
-      <Divider type="vertical" />
-      <Link onClick={openHelpArticle}>{helpArticle.label}</Link>
+      {helpArticle && <Divider type="vertical" />}
+      {helpArticle && <Link onClick={openHelpArticle}>{helpArticle.label}</Link>}
     </DashboardFooter>
   )
 }
