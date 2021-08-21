@@ -1,5 +1,32 @@
 # Changelog
 
+<a name="1.0.406"></a>
+## 1.0.406 (2021-08-21)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.406 [[a9abbac](https://github.com/MarkLyck/formula-stocks/commit/a9abbac624541ce1559b8448680d2fb746309511)]
+
+
+<a name="1.0.405"></a>
+## 1.0.405 (2021-08-21)
+
+### Changed
+
+- ⬆️ Pin dependencies [[b7d54d1](https://github.com/MarkLyck/formula-stocks/commit/b7d54d193c22a925dd2e0ad33cf42fa3e940a9bc)]
+
+### Fixed
+
+- 🐛 fix image issues and disable PWA in dev mode [[fc09151](https://github.com/MarkLyck/formula-stocks/commit/fc091517a0e25af36fd74705c2d7cb6b7c79b495)]
+
+### Miscellaneous
+
+-  Merge pull request [#515](https://github.com/MarkLyck/formula-stocks/issues/515) from MarkLyck/renovate/pin-dependencies [[24fe961](https://github.com/MarkLyck/formula-stocks/commit/24fe96131f29d5f2e90027dbd68bd7693270102d)]
+-  Merge pull request [#518](https://github.com/MarkLyck/formula-stocks/issues/518) from MarkLyck/image-responsiveness [[ba3afb8](https://github.com/MarkLyck/formula-stocks/commit/ba3afb8a773c40a09d99ce8b08f19e4768e376ff)]
+- 📝 version bump to v1.0.405 [[8540da9](https://github.com/MarkLyck/formula-stocks/commit/8540da94c4eaf99d2b840ccbd0ae1193377cab3d)]
+- 📝 generated changelog [[8dc3172](https://github.com/MarkLyck/formula-stocks/commit/8dc31729e4397fa94509c18c6dee3fa91fef630f)]
+
+
 <a name="1.0.404"></a>
 ## 1.0.404 (2021-08-21)
 
