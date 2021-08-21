@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.403"></a>
+## 1.0.403 (2021-08-21)
+
+### Added
+
+- ✨ manifest improvements [[d052b93](https://github.com/MarkLyck/formula-stocks/commit/d052b930598b364c15e63129a397d3f978885c99)]
+
+### Miscellaneous
+
+-  Merge pull request [#516](https://github.com/MarkLyck/formula-stocks/issues/516) from MarkLyck/manifest-meta [[4206c3c](https://github.com/MarkLyck/formula-stocks/commit/4206c3c720bb82fc514f296b562d3a5d0efc3535)]
+- 📝 version bump to v1.0.403 [[200047f](https://github.com/MarkLyck/formula-stocks/commit/200047f2565d15f07ec71aa2442b2361050fdf5c)]
+- 📝 generated changelog [[836d146](https://github.com/MarkLyck/formula-stocks/commit/836d146345ff6384d454891ee35d5f2ed34f280c)]
+
+
 <a name="1.0.402"></a>
 ## 1.0.402 (2021-08-21)
 
