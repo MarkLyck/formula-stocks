@@ -1,3 +1,7 @@
+const withPlugins = require('next-compose-plugins')
+
+const withPWA = require('next-pwa')
+const runtimeCaching = require('next-pwa/cache')
 const withAntdLess = require('next-plugin-antd-less')
 const { withPlausibleProxy } = require('next-plausible')
 const { withSentryConfig } = require('@sentry/nextjs')
@@ -7,16 +11,36 @@ const SentryWebpackPluginOptions = {
   // https://github.com/getsentry/sentry-webpack-plugin#options.
 }
 
-const moduleExports = withPlausibleProxy()(
-  withAntdLess({
-    modifyVars: { '@primary-color': '#3366ff' },
-    lessVarsFilePathAppendToEndOfContent: false,
-    cssLoaderOptions: {},
+const moduleExports = withPlugins(
+  [
+    [
+      withPWA,
+      {
+        pwa: {
+          dest: 'public',
+          runtimeCaching,
+        },
+      },
+    ],
+    [withPlausibleProxy],
+    [
+      withAntdLess,
+      {
+        modifyVars: { '@primary-color': '#3366ff' },
+        lessVarsFilePathAppendToEndOfContent: false,
+        cssLoaderOptions: {},
 
+        webpack(config) {
+          return config
+        },
+      },
+    ],
+  ],
+  {
     webpack(config) {
       return config
     },
-  })
+  }
 )
 
 // Make sure adding Sentry options is the last code to run before exporting, to
