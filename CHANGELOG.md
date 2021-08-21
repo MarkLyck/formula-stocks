@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.404"></a>
+## 1.0.404 (2021-08-21)
+
+### Added
+
+- 📈 identify crisp users by email identify [[98c4d42](https://github.com/MarkLyck/formula-stocks/commit/98c4d42f7d39964beb420ebfa7ebc9ce200ad627)]
+
+### Miscellaneous
+
+-  Merge pull request [#517](https://github.com/MarkLyck/formula-stocks/issues/517) from MarkLyck/manifest-meta [[842b5a1](https://github.com/MarkLyck/formula-stocks/commit/842b5a15bdf08d45c2235415c2af5ff825b4bbc8)]
+- 📝 version bump to v1.0.404 [[82ae331](https://github.com/MarkLyck/formula-stocks/commit/82ae3319544d2aa74e59c062841e16207c23e906)]
+- 📝 generated changelog [[90871e2](https://github.com/MarkLyck/formula-stocks/commit/90871e2f5304171a6b0a5b23fc6a89f6d556f4c5)]
+
+
 <a name="1.0.403"></a>
 ## 1.0.403 (2021-08-21)
 
