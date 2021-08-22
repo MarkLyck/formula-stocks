@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.407"></a>
+## 1.0.407 (2021-08-22)
+
+### Changed
+
+- 🍱 improve tablet screenshot [[ad4fb43](https://github.com/MarkLyck/formula-stocks/commit/ad4fb431eda06fcd37cbd2ba9910779010a38450)]
+
+### Miscellaneous
+
+-  Merge pull request [#519](https://github.com/MarkLyck/formula-stocks/issues/519) from MarkLyck/image-responsiveness [[3c9ca75](https://github.com/MarkLyck/formula-stocks/commit/3c9ca751fb706721d150a06b3d8027ff8c52a82c)]
+- 📝 version bump to v1.0.407 [[746979a](https://github.com/MarkLyck/formula-stocks/commit/746979a0e495732962986f830b644bcb770956d5)]
+- 📝 generated changelog [[0a7a546](https://github.com/MarkLyck/formula-stocks/commit/0a7a546e3bf2dfc5e523bb18940bb0bc6f88b51f)]
+
+
 <a name="1.0.406"></a>
 ## 1.0.406 (2021-08-21)
 
