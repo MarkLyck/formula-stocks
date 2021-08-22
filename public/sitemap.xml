@@ -1,58 +1,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://localhost:3000</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://formulastocks.com</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/risk</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://formulastocks.com/risk</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/strategy</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://formulastocks.com/strategy</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/dashboard/account</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://formulastocks.com/dashboard/account</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/dashboard/admin</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://formulastocks.com/dashboard/admin</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/dashboard/index</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://formulastocks.com/dashboard/analytics</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/dashboard/login</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://formulastocks.com/dashboard</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/dashboard/portfolio</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://formulastocks.com/dashboard/login</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/dashboard/roadmap</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://formulastocks.com/dashboard/portfolio</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/dashboard/suggestions</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://formulastocks.com/dashboard/roadmap</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/dashboard/trades</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://formulastocks.com/dashboard/suggestions</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/dashboard/users</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://formulastocks.com/dashboard/trades</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/dashboard/reports/[symbol]</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://formulastocks.com/dashboard/users</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/dashboard/reports/index</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://formulastocks.com/dashboard/reports</loc>
+    <changefreq>weekly</changefreq>
   </url>
 </urlset>

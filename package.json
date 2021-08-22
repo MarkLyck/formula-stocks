@@ -11,7 +11,8 @@
     "gc": "pretty-quick --staged && gitmoji -c",
     "gca": "git add . && yarn gc",
     "gcap": "yarn gca && git push",
-    "chromatic": "npx chromatic --project-token h4efxyoutie"
+    "chromatic": "npx chromatic --project-token h4efxyoutie",
+    "generate-sitemap": "node ./scripts/generate-sitemap.js"
   },
   "dependencies": {
     "@ant-design/charts": "1.2.10",

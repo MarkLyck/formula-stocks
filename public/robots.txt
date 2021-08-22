@@ -1,0 +1,3 @@
+User-agent: * # match all bots
+Disallow: # allow them to do everything
+Sitemap: https://formulastocks.com/static/sitemap.xml
