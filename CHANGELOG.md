@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.409"></a>
+## 1.0.409 (2021-08-22)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.409 [[df891fa](https://github.com/MarkLyck/formula-stocks/commit/df891fad757194e4eed94db6749554bb5a079438)]
+
+
+<a name="1.0.408"></a>
+## 1.0.408 (2021-08-22)
+
+### Changed
+
+- ⬆️ Update dependency next-plugin-antd-less to v1.4.0 [[eb3a002](https://github.com/MarkLyck/formula-stocks/commit/eb3a002cfe0f84f7ee445ea33dc17de13b2f9ae1)]
+
+### Miscellaneous
+
+-  Merge pull request [#520](https://github.com/MarkLyck/formula-stocks/issues/520) from MarkLyck/renovate/next-plugin-antd-less-1.x [[0d68249](https://github.com/MarkLyck/formula-stocks/commit/0d68249f09c70e238f710304551407648be9681b)]
+-  Merge pull request [#521](https://github.com/MarkLyck/formula-stocks/issues/521) from MarkLyck/seo-fix [[be8b607](https://github.com/MarkLyck/formula-stocks/commit/be8b60755fbfe06cfda34d0dae2f841dd17423b4)]
+- 🔍 improve seo [[de756db](https://github.com/MarkLyck/formula-stocks/commit/de756dbc65d252d5dce0a33cd227eb4dc05e85c2)]
+- 📝 version bump to v1.0.408 [[69eab47](https://github.com/MarkLyck/formula-stocks/commit/69eab476acfe8692ef482ae8e1d0f32b4e2b67cd)]
+- 📝 generated changelog [[d42b7b3](https://github.com/MarkLyck/formula-stocks/commit/d42b7b30ca8bc7fdc8ac1a478745630110038c61)]
+
+
 <a name="1.0.407"></a>
 ## 1.0.407 (2021-08-22)
 
