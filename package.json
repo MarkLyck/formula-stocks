@@ -75,7 +75,7 @@
     "gitmoji-cli": "4.5.0",
     "globby": "11.0.4",
     "next-compose-plugins": "2.2.1",
-    "next-plugin-antd-less": "1.3.0",
+    "next-plugin-antd-less": "1.4.0",
     "next-pwa": "5.3.1",
     "null-loader": "4.0.1",
     "pretty-quick": "3.1.1",
