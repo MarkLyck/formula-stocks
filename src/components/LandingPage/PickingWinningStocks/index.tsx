@@ -51,9 +51,6 @@ const Content = styled.div`
 const ProductImage = styled.img`
   width: 100%;
   margin-bottom: 32px;
-  border-radius: 4px;
-  border: 1px solid #ebedf5;
-  box-shadow: 0 4px 14px 0 rgba(111, 120, 156, 0.08);
   box-sizing: border-box;
 `
 
@@ -67,7 +64,7 @@ const HowItWorks = () => {
       <Container>
         <Element name="how-we-pick-winning-stocks" />
         {windowSize.width <= theme.breakpoints.values.large && (
-          <ProductImage src="/images/product_images/mobile-screenshot.png" alt="Formula Stocks dashboard" />
+          <ProductImage src="/images/product_images/tablet_screenshot.png" alt="Formula Stocks dashboard" />
         )}
         <Content>
           <Space direction="vertical">
