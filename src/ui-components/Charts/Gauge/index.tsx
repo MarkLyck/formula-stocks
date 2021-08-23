@@ -1,13 +1,4 @@
-// import React from 'react'
 import dynamic from 'next/dynamic'
-import styled from '@emotion/styled'
-// import styled from '@emotion/styled'
-// import { maxBy } from 'lodash'
-// import { format } from 'date-fns'
-// import { numberFormatter, decimalNumberFormatter } from 'src/common/utils/formatters'
-// import { useTheme } from '@emotion/react'
-
-// const Line = dynamic(() => import('@ant-design/charts').then((mod) => mod.Line) as any, { ssr: false })
 const Gauge = dynamic(() => import('@ant-design/charts').then((mod) => mod.Gauge) as any, { ssr: false })
 
 const Normalizer = (min: number, max: number) => ({
