@@ -1,5 +1,34 @@
 # Changelog
 
+<a name="1.0.411"></a>
+## 1.0.411 (2021-08-23)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.411 [[3c31fd4](https://github.com/MarkLyck/formula-stocks/commit/3c31fd45a3bbb2bca74835491c6e5086b51ba5c3)]
+
+
+<a name="1.0.410"></a>
+## 1.0.410 (2021-08-23)
+
+### Added
+
+- ✨ AI Score improvements [[662df09](https://github.com/MarkLyck/formula-stocks/commit/662df092e8277cfdc922cfbcc7fcce293a6286a0)]
+
+### Changed
+
+- ⬆️ Update dependency gitmoji-cli to v4.5.1 [[efd3aa8](https://github.com/MarkLyck/formula-stocks/commit/efd3aa8f720f91106e0d4504eba9636ac2d3b903)]
+
+### Miscellaneous
+
+-  Merge pull request [#524](https://github.com/MarkLyck/formula-stocks/issues/524) from MarkLyck/renovate/gitmoji-cli-4.x [[89d22a5](https://github.com/MarkLyck/formula-stocks/commit/89d22a56bcd2f980ea468e471ec20deccb8d4b9a)]
+-  Merge pull request [#525](https://github.com/MarkLyck/formula-stocks/issues/525) from MarkLyck/ai-score [[da707c4](https://github.com/MarkLyck/formula-stocks/commit/da707c434388228a13282e05695684917b24f422)]
+- 🗑️ cleanup [[4451ca4](https://github.com/MarkLyck/formula-stocks/commit/4451ca48e0f9740968e6a7e091989ab42b937aa5)]
+- 🏷️ fix ts [[40d7c73](https://github.com/MarkLyck/formula-stocks/commit/40d7c7397bce1f3cb13aba89b943a32dcc5b063a)]
+- 📝 version bump to v1.0.410 [[5a61be8](https://github.com/MarkLyck/formula-stocks/commit/5a61be80e725649dc8848c61472909a38bf61830)]
+- 📝 generated changelog [[854613d](https://github.com/MarkLyck/formula-stocks/commit/854613d6a8f42a0c0c37c9527bc326f700e0c099)]
+
+
 <a name="1.0.409"></a>
 ## 1.0.409 (2021-08-22)
 
