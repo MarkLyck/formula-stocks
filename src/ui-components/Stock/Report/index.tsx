@@ -4,9 +4,10 @@ import styled from '@emotion/styled'
 import { Card, Divider, Space } from 'antd'
 import AIScore from './AIScore'
 import { ScoreList, BesideSection, BoldValue } from './styles'
-import { HorizontalScore, RadarChart } from 'src/ui-components/Charts'
+import { HorizontalScore, Gauge } from 'src/ui-components/Charts'
 import { AIScorePreview, AIScoreReturn } from 'src/ui-components'
 import { getAIScoreColor } from 'src/common/utils/reportUtils'
+import RadarScores from './RadarScores'
 
 const ChartContainer = styled(Card)`
   width: 100%;
@@ -98,52 +99,33 @@ export interface ReportType {
 }
 
 const Report = ({ price, scores, ticker }: ReportType) => {
-  const radarChartData = [
-    { label: 'Growth', value: scores.ai_growth * 100 + 100 },
-    { label: 'Value', value: scores.ai_value * 100 + 100 },
-    { label: 'Profitability', value: scores.ai_profitability * 100 + 100 },
-    { label: 'Soundness', value: scores.ai_soundness * 100 + 100 },
-    { label: 'Stewardship', value: scores.ai_stewardship * 100 + 100 },
-    { label: 'Safety', value: scores.ai_safety * 100 + 100 },
-    { label: 'Reward', value: scores.ai_reward * 100 + 100 },
-  ]
-
   return (
     <>
       <ReportContainer>
         <ReportPartContainer>
-          <SectionHeader>AI Investment Report</SectionHeader>
+          <SectionHeader>AI Score</SectionHeader>
 
           <Space direction="vertical" style={{ width: '100%' }} size="large">
             <AIScoreCard>
-              <AIScorePreview score={scores.ai_score} label="AI Score" />
+              <Gauge value={scores.ai_score} color={getAIScoreColor(scores.ai_score * 100)} />
+            </AIScoreCard>
+            <AIScoreCard>
+              {/* <AIScorePreview score={scores.ai_score} label="AI Score" /> */}
+              {/* <Divider /> */}
+              <AIScorePreview score={scores.ai_reward} label="Reward" />
+              <Divider />
+              <AIScorePreview score={scores.ai_safety} label="Safety" />
               <Divider />
               <AIScoreReturn score={scores.ai_score} />
             </AIScoreCard>
-            <ChartContainer>
-              <RadarChart data={radarChartData} color={getAIScoreColor(scores.ai_score * 100)} />
-            </ChartContainer>
           </Space>
         </ReportPartContainer>
 
         <ReportPartContainer>
-          <SectionHeader>Scores</SectionHeader>
+          <SectionHeader>Strengths & Weaknesses</SectionHeader>
           <Space direction="vertical" style={{ width: '100%' }} size="large">
             <AIScoreCard>
-              <AIScorePreview score={scores.ai_reward} label="Reward" />
-              <Divider />
-              <AIScorePreview score={scores.ai_safety} label="Safety" />
-            </AIScoreCard>
-            <AIScoreCard>
-              <AIScorePreview score={scores.ai_value} label="Value" />
-              <Divider />
-              <AIScorePreview score={scores.ai_profitability} label="Profitability" />
-              <Divider />
-              <AIScorePreview score={scores.ai_growth} label="Growth" />
-              <Divider />
-              <AIScorePreview score={scores.ai_soundness} label="Soundness" />
-              <Divider />
-              <AIScorePreview score={scores.ai_stewardship} label="Stewardship" />
+              <RadarScores scores={scores} />
             </AIScoreCard>
           </Space>
         </ReportPartContainer>
