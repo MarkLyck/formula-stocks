@@ -41,9 +41,11 @@ const RadarChart = ({ data, color }: RadarChartProps) => {
   const config = {
     data: data,
     legend: false,
-    padding: 48,
     xField: 'label',
     yField: 'value',
+    autoFit: true,
+    height: 500,
+    width: 500,
     color,
     meta: {
       value: {
@@ -97,7 +99,7 @@ const RadarChart = ({ data, color }: RadarChartProps) => {
     area: {},
   }
   // @ts-ignore
-  return <Radar {...config} />
+  return <Radar className="radar-chart" {...config} />
 }
 
 export default RadarChart
