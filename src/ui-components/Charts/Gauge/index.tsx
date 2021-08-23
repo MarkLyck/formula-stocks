@@ -10,10 +10,6 @@ import styled from '@emotion/styled'
 // const Line = dynamic(() => import('@ant-design/charts').then((mod) => mod.Line) as any, { ssr: false })
 const Gauge = dynamic(() => import('@ant-design/charts').then((mod) => mod.Gauge) as any, { ssr: false })
 
-const AIScoreText = styled.span`
-  font-weight: bold;
-`
-
 const Normalizer = (min: number, max: number) => ({
   normalize: (x: number) => min + x * (max - min),
   denormalize: (x: number) => (x + max) / (max - min),
