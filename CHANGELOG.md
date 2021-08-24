@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.414"></a>
+## 1.0.414 (2021-08-24)
+
+### Added
+
+- ✨ improve AI Report [[fa99b39](https://github.com/MarkLyck/formula-stocks/commit/fa99b3902707d2380ffcb460171cc85c62076104)]
+
+### Miscellaneous
+
+-  Merge pull request [#526](https://github.com/MarkLyck/formula-stocks/issues/526) from MarkLyck/ai-score [[4fc062d](https://github.com/MarkLyck/formula-stocks/commit/4fc062d0b63f1f0a30c39067156429137f2fbf8a)]
+- 📝 version bump to v1.0.414 [[1492770](https://github.com/MarkLyck/formula-stocks/commit/14927709f727a172c347ffc053514f1defac65e2)]
+- 📝 generated changelog [[d9069f3](https://github.com/MarkLyck/formula-stocks/commit/d9069f3669f3e3dd6eaf4e0eb75c6887e56cc089)]
+
+
 <a name="1.0.413"></a>
 ## 1.0.413 (2021-08-24)
 
