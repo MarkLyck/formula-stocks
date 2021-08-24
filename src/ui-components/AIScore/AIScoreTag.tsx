@@ -17,8 +17,10 @@ type AIScoreTagProps = {
   score: number
 }
 
-const AIScoreTag = ({ score }: AIScoreTagProps) => {
-  return <Tag color={getAIScoreColor(score)}>{getAIScoreSentiment(score)}</Tag>
+export const AIScoreTag = ({ score, ...props }: AIScoreTagProps) => {
+  return (
+    <Tag color={getAIScoreColor(score)} {...props}>
+      {getAIScoreSentiment(score)}
+    </Tag>
+  )
 }
-
-export default AIScoreTag

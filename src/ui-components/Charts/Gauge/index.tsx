@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import { useTheme } from '@emotion/react'
 const Gauge = dynamic(() => import('@ant-design/charts').then((mod) => mod.Gauge) as any, { ssr: false })
 
 const Normalizer = (min: number, max: number) => ({
@@ -9,18 +10,20 @@ const Normalizer = (min: number, max: number) => ({
 const gaugeNormalizer = Normalizer(-100, 100)
 
 const GaugeChart = ({ value, color }: any) => {
+  const theme = useTheme()
+
   const score = value * 100
   const config = {
     percent: gaugeNormalizer.denormalize(score),
-    height: 300,
-    padding: 12,
+    height: 280,
+    padding: [0, 8, 8, 8],
     range: {
       color: color,
       width: 12,
     },
     indicator: {
-      pointer: { style: { stroke: '#D0D0D0' } },
-      pin: { style: { stroke: '#D0D0D0' } },
+      pointer: { style: { stroke: theme.palette.neutral[500] } },
+      pin: { style: { stroke: theme.palette.neutral[400] } },
     },
     axis: {
       label: {
