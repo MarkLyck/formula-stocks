@@ -2,10 +2,13 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { Card, Divider, Space } from 'antd'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import AIScore from './AIScore'
 import { ScoreList, BesideSection, BoldValue } from './styles'
 import { HorizontalScore, Gauge } from 'src/ui-components/Charts'
 import { AIScorePreview, AIScoreReturn } from 'src/ui-components'
+import { AIScoreTag } from 'src/ui-components/AIScore'
 import { getAIScoreColor } from 'src/common/utils/reportUtils'
 import RadarScores from './RadarScores'
 
@@ -71,6 +74,12 @@ const SectionHeader = styled.h3`
   }
 `
 
+const LargeAIScoreTag = styled(AIScoreTag)`
+  font-weight: bold;
+  padding: 6px 12px;
+  text-transform: uppercase;
+`
+
 // const tips: { [key: string]: string } = {
 //   Reward: 'Higher values, indicates better odds for a higher future return (alpha).',
 //   Safety: "Higher values, indicates better odds for a positive future return. Inverse of 'risk'",
@@ -103,15 +112,19 @@ const Report = ({ price, scores, ticker }: ReportType) => {
     <>
       <ReportContainer>
         <ReportPartContainer>
-          <SectionHeader>AI Score</SectionHeader>
-
           <Space direction="vertical" style={{ width: '100%' }} size="large">
-            <AIScoreCard>
+            <AIScoreCard
+              title={
+                <>
+                  <FontAwesomeIcon icon={['fad', 'tachometer-alt']} style={{ marginRight: 8 }} />
+                  AI Score
+                </>
+              }
+              extra={<LargeAIScoreTag score={scores.ai_score * 100} />}
+            >
               <Gauge value={scores.ai_score} color={getAIScoreColor(scores.ai_score * 100)} />
             </AIScoreCard>
             <AIScoreCard>
-              {/* <AIScorePreview score={scores.ai_score} label="AI Score" /> */}
-              {/* <Divider /> */}
               <AIScorePreview score={scores.ai_reward} label="Reward" />
               <Divider />
               <AIScorePreview score={scores.ai_safety} label="Safety" />
@@ -122,11 +135,8 @@ const Report = ({ price, scores, ticker }: ReportType) => {
         </ReportPartContainer>
 
         <ReportPartContainer>
-          <SectionHeader>Strengths & Weaknesses</SectionHeader>
           <Space direction="vertical" style={{ width: '100%' }} size="large">
-            <AIScoreCard>
-              <RadarScores scores={scores} />
-            </AIScoreCard>
+            <RadarScores scores={scores} />
           </Space>
         </ReportPartContainer>
       </ReportContainer>

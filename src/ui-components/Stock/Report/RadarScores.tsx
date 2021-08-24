@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styled from '@emotion/styled'
-import { Divider, Radio } from 'antd'
+import { Divider, Radio, Card } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { AIScorePreview } from 'src/ui-components'
 
@@ -9,7 +9,6 @@ import { RadarChart } from 'src/ui-components/Charts'
 
 const RaderContainer = styled.div`
   position: relative;
-  height: 568px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -23,20 +22,21 @@ const RaderContainer = styled.div`
   }
 `
 
-const RadioContainer = styled.div`
-  position: absolute;
-  z-index: 10;
-  top: 8px;
-  right: 8px;
-`
-
 const SliderContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 64px;
   width: 100%;
   height: 100%;
+`
+
+const AIScoreCard = styled(Card)`
+  .ant-card-body {
+    padding: 20px;
+  }
+  .ant-card-extra {
+    padding: 0;
+  }
 `
 
 const RadarScores = ({ scores }: any) => {
@@ -53,8 +53,9 @@ const RadarScores = ({ scores }: any) => {
   ]
 
   return (
-    <RaderContainer>
-      <RadioContainer>
+    <AIScoreCard
+      title="Strengths & Weaknesses"
+      extra={
         <Radio.Group onChange={(e: any) => setView(e.target.value)} defaultValue="chart">
           <Radio.Button value="chart">
             <FontAwesomeIcon icon={['fad', 'hexagon']} />
@@ -63,22 +64,25 @@ const RadarScores = ({ scores }: any) => {
             <FontAwesomeIcon icon={['fad', 'sliders-h']} />
           </Radio.Button>
         </Radio.Group>
-      </RadioContainer>
-      {view === 'chart' && <RadarChart data={radarChartData} color={getAIScoreColor(scores.ai_score * 100)} />}
-      {view === 'sliders' && (
-        <SliderContainer>
-          <AIScorePreview score={scores.ai_value} label="Value" />
-          <Divider />
-          <AIScorePreview score={scores.ai_profitability} label="Profitability" />
-          <Divider />
-          <AIScorePreview score={scores.ai_growth} label="Growth" />
-          <Divider />
-          <AIScorePreview score={scores.ai_soundness} label="Soundness" />
-          <Divider />
-          <AIScorePreview score={scores.ai_stewardship} label="Stewardship" />
-        </SliderContainer>
-      )}
-    </RaderContainer>
+      }
+    >
+      <RaderContainer>
+        {view === 'chart' && <RadarChart data={radarChartData} color={getAIScoreColor(scores.ai_score * 100)} />}
+        {view === 'sliders' && (
+          <SliderContainer>
+            <AIScorePreview score={scores.ai_value} label="Value" />
+            <Divider />
+            <AIScorePreview score={scores.ai_profitability} label="Profitability" />
+            <Divider />
+            <AIScorePreview score={scores.ai_growth} label="Growth" />
+            <Divider />
+            <AIScorePreview score={scores.ai_soundness} label="Soundness" />
+            <Divider />
+            <AIScorePreview score={scores.ai_stewardship} label="Stewardship" />
+          </SliderContainer>
+        )}
+      </RaderContainer>
+    </AIScoreCard>
   )
 }
 

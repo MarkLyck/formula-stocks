@@ -56,7 +56,7 @@ const StockReport = () => {
           <TabPane
             tab={
               <Text>
-                <FontAwesomeIcon icon={['fad', 'brain']} style={{ marginRight: 8 }} />
+                <FontAwesomeIcon icon={['fad', 'tachometer-alt']} style={{ marginRight: 8 }} />
                 AI Report
               </Text>
             }
