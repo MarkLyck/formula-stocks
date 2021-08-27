@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.415"></a>
+## 1.0.415 (2021-08-27)
+
+### Fixed
+
+- 🐛 fix loadingerror missing [[29fa754](https://github.com/MarkLyck/formula-stocks/commit/29fa754965c3cfb3924cf307034632ba9716cb42)]
+
+### Miscellaneous
+
+-  Merge pull request [#531](https://github.com/MarkLyck/formula-stocks/issues/531) from MarkLyck/thomas-feedback [[6b3addf](https://github.com/MarkLyck/formula-stocks/commit/6b3addfe16c1a89a1e042a947001ab87d0acfed4)]
+- 📝 version bump to v1.0.415 [[5323841](https://github.com/MarkLyck/formula-stocks/commit/532384142704951d2cda32702c98a7c83383ab07)]
+- 📝 generated changelog [[6ffae39](https://github.com/MarkLyck/formula-stocks/commit/6ffae3989ef36d8012c7e8dc0dc531ef29a0eb26)]
+
+
 <a name="1.0.414"></a>
 ## 1.0.414 (2021-08-24)
 
