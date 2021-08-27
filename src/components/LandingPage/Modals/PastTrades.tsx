@@ -32,11 +32,11 @@ const columns = [
       />
     ),
   },
-  {
-    title: 'First purchase',
-    dataIndex: 'startDate',
-    key: 'startDate',
-  },
+  // {
+  //   title: 'First purchase',
+  //   dataIndex: 'startDate',
+  //   key: 'startDate',
+  // },
   {
     title: 'Duration',
     dataIndex: 'daysHeld',

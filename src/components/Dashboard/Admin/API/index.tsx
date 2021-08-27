@@ -2,6 +2,8 @@ import { Upload, message } from 'antd'
 import { InboxOutlined } from '@ant-design/icons'
 import { useQuery, useMutation } from '@apollo/client'
 import styled from '@emotion/styled'
+
+import { LoadingError } from 'src/ui-components'
 import { FILE_STACK_INFO, FILE_CREATE_MUTATION } from '~/common/queries'
 import LatestUploads from './LatestUploads'
 const { Dragger } = Upload
@@ -62,7 +64,8 @@ const Uploader = () => {
   const { loading, error, data: fileStackData } = useQuery(FILE_STACK_INFO)
   const [fileCreateMutation] = useMutation(FILE_CREATE_MUTATION)
 
-  if (loading || error || !fileStackData) return null
+  if (error) return <LoadingError error={error} />
+  if (loading || !fileStackData) return null
 
   const FILESTACK_API_KEY = fileStackData.fileUploadInfo.apiKey
   const FILESTACK_SIGNATURE = fileStackData.fileUploadInfo.signature

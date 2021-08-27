@@ -2,6 +2,8 @@ import React from 'react'
 import dayjs from 'dayjs'
 import { maxBy } from 'lodash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { COMPANY_NAME } from 'src/common/constants'
 import { Legends, Legend } from 'src/ui-components/Charts/Legends'
 import theme from 'src/lib/theme'
 import { AreaChart } from 'src/ui-components'
@@ -29,7 +31,7 @@ const createPlanData = (data: any[]) => {
 
     return {
       value: Number(balance),
-      type: 'Formula Stocks',
+      type: COMPANY_NAME,
       date: dayjs(point.date).startOf('day').toDate(),
     }
   })

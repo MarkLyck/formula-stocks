@@ -128,7 +128,7 @@ const Performance = ({ padding }: any) => {
             key="0"
           >
             <ScalingSubTitle>
-              How <b>$25,000</b> invested with Formula Stocks in 1970 would have multiplied.
+              How <b>$25,000</b> invested with {COMPANY_NAME} in 1970 would have multiplied.
             </ScalingSubTitle>
             <AnimatedChart
               planPerformance={planPerformance}

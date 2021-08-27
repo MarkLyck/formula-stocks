@@ -4,6 +4,8 @@ import styled from '@emotion/styled'
 import { useQuery } from '@apollo/client'
 import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { LoadingError } from 'src/ui-components'
 import { LATEST_FILES } from '~/common/queries'
 
 const FileContainer = styled.div`
@@ -57,7 +59,9 @@ const FileDate = styled.span`
 
 const LatestUploads = () => {
   const { data, error, loading } = useQuery(LATEST_FILES)
+  if (error) return <LoadingError error={error} />
   if (loading || error) return null
+
   const files = data.filesList.items
   return (
     <>
