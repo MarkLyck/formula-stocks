@@ -4,6 +4,7 @@ import dayjs from 'dayjs'
 import { maxBy } from 'lodash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import { COMPANY_NAME } from 'src/common/constants'
 import { Legends, Legend } from 'src/ui-components/Charts/Legends'
 import { currencyRoundedFormatter } from 'src/common/utils/formatters'
 import theme from 'src/lib/theme'
@@ -33,7 +34,7 @@ const createPlanData = (data: any[]) => {
     return {
       value: Number(balance),
       backtested: dayjsDate.isAfter(dayjs('2009-01-01')) ? false : true,
-      type: `Formula Stocks`,
+      type: COMPANY_NAME,
       date: dayjsDate.toDate(),
     }
   })

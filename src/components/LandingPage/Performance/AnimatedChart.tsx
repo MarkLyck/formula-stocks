@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Space, Card } from 'antd'
 import useBreakpoint from '@w11r/use-breakpoint'
 
+import { COMPANY_NAME } from 'src/common/constants'
 import { AnimationChart } from 'src/ui-components'
 import { currencyRoundedFormatter, numberFormatter } from 'src/common/utils/formatters'
 import { GraphContainer, ChartLoaderContainer } from './styles'
@@ -92,7 +93,7 @@ const createPlanData = (data: any[]) => {
     return {
       value: Number(balance),
       backtested: dayjsDate.isAfter(dayjs('2009-01-01')) ? false : true,
-      type: `Formula Stocks`,
+      type: COMPANY_NAME,
       date: dayjsDate.toDate(),
     }
   })

@@ -1,5 +1,7 @@
 import dynamic from 'next/dynamic'
 import { useTheme } from '@emotion/react'
+
+import { COMPANY_NAME } from 'src/common/constants'
 import Tooltip from './Tooltip'
 
 const Area = dynamic(() => import('@ant-design/charts').then((mod) => mod.Area) as any, { ssr: false })
@@ -50,7 +52,7 @@ const AreaChart = ({
     isStack: false,
     legend: false,
     areaStyle: function areaStyle(point: any) {
-      if (point.type === 'Formula Stocks') {
+      if (point.type === COMPANY_NAME) {
         return { fill: `l(270) 0:#ffffff 0.2:${theme.palette.primary[200]} 1:${theme.palette.primary[700]}` }
       } else {
         return { fill: `l(270) 0:#ffffff 0.2:${theme.palette.neutral[200]} 1:${theme.palette.neutral[700]}` }
