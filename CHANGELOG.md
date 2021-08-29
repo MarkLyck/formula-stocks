@@ -1,5 +1,23 @@
 # Changelog
 
+<a name="1.0.416"></a>
+## 1.0.416 (2021-08-29)
+
+### Changed
+
+- ⬆️ Update dependency @apollo/client to v3.4.10 [[f4d9a6f](https://github.com/MarkLyck/formula-stocks/commit/f4d9a6f2cc8cc5dbeaf6959a4b1b76afe35a7f0f)]
+- ⬆️ Update dependency zustand to v3.5.10 [[a2f58ac](https://github.com/MarkLyck/formula-stocks/commit/a2f58ac3ed7edba353e02b7c559c9a7bb0901225)]
+- ⬆️ Update dependency @types/node to v14.17.12 [[d1e3f97](https://github.com/MarkLyck/formula-stocks/commit/d1e3f97704d44b68f06e433cb9c81e425707abd7)]
+
+### Miscellaneous
+
+-  Merge pull request [#527](https://github.com/MarkLyck/formula-stocks/issues/527) from MarkLyck/renovate/apollo-graphql-packages [[db04570](https://github.com/MarkLyck/formula-stocks/commit/db04570fbb5aeb8d48ce462f141f4c01c1207aa4)]
+-  Merge pull request [#528](https://github.com/MarkLyck/formula-stocks/issues/528) from MarkLyck/renovate/node-14.x [[bb1a00a](https://github.com/MarkLyck/formula-stocks/commit/bb1a00a84ec303ad885ce9f6bce39dc216c452f6)]
+-  Merge pull request [#529](https://github.com/MarkLyck/formula-stocks/issues/529) from MarkLyck/renovate/zustand-3.x [[40000e7](https://github.com/MarkLyck/formula-stocks/commit/40000e736e796a4ceffbe825c530b809ea002901)]
+- 📝 version bump to v1.0.416 [[047229f](https://github.com/MarkLyck/formula-stocks/commit/047229f74e8315e638d233745ac034d95bebb4b9)]
+- 📝 generated changelog [[e5ce0be](https://github.com/MarkLyck/formula-stocks/commit/e5ce0bea0ccde7c1e17a38c74a67ce6126178251)]
+
+
 <a name="1.0.415"></a>
 ## 1.0.415 (2021-08-27)
 
