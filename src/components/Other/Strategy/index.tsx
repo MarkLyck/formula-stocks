@@ -3,7 +3,8 @@ import styled from '@emotion/styled'
 import { Typography, Card, List } from 'antd'
 import ExampleTrade from './ExampleTrade'
 
-import Navbar from '../../LandingPage/Navbar'
+import { COMPANY_NAME } from 'src/common/constants'
+import Navbar from 'src/components/LandingPage/Navbar'
 
 const { Title, Paragraph } = Typography
 
@@ -63,7 +64,7 @@ const Strategy = () => {
         <Content>
           <Title>Strategy</Title>
           <Paragraph>
-            Formula Stocks specializes in buying wonderful businesses at an attractive price. You'd like a business that
+            {COMPANY_NAME} specializes in buying wonderful businesses at an attractive price. You'd like a business that
             grows, in which the reward is asymmetrically larger than the risk. You want a good business model which is
             profitable, managed by people who act in your interest as a shareholder. A business that is financially
             sound and well funded, deliver honest returns, and offer you a good earnings yield. You get the picture, so
@@ -106,7 +107,7 @@ const Strategy = () => {
           </Paragraph>
           <Paragraph>Lets look at an example simplified as much as possible, for brevity.</Paragraph>
           <Paragraph>
-            At 12/31 2009 Formula Stocks bought Apple Inc., a company we had owned on several previous occasions. Why?
+            At 12/31 2009 {COMPANY_NAME} bought Apple Inc., a company we had owned on several previous occasions. Why?
           </Paragraph>
           <Paragraph>
             It was a wonderful business at a very fair price. Joe calculated at the time that Apple could provide up to
@@ -118,7 +119,7 @@ const Strategy = () => {
           </Paragraph>
           <TradesContainer>
             <ExampleTrade date="2009" action="BUY" ticker="AAPL" aiScore={20 / 100} percentReturn={10} />
-            <ExampleTrade date="2011" action="SELL" ticker="AAPL" percentReturn={51.2} />
+            <ExampleTrade date="2011" action="SELL" ticker="AAPL" percentReturn={111} />
           </TradesContainer>
           <Paragraph>
             Again in 2013 Joe turns to Apple, eyeing a 51.1% potential return. This time Joe goes on to make a +39.05%
@@ -137,7 +138,7 @@ const Strategy = () => {
             <ExampleTrade date="2017" action="SELL" ticker="AAPL" percentReturn={56.97} />
           </TradesContainer>
           <Paragraph>
-            Fast forward to 2021. Would Formula Stocks buy Apple Inc. today? No! Joe now calculates, july 2021, that the
+            Fast forward to 2021. Would {COMPANY_NAME} buy Apple Inc. today? No! Joe now calculates, july 2021, that the
             owner of Apple could get a return of 1,62% annually going forward by the same measure. Unattractive. And
             assigns Apple an AI-score of -33,87
           </Paragraph>

@@ -2,7 +2,7 @@ import React from 'react'
 import { useLazyQuery } from '@apollo/client'
 import { format } from 'date-fns'
 import { Button } from 'antd'
-import { CANCEL_SUBSCRIPTION } from '~/common/queries'
+import { CANCEL_SUBSCRIPTION } from 'src/common/queries'
 import { subscriptionType } from '../types'
 import { StatusLine, Description } from '../styles'
 

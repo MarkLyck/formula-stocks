@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Typography, Button } from 'antd'
-// import { SmallTitle } from '~/ui-components/Modal/styles'
+// import { SmallTitle } from 'src/ui-components/Modal/styles'
 const { Paragraph, Title } = Typography
 
 const Container = styled.div`

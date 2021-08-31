@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Modal, Button } from 'antd'
 import { useLazyQuery } from '@apollo/client'
-import { CANCEL_SUBSCRIPTION, UPDATE_SUBSCRIPTION } from '~/common/queries'
+import { CANCEL_SUBSCRIPTION, UPDATE_SUBSCRIPTION } from 'src/common/queries'
 
 // pages
 import CancelOptions from './CancelOptions'
