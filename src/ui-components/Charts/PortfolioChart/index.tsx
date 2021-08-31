@@ -184,7 +184,7 @@ const PortfolioChart = () => {
         FallbackComponent={ErrorFallback}
         onReset={() => {
           // reset the state of your app so the error doesn't happen again
-          location.reload(true)
+          location.reload()
         }}
       >
         <Space direction="vertical">
