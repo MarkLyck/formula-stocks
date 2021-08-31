@@ -1,5 +1,30 @@
 # Changelog
 
+<a name="1.0.422"></a>
+## 1.0.422 (2021-08-31)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.422 [[3478e59](https://github.com/MarkLyck/formula-stocks/commit/3478e59d7e6bfada97050f91d8da9392805cd17f)]
+
+
+<a name="1.0.421"></a>
+## 1.0.421 (2021-08-31)
+
+### Changed
+
+- ⬆️ Update dependency next to v11.1.2 [[ea8d9e0](https://github.com/MarkLyck/formula-stocks/commit/ea8d9e0d0508da6fdc117d9fc7b4a73962137c6f)]
+- ⬆️ Update dependency typescript to v4.4.2 [[4352334](https://github.com/MarkLyck/formula-stocks/commit/43523341e5ec04dac04645455dec6a5749772f49)]
+
+### Miscellaneous
+
+-  Merge pull request [#536](https://github.com/MarkLyck/formula-stocks/issues/536) from MarkLyck/renovate/nextjs-monorepo [[9c666b1](https://github.com/MarkLyck/formula-stocks/commit/9c666b12253937d193a18f17d8e071acd81d4d66)]
+-  Merge pull request [#530](https://github.com/MarkLyck/formula-stocks/issues/530) from MarkLyck/renovate/typescript-4.x [[3d8e445](https://github.com/MarkLyck/formula-stocks/commit/3d8e445ea4819437470c645382aea7c5483483f1)]
+- 🏷️ fix ts [[ee4ce50](https://github.com/MarkLyck/formula-stocks/commit/ee4ce5035092ca67d37d60529fc03c1db162c42e)]
+- 📝 version bump to v1.0.421 [[84879b4](https://github.com/MarkLyck/formula-stocks/commit/84879b466bfc6a3ae8434f93e1c8600847aca7a2)]
+- 📝 generated changelog [[e840ad3](https://github.com/MarkLyck/formula-stocks/commit/e840ad3b0c38047a83ad5d26573ad319819738e1)]
+
+
 <a name="1.0.420"></a>
 ## 1.0.420 (2021-08-31)
 
