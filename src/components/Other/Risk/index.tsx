@@ -8,7 +8,7 @@ import { StockReturn } from 'src/ui-components'
 import { STATISTICS, BACKTESTED_PERFORMANCE_HISTORY, MARKET_PRICE_HISTORY } from 'src/common/queries'
 import { Disclaimer } from 'src/ui-components'
 import BacktestedChart from 'src/components/LandingPage/Performance/BacktestedChart'
-import { COMPANY_NAME } from '~/common/constants'
+import { COMPANY_NAME } from 'src/common/constants'
 import Recessions from './Recessions'
 import TimeInvestedChart from './TimeInvestedChart'
 
@@ -108,7 +108,7 @@ const Risk = () => {
             </ListItem>
           </StyledCard>
           <Paragraph>
-            Formula Stocks win {winRatio}% of the time. Based on 50 years of data we can calculate a mathematical
+            {COMPANY_NAME} win {winRatio}% of the time. Based on 50 years of data we can calculate a mathematical
             expectation of ({(winRatio / 100).toFixed(2)} * {averageGainRounded}) - (
             {((100 - winLossRatio) / 100).toFixed(2)} * {averageLossRounded}) = +{expectedReturn.toFixed(2)}%. Taking an
             average of 2.2 years per trade we get an expected annualized return of {(expectedReturn / 2.2).toFixed(2)}%.
@@ -134,55 +134,55 @@ const Risk = () => {
           <Title level={4}>Facts instead of emotion</Title>
           <Paragraph>The biggest risk factor is always the human factor.</Paragraph>
           <Paragraph>
-            Formula Stocks uses unbiased logic that looks for wonderful growing businesses to invest in. Unlike
+            {COMPANY_NAME} uses unbiased logic that looks for wonderful growing businesses to invest in. Unlike
             algorithms however, humans have to deal with emotions like fear, greed, uncertainty and impatience.
           </Paragraph>
           <Paragraph>
             Controlling emotions is key. If you cannot control emotions, you are much more likely to lose money or miss
-            out. For example if you had invested $25,000 using Formula Stocks back in December 1972 just before the
+            out. For example if you had invested $25,000 using {COMPANY_NAME} back in December 1972 just before the
             downturn, and had sold in fear when the stock market went down -10%, -20%, or -40% in value, you would then
-            have ended up with a loss. Whereas if you used Formula Stocks and let the system do it's thing, it would
+            have ended up with a loss. Whereas if you used {COMPANY_NAME} and let the system do it's thing, it would
             instead have turned $25,000 into millions over a longer period of time, by utilizing the opportunities
             afforded by the very same stock market correction.
           </Paragraph>
           <Paragraph>
-            The same goes for greed. Many of the businesses Formula Stocks have invested in over time, have had
+            The same goes for greed. Many of the businesses {COMPANY_NAME} have invested in over time, have had
             tremendous returns. But if you get greedy and sell too fast, or too fearful that a stock will drop soon and
             sell because of such fear, you are likely to underperform.
           </Paragraph>
           <Paragraph>
-            Formula Stocks have had down years in the past, and it's likely to have down years in the future. If you
+            {COMPANY_NAME} have had down years in the past, and it's likely to have down years in the future. If you
             cannot control your fear, greed and impatience, you may well lose money. On the flip side of this, if you
             can manage your emotions, the sky is the limit.
           </Paragraph>
-          <Title level={4}>How does Formula Stocks typically handle a stock market correction?</Title>
+          <Title level={4}>How does {COMPANY_NAME} typically handle a stock market correction?</Title>
           <Paragraph>
             Corrections are seen from time to time in the markets. Below is a table of larger stock market corrections
-            and how Formula Stocks typically responds to said situation. It shows how big each drawdown was in every
-            major correction/recession since 1970 for both Formula Stocks and the S&P500. You can also see how many
-            months it took to Formula Stocks and the S&P500 to fully recover from these drawdowns (reach their previous
+            and how {COMPANY_NAME} typically responds to said situation. It shows how big each drawdown was in every
+            major correction/recession since 1970 for both {COMPANY_NAME} and the S&P500. You can also see how many
+            months it took to {COMPANY_NAME} and the S&P500 to fully recover from these drawdowns (reach their previous
             high).
           </Paragraph>
           <Recessions />
           <Paragraph style={{ marginTop: 32 }}>
-            While Formula Stocks is not immune to stock market crashes (like any trading system), it has managed to
+            While {COMPANY_NAME} is not immune to stock market crashes (like any trading system), it has managed to
             recover effectively from the crashes much faster than the general market.
           </Paragraph>
           <Paragraph>
-            Formula Stocks doubled in value during the Dot-com bubble. Since most of the over-hyped internet companies
+            {COMPANY_NAME} doubled in value during the Dot-com bubble. Since most of the over-hyped internet companies
             that crashed in the early 2000s, were very far from the stocks which we would invest in, our portfolio at
             the time went up instead of down.
           </Paragraph>
           <Paragraph>
-            Formula Stocks generally corrects along with the broader market, but it should be observed that a downturn
-            immediately increases future returns of the strategy. During a downturn or "price reset", Formula Stocks
+            {COMPANY_NAME} generally corrects along with the broader market, but it should be observed that a downturn
+            immediately increases future returns of the strategy. During a downturn or "price reset", {COMPANY_NAME}
             will be able to find much better buying opportunities. Many stocks bought during downturns ends up being the
-            biggest winners in the years following. Investments made during drawdowns are largely why Formula Stocks is
+            biggest winners in the years following. Investments made during drawdowns are largely why {COMPANY_NAME} is
             able to recover so quickly. The seed for future success is often found in a correction.
           </Paragraph>
           <Paragraph>
             Explore the logarithmic chart below to see how each recession impacted the portfolio. You can compare
-            Formula Stocks vs. the S&P500
+            {COMPANY_NAME} vs. the S&P500
           </Paragraph>
           <BacktestedChart
             name={COMPANY_NAME}
@@ -195,14 +195,14 @@ const Risk = () => {
           />
 
           <Title level={4} style={{ marginTop: 32 }}>
-            Using Formula Stocks as intended.
+            Using {COMPANY_NAME} as intended.
           </Title>
           <Paragraph>
-            Formula Stocks is not about getting rich quick. Consequently, you should not expect that as an outcome
+            {COMPANY_NAME} is not about getting rich quick. Consequently, you should not expect that as an outcome
             within a few weeks.
           </Paragraph>
           <Paragraph>
-            If you were to use Formula Stocks for a very brief period of time, it would be the equivalent of not
+            If you were to use {COMPANY_NAME} for a very brief period of time, it would be the equivalent of not
             diversifying your portfolio. You would expose yourself more to chance, than if you were using it for a
             longer period.
           </Paragraph>
@@ -211,11 +211,11 @@ const Risk = () => {
             of losing money with Formula Stock picks, under various different time frames. Hold one month, and you
             statistically speaking have a ~70% probability of a net profit. conversely ~30% for a net loss. Hold 3
             years, and a ~97% statistical probability of a net profit, and only a ~3% probability of a net loss. All 5
-            year periods with Formula Stocks has been profitable without exception. Note these are historical numbers,
+            year periods with {COMPANY_NAME} has been profitable without exception. Note these are historical numbers,
             future returns may deviate.
           </Paragraph>
           <Tabs defaultActiveKey="1">
-            <TabPane tab="Formula Stocks" key="1">
+            <TabPane tab={COMPANY_NAME} key="1">
               <TimeInvestedChart
                 // @ts-ignore
                 data={backtestedHistory}

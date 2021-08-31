@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { getUnixTime } from 'date-fns'
 import { useLazyQuery } from '@apollo/client'
 import { Modal, Button, DatePicker, Space } from 'antd'
-import { UPDATE_SUBSCRIPTION } from '~/common/queries'
+import { UPDATE_SUBSCRIPTION } from 'src/common/queries'
 import Success from './Success'
 
 const ActionContainer = styled.div`

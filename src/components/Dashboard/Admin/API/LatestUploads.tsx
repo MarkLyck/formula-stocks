@@ -6,7 +6,7 @@ import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { LoadingError } from 'src/ui-components'
-import { LATEST_FILES } from '~/common/queries'
+import { LATEST_FILES } from 'src/common/queries'
 
 const FileContainer = styled.div`
   display: grid;

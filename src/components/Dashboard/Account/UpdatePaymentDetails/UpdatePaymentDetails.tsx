@@ -4,9 +4,9 @@ import { useLazyQuery } from '@apollo/client'
 import { Card, Form, Space, Button } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from '@emotion/styled'
-import { UPDATE_PAYMENT_DETAILS } from '~/common/queries'
+import { UPDATE_PAYMENT_DETAILS } from 'src/common/queries'
 import theme from 'src/lib/theme'
-import { ErrorMessage } from '~/ui-components'
+import { ErrorMessage } from 'src/ui-components'
 
 const stripeElementOptions = {
   style: {

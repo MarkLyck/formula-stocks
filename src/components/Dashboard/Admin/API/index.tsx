@@ -4,7 +4,7 @@ import { useQuery, useMutation } from '@apollo/client'
 import styled from '@emotion/styled'
 
 import { LoadingError } from 'src/ui-components'
-import { FILE_STACK_INFO, FILE_CREATE_MUTATION } from '~/common/queries'
+import { FILE_STACK_INFO, FILE_CREATE_MUTATION } from 'src/common/queries'
 import LatestUploads from './LatestUploads'
 const { Dragger } = Upload
 
