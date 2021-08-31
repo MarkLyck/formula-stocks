@@ -1,5 +1,14 @@
 # Changelog
 
+<a name="1.0.419"></a>
+## 1.0.419 (2021-08-31)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.419 [[4243009](https://github.com/MarkLyck/formula-stocks/commit/42430092d36271c4b6dc4051102c2112a59a3355)]
+- 📝 generated changelog [[7a8d78d](https://github.com/MarkLyck/formula-stocks/commit/7a8d78dcf6ecb84b290251ef9bf8380b8c18e5d1)]
+
+
 <a name="1.0.418"></a>
 ## 1.0.418 (2021-08-31)
 
