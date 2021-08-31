@@ -3,5 +3,5 @@ export const resetApplication = () => {
   localStorage.clear()
   sessionStorage.clear()
   // reload website
-  location.reload(true)
+  location.reload()
 }

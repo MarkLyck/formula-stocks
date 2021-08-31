@@ -68,7 +68,7 @@ const handleSignup = async ({
     })
 
     router.push('/dashboard/portfolio')
-  } catch (error) {
+  } catch (error: any) {
     let errorMessage = error.message
 
     if (error.errors && error.errors.length && error.errors[0] && error.errors[0].message) {
