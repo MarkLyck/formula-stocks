@@ -1,5 +1,49 @@
 # Changelog
 
+<a name="1.0.426"></a>
+## 1.0.426 (2021-09-03)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.426 [[393f645](https://github.com/MarkLyck/formula-stocks/commit/393f64539e247548752df00635e39ad40e2e1159)]
+
+
+<a name="1.0.425"></a>
+## 1.0.425 (2021-09-03)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.425 [[48f7e22](https://github.com/MarkLyck/formula-stocks/commit/48f7e2200f7b0420af5a2894cdc89902b56485c5)]
+
+
+<a name="1.0.424"></a>
+## 1.0.424 (2021-09-03)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.424 [[d15e069](https://github.com/MarkLyck/formula-stocks/commit/d15e06995f5e9729d00b7126439d0105714f3372)]
+
+
+<a name="1.0.423"></a>
+## 1.0.423 (2021-09-03)
+
+### Changed
+
+- ⬆️ Update dependency react-scroll to v1.8.4 [[f212dac](https://github.com/MarkLyck/formula-stocks/commit/f212dac24fd4071285156964c001485f916fd549)]
+- ⬆️ Update dependency @ant-design/charts to v1.2.11 [[1f4d820](https://github.com/MarkLyck/formula-stocks/commit/1f4d820c3ab4b519f54332a6f650bc5d4131ced6)]
+- ⬆️ Update dependency @types/node to v14.17.14 [[d42be3c](https://github.com/MarkLyck/formula-stocks/commit/d42be3cdef36839f6e47486196b53ba5ca9dc5bc)]
+- ⬆️ Update dependency @sentry/nextjs to v6.12.0 [[5b665ab](https://github.com/MarkLyck/formula-stocks/commit/5b665ab29f8d769ee8133c62bcb8669a4aaac47a)]
+
+### Miscellaneous
+
+-  Merge pull request [#540](https://github.com/MarkLyck/formula-stocks/issues/540) from MarkLyck/renovate/react-scroll-1.x [[5089194](https://github.com/MarkLyck/formula-stocks/commit/50891941519a98a8ec503f8eee885d45cf009448)]
+-  Merge pull request [#539](https://github.com/MarkLyck/formula-stocks/issues/539) from MarkLyck/renovate/ant-design-charts-1.x [[f703bfb](https://github.com/MarkLyck/formula-stocks/commit/f703bfb6d5711ed01a4f43c2f1c170b73dbbedf3)]
+-  Merge pull request [#538](https://github.com/MarkLyck/formula-stocks/issues/538) from MarkLyck/renovate/node-14.x [[1990d5c](https://github.com/MarkLyck/formula-stocks/commit/1990d5cc2b25158a93e6d833c1cb12eb91dcd536)]
+-  Merge pull request [#537](https://github.com/MarkLyck/formula-stocks/issues/537) from MarkLyck/renovate/sentry-javascript-monorepo [[5f36048](https://github.com/MarkLyck/formula-stocks/commit/5f360489fc19bf5e55506c8e09324b2e474a3f2a)]
+- 📝 version bump to v1.0.423 [[6d55539](https://github.com/MarkLyck/formula-stocks/commit/6d55539331d33c3fe37b88bba8557d45ce9e773c)]
+- 📝 generated changelog [[c474e82](https://github.com/MarkLyck/formula-stocks/commit/c474e827425788a9472d99faefa4423992af83e5)]
+
+
 <a name="1.0.422"></a>
 ## 1.0.422 (2021-08-31)
 
