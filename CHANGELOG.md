@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.428"></a>
+## 1.0.428 (2021-09-03)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.428 [[241ec4a](https://github.com/MarkLyck/formula-stocks/commit/241ec4a5b36e90b52a4f42307e644ed026a705cb)]
+
+
+<a name="1.0.427"></a>
+## 1.0.427 (2021-09-03)
+
+### Changed
+
+- ⬆️ Update storybook monorepo to v6.3.8 [[314285a](https://github.com/MarkLyck/formula-stocks/commit/314285af23fa24dffd2bc6a3ce2369111d630bc8)]
+- ⬆️ Update dependency gitmoji-cli to v4.6.1 [[91e1396](https://github.com/MarkLyck/formula-stocks/commit/91e13966915602dd08f5fbd6efab8bf84d369a12)]
+
+### Miscellaneous
+
+-  Merge pull request [#542](https://github.com/MarkLyck/formula-stocks/issues/542) from MarkLyck/renovate/storybook-monorepo [[ab424be](https://github.com/MarkLyck/formula-stocks/commit/ab424bef9a96aedc81550f0448ee4209a5d806e6)]
+-  Merge pull request [#541](https://github.com/MarkLyck/formula-stocks/issues/541) from MarkLyck/renovate/gitmoji-cli-4.x [[25b7a63](https://github.com/MarkLyck/formula-stocks/commit/25b7a63d7479b6bd25eb7ee8d7ab836a9b574636)]
+- 📝 version bump to v1.0.427 [[8232765](https://github.com/MarkLyck/formula-stocks/commit/8232765391481f7720f3f5b49d727b0e8c69704d)]
+- 📝 generated changelog [[07bef12](https://github.com/MarkLyck/formula-stocks/commit/07bef1204b9c1c33a03b69356d32e71ffd980f0c)]
+
+
 <a name="1.0.426"></a>
 ## 1.0.426 (2021-09-03)
 
