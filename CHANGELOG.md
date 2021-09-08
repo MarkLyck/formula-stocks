@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="1.0.433"></a>
+## 1.0.433 (2021-09-08)
+
+### Added
+
+- ✨ mini-chart annotation [[4dd9f14](https://github.com/MarkLyck/formula-stocks/commit/4dd9f149601aab01e59cb886f5e40ca36fe247a4)]
+
+### Miscellaneous
+
+-  Merge pull request [#549](https://github.com/MarkLyck/formula-stocks/issues/549) from MarkLyck/mini-chart-annotation [[98dc850](https://github.com/MarkLyck/formula-stocks/commit/98dc85088b7b5da357e149111cc02a112f8da7cb)]
+- 🗑️ cleanup [[0690e87](https://github.com/MarkLyck/formula-stocks/commit/0690e87572901d760be273a63dcf010e4bbd043f)]
+- 📝 version bump to v1.0.433 [[8d761d4](https://github.com/MarkLyck/formula-stocks/commit/8d761d4e4317e68550bf038f233927ac63330e8b)]
+- 📝 generated changelog [[199e9c3](https://github.com/MarkLyck/formula-stocks/commit/199e9c374b1c37d9cf262929673e494167059952)]
+
+
 <a name="1.0.432"></a>
 ## 1.0.432 (2021-09-08)
 
