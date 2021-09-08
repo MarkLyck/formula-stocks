@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.430"></a>
+## 1.0.430 (2021-09-08)
+
+### Added
+
+- 📈 analytics event name update [[798ac50](https://github.com/MarkLyck/formula-stocks/commit/798ac50ba430ff2be8aa484fbde8c319fb1a53f7)]
+
+### Changed
+
+- ⬆️ Update dependency @types/node to v14.17.15 [[17a7f87](https://github.com/MarkLyck/formula-stocks/commit/17a7f87099951bbfb3f195568f4b7436d085f577)]
+- ⬆️ Update dependency graphql to v15.5.3 [[a5a6309](https://github.com/MarkLyck/formula-stocks/commit/a5a6309fbf3279744fa31b6fd7df4c5cdbaa9d5d)]
+- ⬆️ Update dependency @types/react to v17.0.20 [[fee6dd8](https://github.com/MarkLyck/formula-stocks/commit/fee6dd8fdc9b64a264c19be6bd8851189486f022)]
+
+### Miscellaneous
+
+-  Merge pull request [#545](https://github.com/MarkLyck/formula-stocks/issues/545) from MarkLyck/renovate/node-14.x [[f8fe97c](https://github.com/MarkLyck/formula-stocks/commit/f8fe97c8a178c60f64037245a31154059c23b4c6)]
+-  Merge pull request [#544](https://github.com/MarkLyck/formula-stocks/issues/544) from MarkLyck/renovate/graphql-15.x [[3d0dd81](https://github.com/MarkLyck/formula-stocks/commit/3d0dd815218ace733934d7e20d1c50ac109dc236)]
+-  Merge pull request [#543](https://github.com/MarkLyck/formula-stocks/issues/543) from MarkLyck/renovate/react-17.x [[eb4963c](https://github.com/MarkLyck/formula-stocks/commit/eb4963cd5d38b9b26725e0d6371339cc90e492db)]
+-  Merge pull request [#546](https://github.com/MarkLyck/formula-stocks/issues/546) from MarkLyck/newsletter-event-fix [[5cc2f1d](https://github.com/MarkLyck/formula-stocks/commit/5cc2f1d2015dcea48a31fbf53e02bcacd744552f)]
+- 📝 version bump to v1.0.430 [[1a22694](https://github.com/MarkLyck/formula-stocks/commit/1a22694cb79bbccd782477ca64b5efbf09d26f48)]
+- 📝 version bump to v1.0.429 [[0ca1af6](https://github.com/MarkLyck/formula-stocks/commit/0ca1af68c0869991944a182d6c0f486e408fb720)]
+- 📝 generated changelog [[4c68a07](https://github.com/MarkLyck/formula-stocks/commit/4c68a07f152f52b6dde37c3abd8fbf137fa711a9)]
+
+
 <a name="1.0.428"></a>
 ## 1.0.428 (2021-09-03)
 
