@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.431"></a>
+## 1.0.431 (2021-09-08)
+
+### Fixed
+
+- 🐛 fix users table and publish it [[9087bfd](https://github.com/MarkLyck/formula-stocks/commit/9087bfdc2771baff93a31ddfbaa602d2db1c2701)]
+
+### Miscellaneous
+
+-  Merge pull request [#547](https://github.com/MarkLyck/formula-stocks/issues/547) from MarkLyck/users-table-2 [[fe7c105](https://github.com/MarkLyck/formula-stocks/commit/fe7c1052e20ee0d426fbbc43fd6625149e2314bf)]
+- 📝 version bump to v1.0.431 [[3ae16c3](https://github.com/MarkLyck/formula-stocks/commit/3ae16c3e5e0909aa8920dbfbec114f7b49de3a4b)]
+- 📝 generated changelog [[ddd21e8](https://github.com/MarkLyck/formula-stocks/commit/ddd21e815ab53b723820d374e181f0a98e0d55c8)]
+
+
 <a name="1.0.430"></a>
 ## 1.0.430 (2021-09-08)
 
