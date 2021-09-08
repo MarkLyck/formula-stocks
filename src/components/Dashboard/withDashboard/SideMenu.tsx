@@ -167,7 +167,7 @@ const SideMenu = ({ collapsed, setCollapsed, onLinkClick }: SideMenuProps) => {
             if (item.adminOnly) {
               if (!user) return null
               if (user?.type !== 'admin') return null
-              if (item.label === 'Users' || item.label === 'Analytics') {
+              if (item.label === 'Analytics') {
                 if (user.email !== 'hello+fstest@marklyck.com') return null
               }
 
