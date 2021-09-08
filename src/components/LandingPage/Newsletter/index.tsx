@@ -75,7 +75,7 @@ const Newsletter = () => {
 
     executeCreateNewsletter({ variables: { email, firstName } })
     analyticsIdentify({ email })
-    analyticsTrack('newsletter', { email })
+    analyticsTrack('newsletter_signup', { email })
   }
 
   return (
