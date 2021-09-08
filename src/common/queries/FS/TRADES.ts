@@ -12,6 +12,7 @@ export const TRADES_QUERY = gql`
         totalPortfolioWeight
         type
         boughtAt
+        date
         report {
           aIScore
         }
