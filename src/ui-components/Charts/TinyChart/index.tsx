@@ -1,5 +1,4 @@
 import React from 'react'
-import dayjs from 'dayjs'
 import { Typography, Spin } from 'antd'
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
