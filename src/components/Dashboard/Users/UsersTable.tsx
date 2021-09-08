@@ -19,7 +19,6 @@ const columns = [
   {
     title: '',
     dataIndex: 'country',
-    key: 'country',
     width: 20,
     render: (value: string) => {
       if (!value) return null
@@ -35,7 +34,6 @@ const columns = [
   {
     title: 'Name',
     dataIndex: 'firstName',
-    key: 'firstName',
     filteredValue: 'firstName',
     sorter: (a: any, b: any) => (a.firstName < b.firstName ? -1 : 1),
     render: (_value: string, row: any) => `${row.firstName} ${row.lastName}`,
@@ -43,7 +41,6 @@ const columns = [
   {
     title: 'Email',
     dataIndex: 'email',
-    key: 'email',
     sorter: (a: any, b: any) => (a.email < b.email ? -1 : 1),
     render: (value: string) => (
       <Paragraph copyable style={{ marginBottom: 0 }}>
@@ -61,17 +58,17 @@ const columns = [
   {
     title: 'Signed up',
     dataIndex: 'createdAt',
-    key: 'createdAt',
     sorter: (a: any, b: any) => (a.createdAt < b.createdAt ? -1 : 1),
     render: (value: string) => `${dayjs(value).format('MM/DD/YYYY')}`,
   },
   {
     title: 'Last seen',
     dataIndex: 'lastSeen',
-    key: 'lastSeen',
-    sorter: (a: any, b: any) => (a.lastSeen < b.lastSeen ? -1 : 1),
-    defaultSortOrder: 'ascend',
+    sorter: (a: any, b: any) => (new Date(a.lastSeen).getTime() < new Date(b.lastSeen).getTime() ? -1 : 1),
+    // sorter: true,
+    // defaultSortOrder: 'ascend',
     render: (value: string) => {
+      console.log('🔈 ~ value', value)
       if (!value) return null
 
       return dayjs(value).fromNow()
@@ -80,7 +77,6 @@ const columns = [
   {
     title: 'Status',
     dataIndex: 'status',
-    key: 'status',
     width: 20,
     sorter: (a: any, b: any) => {
       const aStatus = getSubscriptionStatus(a?.stripe?.subscription, a.type)
@@ -100,6 +96,7 @@ const columns = [
 const UsersTable = () => {
   const { data, loading } = useQuery(USERS_QUERY)
   const usersData = data?.usersList?.items || []
+  console.log('🔈 ~ usersData', usersData)
 
   return (
     // @ts-ignore
