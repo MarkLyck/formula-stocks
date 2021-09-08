@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.432"></a>
+## 1.0.432 (2021-09-08)
+
+### Fixed
+
+- 🐛 fix newsletter signup [[4f878c8](https://github.com/MarkLyck/formula-stocks/commit/4f878c8a92dbf8ae4e4c0dc2915bdb4129b6f157)]
+
+### Miscellaneous
+
+-  Merge pull request [#548](https://github.com/MarkLyck/formula-stocks/issues/548) from MarkLyck/fix-newsleter [[8c5c5f5](https://github.com/MarkLyck/formula-stocks/commit/8c5c5f5f43a1ec99f858b3a032a94ab004c575ac)]
+- 📝 version bump to v1.0.432 [[364c969](https://github.com/MarkLyck/formula-stocks/commit/364c9692105a1a39cc2e276eb87b61a56f67c257)]
+- 📝 generated changelog [[eca702c](https://github.com/MarkLyck/formula-stocks/commit/eca702cb30b48284bd46d3a4ad22f8ecffefc56c)]
+
+
 <a name="1.0.431"></a>
 ## 1.0.431 (2021-09-08)
 
