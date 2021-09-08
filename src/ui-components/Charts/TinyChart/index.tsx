@@ -1,5 +1,7 @@
 import React from 'react'
+import dayjs from 'dayjs'
 import { Typography, Spin } from 'antd'
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import dynamic from 'next/dynamic'
 import { minBy } from 'lodash'
@@ -24,7 +26,25 @@ const TooltipText = styled(Text)`
   margin: 0;
 `
 
-export const TinyStockChart = ({ data, loading, height = 60 }: any) => {
+const getIndexForTradeDate = (trade: any, data: any[]) => {
+  if (!trade) return null
+
+  let tradeIndex = null
+  data.some((point: any, i) => {
+    if (point.close === trade.price) {
+      tradeIndex = i
+    }
+    if (point.date === trade.date && point.close === trade.price) {
+      tradeIndex = i
+      return true
+    }
+  })
+
+  return tradeIndex
+}
+
+export const TinyStockChart = ({ data, trade, loading, height = 60 }: any) => {
+  const theme = useTheme()
   if (loading) {
     return (
       <LoadingContainer>
@@ -33,6 +53,31 @@ export const TinyStockChart = ({ data, loading, height = 60 }: any) => {
     )
   }
   if (!Array.isArray(data) || data.length === 0) return null
+
+  const tradeIndex = getIndexForTradeDate(trade, data)
+
+  const annotations = []
+  if (tradeIndex !== null) {
+    annotations.push({
+      type: 'dataMarker',
+      position: [tradeIndex, trade?.price],
+      text: {
+        content: `${trade.action}`,
+        style: {
+          fill: theme.palette.primary[600],
+          textAlign: 'center',
+          fontSize: 8,
+        },
+      },
+      line: { length: 4 },
+      point: {
+        style: {
+          fill: theme.palette.primary[600],
+        },
+      },
+      autoAdjust: false,
+    })
+  }
 
   var config = {
     height,
@@ -50,6 +95,7 @@ export const TinyStockChart = ({ data, loading, height = 60 }: any) => {
     yAxis: {
       minLimit: Math.floor(minBy(data, (point: any) => point.close).close),
     },
+    annotations,
     data: data.map((point) => point.close),
     smooth: false,
   }

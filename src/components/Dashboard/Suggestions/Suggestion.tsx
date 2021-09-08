@@ -74,7 +74,7 @@ const Trade = ({ trade, colSpan }: TradeProps) => {
           </Row>
           <SmallDivider />
           <Row justify="space-between" align="middle">
-            <TradeChart ticker={trade.ticker} name={trade.name} data={priceHistory} />
+            <TradeChart trade={trade} name={trade.name} data={priceHistory} />
           </Row>
           <SmallDivider />
           <Row justify="space-between" align="middle">

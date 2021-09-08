@@ -6,15 +6,16 @@ import styled from '@emotion/styled'
 import { STOCK_PRICE_HISTORY_SIMPLE } from 'src/common/queries'
 
 type TradeChartProps = {
-  ticker: string
   name: string
   data: any[]
+  trade: any
 }
 
 const ChartContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100px;
+  padding-top: 20px;
 `
 
 const ChartUnavailableContainer = styled.div`
@@ -43,10 +44,10 @@ const Name = styled.div`
   color: ${(p) => p.theme.palette.neutral[600]};
 `
 
-const TradeChart = ({ ticker, name }: TradeChartProps) => {
+const TradeChart = ({ name, trade }: TradeChartProps) => {
   const { data, loading } = useQuery(STOCK_PRICE_HISTORY_SIMPLE, {
     variables: {
-      symbol: ticker,
+      symbol: trade.ticker,
     },
   })
 
@@ -58,7 +59,7 @@ const TradeChart = ({ ticker, name }: TradeChartProps) => {
       <ChartUnavailableContainer>
         <Name unavailable>{name}</Name>
         <FontAwesomeIcon icon={['fad', 'exclamation-triangle']} />
-        Chart unavailable {ticker?.includes('_TO') ? 'for TSX stocks' : ''}
+        Chart unavailable {trade.ticker?.includes('_TO') ? 'for TSX stocks' : ''}
       </ChartUnavailableContainer>
     )
   }
@@ -66,7 +67,7 @@ const TradeChart = ({ ticker, name }: TradeChartProps) => {
   return (
     <ChartContainer>
       <Name>{name}</Name>
-      <TinyStockChart data={sixMonthsdata} height={100} loading={loading} />
+      <TinyStockChart trade={trade} data={sixMonthsdata} height={100} loading={loading} />
     </ChartContainer>
   )
 }
