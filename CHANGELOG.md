@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="1.0.434"></a>
+## 1.0.434 (2021-09-10)
+
+### Changed
+
+- ⬆️ Update dependency dayjs to v1.10.7 [[5fb2d2e](https://github.com/MarkLyck/formula-stocks/commit/5fb2d2e4b3605b29ca95ee32c2059e0b41e54e8a)]
+
+### Miscellaneous
+
+-  Merge pull request [#550](https://github.com/MarkLyck/formula-stocks/issues/550) from MarkLyck/renovate/dayjs-1.x [[9b066db](https://github.com/MarkLyck/formula-stocks/commit/9b066dbddb1784088b43112106cd80c6b674f3ca)]
+- 📝 version bump to v1.0.434 [[dc87dde](https://github.com/MarkLyck/formula-stocks/commit/dc87dde70b492081fa12db6d5a621bb53dc2b95d)]
+- 📝 generated changelog [[e5e6cc5](https://github.com/MarkLyck/formula-stocks/commit/e5e6cc5fc2ec5743a93eb219f73cf6e19b36659e)]
+
+
 <a name="1.0.433"></a>
 ## 1.0.433 (2021-09-08)
 
