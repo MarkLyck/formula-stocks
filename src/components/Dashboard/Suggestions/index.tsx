@@ -1,20 +1,21 @@
 import React from 'react'
 import { useQuery } from '@apollo/client'
-import { Row, Col } from 'antd'
+import { Row, Col, Spin } from 'antd'
 import useBreakpoint from '@w11r/use-breakpoint'
 import useStore from 'src/lib/useStore'
-import { SUGGESTIONS_QUERY } from 'src/common/queries'
+import { SUGGESTIONS_QUERY, LATEST_SUGGESTION } from 'src/common/queries'
 import { LoadingError, DashboardHeader, PermissionWrapper } from 'src/ui-components'
 import Suggestion from './Suggestion'
 import SuggestionsGuide from './SuggestionsGuide'
 
-const Suggestions = () => {
+const Suggestions = ({ fromDate }: any) => {
   const { 'isTablet-': isTabletMinus } = useBreakpoint()
   const plan = useStore((state: any) => state.plan)
 
   const { data, error } = useQuery(SUGGESTIONS_QUERY, {
     variables: {
       planName: plan,
+      fromDate,
     },
   })
 
@@ -48,4 +49,13 @@ const Suggestions = () => {
   )
 }
 
-export default Suggestions
+const SuggestionsWrapper = (props: any) => {
+  const { data, loading, error } = useQuery(LATEST_SUGGESTION)
+
+  if (loading) return <Spin />
+  if (error) return <LoadingError error={error} />
+
+  return <Suggestions {...props} fromDate={data?.signalsList?.items ? data.signalsList.items[0].date : undefined} />
+}
+
+export default SuggestionsWrapper

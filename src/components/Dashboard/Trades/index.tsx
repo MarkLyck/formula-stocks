@@ -4,18 +4,19 @@ import { Row, Col, Spin } from 'antd'
 import useBreakpoint from '@w11r/use-breakpoint'
 import useStore from 'src/lib/useStore'
 
-import { TRADES_QUERY } from 'src/common/queries'
+import { TRADES_QUERY, LATEST_TRADE } from 'src/common/queries'
 import { LoadingError, DashboardHeader, PermissionWrapper } from 'src/ui-components'
 import Trade from './Trade'
 import TradesGuide from './TradesGuide'
 
-const Trades = () => {
+const Trades = ({ fromDate }: any) => {
   const plan = useStore((state: any) => state.plan)
   const { 'isTablet-': isTabletMinus } = useBreakpoint()
 
   const { data, loading, error } = useQuery(TRADES_QUERY, {
     variables: {
       planName: plan,
+      fromDate,
     },
   })
 
@@ -50,4 +51,13 @@ const Trades = () => {
   )
 }
 
-export default Trades
+const TradesWrapper = (props: any) => {
+  const { data, loading, error } = useQuery(LATEST_TRADE)
+
+  if (loading) return <Spin />
+  if (error) return <LoadingError error={error} />
+
+  return <Trades {...props} fromDate={data?.signalsList?.items ? data.signalsList.items[0].date : undefined} />
+}
+
+export default TradesWrapper
