@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="1.0.436"></a>
+## 1.0.436 (2021-09-14)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.436 [[c785c4b](https://github.com/MarkLyck/formula-stocks/commit/c785c4bed15bece4e2bc58c87a32d630924bff16)]
+
+
+<a name="1.0.435"></a>
+## 1.0.435 (2021-09-14)
+
+### Changed
+
+- ⬆️ Update dependency @apollo/client to v3.4.11 [[6ba69aa](https://github.com/MarkLyck/formula-stocks/commit/6ba69aa9ac4d5cbbe921549045410d2a281ac509)]
+- ⬆️ Update dependency typescript to v4.4.3 [[c9f049d](https://github.com/MarkLyck/formula-stocks/commit/c9f049dafb84e95a55d5291340c5e03af9a5d456)]
+
+### Miscellaneous
+
+-  Merge pull request [#552](https://github.com/MarkLyck/formula-stocks/issues/552) from MarkLyck/renovate/apollo-graphql-packages [[e59a3d0](https://github.com/MarkLyck/formula-stocks/commit/e59a3d0f55da223c9247c2797f8eb15242070a17)]
+-  Merge pull request [#551](https://github.com/MarkLyck/formula-stocks/issues/551) from MarkLyck/renovate/typescript-4.x [[8efbb06](https://github.com/MarkLyck/formula-stocks/commit/8efbb060a5ea1b4cc6a72e2ef9d4ebd6a3a59d9c)]
+- 📝 version bump to v1.0.435 [[c38d609](https://github.com/MarkLyck/formula-stocks/commit/c38d609918768da88c2f386dcf49b4b786ae3af8)]
+- 📝 generated changelog [[445b71d](https://github.com/MarkLyck/formula-stocks/commit/445b71dcfaef408880049924c8aaab69a0caea3f)]
+
+
 <a name="1.0.434"></a>
 ## 1.0.434 (2021-09-10)
 
