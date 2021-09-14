@@ -10,10 +10,10 @@
     lodash.debounce "^4.0.8"
     lodash.throttle "^4.1.1"
 
-"@ant-design/charts@1.2.11":
-  version "1.2.11"
-  resolved "https://registry.yarnpkg.com/@ant-design/charts/-/charts-1.2.11.tgz#392e734e557effe0bfc9d50e8cf8cb775911b32f"
-  integrity sha512-sjwQTlT5CPys+akT7S7M2cVTblwHgzFAhhbriR2GKAcZd+1bgxyxyV9NWDBB1HukqqLmB0I4P4RPur9Kbfnb0A==
+"@ant-design/charts@1.2.13":
+  version "1.2.13"
+  resolved "https://registry.yarnpkg.com/@ant-design/charts/-/charts-1.2.13.tgz#ebd94485353040bcc99fdca4a0e5376db2da660a"
+  integrity sha512-HdCkFR1oPB3cY4phbYoHbCnNat70RhifdquPYJ8upzFm6/dL6F7Is++lA8mj9LXhFbfkZgByV6OgO47fdPg3ew==
   dependencies:
     "@antv/g2plot" "^2.2.11"
     "@antv/g6" "4.2.4"
