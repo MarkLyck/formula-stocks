@@ -15,7 +15,7 @@
     "generate-sitemap": "node ./scripts/generate-sitemap.js"
   },
   "dependencies": {
-    "@ant-design/charts": "1.2.11",
+    "@ant-design/charts": "1.2.13",
     "@apollo/client": "3.4.11",
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
