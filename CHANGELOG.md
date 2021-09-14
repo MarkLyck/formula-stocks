@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.0.438"></a>
+## 1.0.438 (2021-09-14)
+
+### Changed
+
+- ⬆️ Update dependency @ant-design/charts to v1.2.13 [[78a0348](https://github.com/MarkLyck/formula-stocks/commit/78a0348e9984614a2ef8476f7dc8dc2017cac617)]
+- ⬆️ Update dependency isbot to v3.3.3 [[34fa030](https://github.com/MarkLyck/formula-stocks/commit/34fa03068010f4d8d4ad83df3ce7eb0938134afb)]
+
+### Miscellaneous
+
+-  Merge pull request [#555](https://github.com/MarkLyck/formula-stocks/issues/555) from MarkLyck/renovate/isbot-3.x [[e09423f](https://github.com/MarkLyck/formula-stocks/commit/e09423fe6918ddffe05da9f3f2a9427e455c5c97)]
+-  Merge pull request [#553](https://github.com/MarkLyck/formula-stocks/issues/553) from MarkLyck/renovate/ant-design-charts-1.x [[803cabb](https://github.com/MarkLyck/formula-stocks/commit/803cabb8e37c5885744c3e0b87a421f82a2893d0)]
+- 📝 version bump to v1.0.438 [[0bc5909](https://github.com/MarkLyck/formula-stocks/commit/0bc5909500eaf4f36eb03eab3f5eaa3429e854e5)]
+- 📝 generated changelog [[e0205cc](https://github.com/MarkLyck/formula-stocks/commit/e0205ccab0033276bd9d6a1745bd83e657d3dbad)]
+
+
 <a name="1.0.437"></a>
 ## 1.0.437 (2021-09-14)
 
