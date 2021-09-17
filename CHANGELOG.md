@@ -1,5 +1,39 @@
 # Changelog
 
+<a name="1.0.443"></a>
+## 1.0.443 (2021-09-17)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.443 [[17c89c1](https://github.com/MarkLyck/formula-stocks/commit/17c89c118a059e7ede3ea123649ac2f090c993c6)]
+
+
+<a name="1.0.442"></a>
+## 1.0.442 (2021-09-17)
+
+### Miscellaneous
+
+- 📝 version bump to v1.0.442 [[1e9722f](https://github.com/MarkLyck/formula-stocks/commit/1e9722f8f9d1d3d7f7da3ccb3f419224e7f9fed7)]
+
+
+<a name="1.0.441"></a>
+## 1.0.441 (2021-09-17)
+
+### Changed
+
+- ⬆️ Update dependency next-plausible to v2.1.2 [[d1dc052](https://github.com/MarkLyck/formula-stocks/commit/d1dc052d6bfca3b4214181623696a997ce6597cb)]
+- ⬆️ Update dependency next-plugin-antd-less to v1.4.3 [[e5bcdc7](https://github.com/MarkLyck/formula-stocks/commit/e5bcdc79fcc44d2861654910b1ba11d4211a50a4)]
+- ⬆️ Update dependency @types/lodash to v4.14.173 [[918a3a3](https://github.com/MarkLyck/formula-stocks/commit/918a3a306c257aaac4e513fe70d2dc3945c89b5d)]
+
+### Miscellaneous
+
+-  Merge pull request [#561](https://github.com/MarkLyck/formula-stocks/issues/561) from MarkLyck/renovate/next-plausible-2.x [[1b56d90](https://github.com/MarkLyck/formula-stocks/commit/1b56d90803aa5b93e6e1dd78bf48b4abd78ba42d)]
+-  Merge pull request [#559](https://github.com/MarkLyck/formula-stocks/issues/559) from MarkLyck/renovate/next-plugin-antd-less-1.x [[88eeaaf](https://github.com/MarkLyck/formula-stocks/commit/88eeaaf2c3c87570b1088ae5784688462863b1f5)]
+-  Merge pull request [#558](https://github.com/MarkLyck/formula-stocks/issues/558) from MarkLyck/renovate/lodash-4.x [[661f501](https://github.com/MarkLyck/formula-stocks/commit/661f50154da02fc0e86fa29efc0796a91aa49c4b)]
+- 📝 version bump to v1.0.441 [[68e84d2](https://github.com/MarkLyck/formula-stocks/commit/68e84d29e39d9de11cef430f99b9ca0a69386cb5)]
+- 📝 generated changelog [[4ca2f87](https://github.com/MarkLyck/formula-stocks/commit/4ca2f87cc8a3811a48bd0a74a50735e1b517fb50)]
+
+
 <a name="1.0.440"></a>
 ## 1.0.440 (2021-09-15)
 
